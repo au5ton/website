@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+
+
+
+
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://qrohlf.com/trianglify/trianglify.js"></script>
+        <script>
+        var t = new Trianglify({noiseIntensity: 0});
+        var button = false,
+            saveas = false,
+            subtractnoise = document.getElementById('subtractnoise'),
+            addnoise = document.getElementById('addnoise'),
+            noise_display = 0,
+            subtractcellsize = document.getElementById('subtractcellsize'),
+            addcellsize = document.getElementById('addcellsize'),
+            cellsize_display = 0,
+            subtractcellpadding = document.getElementById('subtractcellpadding'),
+            addcellpadding = document.getElementById('addcellpadding'),
+            cellpadding_display = 0,
+            toggle_controls = false,
+            controls = document.getElementById('controls'),
+            prevheight = height();
+
+        button.onclick = function() {
+            recolor();
+            redraw();
+            return false;
+        };
+        toggle_controls.onclick = function() {
+            toggle_controls.innerHTML = toggleClass(controls, "hidden") ? "show controls":"hide controls";
+            window.setTimeout(heightChange, 0); //see if the height changed after render and redraw if it did
+            return false;
+        };
+        window.onresize = function() {
+            redraw();
+        };
+        function heightChange() {
+            if (height() != prevheight) {
+                console.log("height changed from "+prevheight+" to "+height());
+                prevheight = height();
+                redraw();
+            };
+        }
+        function redraw() {
+            console.log("drawing "+document.body.clientWidth+"x"+height())
+            var pattern = t.generate(document.body.clientWidth, height());
+            document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+        };
+        function recolor() {
+            t.options.x_gradient = Trianglify.randomColor();
+            t.options.y_gradient = t.options.x_gradient.map(function(c){return d3.rgb(c).brighter(.5)});
+        }
+        function height() {
+            return Math.max(
+                document.body.scrollHeight, document.documentElement.scrollHeight,
+                document.body.offsetHeight, document.documentElement.offsetHeight,
+                document.body.clientHeight, document.documentElement.clientHeight
+            );
+        }
+        recolor();
+        redraw();
+        </script>
+    </body>
+</html>
