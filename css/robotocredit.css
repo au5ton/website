@@ -7,22 +7,15 @@ p.r {
     text-align: center;
     color:rgb(0,0,0);
 }
-/* unvisited link */
 a:link {
-color: rgb(0,0,0);
+    color: rgb(68,166,244);
 }
-
-/* visited link */
 a:visited {
-color: rgb(0,0,0);
+    color: rgb(255,155,75);
 }
-
-/* mouse over link */
 a:hover {
-color: rgb(0,0,0);
+    color: rgb(7,184,216);
 }
-
-/* selected link */
 a:active {
-color: rgb(0,0,0);
+    color: rgb(68,166,244);
 }
