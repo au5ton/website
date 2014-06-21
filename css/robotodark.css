@@ -2,43 +2,155 @@
     font-family: "RobotoThin";
     src: url(../font/Roboto-Thin.ttf) format("truetype");
 }
-p.r {
+
+/*
+FONT SETTINGS
+*/
+
+p.header1 {
     font-family: "RobotoThin", Verdana, Tahoma;
     color:rgb(255,255,255);
+    font-size:350%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
+p.header2 {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:300%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+p.header3 {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:250%;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+p.header4 {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:200%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+p.header5 {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:150%;
+}
+p.content {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:140%;
+}
+p.description {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:140%;
+    font-style:italic;
+}
+p.footer {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:75%;
+}
+
+/*
+LINK COLORS
+*/
+
 /* unvisited link */
 a:link {
-color: rgb(255,255,255);
+color: rgb(68,166,244);
 }
 
 /* visited link */
 a:visited {
-color: rgb(255,255,255);
+/*color: rgb(255,155,75);*/
+    color: rgb(68,166,244);
 }
 
 /* mouse over link */
 a:hover {
-color: rgb(255,255,255);
+color: rgb(7,184,216);
 }
 
 /* selected link */
 a:active {
-color: rgb(255,255,255);
+color: rgb(68,166,244);
 }
+
+/*
+PROJECT CLASSES
+*/
+
+.imageleft {
+    position: relative;
+    right: 200px;
+}
+
+.imageright {
+    position: relative;
+    left: 200px;
+}
+
+.textleft {
+    position: relative;
+    top: -320px;
+    right: 0px;
+    width: 400px
+}
+
+.textright {
+    position: relative;
+    top: -320px;
+    left: 425px;
+    width: 400px
+}
+
+
+/*
+BOXES AND STUFF 
+*/
 
 .container {
     text-align: center;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 980px;
     color: #2d3a3f;
     padding-top: 60px;
 }
 
 .box {
+
     display: block;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 3px;
     margin: 10px 5px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    /*box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);*/
 }
+
+.circle1 {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    border-style: solid;
+    border-color: rgb(0,0,0)
+}
+
+.icon { 
+margin-top:15px; 
+margin-bottom:15px; 
+margin-left:15px; 
+margin-right:15px; 
+}
+
+.shadowed { /* FOR IMAGES*/
+-webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,1));
+filter: url(shadow.svg#drop-shadow);
+-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+Color='#444')";
+filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
