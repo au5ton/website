@@ -1,6 +1,6 @@
 //I wonder when I'll need to use JavaScript
 
-var theme;
+var theme = "light";
 
 function setTheme(inputTheme)
 {
@@ -18,20 +18,16 @@ function switchTheme()
     {
         theme = "dark";
         document.getElementById("currentTheme").href="css/robotodark.css"; 
-        alert(document.getElementById("currentTheme").href);
     }
     else if(theme == "dark")
     {
         theme = "light";
         document.getElementById("currentTheme").href="css/robotolight.css";
-        alert(document.getElementById("currentTheme").href);
     }
     else
     {
         theme = "light";
         document.getElementById("currentTheme").href="css/robotolight.css";
-        alert("[last resort]"+document.getElementById("currentTheme").href);  
     }
-    location.reload();
+    window.reload();
 }
-

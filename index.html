@@ -5,7 +5,9 @@
         <meta name="description" content="description of ruthlessphysics.com">
         <meta name="author" content="@MacPhage">
         <title>ruthlessphysics.com -- index</title>
-        <link href="css/robotolight.css" rel="stylesheet" type="text/css">
+        <link id="currentTheme" href="css/robotolight.css" rel="stylesheet" type="text/css">
+        <script src="js/themes.js">
+        </script>
     </head>
     <body>
         <div class="container">
@@ -44,15 +46,15 @@
                     <a href="https://srchub.org/p/obskewer/downloads/"><img class="opsys" src="img/icon_windows.png" width="30"></a>
                     <a href="https://srchub.org/p/obskewer/source/tree/master/"><img class="opsys shadowedtiny" src="img/icon_sourcecode.png" width="30"></a>
                 <p>
-                <br>
-                <img class="icon shadowed imageright" src="img/icon_pcalculator.png" width="40%" height="40%">
+                    <br>
+                    <img class="icon shadowed imageright" src="img/icon_pcalculator.png" width="40%" height="40%">
                 <p class="header3 textleft">pCalculator</p>
                 <p class="description textleft">pCalculator is a light-weight Java application for convenient calculation.
-It is designed to do as fully functional and do-all-the-work-for-you as possible.<br><br>
+                    It is designed to do as fully functional and do-all-the-work-for-you as possible.<br><br>
                     <a href="https://srchub.org/p/pcalculator/downloads/"><img class="opsys" src="img/icon_osx.png" width="30"></a>
                     <a href="https://srchub.org/p/pcalculator/downloads/"><img class="opsys" src="img/icon_windows.png" width="30"></a>
                     <a href="https://srchub.org/p/pcalculator/source/tree/master/"><img class="opsys shadowedtiny" src="img/icon_sourcecode.png" width="30"></a>
-                
+
                 </p>
 
 
@@ -62,9 +64,11 @@ It is designed to do as fully functional and do-all-the-work-for-you as possible
                 <!-- FOOTER -->
                 <footer>
                     <p class="footer"> 
+                        <button onClick="switchTheme()">Change theme</button><br>
                         <a href="credit.html">credit</a><br>
                         Website by Austin Jackson (c) 2014
                     </p>
+                    
                 </footer>
             </div>
         </div>
