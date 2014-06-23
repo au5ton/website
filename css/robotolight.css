@@ -3,6 +3,16 @@
     src: url(../font/Roboto-Thin.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "RobotoLight";
+    src: url(../font/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url(../font/Roboto-condensed.ttf) format("truetype");
+}
+
 /*
 CORE
 */
@@ -65,32 +75,32 @@ p.header5 {
     font-size:150%;
 }
 p.content {
-    font-family: "RobotoThin", Verdana, Tahoma;
+    font-family: "RobotoLight", Verdana, Tahoma;
     color:rgb(0,0,0);
     font-size:140%;
 }
 p.time {
-    font-family: "RobotoThin", Verdana, Tahoma;
+    font-family: "RobotoLight", Verdana, Tahoma;
     color: rgb(104, 166, 209);
 }
 p.small {
-    font-family: "RobotoThin", Verdana, Tahoma;
+    font-family: "RobotoLight", Verdana, Tahoma;
     color:rgb(0,0,0);
     font-size:100%;
 }
 p.tiny {
-    font-family: "RobotoThin", Verdana, Tahoma;
+    font-family: "RobotoCondensed", Verdana, Tahoma;
     color:rgb(0,0,0);
-    font-size:60%;
+    font-size: 75%;
 }
 p.description {
-    font-family: "RobotoThin", Verdana, Tahoma;
+    font-family: "RobotoLight", Verdana, Tahoma;
     color:rgb(0,0,0);
     font-size:140%;
     font-style:italic;
 }
 p.footer {
-    font-family: "RobotoThin", Verdana, Tahoma;
+    font-family: "RobotoCondensed", Verdana, Tahoma;
     color:rgb(0,0,0);
     font-size:75%;
 }
