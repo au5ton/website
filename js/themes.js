@@ -18,39 +18,38 @@ function getCookie(cname) {
     return "";
 }
 
-
 var theme = getCookie("theme");
-document.getElementById("currentTheme").href="css/roboto"+theme+".css";
+
 if(theme == "light")
 {
-    document.getElementById("swapper").innerHTML="Switch to Dark mode"; 
-    alert("button light");
+    setCookie("theme","light","9999999");
+    theme = getCookie("theme")
+    document.getElementById("currentTheme").href="css/robotolight.css";
 }
 else if(theme == "dark")
 {
-    document.getElementById("swapper").innerHTML="Switch to Light mode"; 
-    alert("button dark");
+    setCookie("theme","dark","9999999");
+    theme = getCookie("theme")
+    document.getElementById("currentTheme").href="css/robotodark.css";
 }
 else
 {
-    document.getElementById("swapper").innerHTML="???";
+    setCookie("theme","light","9999999");
+    theme = getCookie("theme")
+    document.getElementById("currentTheme").href="css/robotolight.css";
 }
 
-if(theme != "light" || theme != "dark")
+function refreshTheme()
 {
-    theme = "light";
-    setCookie("theme",theme,"9999999");
-}
-
-function setTheme(inputTheme)
-{
-    theme = inputTheme;
-    document.getElementById("currentTheme").href="css/roboto"+inputTheme+".css"; 
+    if(theme != null)
+    {
+    document.getElementById("currentTheme").href="css/roboto"+theme+".css"; 
     location.reload();
+    }
 }
 function getTheme()
 {
-    return theme;
+    return "theme: "+theme+"\ncookie: "+getCookie("theme");
 }
 function switchTheme()
 {
