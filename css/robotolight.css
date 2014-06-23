@@ -78,6 +78,11 @@ p.small {
     color:rgb(0,0,0);
     font-size:100%;
 }
+p.tiny {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(0,0,0);
+    font-size:60%;
+}
 p.description {
     font-family: "RobotoThin", Verdana, Tahoma;
     color:rgb(0,0,0);

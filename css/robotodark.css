@@ -78,6 +78,11 @@ p.small {
     color:rgb(255,255,255);
     font-size:100%;
 }
+p.tiny {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color:rgb(255,255,255);
+    font-size:60%;
+}
 p.description {
     font-family: "RobotoThin", Verdana, Tahoma;
     color:rgb(255,255,255);
@@ -235,7 +240,7 @@ BOXES AND STUFF
 }
 
 .shadowedtiny { /* FOR IMAGES*/
-    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.8));
     filter: url(shadow.svg#drop-shadow);
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
         Color='#444')";
