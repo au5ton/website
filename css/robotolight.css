@@ -69,6 +69,10 @@ p.content {
     color:rgb(0,0,0);
     font-size:140%;
 }
+p.time {
+    font-family: "RobotoThin", Verdana, Tahoma;
+    color: rgb(104, 166, 209);
+}
 p.small {
     font-family: "RobotoThin", Verdana, Tahoma;
     color:rgb(0,0,0);
@@ -107,7 +111,7 @@ a:hover {
 
 /* selected link */
 a:active {
-    color: rgb(68,166,244);
+    color: rgb(224, 74, 109);
 }
 
 /*
@@ -170,6 +174,16 @@ BOXES AND STUFF
     padding: 20px;
     border-radius: 3px;
     margin: 10px 5px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.applet {
+
+    display: block;
+    background: rgba(120, 120, 120, 0.9);  /*CHANGE ME*/
+    padding: 20px;
+    border-radius: 3px;
+    margin: 10px 10px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
