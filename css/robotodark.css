@@ -166,7 +166,7 @@ BOXES AND STUFF
 .box {
 
     display: block;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 3px;
     margin: 10px 5px;

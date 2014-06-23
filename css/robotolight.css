@@ -158,7 +158,7 @@ BOXES AND STUFF
 .container {
     text-align: center;
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 980px; /*CHANGE ME*/
     color: #2d3a3f;
     padding-top: 60px;
 }
@@ -166,7 +166,7 @@ BOXES AND STUFF
 .box {
 
     display: block;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);  /*CHANGE ME*/
     padding: 20px;
     border-radius: 3px;
     margin: 10px 5px;
