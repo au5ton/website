@@ -29,6 +29,12 @@ body {
 FONT SETTINGS
 */
 
+h1, h2, h3, h4, h5, h6, p{ /*reset for mobile browsers */
+
+font-weight: normal;
+
+}
+
 p.header1 {
     font-family: "RobotoThin", Verdana, Tahoma;
     color:rgb(255,255,255);
