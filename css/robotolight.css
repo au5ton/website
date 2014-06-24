@@ -102,36 +102,36 @@ font-weight: normal;
 
 p.header1 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:350%;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 p.header2 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:300%;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 p.header3 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:250%;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 p.header4 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:200%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 p.header5 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:150%;
 }
 p.content {
     font-family: "Roboto-Light", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:140%;
 }
 p.time {
@@ -140,23 +140,23 @@ p.time {
 }
 p.small {
     font-family: "Roboto-Light", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:100%;
 }
 p.tiny {
     font-family: "Roboto-condensed", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size: 75%;
 }
 p.description {
     font-family: "Roboto-LightItalic", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:140%;
     font-style:italic;
 }
 p.footer {
     font-family: "Roboto-condensed", Verdana, Tahoma;
-    color:rgb(255,255,255);
+    color:rgb(0,0,0);
     font-size:75%;
 }
 
@@ -240,7 +240,7 @@ BOXES AND STUFF
 .box {
 
     display: block;
-    background: rgba(0, 0, 0, 0.9);  /*CHANGE ME*/
+    background: rgba(255, 255, 255, 0.9);  /*CHANGE ME*/
     padding: 20px;
     border-radius: 3px;
     margin: 10px 5px;
