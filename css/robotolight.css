@@ -113,19 +113,19 @@ p.header2 {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 p.header3 {
-    font-family: "Roboto-Thin", Verdana, Tahoma;
+    font-family: "Roboto-Light", Verdana, Tahoma;
     color:rgb(0,0,0);
     font-size:250%;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 p.header4 {
-    font-family: "Roboto-Thin", Verdana, Tahoma;
+    font-family: "Roboto-Light", Verdana, Tahoma;
     color:rgb(0,0,0);
     font-size:200%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 p.header5 {
-    font-family: "Roboto-Thin", Verdana, Tahoma;
+    font-family: "Roboto-Light", Verdana, Tahoma;
     color:rgb(0,0,0);
     font-size:150%;
 }
