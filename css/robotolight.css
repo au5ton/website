@@ -190,25 +190,25 @@ PROJECT CLASSES
 
 .imageleft {
     position: relative;
-    right: 200px;
+    right: 220px;
 }
 
 .imageright {
     position: relative;
-    left: 200px;
+    left: 220px;
 }
 
 .textleft {
     position: relative;
     top: -380px;
-    right: -15px;
+    right: -40px;
     width: 400px
 }
 
 .textright {
     position: relative;
     top: -380px;
-    left: 510px;
+    left: 480px;
     width: 400px
 }
 
