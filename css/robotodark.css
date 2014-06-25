@@ -91,6 +91,14 @@ body {
     position: relative;
 }
 
+
+iframe {
+    position: relative;
+    left: -20px;
+/*    width: 970px; 970px*/
+/*    height: 3000px; 3000px*/
+}
+
 /*
 FONT SETTINGS
 */
@@ -103,6 +111,10 @@ font-weight: normal;
 
 p.common {
     color:rgb(255,255,255);
+}
+p.center {
+    text-align: center;
+    align-content: center;
 }
 
 p.header1 {

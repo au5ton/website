@@ -91,6 +91,14 @@ body {
     position: relative;
 }
 
+
+iframe {
+    position: relative;
+    left: -20px;
+/*    width: 970px; 970px*/
+/*    height: 3000px; 3000px*/
+}
+
 /*
 FONT SETTINGS
 */
@@ -103,6 +111,10 @@ font-weight: normal;
 
 p.common {
     color:rgb(0,0,0);
+}
+p.center {
+    text-align: center;
+    align-content: center;
 }
 
 p.header1 {
@@ -151,8 +163,8 @@ p.motd {
     color: rgb(21,114,229);
     text-shadow: 1px 1px 3px rgba(11, 59, 118, 0.8);
     position: relative;
-    top: -125px;
-    right: -300px;
+    top: -130px;
+    right: -290px;
     transform:rotate(-7deg);
     -ms-transform:rotate(-7deg); /* IE 9 */
     -webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
@@ -271,6 +283,23 @@ BOXES AND STUFF
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
+.frameselect {
+    display: block;
+    background: rgba(127,0,127,0.5);
+    padding: 0px;
+    border-radius: 3px;
+    margin: auto;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    width: 600px;
+    height: 50px;
+    text-align:center
+    vertical-align: middle;
+}
+
+.frameoption { 
+    margin-top: 15px;
+}
+
 .applet {
 
     display: block;
@@ -335,4 +364,3 @@ BOXES AND STUFF
         Color='#444')";
         filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
-

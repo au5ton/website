@@ -82,7 +82,8 @@ function switchTheme()
         document.getElementById("swapper").innerHTML="Switch to Dark mode"; 
         setCookie("theme",theme,"9999999");
     }
-    window.reload();
+    //window.reload();
+    changeFrame(currentFrame,w,h);
 }
 function swap(index)
 {
