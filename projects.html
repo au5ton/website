@@ -9,6 +9,8 @@
         </script>
         <script type="text/javascript" src="js/frames.js">
         </script>
+        <script type="text/javascript" src="js/pictureshow.js">
+        </script>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
@@ -18,7 +20,8 @@
             <h2>
                 <p class="common header3">projects</p>
             </h2>
-            <img class="icon shadowed imageleft" src="img/icon_obskewer.png">
+            <img id="obskewerscreenshot" onclick="obskewerswap()" class="icon shadowed imageleft" src="img/icon_obskewer.png">
+            <p id="obskewertag" class="common tagleft">Click to see a screenshot!</p>
             <p class="common header3 textright">Obskewer</p>
             <p class="common description textright">Obskewer is a light-weight Java application for encoding and decoding text using common ciphers.<br><br>
                 <a href="https://srchub.org/p/obskewer/downloads/"><img class="opsys" src="img/icon_osx.png" width="30"></a>
@@ -27,7 +30,8 @@
                 <!-- PROJECT TEMPLATE BEGINNING -->
             <p>
                 <br>
-                <img class="common icon shadowed imageright" src="img/icon_pcalculator.png">
+                <img id="pcalcscreenshot" onclick="pcalcswap()" class="common icon shadowed imageright" src="img/icon_pcalculator.png">
+                <p id="pcalctag" class="common tagright">Click to see a screenshot!</p>
             <p class="common header3 textleft">pCalculator</p>
             <p class="common description textleft">pCalculator is a light-weight Java application for convenient calculation.
                 It is designed to be as fully functional and do-all-the-work-for-you as possible.<br><br>
@@ -53,7 +57,8 @@
 
             <p>
                 <br>
-                <img class="icon shadowed imageright" src="img/ptictactoe.png" width="372" height="372">
+                <img id="ptictacscreenshot" onclick="ptictacswap()" class="icon shadowed imageright" src="img/ptictactoe.png" width="372" height="372">
+                <p id="ptictactag" class="common tagright">Click to see a screenshot!</p>
             <p class="common header3 textleft">pTicTacToe</p>
             <p class="common description textleft">pTicTacToe is a WinBGIm (graphics.h) C++ program that allows two users to play a game of 3-by-3 TicTacToe against each other.<br><br>
                 <a href="javascript:alert('Coming soon!')"><img class="opsys" src="img/icon_osx_wine.png" width="35" title="Coming soon!"></a>
@@ -62,6 +67,10 @@
 
             </p>
 
+            <script type="text/javascript" src="js/pictureshow.js">
+                //defaults();
+            </script>
+            
         </div>
     </body>
 </html>

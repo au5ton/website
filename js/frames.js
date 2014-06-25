@@ -7,7 +7,7 @@ var default_f = "picker";
 var default_w = 970;
 var default_h = 500;
 
-var proj_h = 3000;
+var proj_h = 3200;
 
 function changeFrame(nextFrame,nextWidth,nextHeight)
 {

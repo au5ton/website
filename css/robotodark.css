@@ -162,12 +162,12 @@ p.motd {
     font-size: 140%;
     color: rgb(21,114,229);
     text-shadow: 1px 1px 3px rgba(11, 59, 118, 0.8);
-    position: relative;
-    top: -125px;
-    right: -300px;
-    transform:rotate(-7deg);
-    -ms-transform:rotate(-7deg); /* IE 9 */
-    -webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
+    position: absolute;
+    top: 370px;
+    right: 160px;
+    transform:rotate(-10deg);
+    -ms-transform:rotate(-10deg); /* IE 9 */
+    -webkit-transform:rotate(-10deg); /* Opera, Chrome, and Safari */
 }
 p.description {
     font-family: "Roboto-LightItalic", Verdana, Tahoma;
@@ -232,19 +232,19 @@ PROJECT CLASSES
 
 .tagleft {
     font-family: "Roboto-LightItalic", Verdana, Tahoma;
-    font-size:100%;
+    font-size:120%;
     position: relative;
     top: -20px;
-    right: -40px;
+    right: -60px;
     width: 400px
 }
 
 .tagright {
     font-family: "Roboto-LightItalic", Verdana, Tahoma;
-    font-size:100%;
+    font-size:120%;
     position: relative;
     top: -15px;
-    left: 480px;
+    left: 510px;
     width: 400px
 }
 
@@ -281,6 +281,25 @@ BOXES AND STUFF
     border-radius: 3px;
     margin: 10px 5px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.frameselect {
+    display: block;
+    background: rgba(127,0,127,0.4);
+    padding: 0px;
+    border-radius: 3px;
+    margin: auto;
+    /*box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);*/
+    width: 300px;
+    height: 25px;
+    text-align:center
+    vertical-align: middle;
+}
+
+.frameoption { 
+    margin-top: 3px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .applet {
@@ -347,4 +366,3 @@ BOXES AND STUFF
         Color='#444')";
         filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
-

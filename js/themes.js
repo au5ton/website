@@ -19,13 +19,7 @@ function getCookie(cname) {
 }
 
 var theme = getCookie("theme");
-//var s_min[] = {0,0,0};
-//var s_max[] = {0,0,4};
-//var s_shot[] = {s_min[0],s_min[1],s_min[2]};
 
-var pdraw_min = 0;
-var pdraw_max = 4; //WIP recoding for all projects above
-var pdraw_shot = pdraw_min;
 
 if(theme == "light")
 {
@@ -84,65 +78,4 @@ function switchTheme()
     }
     //window.reload();
     changeFrame(currentFrame,w,h);
-}
-function swap(index)
-{
-    var proj = "";
-    switch(index)
-    {
-            case 0:
-            {
-                proj = "obskewer";
-            }
-            case 1:
-            {
-                proj = "pcalculator";
-            }
-            case 2:
-            {
-                proj = "pdraw";
-            }
-            case 3:
-            {
-                proj = "ptictactoe";
-            }
-            default:
-            {
-                proj = "empty";
-            }
-    }
-    
-    var logo = "img/"+"logo.png";
-    var path = "img/pdrawscreenshot";
-//    if(s_shot[index] < s_max[index])
-//    {
-//        pdraw_shot++;
-//        path += pdraw_shot+".png";
-//        document.getElementById("pdrawscreenshot").src = path;
-//            document.getElementById("pdrawtag").innerHTML = "Click to see another screenshot! Current screenshot: "+pdraw_shot;
-//    }
-//    else
-//    {
-//        pdraw_shot = pdraw_min;
-//        document.getElementById("pdrawscreenshot").src = logo;
-//        document.getElementById("pdrawtag").innerHTML = "Click to see a screenshot!";
-//    }
-}
-function pdrawswap()
-{ 
-    var logo = "img/pdrawlogo.png";
-    var path = "img/pdrawscreenshot";
-    if(pdraw_shot < pdraw_max)
-    {
-        pdraw_shot++;
-        path += pdraw_shot+".png";
-        document.getElementById("pdrawscreenshot").src = path;
-            document.getElementById("pdrawtag").innerHTML = "Click to see another screenshot! Current screenshot: "+pdraw_shot;
-    }
-    else
-    {
-        pdraw_shot = pdraw_min;
-        document.getElementById("pdrawscreenshot").src = logo;
-        document.getElementById("pdrawtag").innerHTML = "Click to see a screenshot!";
-    }
 }

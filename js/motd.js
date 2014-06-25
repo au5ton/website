@@ -9,7 +9,7 @@ m[1] = "CSS riddled!";
 m[2] = "Triangles!";
 m[3] = "Absolutely no WebGL!";
 m[4] = "&lt;iframe&gt; utilizing!";
-m[5] = "<button onclick=alert('BUTTONS!')>Button featured!</button>";
+m[5] = "<button onclick=alert(\"I_like_buttons._c:\")>Button featured!</button>";
 
 function motd_apply()
 {
