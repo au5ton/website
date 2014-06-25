@@ -89,6 +89,7 @@ body {
     background-size: 175% 175%;
 /*    background-color: rgb(157,229,206);*/
     position: relative;
+    text-align: center;
 }
 
 
@@ -267,19 +268,21 @@ BOXES AND STUFF
 
 .container {
     text-align: center;
+    align-self: center;
     margin: 0 auto;
-    max-width: 980px; /*CHANGE ME*/
+    width: 980px;
     color: #2d3a3f;
     padding-top: 60px;
 }
 
 .box {
-
-    display: block;
-    background: rgba(0, 0, 0, 0.9);  /*CHANGE ME*/
+    text-align: center;
+    align-self: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.9); 
     padding: 20px;
     border-radius: 3px;
-    margin: 10px 5px;
+    margin: 0 auto;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
