@@ -1,9 +1,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="description of ruthlessphysics.com">
+        <meta name="description" content="Austin Jackson's code portfolio">
         <meta name="author" content="@MacPhage">
-        <title>ruthlessphysics.com -- index</title>
+        <meta name="robots" content="index, follow, noimageindex, noarchive">
+        <title>ruthlessphysics.com</title>
         <link id="currentTheme" href="css/robotolight.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="js/themes.js">
         </script>
@@ -55,16 +56,74 @@
 
                     </p>
                 </blockquote>
+<!--
                 <p class="common header4">Choose a frame</p>
                     <div id="frameselect" class="frameselect">
                         <button class="frameoption" onclick="changeFrame('projects',970,3200)">Projects</button>
                         <button class="frameoption" onclick="changeFrame('credit',-1,500)">Credit</button>
                         <button class="frameoption" onclick="changeFrame('picker',-1,300)">Close current frame</button>
                     </div>
+-->
 
                 <div>
+<!--
                     <iframe id="mainframe" scrolling="no" frameBorder="0" title="mainframe" width=970 height=300 src="picker.html">
                     </iframe>
+-->
+                    
+                    <h2>
+                <p class="common header3">projects</p>
+            </h2>
+            <img id="obskewerscreenshot" onclick="obskewerswap()" class="icon shadowed imageleft" src="img/icon_obskewer.png">
+            <p id="obskewertag" class="common tagleft">Click to see a screenshot!</p>
+            <p class="common header3 textright">Obskewer</p>
+            <p class="common description textright">Obskewer is a light-weight Java application for encoding and decoding text using common ciphers.<br><br>
+                <a href="https://srchub.org/p/obskewer/downloads/"><img class="opsys" src="img/icon_osx.png" width="30"></a>
+                <a href="https://srchub.org/p/obskewer/downloads/"><img class="opsys" src="img/icon_windows.png" width="30"></a>
+                <a href="https://srchub.org/p/obskewer/source/tree/master/"><img class="opsys shadowedtiny" src="img/icon_sourcecode.png" width="30" title="Git source code repository"></a>
+                <!-- PROJECT TEMPLATE BEGINNING -->
+            <p>
+                <br>
+                <img id="pcalcscreenshot" onclick="pcalcswap()" class="common icon shadowed imageright" src="img/icon_pcalculator.png">
+                <p id="pcalctag" class="common tagright">Click to see a screenshot!</p>
+            <p class="common header3 textleft">pCalculator</p>
+            <p class="common description textleft">pCalculator is a light-weight Java application for convenient calculation.
+                It is designed to be as fully functional and do-all-the-work-for-you as possible.<br><br>
+                <a href="https://srchub.org/p/pcalculator/downloads/"><img class="opsys" src="img/icon_osx.png" width="30"></a>
+                <a href="https://srchub.org/p/pcalculator/downloads/"><img class="opsys" src="img/icon_windows.png" width="30"></a>
+                <a href="https://srchub.org/p/pcalculator/source/tree/master/"><img class="opsys shadowedtiny" src="img/icon_sourcecode.png" width="30" title="Git source code repository"></a>
+
+            </p>
+            <!-- PROJECT TEMPLATE END -->
+
+            <p>
+                <br>
+                <img id="pdrawscreenshot" class="icon shadowed imageleft" src="img/pdrawlogo.png" onclick="pdrawswap()" width="372" height="372">
+            <p id="pdrawtag" class="common tagleft">Click to see a screenshot!</p>
+            <p class="common header3 textright">pDraw</p>
+            <p class="common description textright">pDraw is a WinBGIm (graphics.h) C++ painting application used to create digitally-primitive drawings using your mouse and keyboard.<br><br>
+                <a href="http://winebottler.kronenberg.org/"><img class="opsys" src="img/icon_osx_wine.png" width="35"></a>
+                <a href="https://srchub.org/p/pdraw/downloads/"><img class="opsys" src="img/icon_windows.png" width="30"></a>
+                <a href="https://srchub.org/p/pdraw/source/tree/master/"><img class="opsys shadowedtiny" src="img/icon_sourcecode.png" width="30" title="Git source code repository"></a>
+
+            </p>
+
+
+            <p>
+                <br>
+                <img id="ptictacscreenshot" onclick="ptictacswap()" class="icon shadowed imageright" src="img/ptictactoe.png" width="372" height="372">
+                <p id="ptictactag" class="common tagright">Click to see a screenshot!</p>
+            <p class="common header3 textleft">pTicTacToe</p>
+            <p class="common description textleft">pTicTacToe is a WinBGIm (graphics.h) C++ program that allows two users to play a game of 3-by-3 TicTacToe against each other.<br><br>
+                <a href="javascript:alert('Coming soon!')"><img class="opsys" src="img/icon_osx_wine.png" width="35" title="Coming soon!"></a>
+                <a href="https://srchub.org/p/ptictactoe/downloads/"><img class="opsys" src="img/icon_windows.png" width="30"></a>
+                <a href="https://srchub.org/p/ptictactoe/source/tree/master/"><img class="opsys shadowedtiny" src="img/icon_sourcecode.png" width="30" title="Git source code repository"></a>
+
+            </p>
+
+            <script type="text/javascript" src="js/pictureshow.js">
+                //defaults();
+            </script>
                 </div>
                 <button class="frameoption" onclick="changeFrame('picker',-1,300)">Close current frame</button>
                 <br><br>
