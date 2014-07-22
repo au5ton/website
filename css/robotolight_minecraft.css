@@ -90,6 +90,7 @@ body {
     background-size: 175% 175%;
 /*    background-color: rgb(157,229,206);*/
     position: relative;
+    top: -200px;
 /*    box-sizing: content-box;*/
 }
 
