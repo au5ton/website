@@ -1,0 +1,20 @@
+/* TEAM */
+	Developer: Austin Jackson
+	Contact: themacphage [at] gmail.com
+	Twitter: @MacPhage
+	From: Houston, Texas
+
+/* THANKS */
+
+	Trianglify.js: Quinn Rohlf
+	Twitter: @qrohlf
+	From: Portland, Oregon
+
+	Roboto (TypeFace): Christian Robertson
+	Google+: https://plus.google.com/110879635926653430880/about
+	Employed at: Google		
+
+/* SITE */
+	Language: English
+	Doctype: HTML5
+	IDE: Adobe Brackets, Git, FileZilla, Photoshop
