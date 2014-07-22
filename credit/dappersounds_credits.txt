@@ -1,0 +1,113 @@
+SOUNDS USED:
+
+audiofile/and/itslocation.ogg
+-(link)
+-(author -- "track")
+
+IF SOUNDS HERE DON'T REPRESENT THEIR INGAME SOUND OR THE FILE,
+THEY MIGHT'VE BEEN REPLACED IN THE "ECHOS" PACK BY BDCRAFT OR SNOWSONG
+
+BACKGROUND MUSIC
+{
+  minecraft/music/game/calm1.ogg
+  -(https://soundcloud.com/max-cooper/amorphous-romance-with-tom)
+  -(Max Cooper -- "Amorphous Romance")
+
+  minecraft/music/game/calm2.ogg
+  -(https://soundcloud.com/fuckmylife/radiohead-codex-deadmau5-cover)
+  -(Radiohead -- "Codex (deadmau5 cover)")
+
+  minecraft/music/game/calm3.ogg
+  -(https://soundcloud.com/salidad/salidad-rodeo-on-the-snow)
+  -(Salidad -- "Rodeo on the Snow")
+
+  minecraft/music/game/hal1.ogg
+  -(https://soundcloud.com/markus-wentz/04-oh-so-peaceful-ambient)
+  -(Markus Wents -- "Oh, so peaceful (Ambient)")
+
+  minecraft/music/game/hal2.ogg
+  -(https://soundcloud.com/fuckmylife/suite-04b)
+  -(Alecia Shepard -- "hal1")
+  -(Part of "SnowSong" resource pack)
+
+  minecraft/music/game/hal3.ogg
+  -(https://soundcloud.com/salidad/gone-already)
+  -(Salidad -- "Gone Already")
+
+  minecraft/music/game/hal4.ogg
+  -(https://soundcloud.com/max-cooper/max-cooper-sea-of-sound)
+  -(Max Cooper -- "Ambient Rework")
+
+  minecraft/music/game/nuance1.ogg
+  -(http://www.youtube.com/watch?v=NXM0OGRWG6U)
+  -(deadmau5 & C418 -- "Everything You Are")
+
+  minecraft/music/game/nuance2.ogg
+  -(https://soundcloud.com/salidad/chaos-and-pace)
+  -(Salidad -- "Chaos and Pace")
+
+  minecraft/music/game/piano1.ogg
+  -(https://soundcloud.com/salidad/salidad-white-day)
+  -(Salidad -- "White Day")
+
+  minecraft/music/game/piano2.ogg
+  -(http://www.youtube.com/watch?v=eXhN2wmRTlo)
+  -(deadmau5 -- "Memory Man [JECS Long Play Edit]")
+
+  minecraft/music/game/piano3.ogg
+  -(https://soundcloud.com/salidad/scratch)
+  -(Salidad -- "Scratch")
+}
+
+MUSIC DISCS
+{
+  minecraft/records/11.ogg
+  -songs have been purposely obscured.
+  -see if you can figure out every one that was used!
+}
+
+TITLE SCREEN/MENU MUSIC
+{
+  minecraft/records/menu1.ogg
+  -(https://soundcloud.com/fuckmylife/professor-meowingtons)
+  -(deadmau5 -- "professor meowingtons")
+  -(Extended by MacPhage)
+
+  minecraft/music/menu/menu2.ogg
+  -(https://soundcloud.com/dzasterpeace/chamber-of-the-goddess)
+  -(Disasterpeace -- "chamber of the goddess")
+
+  minecraft/music/menu/menu3.ogg
+  -(https://soundcloud.com/max-cooper/max-cooper-gravity-well-clip)
+  -(Max Cooper -- "Gravity Well (clip)")
+
+  minecraft/music/menu/menu4.ogg
+  -(https://soundcloud.com/c418/hotel-music)
+  -(C418 -- "hotel music")
+
+  minecraft/records/menu5.ogg
+  -(https://www.youtube.com/watch?v=cI1tJFuzJ6k)
+  -(deadmau5 -- "71c")
+  
+}
+
+GAME SOUNDS
+{
+  minecraft/sound/ambient/weather/rain1-4.ogg
+  -(http://freesound.org/people/Ali@k/sounds/156049/)
+
+  minecraft/sound/ambient/weather/thunder1-3.ogg
+  -(http://freesound.org/people/swoods800/sounds/136284/)
+  -(http://freesound.org/people/Sam80/sounds/118765/)
+
+  minecraft/sound/random/break.ogg
+  -Combination of:
+  -(http://freesound.org/people/kevinkace/sounds/66780/)
+  -(http://freesound.org/people/dheming/sounds/177781/)
+
+  minecraft/sound/random/bowhit1-4.ogg
+  -(http://freesound.org/people/Robinhood76/sounds/126464/)
+
+  minecraft/sound/step/wood1-6.ogg
+  -(http://freesound.org/people/ftpalad/sounds/119914/)
+}

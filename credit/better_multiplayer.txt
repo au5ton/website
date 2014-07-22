@@ -1,0 +1,34 @@
+
+THIS IS A MOD COMPILATION PACK
+
+modname
+-(http://author.com/)
+-(http://link.com/)
+
+LiteLoader
+-(http://www.minecraftforum.net/members/Mumfrey)
+-(http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1290155-liteloader-for-minecraft-1-7-10)
+
+Damage Indicators
+-(http://www.minecraftforum.net/members/rich1051414)
+-(http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286538-hit-splat-damage-indicators-v3-1-2-rpg-ui-and)
+
+VoxelMap
+-(http://www.planetminecraft.com/member/mamiyaotaru/)
+-(http://www.planetminecraft.com/mod/zans-minimap/)
+
+InventoryTweaks
+-(http://www.minecraftforum.net/members/Kobata)
+-(http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1288184-inventory-tweaks-1-57-march-14)
+
+iChunUtil
+-(http://www.minecraftforum.net/members/iChun)
+-(http://ichun.us/mods/ichun-util/)
+
+Hats
+-(http://www.minecraftforum.net/members/iChun)
+-(http://ichun.us/mods/hats/)
+
+MobDismemberment
+-(http://www.minecraftforum.net/members/iChun)
+-(http://ichun.us/mods/mob-dismemberment/)
