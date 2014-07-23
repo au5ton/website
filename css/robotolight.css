@@ -66,6 +66,14 @@ FONTS
     font-family: "Roboto-ThinItalic";
     src: url(../font/Roboto-ThinItalic.ttf) format("truetype");
 }
+@font-face {
+    font-family: "Socialico";
+    src: url(../font/Socialico.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SocialicoPlus";
+    src: url(../font/Socialico-Plus.ttf) format("truetype");
+}
 
 
 /*
@@ -87,7 +95,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 175% 175%;
-/*    background-color: rgb(157,229,206);*/
+    /*    background-color: rgb(157,229,206);*/
     position: relative;
     text-align: center;
     margin-bottom: 60px;
@@ -99,8 +107,8 @@ body {
 iframe {
     position: relative;
     left: -20px;
-/*    width: 970px; 970px*/
-/*    height: 3000px; 3000px*/
+    /*    width: 970px; 970px*/
+    /*    height: 3000px; 3000px*/
 }
 
 /*
@@ -109,7 +117,7 @@ FONT SETTINGS
 
 h1, h2, h3, h4, h5, h6, p{ /*reset for mobile browsers */
 
-font-weight: normal;
+    font-weight: normal;
 
 }
 
@@ -120,6 +128,47 @@ font-weight: normal;
     text-align: center;
     align-content: center;
 }
+/*
+// TEXT ICONS
+*/
+.socialico {
+    font-family: "Socialico";
+    font: normal normal 32px;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.socialicoplus {
+    font-family: "SocialicoPlus";
+    font: normal normal 32px;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.ico_soc {
+    font-size: 75px!important;
+}
+
+.ico_git {
+    font-size: 50px!important;
+    position: relative!important;
+    bottom: 13px!important;
+}
+
 
 .header1 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
@@ -300,7 +349,7 @@ BOXES AND STUFF
     width: 300px;
     height: 25px;
     text-align:center
-    vertical-align: middle;
+        vertical-align: middle;
 }
 
 .frameoption { 
@@ -362,7 +411,7 @@ BOXES AND STUFF
 .double {
     font-size: 200%;
 }
-    
+
 
 .shadowed { /* FOR IMAGES*/
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
