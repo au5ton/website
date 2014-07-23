@@ -5,6 +5,6 @@ All the source code and resources behind the [ruthlessphysics.com](ruthlessphysi
 
 <h3>Utilizations</h3>
 <ul>
-<li></li>
+<li>[Trianglify.js](http://qrohlf.com/trianglify/)</li>
 <li></li>
 </ul>
