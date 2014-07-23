@@ -110,55 +110,56 @@ font-weight: normal;
 
 }
 
-p.common {
+.common {
     color:rgb(0,0,0);
 }
-p.center {
+.center {
     text-align: center;
     align-content: center;
 }
 
-p.header1 {
+.header1 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
     font-size:350%;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
-p.header2 {
+.header2 {
     font-family: "Roboto-Thin", Verdana, Tahoma;
     font-size:300%;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
-p.header3 {
+.header3 {
     font-family: "Roboto-Light", Verdana, Tahoma;
     font-size:250%;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
-p.header4 {
+.header4 {
     font-family: "Roboto-Light", Verdana, Tahoma;
     font-size:200%;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
-p.header5 {
+.header5 {
     font-family: "Roboto-Light", Verdana, Tahoma;
     font-size:150%;
 }
-p.content {
+.content {
     font-family: "Roboto-Light", Verdana, Tahoma;
     font-size:140%;
+    line-height: 125%;
 }
-p.time {
+.time {
     font-family: "Roboto-Light", Verdana, Tahoma;
     color: rgb(104, 166, 209);
 }
-p.small {
+.small {
     font-family: "Roboto-Light", Verdana, Tahoma;
     font-size:100%;
 }
-p.tiny {
+.tiny {
     font-family: "Roboto-Condensed", Verdana, Tahoma;
     font-size: 75%;
 }
-p.motd {
+.motd {
     font-family: "Roboto-CondensedItalic", Verdana, Tahoma;
     font-size: 140%;
     color: rgb(21,114,229);
@@ -170,11 +171,11 @@ p.motd {
     -ms-transform:rotate(-10deg); /* IE 9 */
     -webkit-transform:rotate(-10deg); /* Opera, Chrome, and Safari */
 }
-p.description {
+.description {
     font-family: "Roboto-LightItalic", Verdana, Tahoma;
     font-size:140%;
 }
-p.footer {
+.footer {
     font-family: "Roboto-BoldCondensed", Verdana, Tahoma;
     font-size:75%;
 }
