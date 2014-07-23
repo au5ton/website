@@ -18,6 +18,7 @@ m[10] = "Thank @qrohlf for the background!";
 m[11] = "Say hi to @zorcan1!";
 m[12] = "Say hi to @Jebs_Helper!";
 m[13] = "Say hi to @JavaFTW!";
+m[14] = "There's no place like 127.0.0.1!";
 
 
 function motd_apply()
