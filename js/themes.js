@@ -30,6 +30,7 @@ var shapes = 5;
 var spacing = 6;
 var special = 7;
 var text = 8;
+var animation = 9;
 
 var core = new Array(); //"Core" theme
 core[common] = "css/core/common.css";
@@ -41,6 +42,7 @@ core[shapes] = "css/core/shapes.css";
 core[spacing] = "css/core/spacing.css";
 core[special] = "css/core/special.css";
 core[text] = "css/core/text.css";
+core[animation] = "css/core/animation.css";
 
 var light = new Array(); //"Light" theme
 light[common] = "css/theme/light/common.css";
@@ -52,6 +54,7 @@ light[shapes] = core[shapes];
 light[spacing] = core[spacing];
 light[special] = core[special];
 light[text] = core[text];
+light[animation] = core[animation];
 
 var dark = new Array(); //"Dark" theme
 dark[common] = "css/theme/dark/common.css";
@@ -63,6 +66,7 @@ dark[shapes] = core[shapes];
 dark[spacing] = core[spacing];
 dark[special] = core[special];
 dark[text] = core[text];
+dark[animation] = core[animation];
 
 function themes_cookieupdate()
 {
@@ -133,6 +137,7 @@ function themes_reset()
     document.getElementById("css_spacing").href = core[spacing];
     document.getElementById("css_special").href = core[special];
     document.getElementById("css_text").href = core[text];
+    document.getElementById("css_animation").href = core[animation];
 }
 
 function themes_light()
@@ -146,6 +151,7 @@ function themes_light()
     document.getElementById("css_spacing").href = light[spacing];
     document.getElementById("css_special").href = light[special];
     document.getElementById("css_text").href = light[text];
+    document.getElementById("css_animation").href = core[animation];
 }
 
 function themes_dark()
@@ -159,4 +165,5 @@ function themes_dark()
     document.getElementById("css_spacing").href = dark[spacing];
     document.getElementById("css_special").href = dark[special];
     document.getElementById("css_text").href = dark[text];
+    document.getElementById("css_animation").href = core[animation];
 }
