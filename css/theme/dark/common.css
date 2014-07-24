@@ -1,0 +1,18 @@
+/*
+
+ruthlessphysics.com
+css-core
+common.css
+
+This website is open-source.
+http://github.com/macphage/ruthlessphysics/
+
+*/
+
+.common {
+    color: rgb(255,255,255);
+}
+
+.box {
+    background: rgba(10,10,10,0.9);
+}

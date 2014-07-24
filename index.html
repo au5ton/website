@@ -5,145 +5,158 @@
         <meta name="author" content="@MacPhage">
         <meta name="robots" content="index, follow, noimageindex, noarchive">
         <title>ruthlessphysics.com</title>
-        <link rel="stylesheet" type="text/css" href="css/robotolight.css" id="currentTheme" >
-        <link rel="stylesheet" type="text/css" href="css/octicons.css">
-        <script type="text/javascript" src="js/themes.js">
-        </script>
-        <script type="text/javascript" src="js/motd.js">
-            window.onload = motd_apply();
-        </script>
-        <script type="text/javascript" src="js/frames.js">
-        </script>
-        <script type="text/javascript" src="js/pictureshow.js">
-        </script>
+
+        <!-- RP CSS -->
+        <link rel="stylesheet" type="text/css" href="css/core/common.css" id="css_common">
+        <link rel="stylesheet" type="text/css" href="css/core/effects.css" id="css_effects">
+        <link rel="stylesheet" type="text/css" href="css/core/fonts.css" id="css_fonts">
+        <link rel="stylesheet" type="text/css" href="css/core/html.css" id="css_html">
+        <link rel="stylesheet" type="text/css" href="css/core/position.css" id="css_position">
+        <link rel="stylesheet" type="text/css" href="css/core/shapes.css" id="css_shapes">
+        <link rel="stylesheet" type="text/css" href="css/core/spacing.css" id="css_spacing">
+        <link rel="stylesheet" type="text/css" href="css/core/special.css" id="css_special">
+        <link rel="stylesheet" type="text/css" href="css/core/text.css" id="css_text">
+        <!-- RP CSS -->
+
+        <!-- THIRD PARTY CSS -->
+        <link rel="stylesheet" type="text/css" href="css/thirdparty/octicons.css">
+        <!-- THIRD PARTY CSS -->
+
+        <!-- RP JAVASCRIPT -->
+        <script type="text/javascript" src="js/entrypoint.js"></script>
+        <script type="text/javascript" src="js/themes.js"></script>
+        <script type="text/javascript" src="js/motd.js"></script>
+        <script type="text/javascript" src="js/pictureshow.js"></script>
+        <!-- RP JAVASCRIPT -->
+
+        <!-- THIRD PARTY JAVASCRIPT -->
         <script type="text/javascript" src="http://qrohlf.com/trianglify/trianglify.js"></script>
+        <!-- THIRD PARTY JAVASCRIPT -->
+
+        <!-- RP ICONS -->
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
+        <!-- RP ICONS -->
 
     </head>
-    <body onload="motd_apply()">
+    <body onload="main()">
 
         <div class="container">
             <div class="box">
-                <header>
-                    <button id="swapper" onClick="switchTheme()">Switch to Dark mode</button><br>
-                    <p id="swapperSub" class="common tiny">See which one is easier on your eyes. :) There may be delays between switches.</p><br><br>
-                    <h1>
-                        <p class="common header1">ruthlessphysics</p>
-                        <p id="motd" class="common motd">Enable JavaScript!</p>
-                    </h1>
-                </header><br><br>
-                
+                <p class="common tiny">Change theme:</p>
+                <form action="" method="post">
+                    <select id="swapper" onchange="themes_update(this.selectedIndex)">
+                        <option>Light</option>
+                        <option>Dark</option>
+                    </select>
+                </form>
                 <br><br>
-                <h2><p class="common header4">
-                    about
-                    </p></h2>
-                
+                <h1 class="common">ruthlessphysics</h1>
+                <p class="common motd" id="motd" >Enable JavaScript!</p>
+                <br><br><br><br>               
+                <h3 class="common">about</h3>
+
                 <blockquote>
-                    
-                    
-                    
-                    <p id="bio" class="common content">
+                    <c id="bio" class="common medium">
 
                         <!-- REAL CONTENT -->
 
                         Welcome to ruthlessphysics.com.<br>
                         I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/MacPhage/ruthlessphysics">entire website is open-source</a>.<br><br>
                         My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/"><span class="octicon octicon-logo-github"></span></a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br><br>
-                        
+
                         Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There's a tool out there called <a href="http://winebottler.kronenberg.org/">WineBottler</a> that works great for some of my Windows programs.<br><br>
-                        
-                        My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look it <a href="https://github.com/MacPhage">my code</a>! There's definitely nothing suspicious.
+
+                        My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">my code</a>! There's definitely nothing suspicious.
 
                         <br><br>
-                        <a href="http://twitter.com/macphage"><span class="social socialico" style="font-size: 67px; position: relative; bottom: 5px;" >l</span></a>
-                        <a href="https://github.com/MacPhage"><span class="social mega-octicon octicon-mark-github ico_git" style="font-size:35px;"></span></a>
-                        <a href="https://github.com/MacPhage/ruthlessphysics"><span class="social mega-octicon octicon-file-code ico_git"></span>
-                            </a>
-
-
-
-                    </p>
+                        <a href="http://twitter.com/macphage">
+                            <span class="social socialico socialico_a">l</span>
+                        </a>
+                        <a href="https://github.com/MacPhage">
+                            <span class="social mega-octicon octicon-mark-github octicon_a"></span>
+                        </a>
+                        <a href="https://github.com/MacPhage/ruthlessphysics">
+                            <span class="social mega-octicon octicon-file-code octicon_a"></span>
+                        </a>
+                    </c>
                 </blockquote>
-<!--
-                <p class="common header4">Choose a frame</p>
-                    <div id="frameselect" class="frameselect">
-                        <button class="frameoption" onclick="changeFrame('projects',970,3200)">Projects</button>
-                        <button class="frameoption" onclick="changeFrame('credit',-1,500)">Credit</button>
-                        <button class="frameoption" onclick="changeFrame('picker',-1,300)">Close current frame</button>
-                    </div>
+                <!--
+<p class="common header4">Choose a frame</p>
+<div id="frameselect" class="frameselect">
+<button class="frameoption" onclick="changeFrame('projects',970,3200)">Projects</button>
+<button class="frameoption" onclick="changeFrame('credit',-1,500)">Credit</button>
+<button class="frameoption" onclick="changeFrame('picker',-1,300)">Close current frame</button>
+</div>
 -->
 
                 <div>
-<!--
-                    <iframe id="mainframe" scrolling="no" frameBorder="0" title="mainframe" width=970 height=300 src="picker.html">
-                    </iframe>
+                    <!--
+<iframe id="mainframe" scrolling="no" frameBorder="0" title="mainframe" width=970 height=300 src="picker.html">
+</iframe>
 -->
-                    
-                    <h2>
-                <p class="common header3">projects</p>
-            </h2>
-            <img id="obskewerscreenshot" onclick="obskewerswap()" class="icon shadowed imageleft" src="img/icon_obskewer.png">
-            <p id="obskewertag" class="common tagleft">Click to see a screenshot!</p>
-            <p class="common header3 textright">Obskewer</p>
-            <p class="common description textright">Obskewer is a light-weight Java application for encoding and decoding text using common ciphers.<br><br>
-                <a href="https://github.com/MacPhage/Obskewer/releases"><span class="opsys socialico ico_soc">@</span></a>
-                <a href="https://github.com/MacPhage/Obskewer/releases"><span class="opsys socialico ico_soc">0</span></a>
-                <a href="https://github.com/MacPhage/Obskewer"><span class="opsys mega-octicon octicon-mark-github ico_git"></span></a>
-                <!-- PROJECT TEMPLATE BEGINNING -->
-            <p>
-                <br>
-                <img id="pcalcscreenshot" onclick="pcalcswap()" class="common icon shadowed imageright" src="img/icon_pcalculator.png">
-                <p id="pcalctag" class="common tagright">Click to see a screenshot!</p>
-            <p class="common header3 textleft">pCalculator</p>
-            <p class="common description textleft">pCalculator is a light-weight Java application for convenient calculation.
-                It is designed to be as fully functional and do-all-the-work-for-you as possible.<br><br>
-                <a href="https://github.com/MacPhage/pCalculator/releases"><span class="opsys socialico ico_soc">@</span></a>
-                <a href="https://github.com/MacPhage/pCalculator/releases"><span class="opsys socialico ico_soc">0</span></a>
-                <a href="https://github.com/MacPhage/pCalculator"><span class="opsys mega-octicon octicon-mark-github ico_git"></span></a>
 
-            </p>
-            <!-- PROJECT TEMPLATE END -->
+                    <h3 class="common">projects</h3>
+                    <img id="obskewerscreenshot" onclick="obskewerswap()" class="icon shadowed imageleft" src="img/icon_obskewer.png">
+                    <p id="obskewertag" class="common tagleft">Click to see a screenshot!</p>
+                    <h4 class="common textright">Obskewer</h4>
+                    <p class="common description textright">Obskewer is a light-weight Java application for encoding and decoding text using common ciphers.<br><br>
+                        <a href="https://github.com/MacPhage/Obskewer/releases"><span class="opsys socialico socialico_p">@</span></a>
+                        <a href="https://github.com/MacPhage/Obskewer/releases"><span class="opsys socialico socialico_p">0</span></a>
+                        <a href="https://github.com/MacPhage/Obskewer"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
+                        <!-- PROJECT TEMPLATE BEGINNING -->
+                    <p>
+                        <br>
+                        <img id="pcalcscreenshot" onclick="pcalcswap()" class="common icon shadowed imageright" src="img/icon_pcalculator.png">
+                    <p id="pcalctag" class="common tagright">Click to see a screenshot!</p>
+                    <h4 class="common textleft">pCalculator</h4>
+                    <p class="common description textleft">pCalculator is a light-weight Java application for convenient calculation.
+                        It is designed to be as fully functional and do-all-the-work-for-you as possible.<br><br>
+                        <a href="https://github.com/MacPhage/pCalculator/releases"><span class="opsys socialico socialico_p">@</span></a>
+                        <a href="https://github.com/MacPhage/pCalculator/releases"><span class="opsys socialico socialico_p">0</span></a>
+                        <a href="https://github.com/MacPhage/pCalculator"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
 
-            <p>
-                <br>
-                <img id="pdrawscreenshot" class="icon shadowed imageleft" src="img/pdrawlogo.png" onclick="pdrawswap()" width="372" height="372">
-            <p id="pdrawtag" class="common tagleft">Click to see a screenshot!</p>
-            <p class="common header3 textright">pDraw</p>
-            <p class="common description textright">pDraw is a WinBGIm (graphics.h) C++ painting application used to create digitally-primitive drawings using your mouse and keyboard.<br><br>
-                <a href="http://winebottler.kronenberg.org/"><span class="opsys socialico ico_soc">@</span></a>
-                <a href="https://github.com/MacPhage/pDraw/releases"><span class="opsys socialico ico_soc">0</span></a>
-                <a href="https://github.com/MacPhage/pDraw"><span class="opsys mega-octicon octicon-mark-github ico_git"></span></a>
+                    </p>
+                    <!-- PROJECT TEMPLATE END -->
 
-            </p>
+                    <p>
+                        <br>
+                        <img id="pdrawscreenshot" class="icon shadowed imageleft" src="img/pdrawlogo.png" onclick="pdrawswap()" width="372" height="372">
+                    <p id="pdrawtag" class="common tagleft">Click to see a screenshot!</p>
+                    <h4 class="common textright">pDraw</h4>
+                    <p class="common description textright">pDraw is a WinBGIm (graphics.h) C++ painting application used to create digitally-primitive drawings using your mouse and keyboard.<br><br>
+                        <a href="http://winebottler.kronenberg.org/"><span class="opsys socialico socialico_p">@</span></a>
+                        <a href="https://github.com/MacPhage/pDraw/releases"><span class="opsys socialico socialico_p">0</span></a>
+                        <a href="https://github.com/MacPhage/pDraw"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
+
+                    </p>
 
 
-            <p>
-                <br>
-                <img id="ptictacscreenshot" onclick="ptictacswap()" class="icon shadowed imageright" src="img/ptictactoe.png" width="372" height="372">
-                <p id="ptictactag" class="common tagright">Click to see a screenshot!</p>
-            <p class="common header3 textleft">pTicTacToe</p>
-            <p class="common description textleft">pTicTacToe is a WinBGIm (graphics.h) C++ program that allows two users to play a game of 3-by-3 TicTacToe against each other.<br><br>
-                <a href="https://github.com/MacPhage/pTicTacToe/releases"><span class="opsys socialico ico_soc">@</span></a>
-                <a href="https://github.com/MacPhage/pTicTacToe/releases"><span class="opsys socialico ico_soc">0</span></a>
-                <a href="https://github.com/MacPhage/pTicTacToe"><span class="opsys mega-octicon octicon-mark-github ico_git"></span></a>
+                    <p>
+                        <br>
+                        <img id="ptictacscreenshot" onclick="ptictacswap()" class="icon shadowed imageright" src="img/ptictactoe.png" width="372" height="372">
+                    <p id="ptictactag" class="common tagright">Click to see a screenshot!</p>
+                    <h4 class="common textleft">pTicTacToe</h4>
+                    <p class="common description textleft">pTicTacToe is a Java LWJGL program that allows two users to play a game of 3-by-3 TicTacToe against each other.<br><br>
+                        <a href="https://github.com/MacPhage/pTicTacToe/releases"><span class="opsys socialico socialico_p">@</span></a>
+                        <a href="https://github.com/MacPhage/pTicTacToe/releases"><span class="opsys socialico socialico_p">0</span></a>
+                        <a href="https://github.com/MacPhage/pTicTacToe"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
 
-            </p>
+                    </p>
 
-            <script type="text/javascript" src="js/pictureshow.js">
-                //defaults();
-            </script>
+                    <script type="text/javascript" src="js/pictureshow.js">
+                        //defaults();
+                    </script>
                 </div>
                 <br><br>
                 <!-- PREFOOTER -->
-                
+
                 <!-- FOOTER -->
                 <footer>
                     <p class="common footer"> 
-                        This site runs best on Mac OS X.<br><br>
-                        <a href="credit.html">Credits</a><br>
-                        Website coded by Austin Jackson &copy; 2014<br>
+                        <a href="credit.html">Attributions</a><br>
+                        Website coded by Austin Jackson and <a href="">GitHub contributors</a> &copy; 2014<br>
                         Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
                         Contact: <a href="http://twitter.com/MacPhage">@MacPhage</a><br>
                     </p>
@@ -212,16 +225,16 @@
             }
             redraw();
         </script>
-<!--
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <!--
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-50814720-1', 'ruthlessphysics.com');
-            ga('send', 'pageview');
-        </script>
+ga('create', 'UA-50814720-1', 'ruthlessphysics.com');
+ga('send', 'pageview');
+</script>
 -->
     </body>
 </html>

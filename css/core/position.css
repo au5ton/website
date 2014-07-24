@@ -1,0 +1,93 @@
+/*
+
+ruthlessphysics.com
+css-core
+position.css
+
+This website is open-source.
+http://github.com/macphage/ruthlessphysics/
+
+*/
+
+.motd {
+/*
+    position: absolute;
+    top: 360px;
+    right: 10%;
+*/
+    position: relative;
+    bottom: 90px;
+    left: 270px;
+}
+
+.socialico_a {
+    position: relative;
+    bottom: 5px;
+}
+
+.socialico_p {
+}
+
+.octicon_a {
+    position: relative;
+    bottom: 13px;
+}
+
+.octicon_p {
+    position: relative;
+    bottom: 11px;
+}
+
+.imageleft {
+    position: relative;
+    right: 220px;
+}
+
+.imageright {
+    position: relative;
+    left: 220px;
+}
+
+.textleft {
+    position: relative;
+    top: -380px;
+    right: -40px;
+    width: 400px
+}
+
+.textright {
+    position: relative;
+    top: -380px;
+    left: 480px;
+    width: 400px
+}
+
+.tagleft {
+    font-family: "Roboto-LightItalic", Verdana, Tahoma;
+    font-size:140%;
+    position: relative;
+    top: -20px;
+    right: -60px;
+    width: 400px
+}
+
+.tagright {
+    font-family: "Roboto-LightItalic", Verdana, Tahoma;
+    font-size:140%;
+    position: relative;
+    top: -15px;
+    left: 510px;
+    width: 400px
+}
+
+.left {
+    position: relative;
+    right: 25px;
+    width: 400px
+}
+
+.right {
+    position: relative;
+    left: 390px;
+    width: 400px
+}
