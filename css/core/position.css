@@ -1,0 +1,69 @@
+.motd_position {
+    position: absolute;
+    top: 360px;
+    right: 10%;
+}
+
+.socialico_position {
+    font-size: 75px;
+}
+
+.octicon_position {
+    font-size: 50px;
+    position: relative;
+    bottom: 13px;
+}
+
+.imageleft {
+    position: relative;
+    right: 220px;
+}
+
+.imageright {
+    position: relative;
+    left: 220px;
+}
+
+.textleft {
+    position: relative;
+    top: -380px;
+    right: -40px;
+    width: 400px
+}
+
+.textright {
+    position: relative;
+    top: -380px;
+    left: 480px;
+    width: 400px
+}
+
+.tagleft {
+    font-family: "Roboto-LightItalic", Verdana, Tahoma;
+    font-size:140%;
+    position: relative;
+    top: -20px;
+    right: -60px;
+    width: 400px
+}
+
+.tagright {
+    font-family: "Roboto-LightItalic", Verdana, Tahoma;
+    font-size:140%;
+    position: relative;
+    top: -15px;
+    left: 510px;
+    width: 400px
+}
+
+.left {
+    position: relative;
+    right: 25px;
+    width: 400px
+}
+
+.right {
+    position: relative;
+    left: 390px;
+    width: 400px
+}

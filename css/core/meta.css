@@ -1,0 +1,53 @@
+/*
+
+Used only for testing.html, do not modify, just ignore.
+
+*/
+.meta_margin {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.meta {
+    font-family: Courier;
+    text-align: left;
+    padding-bottom: 0px;
+}
+.meta_head {
+    font-family: Courier;
+    text-align: left;
+    font-size: 50px;
+    padding-bottom: 0px;
+}
+.meta_sub {
+    font-family: Courier;
+    text-align: left;
+    font-size: 40px;
+    padding-bottom: 0px;
+}
+.meta_caption {
+    font-family: Courier;
+    text-align: left;
+    font-size: 24px;
+    padding-bottom: 0px;
+}
+.meta_paragraph {
+    font-family: Courier;
+    text-align: left;
+    font-size: 16px;
+    padding-bottom: 0px;
+}
+.meta_teal {
+    font-weight: bold;
+    color: rgb(150, 200, 200);
+    background-color: rgb(100, 100, 100);
+}
+.meta_container {
+    display: block;
+    background: rgb(150, 200, 200);
+    padding: 20px;
+    border-radius: 3px;
+    margin: 15px;
+    margin-right: 500px;
+    margin-left: 0px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
