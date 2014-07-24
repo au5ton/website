@@ -4,6 +4,9 @@
 	Twitter: @MacPhage
 	From: Houston, Texas
 
+	Developer: FirstWorldAnarchy
+	Twitter: @JavaFTW
+
 /* THANKS */
 
 	Trianglify.js: Quinn Rohlf
@@ -12,9 +15,12 @@
 
 	Roboto (TypeFace): Christian Robertson
 	Google+: https://plus.google.com/110879635926653430880/about
-	Employed at: Google		
+	Employed at: Google	
+
+	Socialico: Jelio Dimitrov
+	Website: https://www.behance.net/arsek
 
 /* SITE */
 	Language: English
 	Doctype: HTML5
-	IDE: Adobe Brackets, Git, FileZilla, Photoshop
+	IDE: Adobe Brackets, GitHub, FileZilla, Photoshop
