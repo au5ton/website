@@ -10,7 +10,7 @@ m[2] = "Triangles!";
 m[3] = "Absolutely no WebGL!";
 m[4] = "<button onclick=alert(\"I_like_buttons._c:\")>Button featured!</button>";
 m[5] = "Also checkout Srchub.org! They're awesome!";
-m[6] = "Now on <span class=\"mega-octicon octicon-logo-github\" style=\"font-size: 40px;\"></span>!";
+m[6] = "Now on GitHub!";
 m[7] = "Uses Octocons!";
 m[8] = "Uses Socialico!";
 m[9] = "Say hi to teen programmers!";

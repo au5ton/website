@@ -73,6 +73,17 @@ http://github.com/macphage/ruthlessphysics/
     font-family: "Roboto-ThinItalic";
     src: url(../../font/Roboto-ThinItalic.ttf) format("truetype");
 }
+/* 
+
+SOCIALICO FONT SIZING
+
+inputsize:actualsize
+1:0.8
+
+if you want actualsize with your input, multiply your input by 1.25.
+then, your old input will be the actual size.
+
+*/
 @font-face {
     font-family: "Socialico";
     src: url(../../font/Socialico.ttf) format("truetype");

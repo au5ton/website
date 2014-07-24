@@ -25,6 +25,10 @@ http://github.com/macphage/ruthlessphysics/
     font-size:140%;
     line-height: 125%;
 }
+.medium {
+    font-size:120%;
+    line-height: 125%;
+}
 .small {
     font-size: 85%;
 }
@@ -50,7 +54,7 @@ http://github.com/macphage/ruthlessphysics/
     font-weight: normal!important;
     font-family: "Roboto-Light"!important, Verdana!important, Tahoma!important;
 }
-.motd_text {
+.motd {
     font-family: "Roboto-CondensedItalic", Verdana, Tahoma;
     font-size: 140%;
     color: rgb(21,114,229);

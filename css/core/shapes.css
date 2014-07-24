@@ -1,3 +1,14 @@
+/*
+
+ruthlessphysics.com
+css-core
+shapes.css
+
+This website is open-source.
+http://github.com/macphage/ruthlessphysics/
+
+*/
+
 .container {
     text-align: center;
     align-self: center;
@@ -11,9 +22,22 @@
     text-align: center;
     align-self: center;
     display: inline-block;
-    background: rgba(255, 255, 255, 0.9); 
     padding: 20px;
     border-radius: 3px;
     margin: 0 auto;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.octicon_a {
+    font-size: 50px!important;
+}
+.octicon_p {
+    font-size: 47px!important;
+}
+
+.socialico_a {
+    font-size: 69px!important;
+}
+.socialico_p {
+    font-size: 69px!important;
 }
