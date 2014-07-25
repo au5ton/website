@@ -11,7 +11,7 @@ http://github.com/macphage/ruthlessphysics/
 
 .container {
     text-align: center;
-    align-self: center;
+    align-self: center!important;
     margin: 0 auto;
     width: 980px;
     color: #2d3a3f;
@@ -20,7 +20,7 @@ http://github.com/macphage/ruthlessphysics/
 
 .box {
     text-align: center;
-    align-self: center;
+    align-self: center!important; /*Maybe this will fix it, I'm not much of a CSS person*/
     display: inline-block;
     padding: 20px;
     border-radius: 3px;
