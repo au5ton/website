@@ -1,0 +1,21 @@
+{
+  "projects":
+  {
+    "pcalculator":
+    {
+      "current-version":"v1.1.0",
+      "project-url":"https://github.com/MacPhage/pCalculator"
+    },
+    "obskewer":
+    {
+      "current-version":"v1.2.2",
+      "project-url":"https://github.com/MacPhage/Obskewer/releases"
+    },
+    "ptictactoe":
+    {
+      "current-version":"v1.0.0-beta1",
+      "project-url":"https://github.com/MacPhage/pTicTacToe/releases"
+    }
+  },
+  "comment":"This probably wont be used, but we will see."
+}
