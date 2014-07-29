@@ -1,1 +1,0 @@
-open -a Terminal ~/Documents/GitHub/ruthlessphysics/push.sh

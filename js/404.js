@@ -106,7 +106,6 @@ l.push("go to index.html");
 
 function applyErrorMessage()
 {
-    
     document.getElementById("error").innerHTML = getErrorMessage();
 }
 
@@ -119,7 +118,6 @@ function getErrorMessage()
 
 function applyLinkMessage()
 {
-    
     document.getElementById("link").innerHTML = getLinkMessage();
 }
 
