@@ -30,6 +30,7 @@ body {
     margin-left: 0px;
     margin-right: 0px;
     /* WORLDWIDE FONT */
+    font-size: 20px;
 }
 
 p { 
@@ -105,9 +106,31 @@ bc {
     font-family: "Roboto-BoldCondensed", Verdana, Tahoma;
 }
 
+regular {
+    font-family: "Roboto-Regular", Verdana, Tahoma;
+}
+
+.regularitalic {
+    font-family: "Roboto-RegularItalic", Verdana, Tahoma;
+}
+
 big {
     font-size: 200%;
 }
+medium {
+    font-size: 150%;
+}
+sorta {
+    font-size: 125%;
+}
 little {
     font-size: 50%;
+}
+
+hr {
+    width: 50%;
+}
+
+capsule {
+
 }
