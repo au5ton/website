@@ -9,6 +9,10 @@ http://github.com/macphage/ruthlessphysics/
 
 */
 
+.mirror {
+    font-family: "Roboto-BoldCondensed", Verdana, Tahoma;
+}
+
 .align_left {
      text-align: left;
 }

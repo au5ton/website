@@ -11,7 +11,7 @@ http://github.com/macphage/ruthlessphysics/
 
 .container {
     text-align: center;
-    align-self: center!important;
+    align-self: center;
     margin: 0 auto;
     width: 980px;
     color: #2d3a3f;
@@ -20,12 +20,33 @@ http://github.com/macphage/ruthlessphysics/
 
 .box {
     text-align: center;
-    align-self: center!important; /*Maybe this will fix it, I'm not much of a CSS person*/
+    align-self: center;
     display: inline-block;
     padding: 20px;
     border-radius: 3px;
     margin: 0 auto;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.topcontainer {
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+    width: 300px;
+    color: #2d3a3f;
+    padding-top: 0px;
+}
+
+.indented {
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+    width: 600px;
+    color: #2d3a3f;
+/*
+    padding-left: 200px;
+    padding-right: 200px;
+*/
 }
 
 .octicon_a {

@@ -36,8 +36,13 @@ p {
     font-family: "Roboto-Light", Verdana, Tahoma;
 }
 
-c { 
+c {
     font-family: "Roboto-Light", Verdana, Tahoma;
+}
+
+li, ul { 
+    font-family: "Roboto-Light", Verdana, Tahoma;
+    text-align: left;
 }
 
 h1 {
@@ -95,4 +100,14 @@ i {
 
 b {
     font-family: "Roboto-Bold", Verdana, Tahoma;
+}
+bc {
+    font-family: "Roboto-BoldCondensed", Verdana, Tahoma;
+}
+
+big {
+    font-size: 200%;
+}
+little {
+    font-size: 50%;
 }
