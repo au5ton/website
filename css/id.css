@@ -19,21 +19,7 @@
     top: -70px;
 }
 
-@media all and (max-device-width: 720px){
-    #MainTitle {
-    font-family: "HelveticaNeue-Thin";
-    font-size: 350%;
-    padding-top: 100px;
-    word-wrap: break-word;
-    }
-}
 
-@media all and (max-device-width: 720px){
-    .fixthisplease {
-    position: relative;
-    top: -30px;
-    }
-}
 
 #AboutTitle {
     font-family: "Roboto-Light";
