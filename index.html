@@ -1,37 +1,43 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
         <meta name="description" content="Austin Jackson's code portfolio">
         <meta name="author" content="@MacPhage">
         <meta name="robots" content="index, follow, noimageindex, noarchive">
         <title>ruthlessphysics.com</title>
 
         <!-- RP CSS -->
-        <link rel="stylesheet" type="text/css" href="css/core/common.css" id="css_common">
-        <link rel="stylesheet" type="text/css" href="css/core/effects.css" id="css_effects">
-        <link rel="stylesheet" type="text/css" href="css/core/fonts.css" id="css_fonts">
-        <link rel="stylesheet" type="text/css" href="css/core/html.css" id="css_html">
-        <link rel="stylesheet" type="text/css" href="css/core/position.css" id="css_position">
-        <link rel="stylesheet" type="text/css" href="css/core/shapes.css" id="css_shapes">
-        <link rel="stylesheet" type="text/css" href="css/core/spacing.css" id="css_spacing">
-        <link rel="stylesheet" type="text/css" href="css/core/special.css" id="css_special">
-        <link rel="stylesheet" type="text/css" href="css/core/text.css" id="css_text">
-        <link rel="stylesheet" type="text/css" href="css/core/animation.css" id="css_animation">
+        <link rel="stylesheet" type="text/css" href="css/common.css" id="css_common">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css" id="css_fonts">
+        <link rel="stylesheet" type="text/css" href="css/id.css" id="css_id">
+        <link rel="stylesheet" type="text/css" href="css/colors.css" id="css_colors">
+        <link rel="stylesheet" type="text/css" href="css/animation.css" id="css_colors">
+        <link rel="stylesheet" type="text/css" href="css/shapes.css" id="css_colors">
+
+
         <!-- RP CSS -->
 
         <!-- THIRD PARTY CSS -->
         <link rel="stylesheet" type="text/css" href="css/thirdparty/octicons.css">
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <!-- THIRD PARTY CSS -->
 
         <!-- RP JAVASCRIPT -->
+<!--
         <script type="text/javascript" src="js/entrypoint.js"></script>
         <script type="text/javascript" src="js/themes.js"></script>
         <script type="text/javascript" src="js/motd.js"></script>
         <script type="text/javascript" src="js/pictureshow.js"></script>
+-->
         <!-- RP JAVASCRIPT -->
 
         <!-- THIRD PARTY JAVASCRIPT -->
         <script type="text/javascript" src="http://qrohlf.com/trianglify/trianglify.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- THIRD PARTY JAVASCRIPT -->
 
         <!-- RP ICONS -->
@@ -41,135 +47,46 @@
         <!-- RP ICONS -->
 
     </head>
-    <body onload="main()">
-
-        <div class="container">
-            <div class="box">
-                <div class="topcontainer">
-                    <p class="common tiny">Change theme:</p>
-                    <form action="" method="post">
-                        <select id="swapper" onchange="themes_update(this.selectedIndex)">
-                            <option>Light</option>
-                            <option>Dark</option>
-                        </select>
-                    </form>
-                </div>
-
+    <body onload="">
+        
+        <div id="MainContentContainer" class="container">
+            <div id="MainContentBox" class="box">
+                
+                <h1 id="MainTitle" class="text-center">
+                    ruthlessphysics<br>
+                    <small id="MainSubtitle">austin jackson's<br><span class="fixthisplease">code portfolio</span></small>
+                </h1>
+                
                 <br><br>
-                <h1 class="common">ruthlessphysics</h1>
-                <p class="common motd" id="motd" >Enable JavaScript!</p>
-                <br><br><br><br>               
-                <h3 class="common">about</h3>
+                
+                <h1 id="AboutTitle" class="text-center">about</h1>
+                <p id="AboutBio" class="text-center">
+                    Welcome to ruthlessphysics.com.<br>
+I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this entire website is open-source.<br><br>
 
-                <blockquote>
-                    <c id="bio" class="common medium">
+My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on [GitHub]. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br><br>
 
-                        <!-- REAL CONTENT -->
+Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to Java, that's very possible. However, some of my software may require emulation. There's a tool out there called WineBottler that works great for some of my Windows programs.<br><br>
 
-                        Welcome to ruthlessphysics.com.<br>
-                        I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/MacPhage/ruthlessphysics">entire website is open-source</a>.<br><br>
-                        My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/"><span class="octicon octicon-logo-github"></span></a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br><br>
-
-                        Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There's a tool out there called <a href="http://winebottler.kronenberg.org/">WineBottler</a> that works great for some of my Windows programs.<br><br>
-
-                        My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">my code</a>! There's definitely nothing suspicious.
-
-                        <br><br>
-                        <a href="http://twitter.com/macphage">
-                            <span class="social socialico socialico_a">l</span>
-                        </a>
-                        <a href="https://github.com/MacPhage">
-                            <span class="social mega-octicon octicon-mark-github octicon_a"></span>
-                        </a>
-                        <a href="https://github.com/MacPhage/ruthlessphysics">
-                            <span class="social mega-octicon octicon-file-code octicon_a"></span>
-                        </a>
-                    </c>
-                </blockquote>
-                <!--
-<p class="common header4">Choose a frame</p>
-<div id="frameselect" class="frameselect">
-<button class="frameoption" onclick="changeFrame('projects',970,3200)">Projects</button>
-<button class="frameoption" onclick="changeFrame('credit',-1,500)">Credit</button>
-<button class="frameoption" onclick="changeFrame('picker',-1,300)">Close current frame</button>
-</div>
--->
-
-                <div>
-                    <!--
-<iframe id="mainframe" scrolling="no" frameBorder="0" title="mainframe" width=970 height=300 src="picker.html">
-</iframe>
--->
-
-                    <h3 class="common">projects</h3>
-                    <img id="obskewerscreenshot" onclick="obskewerswap()" class="icon shadowed imageleft" src="img/icon_obskewer.png">
-                    <p id="obskewertag" class="common tagleft">Click to see a screenshot!</p>
-                    <h4 class="common textright">Obskewer</h4>
-                    <p class="common description textright">Obskewer is a light-weight Java application for encoding and decoding text using common ciphers.<br><br>
-                        <a href="https://github.com/MacPhage/Obskewer/releases"><span class="opsys socialico socialico_p">@</span></a>
-                        <a href="https://github.com/MacPhage/Obskewer/releases"><span class="opsys socialico socialico_p">0</span></a>
-                        <a href="https://github.com/MacPhage/Obskewer"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
-                        <!-- PROJECT TEMPLATE BEGINNING -->
-                    <p>
-                        <br>
-                        <img id="pcalcscreenshot" onclick="pcalcswap()" class="common icon shadowed imageright" src="img/icon_pcalculator.png">
-                    <p id="pcalctag" class="common tagright">Click to see a screenshot!</p>
-                    <h4 class="common textleft">pCalculator</h4>
-                    <p class="common description textleft">pCalculator is a light-weight Java application for convenient calculation.
-                        It is designed to be as fully functional and do-all-the-work-for-you as possible.<br><br>
-                        <a href="https://github.com/MacPhage/pCalculator/releases"><span class="opsys socialico socialico_p">@</span></a>
-                        <a href="https://github.com/MacPhage/pCalculator/releases"><span class="opsys socialico socialico_p">0</span></a>
-                        <a href="https://github.com/MacPhage/pCalculator"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
-
-                    </p>
-                    <!-- PROJECT TEMPLATE END -->
-
-                    <p>
-                        <br>
-                        <img id="pdrawscreenshot" class="icon shadowed imageleft" src="img/pdrawlogo.png" onclick="pdrawswap()" width="372" height="372">
-                    <p id="pdrawtag" class="common tagleft">Click to see a screenshot!</p>
-                    <h4 class="common textright">pDraw</h4>
-                    <p class="common description textright">pDraw is a WinBGIm (graphics.h) C++ painting application used to create digitally-primitive drawings using your mouse and keyboard.<br><br>
-                        <a href="http://winebottler.kronenberg.org/"><span class="opsys socialico socialico_p">@</span></a>
-                        <a href="https://github.com/MacPhage/pDraw/releases"><span class="opsys socialico socialico_p">0</span></a>
-                        <a href="https://github.com/MacPhage/pDraw"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
-
-                    </p>
-
-
-                    <p>
-                        <br>
-                        <img id="ptictacscreenshot" onclick="ptictacswap()" class="icon shadowed imageright" src="img/ptictactoe.png" width="372" height="372">
-                    <p id="ptictactag" class="common tagright">Click to see a screenshot!</p>
-                    <h4 class="common textleft">pTicTacToe</h4>
-                    <p class="common description textleft">pTicTacToe is a Java LWJGL program that allows two users to play a game of 3-by-3 TicTacToe against each other.<br><br>
-                        <a href="https://github.com/MacPhage/pTicTacToe/releases"><span class="opsys socialico socialico_p">@</span></a>
-                        <a href="https://github.com/MacPhage/pTicTacToe/releases"><span class="opsys socialico socialico_p">0</span></a>
-                        <a href="https://github.com/MacPhage/pTicTacToe"><span class="opsys mega-octicon octicon-mark-github octicon_p"></span></a>
-
-                    </p>
-
-                    <script type="text/javascript" src="js/pictureshow.js">
-                        //defaults();
-                    </script>
-                </div>
-                <br><br>
-                <!-- PREFOOTER -->
-
-                <!-- FOOTER -->
-                <footer>
-                    <p class="common footer"> 
-                        <big><a href="mirrors.html">This website is being mirrored</a></big><br><br>
-                        
+My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at my code! There's definitely nothing suspicious. 
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="container-fluid">
+                    <div id="EndFooter" class="text-center box">
                         <a href="credit.html">Attributions</a><br>
                         Website coded by Austin Jackson and <a href="">GitHub contributors</a> &copy; 2014<br>
                         Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
-                        Contact: <a href="http://twitter.com/MacPhage">@MacPhage</a><br>
-                    </p>
-
-                </footer>
+                    </div>
+                </div>
+                
             </div>
+            <div class="col-md-3"></div>
         </div>
+
 
         <!-- Background generation -->
         <!-- http://qrohlf.com/trianglify/ -->
@@ -242,5 +159,6 @@ ga('create', 'UA-50814720-1', 'ruthlessphysics.com');
 ga('send', 'pageview');
 </script>
 -->
+
     </body>
 </html>

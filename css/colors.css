@@ -1,0 +1,34 @@
+.color-primary-cont {
+    color: #428bca;
+}
+.color-primary-back {
+    background: #428bca;
+}
+
+.color-success-cont {
+    color: #5cb85c;
+}
+.color-success-back {
+    background: #5cb85c;
+}
+
+.color-info-cont {
+    color: #5bc0de;
+}
+.color-info-back {
+    background: #5bc0de;
+}
+
+.color-warning-cont {
+    color: #f0ad4e;
+}
+.color-warning-back {
+    background: #f0ad4e;
+}
+
+.color-danger-cont {
+    color: #d9534f;
+}
+.color-danger-back {
+    background: #d9534f;
+}

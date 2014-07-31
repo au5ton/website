@@ -1,0 +1,63 @@
+about
+
+Welcome to ruthlessphysics.com.
+I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this entire website is open-source.
+
+My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on [GitHub]. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) 
+
+Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to Java, that's very possible. However, some of my software may require emulation. There's a tool out there called WineBottler that works great for some of my Windows programs.
+
+My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at my code! There's definitely nothing suspicious. 
+
+
+projects
+
+Click to see a screenshot!
+
+Obskewer
+
+Obskewer is a light-weight Java application for encoding and decoding text using common ciphers.
+
+@ 0 
+
+
+
+
+Click to see a screenshot!
+
+pCalculator
+
+pCalculator is a light-weight Java application for convenient calculation. It is designed to be as fully functional and do-all-the-work-for-you as possible.
+
+@ 0 
+
+
+
+
+Click to see a screenshot!
+
+pDraw
+
+pDraw is a WinBGIm (graphics.h) C++ painting application used to create digitally-primitive drawings using your mouse and keyboard.
+
+@ 0 
+
+
+
+
+Click to see a screenshot!
+
+pTicTacToe
+
+pTicTacToe is a Java LWJGL program that allows two users to play a game of 3-by-3 TicTacToe against each other.
+
+@ 0 
+
+
+
+This website is being mirrored
+
+Attributions
+Website coded by Austin Jackson and GitHub contributors © 2014
+Webmaster: TheMacPhage@gmail.com
+Contact: @MacPhage

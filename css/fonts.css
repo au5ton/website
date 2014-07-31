@@ -1,0 +1,240 @@
+/*
+
+ruthlessphysics.com
+css-core
+fonts.css
+
+This website is open-source.
+http://github.com/macphage/ruthlessphysics/
+
+*/
+
+/* ROBOTO */
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(../font/Roboto-Thin.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(../font/Roboto-ThinItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../font/Roboto-Light.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../font/Roboto-LightItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../font/Roboto-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../font/Roboto-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../font/Roboto-Italic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../font/Roboto-BoldItalic.ttf) format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../font/Roboto-Medium.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(../font/Roboto-MediumItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto-Condensed";
+    src: url(../font/Roboto-Condensed.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Condensed";
+    src: url(../font/Roboto-CondensedItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto-Condensed";
+    src: url(../font/Roboto-BoldCondensed.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Condensed";
+    src: url(../font/Roboto-BoldCondensedItalic.ttf) format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto-Black";
+    src: url(../font/Roboto-Black.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Black";
+    src: url(../font/Roboto-BlackItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* HELVETICA NEUE */
+@font-face {
+    font-family: "HelveticaNeue-UltraLight";
+    src: url(../font/HelveticaNeueUltraLight.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HelveticaNeue-UltraLight";
+    src: url(../font/HelveticaNeueUltraLightItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "HelveticaNeue-Thin";
+    src: url(../font/HelveticaNeueThin.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HelveticaNeue-Thin";
+    src: url(../font/HelveticaNeueThinItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "HelveticaNeue-Light";
+    src: url(../font/HelveticaNeueLight.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HelveticaNeue-Light";
+    src: url(../font/HelveticaNeueLightItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url(../font/HelveticaNeue.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url(../font/HelveticaNeueItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url(../font/HelveticaNeueBold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url(../font/HelveticaNeueBoldItalic.ttf) format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "HelveticaNeue-Medium";
+    src: url(../font/HelveticaNeueMedium.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HelveticaNeue-Medium";
+    src: url(../font/HelveticaNeueMediumItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "HelveticaNeue-Condensed";
+    src: url(../font/HelveticaNeueCondensedBold.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "HelveticaNeue-Black";
+    src: url(../font/HelveticaNeueCondensedBlack.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* CONSOLAS */
+@font-face {
+    font-family: "Consolas";
+    src: url(../font/Consolas.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Consolas";
+    src: url(../font/ConsolasBold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Consolas";
+    src: url(../font/ConsolasItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}@font-face {
+    font-family: "Consolas";
+    src: url(../font/ConsolasBoldItalic.ttf) format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* 
+
+SOCIALICO FONT SIZING
+
+inputsize:actualsize
+1:0.8
+
+if you want actualsize with your input, multiply your input by 1.25.
+then, your old input will be the actual size.
+
+*/
+@font-face {
+    font-family: "Socialico";
+    src: url(../font/Socialico.ttf) format("truetype");
+}
+@font-face {
+    font-family: "SocialicoPlus";
+    src: url(../font/Socialico-Plus.ttf) format("truetype");
+}
