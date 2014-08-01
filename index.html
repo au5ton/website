@@ -1,216 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <meta name="description" content="Austin Jackson's code portfolio">
-        <meta name="author" content="@MacPhage">
-        <meta name="robots" content="index, follow, noimageindex, noarchive">
-        <title>ruthlessphysics.com</title>
+  <meta name="description" content="Austin Jackson's code portfolio">
+  <meta name="author" content="@MacPhage">
+  <meta name="robots" content="index, follow, noimageindex, noarchive">
+  <title>ruthlessphysics.com</title>
 
-        <!-- RP CSS -->
-        <link rel="stylesheet" type="text/css" href="css/main.min.css" id="css_main">
-        <!-- RP CSS -->
+  <!-- RP CSS -->
+  <link rel="stylesheet" type="text/css" href="css/main.min.css" id="css_main">
+  <!-- RP CSS -->
 
-        <!-- THIRD PARTY CSS -->
-        <link href="https://raw.githubusercontent.com/github/octicons/master/octicons/octicons.css" rel="stylesheet" type="text/css">
-        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,400italic|Roboto+Condensed:700" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
-        <!-- THIRD PARTY CSS -->
+  <!-- THIRD PARTY CSS -->
+  <link href="https://raw.githubusercontent.com/github/octicons/master/octicons/octicons.css" rel="stylesheet" type="text/css">
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,400italic|Roboto+Condensed:700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
+  <!-- THIRD PARTY CSS -->
 
-        <!-- RP JAVASCRIPT -->
-        <script type="text/javascript" src="js/main.min.js"></script>
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
-        <!-- RP JAVASCRIPT -->
+  <!-- RP JAVASCRIPT -->
+  <script type="text/javascript" src="js/main.min.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+  <!-- RP JAVASCRIPT -->
 
-        <!-- THIRD PARTY JAVASCRIPT -->
-        <script type="text/javascript" src="http://qrohlf.com/trianglify/trianglify.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <!-- THIRD PARTY JAVASCRIPT -->
+  <!-- THIRD PARTY JAVASCRIPT -->
+  <script type="text/javascript" src="http://qrohlf.com/trianglify/trianglify.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- THIRD PARTY JAVASCRIPT -->
 
-        <!-- RP ICONS -->
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
-        <!-- RP ICONS -->
+  <!-- RP ICONS -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
+  <!-- RP ICONS -->
 
-    </head>
-    <body onload="">
+</head>
+<body onload="">
 
-        <code id="resolution" style="float: right;"></code>
-        <code style="float: right;">Resolution: </code>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a id="NavbarBrand" class="navbar-brand">ruthlessphysics.com</a>
+      </div>
 
-        <div id="MainContentContainer" class="container-fluid">
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-10">
-                    <div id="MainContentBox">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a id="NavbarItem" href="#">Home</a></li>
+          <li><a id="NavbarItem" href="#">Projects</a></li>
+          <li><a id="NavbarItem" href="#">Learning</a></li>
+          <li class="dropdown">
+            <a id="NavbarItem" href="#" class="dropdown-toggle" data-toggle="dropdown">Follow me <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a id="NavbarItem" href="#">Social</a></li>
+              <li><a id="NavbarItem" href="#">Social</a></li>
+              <li><a id="NavbarItem" href="#">Social</a></li>
+              <li class="divider"></li>
+              <li><a id="NavbarItem" href="#">Different Social</a></li>
+            </ul>
+          </li>
+          <li><a id="NavbarItem" href="credit.html">Credit</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
 
-                        <h1 id="MainTitle" class="text-center">
-                            ruthlessphysics<br>
-                            <small id="MainSubtitle">austin jackson's<br><span class="fixthisplease">code portfolio</span></small>
-                        </h1>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
-                        <br><br>
+  <code id="resolution" style="float: right;"></code>
+  <code style="float: right;">Resolution: </code>
 
-                        <h1 id="AboutTitle" class="text-center">about</h1>
-                        <p id="AboutBio" class="text-center">
-                            Welcome to ruthlessphysics.com.<br>
-                            I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br><br>
+  <div id="MainContentContainer" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div id="MainContentBox">
 
-                            My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br><br>
+          <h1 id="MainTitle" class="text-center">
+            ruthlessphysics<br>
+            <small id="MainSubtitle">austin jackson's<br><span class="fixthisplease">code portfolio</span></small>
+          </h1>
 
-                            Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There are tools out there called <a href="http://www.winehq.org/">Wine</a> and <a href="http://winebottler.kronenberg.org/">WineBottler</a>, which work great for some of my Windows-only programs.<br><br>
+          <br><br>
 
-                            My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">the code</a>! There's definitely nothing suspicious.
-                        </p>
-                        <div id="SocialContainer" class="container">
-                            <row>
-                                <div class="col-sm-4"></div>
-                                <div class="col-sm-4 text-center">
-                                    <a href="http://twitter.com/macphage"><img id="MyTwitter" src="img/icon_twitter.png"></a>
-                                </div>
-                                <div class="col-sm-4"></div>
-                            </row>
-                        </div>
+          <h1 id="AboutTitle" class="text-center">about</h1>
+          <p id="AboutBio" class="text-center">
+            Welcome to ruthlessphysics.com.<br>
+            I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br><br>
 
-                    </div>
-                </div>
-                <div class="col-sm-1"></div>
-            </div>
+            My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br><br>
+
+            Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There are tools out there called <a href="http://www.winehq.org/">Wine</a> and <a href="http://winebottler.kronenberg.org/">WineBottler</a>, which work great for some of my Windows-only programs.<br><br>
+
+            My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">the code</a>! There's definitely nothing suspicious.
+          </p>
+          <div id="SocialContainer" class="container">
+            <row>
+              <div class="col-sm-4"></div>
+              <div class="col-sm-4 text-center">
+                <a href="http://twitter.com/macphage"><img id="MyTwitter" src="img/icon_twitter.png"></a>
+              </div>
+              <div class="col-sm-4"></div>
+            </row>
+          </div>
+
         </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
 
 
-        <footer>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6">
-                        <div class="container-fluid">
-                            <div id="EndFooter" class="text-center box">
-                                <a href="credit.html">Attributions</a><br>
-                                Website coded by Austin Jackson and <a href="">GitHub contributors</a> &copy; 2014<br>
-                                Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="container-fluid">
+            <div id="EndFooter" class="text-center box">
+              <a href="credit.html">Attributions</a><br>
+              Website coded by Austin Jackson and <a href="">GitHub contributors</a> &copy; 2014<br>
+              Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
             </div>
-        </footer>
+          </div>
+
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </footer>
 
 
-        <!-- Background generation -->
-        <!-- http://qrohlf.com/trianglify/ -->
+  <!-- Background generation -->
+  <!-- http://qrohlf.com/trianglify/ -->
 
-        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-        <script type="text/javascript" src="http://qrohlf.com/trianglify/trianglify.min.js"></script>
-        <script type="text/javascript">
-            var t = new Trianglify(
-                {
-                    bleed: 0,
-                    noiseIntensity: 0
-                }
-            );
-            var firstWidth = document.body.clientWidth;
-            var currentWidth = document.body.clientWidth;
-            function redraw()
-            {
-                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
-                var pattern = t.generate(document.body.clientWidth, height());
-                document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
-            }
-            function height() {
-                return Math.max(
-                    document.body.scrollHeight, document.documentElement.scrollHeight,
-                    document.body.offsetHeight, document.documentElement.offsetHeight,
-                    document.body.clientHeight, document.documentElement.clientHeight
-                );
-            }
-            window.onresize = function() {
-                var newWidth = document.body.clientWidth;
-                var difference = Math.abs(newWidth - currentWidth);
-                var differenceFirst = Math.abs(newWidth - firstWidth);
-                if(difference > 100)
-                {
-                    console.log("Enough of a window change has been made.");
-                    console.log("Difference from last change: "+difference+", original: "+differenceFirst);
-                    redraw();
-                    currentWidth = newWidth;
-                }
-                showResolution();
-            };
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="http://qrohlf.com/trianglify/trianglify.min.js"></script>
+  <script type="text/javascript">
+  var t = new Trianglify(
+    {
+      bleed: 0,
+      noiseIntensity: 0
+    }
+  );
+  var firstWidth = document.body.clientWidth;
+  var currentWidth = document.body.clientWidth;
+  function redraw()
+  {
+    console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
+    var pattern = t.generate(document.body.clientWidth, height());
+    document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+  }
+  function height() {
+    return Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+  }
+  window.onresize = function() {
+    var newWidth = document.body.clientWidth;
+    var difference = Math.abs(newWidth - currentWidth);
+    var differenceFirst = Math.abs(newWidth - firstWidth);
+    if(difference > 100)
+      {
+        console.log("Enough of a window change has been made.");
+        console.log("Difference from last change: "+difference+", original: "+differenceFirst);
+        redraw();
+        currentWidth = newWidth;
+      }
+      showResolution();
+    };
 
-            function showResolution()
-            {
-                document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
-            }
+    function showResolution()
+    {
+      document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
+    }
 
-            redraw();
-            showResolution();
-        </script>
-<!--
-        <script>
-            var t = new Trianglify({noiseIntensity: 0});
-            var button = false,
-                saveas = false,
-                subtractnoise = document.getElementById('subtractnoise'),
-                addnoise = document.getElementById('addnoise'),
-                noise_display = 0,
-                subtractcellsize = document.getElementById('subtractcellsize'),
-                addcellsize = document.getElementById('addcellsize'),
-                cellsize_display = 0,
-                subtractcellpadding = document.getElementById('subtractcellpadding'),
-                addcellpadding = document.getElementById('addcellpadding'),
-                cellpadding_display = 0,
-                toggle_controls = false,
-                controls = document.getElementById('controls'),
-                prevheight = height();
+    redraw();
+    showResolution();
+    </script>
+    <!--
+    <script>
+    var t = new Trianglify({noiseIntensity: 0});
+    var button = false,
+    saveas = false,
+    subtractnoise = document.getElementById('subtractnoise'),
+    addnoise = document.getElementById('addnoise'),
+    noise_display = 0,
+    subtractcellsize = document.getElementById('subtractcellsize'),
+    addcellsize = document.getElementById('addcellsize'),
+    cellsize_display = 0,
+    subtractcellpadding = document.getElementById('subtractcellpadding'),
+    addcellpadding = document.getElementById('addcellpadding'),
+    cellpadding_display = 0,
+    toggle_controls = false,
+    controls = document.getElementById('controls'),
+    prevheight = height();
 
-            button.onclick = function() {
-                recolor();
-                redraw();
-                return false;
-            };
-            toggle_controls.onclick = function() {
-                toggle_controls.innerHTML = toggleClass(controls, "hidden") ? "show controls":"hide controls";
-                window.setTimeout(heightChange, 0); //see if the height changed after render and redraw if it did
-                return false;
-            };
-            window.onresize = function() {
-                redraw();
-            };
-            function heightChange() {
-                if (height() != prevheight) {
-                    console.log("height changed from "+prevheight+" to "+height());
-                    prevheight = height();
-                    redraw();
-                };
-            }
-            function redraw() {
-                console.log("drawing "+document.body.clientWidth+"x"+height());
-                var pattern = t.generate(document.body.clientWidth, height());
-                document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
-            };
-            function recolor() {
-                t.options.x_gradient = Trianglify.randomColor();
-                t.options.y_gradient = t.options.x_gradient.map(function(c){return d3.rgb(c).brighter(.5)});
-            }
-            function height() {
-                return Math.max(
-                    document.body.scrollHeight, document.documentElement.scrollHeight,
-                    document.body.offsetHeight, document.documentElement.offsetHeight,
-                    document.body.clientHeight, document.documentElement.clientHeight
-                );
-            }
-            redraw();
-        </script>
+    button.onclick = function() {
+    recolor();
+    redraw();
+    return false;
+  };
+  toggle_controls.onclick = function() {
+  toggle_controls.innerHTML = toggleClass(controls, "hidden") ? "show controls":"hide controls";
+  window.setTimeout(heightChange, 0); //see if the height changed after render and redraw if it did
+  return false;
+};
+window.onresize = function() {
+redraw();
+};
+function heightChange() {
+if (height() != prevheight) {
+console.log("height changed from "+prevheight+" to "+height());
+prevheight = height();
+redraw();
+};
+}
+function redraw() {
+console.log("drawing "+document.body.clientWidth+"x"+height());
+var pattern = t.generate(document.body.clientWidth, height());
+document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+};
+function recolor() {
+t.options.x_gradient = Trianglify.randomColor();
+t.options.y_gradient = t.options.x_gradient.map(function(c){return d3.rgb(c).brighter(.5)});
+}
+function height() {
+return Math.max(
+document.body.scrollHeight, document.documentElement.scrollHeight,
+document.body.offsetHeight, document.documentElement.offsetHeight,
+document.body.clientHeight, document.documentElement.clientHeight
+);
+}
+redraw();
+</script>
 -->
-        <!--
+<!--
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -222,5 +255,5 @@ ga('send', 'pageview');
 </script>
 -->
 
-    </body>
+</body>
 </html>

@@ -8,120 +8,120 @@ http://github.com/macphage/macphage.github.io/
 
 */
 
-    /* HELVETICA NEUE */
-    /*@font-face {
-        font-family: "HelveticaNeue-UltraLight";
-        src: url(../font/HelveticaNeueUltraLight.ttf) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-UltraLight";
-        src: url(../font/HelveticaNeueUltraLightItalic.ttf) format("truetype");
-        font-weight: normal;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Thin";
-        src: url(../font/HelveticaNeueThin.ttf) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Thin";
-        src: url(../font/HelveticaNeueThinItalic.ttf) format("truetype");
-        font-weight: normal;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Light";
-        src: url(../font/HelveticaNeueLight.ttf) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Light";
-        src: url(../font/HelveticaNeueLightItalic.ttf) format("truetype");
-        font-weight: normal;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: "HelveticaNeue";
-        src: url(../font/HelveticaNeue.ttf) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: "HelveticaNeue";
-        src: url(../font/HelveticaNeueItalic.ttf) format("truetype");
-        font-weight: normal;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: "HelveticaNeue";
-        src: url(../font/HelveticaNeueBold.ttf) format("truetype");
-        font-weight: bold;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: "HelveticaNeue";
-        src: url(../font/HelveticaNeueBoldItalic.ttf) format("truetype");
-        font-weight: bold;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Medium";
-        src: url(../font/HelveticaNeueMedium.ttf) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Medium";
-        src: url(../font/HelveticaNeueMediumItalic.ttf) format("truetype");
-        font-weight: normal;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Condensed";
-        src: url(../font/HelveticaNeueCondensedBold.ttf) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: "HelveticaNeue-Black";
-        src: url(../font/HelveticaNeueCondensedBlack.ttf) format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }*/
+/* HELVETICA NEUE */
+/*@font-face {
+font-family: "HelveticaNeue-UltraLight";
+src: url(../font/HelveticaNeueUltraLight.ttf) format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: "HelveticaNeue-UltraLight";
+src: url(../font/HelveticaNeueUltraLightItalic.ttf) format("truetype");
+font-weight: normal;
+font-style: italic;
+}
+@font-face {
+font-family: "HelveticaNeue-Thin";
+src: url(../font/HelveticaNeueThin.ttf) format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: "HelveticaNeue-Thin";
+src: url(../font/HelveticaNeueThinItalic.ttf) format("truetype");
+font-weight: normal;
+font-style: italic;
+}
+@font-face {
+font-family: "HelveticaNeue-Light";
+src: url(../font/HelveticaNeueLight.ttf) format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: "HelveticaNeue-Light";
+src: url(../font/HelveticaNeueLightItalic.ttf) format("truetype");
+font-weight: normal;
+font-style: italic;
+}
+@font-face {
+font-family: "HelveticaNeue";
+src: url(../font/HelveticaNeue.ttf) format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: "HelveticaNeue";
+src: url(../font/HelveticaNeueItalic.ttf) format("truetype");
+font-weight: normal;
+font-style: italic;
+}
+@font-face {
+font-family: "HelveticaNeue";
+src: url(../font/HelveticaNeueBold.ttf) format("truetype");
+font-weight: bold;
+font-style: normal;
+}
+@font-face {
+font-family: "HelveticaNeue";
+src: url(../font/HelveticaNeueBoldItalic.ttf) format("truetype");
+font-weight: bold;
+font-style: italic;
+}
+@font-face {
+font-family: "HelveticaNeue-Medium";
+src: url(../font/HelveticaNeueMedium.ttf) format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: "HelveticaNeue-Medium";
+src: url(../font/HelveticaNeueMediumItalic.ttf) format("truetype");
+font-weight: normal;
+font-style: italic;
+}
+@font-face {
+font-family: "HelveticaNeue-Condensed";
+src: url(../font/HelveticaNeueCondensedBold.ttf) format("truetype");
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: "HelveticaNeue-Black";
+src: url(../font/HelveticaNeueCondensedBlack.ttf) format("truetype");
+font-weight: normal;
+font-style: normal;
+}*/
 
-    /*
+/*
 
-    SOCIALICO FONT SIZING
+SOCIALICO FONT SIZING
 
-    inputsize:actualsize
-    1:0.8
+inputsize:actualsize
+1:0.8
 
-    if you want actualsize with your input, multiply your input by 1.25.
-    then, your old input will be the actual size.
+if you want actualsize with your input, multiply your input by 1.25.
+then, your old input will be the actual size.
 
-    */
+*/
 
-    @font-face {
-        font-family: "Socialico";
-        src: url(../font/Socialico.ttf) format("truetype");
-    }
-    @font-face {
-        font-family: "SocialicoPlus";
-        src: url(../font/Socialico-Plus.ttf) format("truetype");
-    }
-    .socialico {
-        font-family: "Socialico";
-        text-decoration: none;
-    }
-    .socialicoplus {
-        font-family: "SocialicoPlus";
-        text-decoration: none;
-    }
+@font-face {
+  font-family: "Socialico";
+  src: url(../font/Socialico.ttf) format("truetype");
+}
+@font-face {
+  font-family: "SocialicoPlus";
+  src: url(../font/Socialico-Plus.ttf) format("truetype");
+}
+.socialico {
+  font-family: "Socialico";
+  text-decoration: none;
+}
+.socialicoplus {
+  font-family: "SocialicoPlus";
+  text-decoration: none;
+}
 /*
 
 macphage.github.io
@@ -132,27 +132,27 @@ http://github.com/macphage/macphage.github.io/
 
 */
 
-  a:link {
-      -webkit-transition: color 500ms;
-      -ms-transition: color 500ms;
-      -moz-transition: color 500ms;
-      -o-transition: color 500ms;
-      transition: color 500ms;
-  }
-  a:visited {
-      -webkit-transition: color 500ms;
-      -ms-transition: color 500ms;
-      -moz-transition: color 500ms;
-      -o-transition: color 500ms;
-      transition: color 500ms;
-  }
-  a:hover {
-      -webkit-transition: color 500ms;
-      -ms-transition: color 500ms;
-      -moz-transition: color 500ms;
-      -o-transition: color 500ms;
-      transition: color 500ms;
-  }
+a:link {
+  -webkit-transition: color 500ms;
+  -ms-transition: color 500ms;
+  -moz-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms;
+}
+a:visited {
+  -webkit-transition: color 500ms;
+  -ms-transition: color 500ms;
+  -moz-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms;
+}
+a:hover {
+  -webkit-transition: color 500ms;
+  -ms-transition: color 500ms;
+  -moz-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms;
+}
 
 /*
 
@@ -164,35 +164,35 @@ http://github.com/macphage/macphage.github.io/
 
 */
 
-  p, h1, h2, h3, h4, h5, h6 {
-      color: rgb(0,0,0);
-  }
+p, h1, h2, h3, h4, h5, h6 {
+  color: rgb(0,0,0);
+}
 
-  #MainContentBox {
-      background: rgba(255,255,255,0.8);
-  }
+#MainContentBox {
+  background: rgba(255,255,255,0.8);
+}
 
-  #EndFooter {
-      color: rgba(255,255,255,0.9);
-      background: rgba(10,10,10,0.75);
-  }
+#EndFooter {
+  color: rgba(255,255,255,0.9);
+  background: rgba(10,10,10,0.75);
+}
 
-  .background {
-      background: rgba(255,255,255,0.9);
-  }
+.background {
+  background: rgba(255,255,255,0.9);
+}
 
-  a:link {
-      color: rgb(68,166,244)!important;
-  }
-  a:visited {
-      color: rgb(255,155,75)!important;
-  }
-  a:hover {
-      color: rgb(7,216,216)!important;
-  }
-  a:active {
-      color: rgb(224, 74, 109)!important;
-  }
+a:link {
+  color: rgb(68,166,244)!important;
+}
+a:visited {
+  color: rgb(255,155,75)!important;
+}
+a:hover {
+  color: rgb(7,216,216)!important;
+}
+a:active {
+  color: rgb(224, 74, 109)!important;
+}
 
 
 
@@ -206,92 +206,105 @@ http://github.com/macphage/macphage.github.io/
 
 */
 
-  body {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 175% 175%;
-      overflow-x: hidden;
-      width: 100%;
-  }
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 175% 175%;
+  overflow-x: hidden;
+  width: 100%;
+}
 
-  #MainTitle {
-      font-family: "HelveticaNeue-Thin","Roboto";
-      font-weight: 200;
-      font-style: normal;
-      font-size: 700%;
-      padding-top: 100px;
-      word-wrap: break-word;
-  }
+#NavbarBrand {
+  font-family: "HelveticaNeue-Light","Roboto Condensed";
+  font-weight: normal;
+}
 
-  #MainSubtitle {
-      font-family: "HelveticaNeue-Light","Roboto";
-      font-weight: 300;
-      font-style: normal;
-      font-size: 40%;
-      padding-top: 0px;
-      position: relative;
-      bottom: 0px;
-      word-wrap: break-word;
-  }
+#NavbarItem {
+  font-family: "HelveticaNeue-Light","Roboto Condensed";
+  font-weight: normal;
+}
 
-  .fixthisplease {
-      position: relative;
-      top: -70px;
-  }
+#MainTitle {
+  font-family: "HelveticaNeue-Thin","Roboto";
+  font-weight: 200;
+  font-style: normal;
+  font-size: 700%;
+  padding-top: 100px;
+  word-wrap: break-word;
+}
 
-  #AboutTitle {
-      font-family: "Roboto";
-      font-weight: 300;
-      font-size: 300%;
-      color: rgb(50,50,50);
-  }
+#MainSubtitle {
+  font-family: "HelveticaNeue-Light","Roboto";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 40%;
+  padding-top: 0px;
+  position: relative;
+  bottom: 0px;
+  word-wrap: break-word;
+}
 
-  #AboutBio {
-      font-family: "Roboto";
-      font-weight: 400;
-      font-size: 150%;
-      line-height: 125%;
-      padding-left: 0px;
-      padding-right: 0px;
-      color: rgb(50,50,50);
-  }
+.fixthisplease {
+  position: relative;
+  top: -70px;
+}
 
-  #MainContentContainer {
-      padding: 5%;
-  }
+#AboutTitle {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 300%;
+  color: rgb(50,50,50);
+}
 
-  #SocialContainer {
-      width: 100%;
-      margin-top: 5%;
-  }
+#AboutBio {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 150%;
+  line-height: 125%;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: rgb(50,50,50);
+}
 
-  #MyTwitter {
-      -webkit-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
-      -moz-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
-      -ms-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
-  }
-  #MyTwitter:active {
-      position: relative;
-      top: 2px;
-      left: 2px;
-      -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.5));
-      -moz-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
-      -ms-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
-  }
+#MainContentContainer {
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
-  #MainContentBox {
-      display: block;
-      border-radius: 3px;
-      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-      padding: 2%;
-  }
+#SocialContainer {
+  width: 100%;
+  margin-top: 5%;
+}
 
-  #EndFooter {
-      font-family: "Roboto Condensed";
-      font-weight: bold;
-      font-size: 85%;
-      display: block;
-      border-radius: 3px;
-      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-      padding: 1%;
-  }
+#MyTwitter {
+  -webkit-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
+  -moz-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
+  -ms-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
+}
+#MyTwitter:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0.5));
+  -moz-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
+  -ms-filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.5));
+}
+
+#MainContentBox {
+  display: block;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  padding: 2%;
+}
+
+#EndFooter {
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+  font-size: 85%;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  padding: 1%;
+}
