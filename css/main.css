@@ -20,7 +20,7 @@ http://github.com/macphage/macphage.github.io/
         src: url(../font/HelveticaNeueUltraLightItalic.ttf) format("truetype");
         font-weight: normal;
         font-style: italic;
-    }*/
+    }
     @font-face {
         font-family: "HelveticaNeue-Thin";
         src: url(../font/HelveticaNeueThin.ttf) format("truetype");
@@ -45,7 +45,7 @@ http://github.com/macphage/macphage.github.io/
         font-weight: normal;
         font-style: italic;
     }
-    /*@font-face {
+    @font-face {
         font-family: "HelveticaNeue";
         src: url(../font/HelveticaNeue.ttf) format("truetype");
         font-weight: normal;
@@ -215,14 +215,18 @@ http://github.com/macphage/macphage.github.io/
   }
 
   #MainTitle {
-      font-family: "HelveticaNeue-Thin";
+      font-family: "HelveticaNeue-Thin","Roboto";
+      font-weight: 200;
+      font-style: normal;
       font-size: 700%;
       padding-top: 100px;
       word-wrap: break-word;
   }
 
   #MainSubtitle {
-      font-family: "HelveticaNeue-Light";
+      font-family: "HelveticaNeue-Light","Roboto";
+      font-weight: 300;
+      font-style: normal;
       font-size: 40%;
       padding-top: 0px;
       position: relative;
@@ -239,15 +243,17 @@ http://github.com/macphage/macphage.github.io/
       font-family: "Roboto";
       font-weight: 300;
       font-size: 300%;
+      color: rgb(50,50,50);
   }
 
   #AboutBio {
       font-family: "Roboto";
-      font-weight: 300;
+      font-weight: 400;
       font-size: 150%;
       line-height: 125%;
       padding-left: 0px;
       padding-right: 0px;
+      color: rgb(50,50,50);
   }
 
   #MainContentContainer {
