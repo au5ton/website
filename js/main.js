@@ -19,7 +19,7 @@ var FourOhFour = function(){
 
   function quote(message, person)
   {
-      return (""+message+"<br><p class=\"align_right\"><bc>~"+person+"</bc></p>");
+    return (""+message+"<br><p class=\"align_right\"><bc>~"+person+"</bc></p>");
   }
 
   //THIS IS THE INNER HTML SO HTML FORMATTING IS ALLOWED
@@ -105,25 +105,25 @@ var FourOhFour = function(){
 
   function applyErrorMessage()
   {
-      document.getElementById("error").innerHTML = getErrorMessage();
+    document.getElementById("error").innerHTML = getErrorMessage();
   }
 
   function getErrorMessage()
   {
-      random = Math.floor(Math.random() * e.length);
-      console.log("getErrorMessage() called, random: " + random);
-      return e[random];
+    random = Math.floor(Math.random() * e.length);
+    console.log("getErrorMessage() called, random: " + random);
+    return e[random];
   }
 
 
 };
 
 /*
-  MESSAGE OF THE DAY
-  MESSAGE OF THE DAY
-  MESSAGE OF THE DAY
-  MESSAGE OF THE DAY
-  MESSAGE OF THE DAY
+MESSAGE OF THE DAY
+MESSAGE OF THE DAY
+MESSAGE OF THE DAY
+MESSAGE OF THE DAY
+MESSAGE OF THE DAY
 */
 
 var MessageOfTheDay = function(){
@@ -132,6 +132,7 @@ var MessageOfTheDay = function(){
 
   var motd_random;
   var m = [];
+  var tagline = [];
 
   //THIS IS THE INNER HTML SO HTML FORMATTING IS ALLOWED
   m.push("JavaScript functionality!");
@@ -152,41 +153,56 @@ var MessageOfTheDay = function(){
   m.push("There's no place like 127.0.0.1!");
   m.push("<span id=\"epoch\">Enable JavaScript!</span>");
 
+  tagline.push("a programmers' website");
+  tagline.push("a website for code");
+  //tagline.push("austin jackson");
+
 
   function motd_apply()
   {
+    document.getElementById("motd").innerHTML = motd_get();
+  }
 
-      document.getElementById("motd").innerHTML = motd_get();
+  function applyTagline()
+  {
+    document.getElementById("MainSubtitle").innerHTML = getTagline();
   }
 
   function motd_get()
   {
-      motd_random = Math.floor(Math.random() * m.length);
-      console.log("motd_get() called, motd_random: " + motd_random);
-      return m[motd_random];
+    motd_random = Math.floor(Math.random() * m.length);
+    console.log("motd_get() called, motd_random: " + motd_random);
+    return m[motd_random];
+  }
+
+  function getTagline()
+  {
+    motd_random = Math.floor(Math.random() * tagline.length);
+    console.log("getTagline() called, motd_random: " + motd_random);
+    return tagline[motd_random];
   }
 
   var element = document.getElementById("element-id");
   element.parentNode.removeChild(element);
 
   function closeIFrame(){
-       $('#motdgen').remove();
+    $('#motdgen').remove();
   }
 
   function updateEpoch()
   {
-      document.getElementById("epoch").innerHTML = "Epoch! " + Date.now();
-      requestAnimationFrame(updateEpoch);
+    document.getElementById("epoch").innerHTML = "Epoch! " + Date.now();
+    requestAnimationFrame(updateEpoch);
   }
 
 };
 
 /*
-  PICTURESHOW
-  PICTURESHOW
-  PICTURESHOW
-  PICTURESHOW
-  PICTURESHOW
+PICTURESHOW
+PICTURESHOW
+PICTURESHOW
+PICTURESHOW
+PICTURESHOW
 */
 
 var PictureShow = function(){
@@ -196,334 +212,334 @@ var PictureShow = function(){
 
   function obskewerswap()
   {
-      var proj = "obskewer"; //Short-name of project in use
-      var id = 0;
-      var logo = "img/icon_obskewer.png"; //Manual setup
-      var path = "img/"+proj+"screenshot";
-      var min = 0;
-      var max = 0;
-      console.log("shot["+id+"]: "+shot[id]);
-      if(max == min)
+    var proj = "obskewer"; //Short-name of project in use
+    var id = 0;
+    var logo = "img/icon_obskewer.png"; //Manual setup
+    var path = "img/"+proj+"screenshot";
+    var min = 0;
+    var max = 0;
+    console.log("shot["+id+"]: "+shot[id]);
+    if(max == min)
       {
-          document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
+        document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
       }
       else if(shot[id] < max)
-      {
+        {
           shot[id]++;
           path += shot[id]+".png";
           document.getElementById(proj+"screenshot").src = path;
           document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
-      }
-      else
-      {
-          shot[id] = min;
-          document.getElementById(proj+"screenshot").src = logo;
-          document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
-      }
-  }
+        }
+        else
+          {
+            shot[id] = min;
+            document.getElementById(proj+"screenshot").src = logo;
+            document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
+          }
+        }
 
-  function pcalcswap()
-  {
-      var proj = "pcalc"; //Short-name of project in use
-      var id = 1;
-      var logo = "img/icon_pcalculator.png"; //Manual setup
-      var path = "img/"+proj+"screenshot";
-      var min = 0;
-      var max = 0;
-      console.log("shot["+id+"]: "+shot[id]);
-      if(max == min)
-      {
-          document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
-      }
-      else if(shot[id] < max)
-      {
-          shot[id]++;
-          path += shot[id]+".png";
-          document.getElementById(proj+"screenshot").src = path;
-          document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
-      }
-      else
-      {
-          shot[id] = min;
-          document.getElementById(proj+"screenshot").src = logo;
-          document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
-      }
-  }
-
-  function pdrawswap()
-  {
-      var proj = "pdraw"; //Short-name of project in use
-      var id = 2;
-      var logo = "img/pdrawlogo.png"; //Manual setup
-      var path = "img/"+proj+"screenshot";
-      var min = 0;
-      var max = 4;
-      console.log("shot["+id+"]: "+shot[id]);
-      if(max == min)
-      {
-          document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
-      }
-      else if(shot[id] < max)
-      {
-          shot[id]++;
-          path += shot[id]+".png";
-          document.getElementById(proj+"screenshot").src = path;
-          document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
-      }
-      else
-      {
-          shot[id] = min;
-          document.getElementById(proj+"screenshot").src = logo;
-          document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
-      }
-  }
-
-  function ptictacswap()
-  {
-      var proj = "ptictac"; //Short-name of project in use
-      var id = 3;
-      var logo = "img/ptictactoe.png"; //Manual setup
-      var path = "img/"+proj+"screenshot";
-      var min = 0;
-      var max = 0;
-      console.log("shot["+id+"]: "+shot[id]);
-      if(max == min)
-      {
-          document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
-      }
-      else if(shot[id] < max)
-      {
-          shot[id]++;
-          path += shot[id]+".png";
-          document.getElementById(proj+"screenshot").src = path;
-          document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
-      }
-      else
-      {
-          shot[id] = min;
-          document.getElementById(proj+"screenshot").src = logo;
-          document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
-      }
-  }
-
-  function templateswap()
-  {
-      var proj = "template"; //Short-name of project in use
-      var id = -1;
-      var logo = "img/icon_empty.png"; //Manual setup
-      var path = "img/"+proj+"screenshot";
-      var min = 0;
-      var max = 0;
-      console.log("shot["+id+"]: "+shot[id]);
-      if(max == min)
-      {
-          document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
-      }
-      else if(shot[id] < max)
-      {
-          shot[id]++;
-          path += shot[id]+".png";
-          document.getElementById(proj+"screenshot").src = path;
-          document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
-      }
-      else
-      {
-          shot[id] = min;
-          document.getElementById(proj+"screenshot").src = logo;
-          document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
-      }
-  }
-};
-
-/*
-  THEME
-  THEME
-  THEME
-  THEME
-  THEME
-*/
-
-var Theme = function(){
-  //I wonder when I'll need to use JavaScript
-
-
-  function setCookie(cname, cvalue, exdays) {
-      var d = new Date();
-      d.setTime(d.getTime() + (exdays*24*60*60*1000));
-      var expires = "expires="+d.toGMTString();
-      document.cookie = cname + "=" + cvalue + "; " + expires;
-  }
-
-  function getCookie(cname) {
-      var name = cname + "=";
-      var ca = document.cookie.split(';');
-      for(var i=0; i<ca.length; i++) {
-          var c = ca[i].trim();
-          if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
-      }
-      return "";
-  }
-
-  var currentTheme;
-  var cookie_theme = getCookie("theme");
-
-  var common = 0;
-  var effects = 1;
-  var fonts = 2;
-  var html = 3;
-  var position = 4;
-  var shapes = 5;
-  var spacing = 6;
-  var special = 7;
-  var text = 8;
-  var animation = 9;
-
-  //var core = new Array(); //"Core" theme
-  var core = [
-    "",
-    ""
-  ];
-
-  // core[common] = "css/core/common.css";
-  // core[effects] = "css/core/effects.css";
-  // core[fonts] = "css/core/fonts.css";
-  // core[html] = "css/core/html.css";
-  // core[position] = "css/core/position.css";
-  // core[shapes] = "css/core/shapes.css";
-  // core[spacing] = "css/core/spacing.css";
-  // core[special] = "css/core/special.css";
-  // core[text] = "css/core/text.css";
-  // core[animation] = "css/core/animation.css";
-
-  // var light = new Array(); //"Light" theme
-  var light = [
-    "",
-    ""
-  ];
-  // light[common] = "css/theme/light/common.css";
-  // light[effects] = core[effects];
-  // light[fonts] = core[fonts];
-  // light[html] = core[html];
-  // light[position] = core[position];
-  // light[shapes] = core[shapes];
-  // light[spacing] = core[spacing];
-  // light[special] = core[special];
-  // light[text] = core[text];
-  // light[animation] = core[animation];
-
-  // var dark = new Array(); //"Dark" theme
-  var dark = [
-    "",
-    ""
-  ];
-  // dark[common] = "css/theme/dark/common.css";
-  // dark[effects] = core[effects];
-  // dark[fonts] = core[fonts];
-  // dark[html] = core[html];
-  // dark[position] = core[position];
-  // dark[shapes] = core[shapes];
-  // dark[spacing] = core[spacing];
-  // dark[special] = core[special];
-  // dark[text] = core[text];
-  // dark[animation] = core[animation];
-
-  function themes_cookieupdate()
-  {
-      var e = document.getElementById("swapper");
-      if(cookie_theme == "light")
-      {
-          e.selectedIndex = 0;
-          themes_light();
-          currentTheme = "light";
-          console.log("currentTheme is "+currentTheme);
-          console.log("getCookie(\"theme\") is "+getCookie("theme"));
-      }
-      else if(cookie_theme == "dark")
-      {
-          e.selectedIndex = 1;
-          themes_dark();
-          currentTheme = "dark";
-          console.log("currentTheme is "+currentTheme);
-          console.log("getCookie(\"theme\") is "+getCookie("theme"));
-      }
-      else
-      {
-          themes_update(-1);
-      }
-  }
-
-  function themes_update(value)
-  {
-      switch(parseInt(value))
-      {
-          case 0:
+        function pcalcswap()
+        {
+          var proj = "pcalc"; //Short-name of project in use
+          var id = 1;
+          var logo = "img/icon_pcalculator.png"; //Manual setup
+          var path = "img/"+proj+"screenshot";
+          var min = 0;
+          var max = 0;
+          console.log("shot["+id+"]: "+shot[id]);
+          if(max == min)
+            {
+              document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
+            }
+            else if(shot[id] < max)
               {
-                  themes_light();
-                  currentTheme = "light";
-                  console.log("currentTheme is "+currentTheme);
-                  setCookie("theme","light","180");
-                  console.log("getCookie(\"theme\") is "+getCookie("theme"));
-                  break;
+                shot[id]++;
+                path += shot[id]+".png";
+                document.getElementById(proj+"screenshot").src = path;
+                document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
               }
-          case 1:
+              else
+                {
+                  shot[id] = min;
+                  document.getElementById(proj+"screenshot").src = logo;
+                  document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
+                }
+              }
+
+              function pdrawswap()
               {
-                  themes_dark();
-                  currentTheme = "dark";
-                  console.log("currentTheme is "+currentTheme);
-                  setCookie("theme","dark","180");
-                  console.log("getCookie(\"theme\") is "+getCookie("theme"));
-                  break;
-              }
-          default:
-              {
-                  themes_reset();
-                  currentTheme = "core";
-                  console.log("currentTheme is "+currentTheme);
-                  console.log("getCookie(\"theme\") is "+getCookie("theme"));
-                  break;
-              }
-      }
-  }
+                var proj = "pdraw"; //Short-name of project in use
+                var id = 2;
+                var logo = "img/pdrawlogo.png"; //Manual setup
+                var path = "img/"+proj+"screenshot";
+                var min = 0;
+                var max = 4;
+                console.log("shot["+id+"]: "+shot[id]);
+                if(max == min)
+                  {
+                    document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
+                  }
+                  else if(shot[id] < max)
+                    {
+                      shot[id]++;
+                      path += shot[id]+".png";
+                      document.getElementById(proj+"screenshot").src = path;
+                      document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
+                    }
+                    else
+                      {
+                        shot[id] = min;
+                        document.getElementById(proj+"screenshot").src = logo;
+                        document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
+                      }
+                    }
 
-  function themes_reset()
-  {
-      document.getElementById("css_common").href = core[common];
-      document.getElementById("css_effects").href= core[effects];
-      document.getElementById("css_fonts").href= core[fonts];
-      document.getElementById("css_html").href = core[html];
-      document.getElementById("css_position").href = core[position];
-      document.getElementById("css_shapes").href = core[shapes];
-      document.getElementById("css_spacing").href = core[spacing];
-      document.getElementById("css_special").href = core[special];
-      document.getElementById("css_text").href = core[text];
-      document.getElementById("css_animation").href = core[animation];
-  }
+                    function ptictacswap()
+                    {
+                      var proj = "ptictac"; //Short-name of project in use
+                      var id = 3;
+                      var logo = "img/ptictactoe.png"; //Manual setup
+                      var path = "img/"+proj+"screenshot";
+                      var min = 0;
+                      var max = 0;
+                      console.log("shot["+id+"]: "+shot[id]);
+                      if(max == min)
+                        {
+                          document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
+                        }
+                        else if(shot[id] < max)
+                          {
+                            shot[id]++;
+                            path += shot[id]+".png";
+                            document.getElementById(proj+"screenshot").src = path;
+                            document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
+                          }
+                          else
+                            {
+                              shot[id] = min;
+                              document.getElementById(proj+"screenshot").src = logo;
+                              document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
+                            }
+                          }
 
-  function themes_light()
-  {
-      document.getElementById("css_common").href = light[common];
-      document.getElementById("css_effects").href= light[effects];
-      document.getElementById("css_fonts").href= light[fonts];
-      document.getElementById("css_html").href = light[html];
-      document.getElementById("css_position").href = light[position];
-      document.getElementById("css_shapes").href = light[shapes];
-      document.getElementById("css_spacing").href = light[spacing];
-      document.getElementById("css_special").href = light[special];
-      document.getElementById("css_text").href = light[text];
-      document.getElementById("css_animation").href = core[animation];
-  }
+                          function templateswap()
+                          {
+                            var proj = "template"; //Short-name of project in use
+                            var id = -1;
+                            var logo = "img/icon_empty.png"; //Manual setup
+                            var path = "img/"+proj+"screenshot";
+                            var min = 0;
+                            var max = 0;
+                            console.log("shot["+id+"]: "+shot[id]);
+                            if(max == min)
+                              {
+                                document.getElementById(proj+"tag").innerHTML = "No screenshots available. :(";
+                              }
+                              else if(shot[id] < max)
+                                {
+                                  shot[id]++;
+                                  path += shot[id]+".png";
+                                  document.getElementById(proj+"screenshot").src = path;
+                                  document.getElementById(proj+"tag").innerHTML = "Click to see another screenshot! Current screenshot: "+shot[id];
+                                }
+                                else
+                                  {
+                                    shot[id] = min;
+                                    document.getElementById(proj+"screenshot").src = logo;
+                                    document.getElementById(proj+"tag").innerHTML = "Click to see a screenshot!";
+                                  }
+                                }
+                              };
 
-  function themes_dark()
-  {
-      document.getElementById("css_common").href = dark[common];
-      document.getElementById("css_effects").href= dark[effects];
-      document.getElementById("css_fonts").href= dark[fonts];
-      document.getElementById("css_html").href = dark[html];
-      document.getElementById("css_position").href = dark[position];
-      document.getElementById("css_shapes").href = dark[shapes];
-      document.getElementById("css_spacing").href = dark[spacing];
-      document.getElementById("css_special").href = dark[special];
-      document.getElementById("css_text").href = dark[text];
-      document.getElementById("css_animation").href = core[animation];
-  }
-};
+                              /*
+                              THEME
+                              THEME
+                              THEME
+                              THEME
+                              THEME
+                              */
+
+                              var Theme = function(){
+                                //I wonder when I'll need to use JavaScript
+
+
+                                function setCookie(cname, cvalue, exdays) {
+                                  var d = new Date();
+                                  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+                                  var expires = "expires="+d.toGMTString();
+                                  document.cookie = cname + "=" + cvalue + "; " + expires;
+                                }
+
+                                function getCookie(cname) {
+                                  var name = cname + "=";
+                                  var ca = document.cookie.split(';');
+                                  for(var i=0; i<ca.length; i++) {
+                                    var c = ca[i].trim();
+                                    if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+                                    }
+                                    return "";
+                                  }
+
+                                  var currentTheme;
+                                  var cookie_theme = getCookie("theme");
+
+                                  var common = 0;
+                                  var effects = 1;
+                                  var fonts = 2;
+                                  var html = 3;
+                                  var position = 4;
+                                  var shapes = 5;
+                                  var spacing = 6;
+                                  var special = 7;
+                                  var text = 8;
+                                  var animation = 9;
+
+                                  //var core = new Array(); //"Core" theme
+                                  var core = [
+                                  "",
+                                  ""
+                                  ];
+
+                                  // core[common] = "css/core/common.css";
+                                  // core[effects] = "css/core/effects.css";
+                                  // core[fonts] = "css/core/fonts.css";
+                                  // core[html] = "css/core/html.css";
+                                  // core[position] = "css/core/position.css";
+                                  // core[shapes] = "css/core/shapes.css";
+                                  // core[spacing] = "css/core/spacing.css";
+                                  // core[special] = "css/core/special.css";
+                                  // core[text] = "css/core/text.css";
+                                  // core[animation] = "css/core/animation.css";
+
+                                  // var light = new Array(); //"Light" theme
+                                  var light = [
+                                  "",
+                                  ""
+                                  ];
+                                  // light[common] = "css/theme/light/common.css";
+                                  // light[effects] = core[effects];
+                                  // light[fonts] = core[fonts];
+                                  // light[html] = core[html];
+                                  // light[position] = core[position];
+                                  // light[shapes] = core[shapes];
+                                  // light[spacing] = core[spacing];
+                                  // light[special] = core[special];
+                                  // light[text] = core[text];
+                                  // light[animation] = core[animation];
+
+                                  // var dark = new Array(); //"Dark" theme
+                                  var dark = [
+                                  "",
+                                  ""
+                                  ];
+                                  // dark[common] = "css/theme/dark/common.css";
+                                  // dark[effects] = core[effects];
+                                  // dark[fonts] = core[fonts];
+                                  // dark[html] = core[html];
+                                  // dark[position] = core[position];
+                                  // dark[shapes] = core[shapes];
+                                  // dark[spacing] = core[spacing];
+                                  // dark[special] = core[special];
+                                  // dark[text] = core[text];
+                                  // dark[animation] = core[animation];
+
+                                  function themes_cookieupdate()
+                                  {
+                                    var e = document.getElementById("swapper");
+                                    if(cookie_theme == "light")
+                                      {
+                                        e.selectedIndex = 0;
+                                        themes_light();
+                                        currentTheme = "light";
+                                        console.log("currentTheme is "+currentTheme);
+                                        console.log("getCookie(\"theme\") is "+getCookie("theme"));
+                                      }
+                                      else if(cookie_theme == "dark")
+                                        {
+                                          e.selectedIndex = 1;
+                                          themes_dark();
+                                          currentTheme = "dark";
+                                          console.log("currentTheme is "+currentTheme);
+                                          console.log("getCookie(\"theme\") is "+getCookie("theme"));
+                                        }
+                                        else
+                                          {
+                                            themes_update(-1);
+                                          }
+                                        }
+
+                                        function themes_update(value)
+                                        {
+                                          switch(parseInt(value))
+                                          {
+                                            case 0:
+                                              {
+                                                themes_light();
+                                                currentTheme = "light";
+                                                console.log("currentTheme is "+currentTheme);
+                                                setCookie("theme","light","180");
+                                                console.log("getCookie(\"theme\") is "+getCookie("theme"));
+                                                break;
+                                              }
+                                              case 1:
+                                                {
+                                                  themes_dark();
+                                                  currentTheme = "dark";
+                                                  console.log("currentTheme is "+currentTheme);
+                                                  setCookie("theme","dark","180");
+                                                  console.log("getCookie(\"theme\") is "+getCookie("theme"));
+                                                  break;
+                                                }
+                                                default:
+                                                  {
+                                                    themes_reset();
+                                                    currentTheme = "core";
+                                                    console.log("currentTheme is "+currentTheme);
+                                                    console.log("getCookie(\"theme\") is "+getCookie("theme"));
+                                                    break;
+                                                  }
+                                                }
+                                              }
+
+                                              function themes_reset()
+                                              {
+                                                document.getElementById("css_common").href = core[common];
+                                                document.getElementById("css_effects").href= core[effects];
+                                                document.getElementById("css_fonts").href= core[fonts];
+                                                document.getElementById("css_html").href = core[html];
+                                                document.getElementById("css_position").href = core[position];
+                                                document.getElementById("css_shapes").href = core[shapes];
+                                                document.getElementById("css_spacing").href = core[spacing];
+                                                document.getElementById("css_special").href = core[special];
+                                                document.getElementById("css_text").href = core[text];
+                                                document.getElementById("css_animation").href = core[animation];
+                                              }
+
+                                              function themes_light()
+                                              {
+                                                document.getElementById("css_common").href = light[common];
+                                                document.getElementById("css_effects").href= light[effects];
+                                                document.getElementById("css_fonts").href= light[fonts];
+                                                document.getElementById("css_html").href = light[html];
+                                                document.getElementById("css_position").href = light[position];
+                                                document.getElementById("css_shapes").href = light[shapes];
+                                                document.getElementById("css_spacing").href = light[spacing];
+                                                document.getElementById("css_special").href = light[special];
+                                                document.getElementById("css_text").href = light[text];
+                                                document.getElementById("css_animation").href = core[animation];
+                                              }
+
+                                              function themes_dark()
+                                              {
+                                                document.getElementById("css_common").href = dark[common];
+                                                document.getElementById("css_effects").href= dark[effects];
+                                                document.getElementById("css_fonts").href= dark[fonts];
+                                                document.getElementById("css_html").href = dark[html];
+                                                document.getElementById("css_position").href = dark[position];
+                                                document.getElementById("css_shapes").href = dark[shapes];
+                                                document.getElementById("css_spacing").href = dark[spacing];
+                                                document.getElementById("css_special").href = dark[special];
+                                                document.getElementById("css_text").href = dark[text];
+                                                document.getElementById("css_animation").href = core[animation];
+                                              }
+                                            };

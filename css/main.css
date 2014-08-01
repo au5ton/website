@@ -181,14 +181,15 @@ p, h1, h2, h3, h4, h5, h6 {
   background: rgba(255,255,255,0.9);
 }
 
-a:link {
-  color: rgb(68,166,244)!important;
+a:link, a:visited {
+  /*color: rgb(68, 166, 244)!important;*/
+  color: rgb(50, 141, 194)!important;
 }
-a:visited {
-  color: rgb(255,155,75)!important;
-}
+/*a:visited {
+color: rgb(62, 66, 170)!important;
+} */
 a:hover {
-  color: rgb(7,216,216)!important;
+  color: rgb(0, 231, 169)!important;
 }
 a:active {
   color: rgb(224, 74, 109)!important;
@@ -229,7 +230,8 @@ body {
   font-weight: 200;
   font-style: normal;
   font-size: 700%;
-  padding-top: 100px;
+  padding-top: 10%;
+  padding-bottom: 10%;
   word-wrap: break-word;
 }
 
