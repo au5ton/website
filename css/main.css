@@ -124,13 +124,14 @@ body {
 }
 
 #NavbarBrand {
-  font-family: "Roboto Condensed";
-  font-weight: normal;
+  font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;
+  font-weight: 500;
 }
 
 #NavbarItem {
-  font-family: "Roboto Condensed";
-  font-weight: normal;
+  font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;
+  font-weight: 500;
+  font-size: 112.5%;
 }
 
 #MainContentContainer {
@@ -148,7 +149,7 @@ body {
 }
 
 #MainTitle {
-  font-family: "HelveticaNeue-Thin","Roboto";
+  font-family: "HelveticaNeue-Thin","Roboto", Tahoma, sans serif;
   font-weight: 200;
   font-style: normal;
   font-size: 265%;
@@ -158,7 +159,7 @@ body {
 }
 
 #MainSubtitle {
-  font-family: "HelveticaNeue-Light","Roboto";
+  font-family: "HelveticaNeue-Light", "Roboto", Tahoma, sans serif;
   font-weight: 300;
   font-style: normal;
   font-size: 40%;
@@ -174,14 +175,15 @@ body {
 }
 
 #AboutTitle {
-  font-family: "Roboto";
+  font-family: "Roboto-Light", "Roboto", Tahoma, sans serif;
   font-weight: 300;
   color: rgb(50,50,50);
 }
 
 #AboutBio {
-  font-family: "Roboto";
+  font-family: "Roboto", Tahoma, sans serif;
   font-weight: 400;
+  font-size: 110%;
   line-height: 125%;
   padding-left: 0px;
   padding-right: 0px;
@@ -238,6 +240,16 @@ body {
   word-wrap: break-word;
 }
 
+#ProjectReleases {
+  font-family: "HelveticaNeue","Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  word-wrap: break-word;
+}
+
 #ProjectIcon {
   margin: 3%;
   width: 50%;
@@ -282,9 +294,9 @@ body {
 }*/
 
 #EndFooter {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;
   font-weight: bold;
-  font-size: 85%;
+  font-size: 90%;
   display: block;
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
