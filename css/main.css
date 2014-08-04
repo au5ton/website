@@ -150,7 +150,7 @@ body {
 
 #MainTitle {
   font-family: "HelveticaNeue-Thin","Roboto", Tahoma, sans serif;
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
   font-size: 265%;
   padding-top: 10%;
@@ -176,21 +176,21 @@ body {
 
 #AboutTitle {
   font-family: "Roboto-Light", "Roboto", Tahoma, sans serif;
-  font-weight: 300;
+  font-weight: 400;
   color: rgb(50,50,50);
 }
 
 #AboutBio {
   font-family: "Roboto", Tahoma, sans serif;
   font-weight: 400;
-  font-size: 110%;
+  font-size: 120%;
   line-height: 125%;
   padding-left: 0px;
   padding-right: 0px;
   color: rgb(50,50,50);
 }
 
-#ProjectName {
+/*#ProjectName {
   font-family: "HelveticaNeue","Roboto";
   font-weight: 500;
   font-style: normal;
@@ -254,7 +254,7 @@ body {
   margin: 3%;
   width: 50%;
   height: 50%;
-}
+}*/
 
 
 /*
@@ -296,7 +296,7 @@ body {
 #EndFooter {
   font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;
   font-weight: bold;
-  font-size: 90%;
+  font-size: 100%;
   display: block;
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
