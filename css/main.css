@@ -149,7 +149,7 @@ body {
 }
 
 #MainTitle {
-  font-family: "HelveticaNeue-Thin","Roboto", Tahoma, sans serif;
+  font-family: "HelveticaNeue-Thin","Segoe UI Light","Roboto", Tahoma, sans serif;
   font-weight: 300;
   font-style: normal;
   font-size: 265%;
@@ -159,7 +159,7 @@ body {
 }
 
 #MainSubtitle {
-  font-family: "HelveticaNeue-Light", "Roboto", Tahoma, sans serif;
+  font-family: "HelveticaNeue-Light","Segoe UI Light","Roboto", Tahoma, sans serif;
   font-weight: 300;
   font-style: normal;
   font-size: 40%;
@@ -175,15 +175,15 @@ body {
 }
 
 #AboutTitle {
-  font-family: "Roboto-Light", "Roboto", Tahoma, sans serif;
+  font-family: "HelveticaNeue","Segoe UI","Roboto", Tahoma, sans serif;
   font-weight: 400;
   color: rgb(50,50,50);
 }
 
 #AboutBio {
-  font-family: "Roboto", Tahoma, sans serif;
+  font-family: "HelveticaNeue","Segoe UI","Roboto", Tahoma, sans serif;
   font-weight: 400;
-  font-size: 120%;
+  font-size: 125%;
   line-height: 125%;
   padding-left: 0px;
   padding-right: 0px;
@@ -294,9 +294,9 @@ body {
 }*/
 
 #EndFooter {
-  font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;
+  font-family: "HelveticaNeue","Segoe UI","Roboto", Tahoma, sans serif;
+  /*font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;*/
   font-weight: bold;
-  font-size: 100%;
   display: block;
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);

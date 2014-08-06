@@ -1,4 +1,4 @@
-#NavbarBrand {
+/*#NavbarBrand {
   font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;
   font-weight: 500;
 }
@@ -7,7 +7,7 @@
   font-family: "Roboto Condensed", "Roboto-Condensed", "Roboto", Tahoma, sans serif;
   font-weight: 500;
   font-size: 112.5%;
-}
+}*/
 
 #MainContentContainer {
   padding-top: 75px;
@@ -16,18 +16,31 @@
   padding-right: 5%;
 }
 
+/*PRIMARY CONTENT*/
 #PrimaryContentBox {
   display: block;
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
   padding: 2%;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
+/*SIDEBAR*/
 #SecondaryContentBox {
   display: block;
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
   padding: 2%;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#Sidebar {
+  /**/
+}
+#SidebarHidden {
+  /**/
+}
+
+.hidden {
+  visibility: hidden;
 }
