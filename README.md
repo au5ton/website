@@ -5,15 +5,7 @@ All the source code and resources behind the [ruthlessphysics.com](http://ruthle
 
 ##Utilizations
 
-- [@qrohlf's Trianglify.js](http://qrohlf.com/trianglify/)
-- [GitHub's Octicons](https://octicons.github.com/)
-- [FontFabric's Socialico](http://fontfabric.com/social-media-icons-pack/)
-
-##Mirroring
-
-This website is mirrored both on [macphage.github.io](http://macphage.github.io) and [ruthlessphysics.com](http://ruthlessphysics.com/).
-
-See [mirrors.html](http://macphage.github.io/mirrors.html) for more details.
+- See the [credit page](http://macphage.github.io/site/credit.html) for a full list of the site's utilizations
 
 ##Contribution
 
