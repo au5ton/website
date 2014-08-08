@@ -1,0 +1,143 @@
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 175% 175%;
+    overflow-x: hidden;
+    width: 100%;
+    color: rgb(0,0,0);
+}
+
+a:link, a:visited {
+    color: rgb(50, 141, 194)!important;
+    -webkit-transition: color 500ms;
+    -ms-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -o-transition: color 500ms;
+    transition: color 500ms;
+}
+a:hover {
+    color: rgb(0, 231, 169)!important;
+    -webkit-transition: color 500ms;
+    -ms-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -o-transition: color 500ms;
+    transition: color 500ms;
+}
+a:active {
+    color: rgb(224, 74, 109)!important;
+    -webkit-transition: color 500ms;
+    -ms-transition: color 500ms;
+    -moz-transition: color 500ms;
+    -o-transition: color 500ms;
+    transition: color 500ms;
+}
+
+#NavbarBrand {
+    font-family: "Roboto Condensed","Roboto","Helvetica Neue","Segoe UI",Tahoma,sans serif;
+    font-weight: 500;
+}
+
+#NavbarItem {
+    font-family: "Roboto Condensed","Roboto","Helvetica Neue","Segoe UI",Tahoma,sans serif;
+    font-weight: 500;
+    font-size: 112.5%;
+}
+
+#NavbarProjectIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    -webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
+    -moz-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
+}
+
+#MainContentContainer {
+    padding-top: 75px;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#MainContentBox {
+    display: block;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    padding: 2%;
+    background: rgba(255,255,255,0.8);
+}
+
+#MainTitle {
+    font-family: "HelveticaNeue-Thin","Segoe UI Light","Roboto", Tahoma, sans serif;
+    font-weight: 300;
+    font-style: normal;
+    word-wrap: break-word;
+}
+
+#MainSubtitle {
+    font-family: "HelveticaNeue-Light","Segoe UI Light","Roboto", Tahoma, sans serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-top: 0px;
+    position: relative;
+    bottom: 0px;
+    word-wrap: break-word;
+}
+
+.fixthisplease {
+    position: relative;
+    top: -70px;
+}
+
+#AboutTitle {
+    font-family: "HelveticaNeue","Segoe UI","Roboto", Tahoma, sans serif;
+    font-weight: 400;
+    color: rgb(50,50,50);
+}
+
+#AboutBio {
+    font-family: "HelveticaNeue","Segoe UI","Roboto", Tahoma, sans serif;
+    font-weight: 400;
+    line-height: 125%;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: rgb(50,50,50);
+}
+
+#EndFooter {
+    font-family: "Helvetica Neue Bold","Segoe UI Bold","Roboto Condensed", Tahoma, sans serif;
+    font-weight: bold;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    padding: 1%;
+    color: rgba(255,255,255,0.9);
+    background: rgba(10,10,10,0.75);
+}
+
+
+.shadowed { /* FOR IMAGES*/
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+    filter: url(shadow.svg#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+        Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    }
+
+    .shadowedsmall { /* FOR IMAGES*/
+        -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.30));
+        filter: url(shadow.svg#drop-shadow);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+            Color='#444')";
+            filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+            -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+        }
+
+        .shadowedtiny { /* FOR IMAGES*/
+            -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+            filter: url(shadow.svg#drop-shadow);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
+                Color='#444')";
+                filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+                -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            }

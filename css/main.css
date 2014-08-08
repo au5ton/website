@@ -20,11 +20,11 @@ then, your old input will be the actual size.
 
 @font-face {
   font-family: "Socialico";
-  src: url(../font/Socialico.ttf) format("truetype");
+  src: url(../fonts/Socialico.ttf) format("truetype");
 }
 @font-face {
   font-family: "SocialicoPlus";
-  src: url(../font/Socialico-Plus.ttf) format("truetype");
+  src: url(../fonts/Socialico-Plus.ttf) format("truetype");
 }
 .socialico {
   font-family: "Socialico";
