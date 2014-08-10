@@ -33,14 +33,16 @@ a:active {
 }
 
 #NavbarBrand {
-    font-family: "Roboto Condensed","Roboto","Helvetica Neue","Segoe UI",Tahoma,sans serif;
+    font-family: "Roboto Condensed","Helvetica Neue Bold","Segoe UI Semibold",Tahoma,sans serif;
     font-weight: 500;
+    font-style: condensed;
 }
 
 #NavbarItem {
-    font-family: "Roboto Condensed","Roboto","Helvetica Neue","Segoe UI",Tahoma,sans serif;
+    font-family: "Roboto Condensed","Helvetica Neue Bold","Segoe UI Semibold",Tahoma,sans serif;
     font-weight: 500;
-    font-size: 112.5%;
+    font-style: condensed;
+    font-size: 115%;
 }
 
 #NavbarProjectIcon {
