@@ -1,10 +1,11 @@
 /* TEAM */
-	Developer: Austin Jackson
+	Developer: Austin Jackson (MacPhage)
 	Contact: themacphage [at] gmail.com
 	Twitter: @MacPhage
 	From: Houston, Texas
 
-	Developer: FirstWorldAnarchy
+	Developer: Tarun Boddupalli (FirstWorldAnarchy)
+	Contact: tarunbgamer@gmail.com
 	Twitter: @JavaFTW
 
 /* THANKS */

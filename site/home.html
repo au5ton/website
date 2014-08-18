@@ -15,14 +15,14 @@
         <!-- RP CSS -->
 
         <!-- THIRD PARTY CSS -->
-<!--        <link href="https://raw.githubusercontent.com/github/octicons/master/octicons/octicons.css" rel="stylesheet" type="text/css">-->
+        <!--        <link href="https://raw.githubusercontent.com/github/octicons/master/octicons/octicons.css" rel="stylesheet" type="text/css">-->
         <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans:400,300,600|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
         <!-- THIRD PARTY CSS -->
 
         <!-- RP JAVASCRIPT -->
-        <script src="../js/main.min.js"></script>
         <script src="../js/cinnabar.switcheroo.min.js"></script>
         <!-- RP JAVASCRIPT -->
 
@@ -31,10 +31,9 @@
         <script src="../js/jquery.min.js" ></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/d3.v3.min.js"></script>
-        <script src="../js/less.min.js"></script>
         <script src="../js/prism.js"></script>
         <script src="../js/blur.min.js"></script>
-        <script src="../js/Vague.js"></script>
+        <script src="../js/AppScroll.min.js"></script>
         <!-- THIRD PARTY JAVASCRIPT -->
 
         <!-- RP ICONS -->
@@ -63,8 +62,8 @@
                             <a id="NavbarSection" class="dropdown-toggle" data-toggle="dropdown" href="">Portfolio<span class="caret"></span></a>
                             <ul class="dropdown-menu" aria-labelledby="themes">
                                 <li><a id="NavbarSubhead">Java</a></li>
-                                <li><a id="NavbarItem" href="http://github.com/MacPhage/Obskewer"><img id="NavbarProjectIcon" src="../img/icon_obskewer.png">Obskewer</a></li>
-                                <li><a id="NavbarItem" href="http://github.com/MacPhage/pCalculator"><img id="NavbarProjectIcon" src="../img/icon_pcalculator.png">pCalculator</a></li>
+                                <li><a id="NavbarItem" href="http://github.com/MacPhage/Obskewer" data-toggle="tooltip" data-placement="auto right" title="A light-weight Java application for coded messages"><img id="NavbarProjectIcon" src="../img/icon_obskewer.png">Obskewer</a></li>
+                                <li><a id="NavbarItem" href="http://github.com/MacPhage/pCalculator" data-toggle="tooltip" data-placement="auto right" title="A light-weight Java application for convenient calculation"><img id="NavbarProjectIcon" src="../img/icon_pcalculator.png">pCalculator</a></li>
                                 <li><a id="NavbarItem" href="http://github.com/MacPhage/pTicTacToe">pTicTacToe</a></li>
                                 <li><a id="NavbarItem" href="http://github.com/MacPhage/txt-concat">txt-concat</a></li>
                                 <li><a id="NavbarItem" href="https://github.com/MacPhage/jcommandline">jcommandline</a></li>
@@ -73,6 +72,8 @@
                                 <li><a id="NavbarSubhead">C++</a></li>
                                 <li><a id="NavbarItem" href="http://github.com/MacPhage/pDraw"><img id="NavbarProjectIcon" src="../img/pdrawlogo.png">pDraw</a></li>
                                 <li><a id="NavbarItem" href="http://github.com/MacPhage/supercircle">SuperCircle: legacy</a></li>
+                                <li><a id="NavbarItem" href="https://github.com/MacPhage/pCalculator/tree/5e113d92d50a7a7d9f1c71bdb05dd9e278d02fd7">pCalculator (original C++)</a></li>
+                                <li><a id="NavbarItem" href="https://github.com/MacPhage/pTicTacToe/tree/bf962514e60ffcb70345480c3e2dcd24f09d0d1a">pTicTacToe (original C++)</a></li>
                                 <li class="divider"></li>
                                 <li><a id="NavbarSubhead">JavaScript</a></li>
                                 <li><a id="NavbarItem" href="http://github.com/MacPhage/cinnabar">Cinnabar</a></li>
@@ -89,12 +90,19 @@
                                 <li><a id="NavbarItem" href="mailto:theaustinjackson@gmail.com">Email</a></li>
                             </ul>
                         </li>
-                        <li><a id="NavbarSection" href="credit.html">Credit</a></li>
+                        <li><a id="NavbarSection" href="credit.html">Attributions</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a id="NavbarHumans" href="../humans.txt">Humans</button></a>
+                        </li>
                     </ul>
 
                 </div>
             </div>
         </div>
+
+        <div id="Background"></div>
 
         <div id="MainContentContainer" class="container-fluid">
             <div class="row">
@@ -118,7 +126,7 @@
                             <h3 id="AboutTitle" class="text-center">about</h3>
                             <p id="AboutBio" class="text-center">
                                 Welcome to ruthlessphysics.com.<br>
-                                I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br>
+                                I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a id="Link" href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br>
                                 <br>
                                 My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br>
                                 <br>
@@ -134,36 +142,35 @@
                 </div>
                 <div class="col-sm-1"></div>
             </div>
+
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <div class="container-fluid">
+                                <div id="EndFooter" class="text-center box">
+                                    <a href="credit.html">Attributions</a><br>
+                                    Website by Austin Jackson &copy; 2014<br>
+                                    Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+            </footer>
+
         </div>
 
 
-        <footer>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-6">
-                        <div class="container-fluid">
-                            <div id="EndFooter" class="text-center box">
-                                <a href="credit.html">Attributions</a><br>
-                                Website by Austin Jackson &copy; 2014<br>
-                                Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-sm-3"></div>
-                </div>
-            </div>
-        </footer>
 
 
         <!-- Background generation -->
         <!-- http://qrohlf.com/trianglify/ -->
 
         <script type="text/javascript">    
-
-
-
             var t = new Trianglify(
                 {
                     bleed: 0,
@@ -176,7 +183,8 @@
             {
                 console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
                 var pattern = t.generate(document.body.clientWidth, height());
-                document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+                //document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+                document.getElementById("Background").setAttribute('style', 'background-image: '+pattern.dataUrl);
             }
             function height() {
                 return Math.max(
@@ -190,9 +198,9 @@
                 var difference = Math.abs(newWidth - currentWidth);
                 var differenceFirst = Math.abs(newWidth - firstWidth);
 
-                
+
                 showResolution();
-                //showMode();
+                showMode();
                 cinnabar_link();
 
                 if(difference > 100)
@@ -204,7 +212,7 @@
                     $('#MainContentBox').blurjs({
                         source: "body",
                         radius: 100,
-                        overlay: "rgba(255,255,255,0.5)"
+                        overlay: "rgba(255,255,255,0.6)"
 
                     });
                 }
@@ -224,12 +232,24 @@
             showResolution();
             showMode();
 
-            $('#MainContentBox').blurjs({
-                source: "body",
-                radius: 100,
-                overlay: "rgba(255,255,255,0.5)"
 
+            var scroller = new AppScroll({
+                toolbar: document.getElementById("MainNavbar"),
+                scroller: document.getElementById("MainContentContainer")
             });
+
+            $('#MainContentBox').blurjs({
+                source: "#Background",
+                radius: 50,
+                overlay: "rgba(255,255,255,0.6)"
+            });
+
+
+            $(document).ready(function () {
+                $("[data-toggle=tooltip]").tooltip();
+            });
+
+            document.getElementById("MainContentBox").setAttribute("style","background-position: 0px 0px!important;");
 
         </script>
     </body>
