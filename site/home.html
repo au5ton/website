@@ -15,11 +15,10 @@
         <!-- RP CSS -->
 
         <!-- THIRD PARTY CSS -->
-        <link href="https://raw.githubusercontent.com/github/octicons/master/octicons/octicons.css" rel="stylesheet" type="text/css">
+<!--        <link href="https://raw.githubusercontent.com/github/octicons/master/octicons/octicons.css" rel="stylesheet" type="text/css">-->
         <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,400italic|Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Ubuntu:300,400,500,700|Open+Sans:400,300,600|Roboto:400,100,300,500,700|Roboto+Condensed:400,300,700|Exo+2:400,200,100,300,500,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans:400,300,600|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
         <!-- THIRD PARTY CSS -->
 
         <!-- RP JAVASCRIPT -->
@@ -35,6 +34,7 @@
         <script src="../js/less.min.js"></script>
         <script src="../js/prism.js"></script>
         <script src="../js/blur.min.js"></script>
+        <script src="../js/Vague.js"></script>
         <!-- THIRD PARTY JAVASCRIPT -->
 
         <!-- RP ICONS -->
@@ -100,34 +100,36 @@
             <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10">
-                    <div id="MainContentBox">
-                        <code>Resolution: </code>
-                        <code id="resolution"></code>
-                        <br>
-                        <code>Mode: </code>
-                        <code id="mode"></code>
+                    <div id="MainContentBoxBlurLayer">
+                        <div id="MainContentBox">
+                            <code>Resolution: </code>
+                            <code id="resolution"></code>
+                            <br>
+                            <code>Mode: </code>
+                            <code id="mode"></code>
 
-                        <h1 id="MainTitle" class="text-center">
-                            <small id="MainSubtitle">Hello, my name is</small><br>
-                            austin jackson
-                        </h1>
+                            <h1 id="MainTitle" class="text-center">
+                                <small id="MainSubtitle">Hello, my name is</small><br>
+                                austin jackson
+                            </h1>
 
-                        <br><br>
+                            <br><br>
 
-                        <h3 id="AboutTitle" class="text-center">about</h3>
-                        <p id="AboutBio" class="text-center">
-                            Welcome to ruthlessphysics.com.<br>
-                            I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br>
+                            <h3 id="AboutTitle" class="text-center">about</h3>
+                            <p id="AboutBio" class="text-center">
+                                Welcome to ruthlessphysics.com.<br>
+                                I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br>
+                                <br>
+                                My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br>
+                                <br>
+                                Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There are tools out there called <a href="http://www.winehq.org/">Wine</a> and <a href="http://winebottler.kronenberg.org/">WineBottler</a>, which work great for some of my Windows-only programs.<br>
+                                <br>
+                                My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">the code</a>! There's definitely nothing suspicious.<br>
+                                <br>
+                                Now go check out that Navbar thing at the top!
+                            </p>
                             <br>
-                            My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br>
-                            <br>
-                            Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There are tools out there called <a href="http://www.winehq.org/">Wine</a> and <a href="http://winebottler.kronenberg.org/">WineBottler</a>, which work great for some of my Windows-only programs.<br>
-                            <br>
-                            My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">the code</a>! There's definitely nothing suspicious.<br>
-                            <br>
-                            Now go check out that Navbar thing at the top!
-                        </p>
-                        <br>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-1"></div>
@@ -160,7 +162,7 @@
 
         <script type="text/javascript">    
 
-            
+
 
             var t = new Trianglify(
                 {
@@ -188,6 +190,11 @@
                 var difference = Math.abs(newWidth - currentWidth);
                 var differenceFirst = Math.abs(newWidth - firstWidth);
 
+                
+                showResolution();
+                //showMode();
+                cinnabar_link();
+
                 if(difference > 100)
                 {
                     console.log("Enough of a window change has been made.");
@@ -195,15 +202,12 @@
                     redraw();
                     currentWidth = newWidth;
                     $('#MainContentBox').blurjs({
-                        source: blur_source_,
-                        radius: blur_radius,
-                        overlay: blur_overlay
+                        source: "body",
+                        radius: 100,
+                        overlay: "rgba(255,255,255,0.5)"
+
                     });
                 }
-                showResolution();
-                showMode();
-                cinnabar_link();
-
 
             };
 
@@ -222,15 +226,10 @@
 
             $('#MainContentBox').blurjs({
                 source: "body",
-                radius: 50,
-                overlay: "",
-                draggable: true
+                radius: 100,
+                overlay: "rgba(255,255,255,0.5)"
 
             });
-            
-            var blur_source = "body";
-            var blur_radius = 50;
-            var blur_overlay = "rgba(255,255,255,0.0)";
 
         </script>
     </body>
