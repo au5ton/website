@@ -33,6 +33,17 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     transition: color 500ms;
 }
 
+#Background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 #NavbarBrand {
     font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
     font-weight: 700!important;
@@ -89,23 +100,12 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     padding-right: 5%;
 }
 
-#Background {
-    background-repeat: no-repeat;
-    background-position: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-}
-
 #MainContentBox {
     display: block;
     border-radius: 5px;
     padding: 2%;
     color: rgb(50,50,50);
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.8);
 }
 
 #MainTitle {
