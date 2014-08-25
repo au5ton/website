@@ -1,26 +1,30 @@
-/* TEAM */
-	Developer: Austin Jackson
-	Contact: themacphage [at] gmail.com
+/* SITE DEV */
+	Developer: Austin Jackson 
+	Github: MacPhage
 	Twitter: @MacPhage
 	From: Houston, Texas
 
-	Developer: FirstWorldAnarchy
+	Developer: Tarun Boddupalli
+	Github: FirstWorldAnarchy
 	Twitter: @JavaFTW
 
 /* THANKS */
 
+	Bootstrap: Mark Otto
+	Github: mdo
+	Twitter: @mdo
+	From: San Francisco, California
+	
+	Bootstrap: Jacob
+	Github: fat
+	Twitter: @fat
+	From: San Francisco, California
+
 	Trianglify.js: Quinn Rohlf
+	Github: qrohlf
 	Twitter: @qrohlf
 	From: Portland, Oregon
 
-	Roboto (TypeFace): Christian Robertson
-	Google+: https://plus.google.com/110879635926653430880/about
-	Employed at: Google	
-
-	Socialico: Jelio Dimitrov
-	Website: https://www.behance.net/arsek
-
-/* SITE */
-	Language: English
-	Doctype: HTML5
-	IDE: Adobe Brackets, GitHub, FileZilla, Photoshop
+	Roboto Condensed (TypeFace): Christian Robertson
+	Source Sans Pro (TypeFace): Paul D. Hunt
+	Open Sans (TypeFace): Steve Matteson

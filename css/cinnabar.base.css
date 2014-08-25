@@ -1,30 +1,31 @@
 body {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 175% 175%;
+    background-size: 100% 100%;
     overflow-x: hidden;
     width: 100%;
-    color: rgb(0,0,0);
+    color: rgb(50,50,50);
+    font-weight: normal;
 }
 
-a:link, a:visited {
-    color: rgb(50, 141, 194)!important;
+a:link, a:visited, #NavbarSection:link, #NavbarSection:visited, #NavbarItem:link, #NavbarItem:visited, #MainContentContainer a:link, #MainContentContainer a:visited {
+    color: rgb(50, 141, 194);
     -webkit-transition: color 500ms;
     -ms-transition: color 500ms;
     -moz-transition: color 500ms;
     -o-transition: color 500ms;
     transition: color 500ms;
 }
-a:hover {
-    color: rgb(0, 231, 169)!important;
+a:hover, #NavbarSection:hover, #NavbarItem:hover, #MainContentContainer a:hover {
+    color: rgb(2, 191, 137);
     -webkit-transition: color 500ms;
     -ms-transition: color 500ms;
     -moz-transition: color 500ms;
     -o-transition: color 500ms;
     transition: color 500ms;
 }
-a:active {
-    color: rgb(224, 74, 109)!important;
+a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:active {
+    color: rgb(211, 75, 105);
     -webkit-transition: color 500ms;
     -ms-transition: color 500ms;
     -moz-transition: color 500ms;
@@ -33,16 +34,44 @@ a:active {
 }
 
 #NavbarBrand {
-    font-family: "Roboto Condensed","Helvetica Neue Bold","Segoe UI Semibold",Tahoma,sans serif;
-    font-weight: 500;
-    font-style: condensed;
+    font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
+    font-weight: 700!important;
+    font-style: normal;
+}
+
+#NavbarSection {
+    font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
+    font-weight: 700!important;
+    font-style: normal;
+    font-size: 115%;
 }
 
 #NavbarItem {
-    font-family: "Roboto Condensed","Helvetica Neue Bold","Segoe UI Semibold",Tahoma,sans serif;
-    font-weight: 500;
-    font-style: condensed;
+    font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
+    font-weight: 700!important;
+    font-style: normal;
     font-size: 115%;
+}
+
+#NavbarSubhead {
+    font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
+    font-weight: 700!important;
+    font-style: normal;
+    font-size: 117.5%;
+    background: rgba(150,150,150,0.25);
+}
+
+#NavbarHumans {
+    font-family: "Lobster Two", cursive;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 150%;
+    background: rgba(255, 166, 221, 0.25);
+}
+
+#NavbarHumans:hover {
+    color: rgb(100,100,100);
+    background: rgba(255, 166, 221, 0.6);
 }
 
 #NavbarProjectIcon {
@@ -60,53 +89,56 @@ a:active {
     padding-right: 5%;
 }
 
+#Background {
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
 #MainContentBox {
     display: block;
-    border-radius: 3px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
     padding: 2%;
+    color: rgb(50,50,50);
     background: rgba(255,255,255,0.8);
 }
 
 #MainTitle {
-    font-family: "HelveticaNeue-Thin","Segoe UI Light","Roboto", Tahoma, sans serif;
+    font-family: "Open Sans","Helvetica Neue Thin","Segoe UI Light", Tahoma, sans serif;
     font-weight: 300;
     font-style: normal;
     word-wrap: break-word;
+    
 }
 
 #MainSubtitle {
-    font-family: "HelveticaNeue-Light","Segoe UI Light","Roboto", Tahoma, sans serif;
-    font-weight: 300;
+    font-family: "Open Sans","Helvetica Neue Light","Segoe UI Light", Tahoma, sans serif;
+    font-weight: 400;
     font-style: normal;
     padding-top: 0px;
-    position: relative;
-    bottom: 0px;
     word-wrap: break-word;
 }
 
-.fixthisplease {
-    position: relative;
-    top: -70px;
-}
-
 #AboutTitle {
-    font-family: "HelveticaNeue","Segoe UI","Roboto", Tahoma, sans serif;
-    font-weight: 400;
-    color: rgb(50,50,50);
+    font-family: "Open Sans","Helvetica Neue","Segoe UI", Tahoma, sans serif;
+    font-weight: 500;
 }
 
 #AboutBio {
-    font-family: "HelveticaNeue","Segoe UI","Roboto", Tahoma, sans serif;
+    font-family: "Source Sans Pro","Helvetica Neue","Segoe UI", Tahoma, sans serif;
     font-weight: 400;
-    line-height: 125%;
+    line-height: 1.30em;
     padding-left: 0px;
     padding-right: 0px;
-    color: rgb(50,50,50);
 }
 
 #EndFooter {
-    font-family: "Helvetica Neue Bold","Segoe UI Bold","Roboto Condensed", Tahoma, sans serif;
+    font-family: "Segoe UI Bold","Roboto Condensed","Helvetica Neue Bold", Tahoma, sans serif;
     font-weight: bold;
     display: block;
     border-radius: 3px;
@@ -120,8 +152,7 @@ a:active {
 .shadowed { /* FOR IMAGES*/
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
     filter: url(shadow.svg#drop-shadow);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
-        Color='#444')";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
         filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
         -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
     }
@@ -129,17 +160,15 @@ a:active {
     .shadowedsmall { /* FOR IMAGES*/
         -webkit-filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.30));
         filter: url(shadow.svg#drop-shadow);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
-            Color='#444')";
-            filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
             -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
         }
 
         .shadowedtiny { /* FOR IMAGES*/
             -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
             filter: url(shadow.svg#drop-shadow);
-            -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,
-                Color='#444')";
-                filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+            -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+        filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
                 -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
             }
