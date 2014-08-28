@@ -37,6 +37,12 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
     font-weight: 700!important;
     font-style: normal;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
 }
 
 #NavbarSection {
@@ -44,6 +50,12 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     font-weight: 700!important;
     font-style: normal;
     font-size: 115%;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
 }
 
 #NavbarItem {
@@ -51,6 +63,12 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     font-weight: 700!important;
     font-style: normal;
     font-size: 115%;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
 }
 
 #NavbarSubhead {
@@ -59,6 +77,12 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     font-style: normal;
     font-size: 117.5%;
     background: rgba(150,150,150,0.25);
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
 }
 
 #NavbarHumans {
@@ -67,6 +91,12 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     font-style: normal;
     font-size: 150%;
     background: rgba(255, 166, 221, 0.25);
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
 }
 
 #NavbarHumans:hover {
@@ -80,6 +110,12 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     margin-right: 5px;
     -webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
     -moz-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
 }
 
 #MainContentContainer {
