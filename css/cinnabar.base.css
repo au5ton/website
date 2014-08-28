@@ -33,7 +33,7 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     transition: color 500ms;
 }
 
-#NavbarBrand {
+#NavbarBrand, #NavbarBrand:link, #NavbarBrand:visited, #NavbarBrand:hover, #NavbarBrand:active {
     font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
     font-weight: 700!important;
     font-style: normal;
@@ -71,7 +71,7 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
     user-select: none;
 }
 
-#NavbarSubhead {
+#NavbarSubhead, #NavbarSubhead:link, #NavbarSubhead:visited, #NavbarSubhead:hover, #NavbarSubhead:active {
     font-family: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
     font-weight: 700!important;
     font-style: normal;
@@ -86,10 +86,10 @@ a:active, #NavbarSection:active, #NavbarItem:active, #MainContentContainer a:act
 }
 
 #NavbarHumans {
-    font-family: "Lobster Two", cursive;
+    font-family: "Satisfy", cursive;
     font-weight: normal;
     font-style: normal;
-    font-size: 150%;
+    font-size: 175%;
     background: rgba(255, 166, 221, 0.25);
     -webkit-user-select: none; /* Chrome/Safari */        
     -moz-user-select: none; /* Firefox */
