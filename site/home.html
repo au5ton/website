@@ -11,7 +11,7 @@
 
         <!-- RP CSS -->
         <link href="../css/cinnabar.base.css" rel="stylesheet" type="text/css">
-        <link href="../css/cinnabar.xs.css" rel="stylesheet" type="text/css" id="cinnabar_current">
+        <link href="" rel="stylesheet" type="text/css" id="cinnabar_current">
         <!-- RP CSS -->
 
         <!-- THIRD PARTY CSS -->
@@ -81,7 +81,7 @@
                                 <li><a id="NavbarItem" href="https://github.com/MacPhage/pTicTacToe/tree/bf962514e60ffcb70345480c3e2dcd24f09d0d1a">pTicTacToe (original C++)</a></li>
                                 <li class="divider"></li>
                                 <li><a id="NavbarSubhead">JavaScript</a></li>
-                                <li><a id="NavbarItem" href="http://github.com/MacPhage/cinnabar" data-toggle="tooltip" data-placement="auto right" title="A set of JavaScript web tools">Cinnabar</a></li>
+                                <li><a id="NavbarItem" href="http://github.com/MacPhage/cinnabar" data-toggle="tooltip" data-placement="auto right" title="A set of JavaScript web tools">Cinnabar tools</a></li>
                                 <li class="divider"></li>
                                 <li><a id="NavbarSubhead">Web</a></li>
                                 <li><a id="NavbarItem" href="http://github.com/MacPhage/macphage.github.io" data-toggle="tooltip" data-placement="auto right" title="This very website!"><img id="NavbarProjectIcon" src="../apple-touch-icon-152x152.png">macphage.github.io</a></li>
@@ -190,7 +190,7 @@ Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
     {
         console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
         var pattern = t.generate(document.body.clientWidth, height());
-        document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+        document.body.setAttribute("style", "background-image: "+pattern.dataUrl);
         //                document.getElementById("Background").setAttribute('style', 'background-image: '+pattern.dataUrl);
     }
     function height() {
