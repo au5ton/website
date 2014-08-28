@@ -31,9 +31,8 @@
         <script src="../js/jquery.min.js" ></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/d3.v3.min.js"></script>
-        <script src="../js/prism.js"></script>
-        <script src="../js/blur.min.js"></script>
         <script src="../js/AppScroll.min.js"></script>
+        <script src="../js/fastclick.js"></script>
         <!-- THIRD PARTY JAVASCRIPT -->
 
         <!-- RP ICONS -->
@@ -55,7 +54,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a id="NavbarBrand" class="navbar-brand">macphage.github.io</a>
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <button class="navbar-toggle needsclick" type="button" data-toggle="collapse" data-target="#navbar-main">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -101,164 +100,171 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a id="NavbarHumans" href="../humans.txt">Humans</button></a>
-                        </li>
-                    </ul>
+                    </li>
+                </ul>
 
-                </div>
-            </div>
         </div>
+        </div>
+    </div>
 
 <!--        <div id="Background"></div>-->
 
-        <div id="MainContentContainer" class="container-fluid">
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-10">
-                    <div id="MainContentBoxBlurLayer">
-                        <div id="MainContentBox">
-                            <code>Resolution: </code>
-                            <code id="resolution"></code>
-                            <br>
-                            <code>Mode: </code>
-                            <code id="mode"></code>
+<div id="MainContentContainer" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div id="MainContentBoxBlurLayer">
+                <div id="MainContentBox">
+                    <code>Resolution: </code>
+                    <code id="resolution"></code>
+                    <br>
+                    <code>Mode: </code>
+                    <code id="mode"></code>
 
-                            <h1 id="MainTitle" class="text-center">
-                                <small id="MainSubtitle">Hello, my name is</small><br>
-                                austin jackson
-                            </h1>
+                    <h1 id="MainTitle" class="text-center">
+                        <small id="MainSubtitle">Hello, my name is</small><br>
+                        austin jackson
+                    </h1>
 
-                            <br><br>
+                    <br><br>
 
-                            <h3 id="AboutTitle" class="text-center">about</h3>
-                            <p id="AboutBio" class="text-center">
-                                Welcome to ruthlessphysics.com.<br>
-                                I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a id="Link" href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br>
-                                <br>
-                                My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br>
-                                <br>
-                                Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There are tools out there called <a href="http://www.winehq.org/">Wine</a> and <a href="http://winebottler.kronenberg.org/">WineBottler</a>, which work great for some of my Windows-only programs.<br>
-                                <br>
-                                My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">the code</a>! There's definitely nothing suspicious.<br>
-                                <br>
-                                Now go check out that Navbar thing at the top!
-                            </p>
-                            <br>
-                        </div>
-                    </div>
+                    <h3 id="AboutTitle" class="text-center">about</h3>
+                    <p id="AboutBio" class="text-center">
+                        Welcome to ruthlessphysics.com.<br>
+                        I'm Austin Jackson and I'm programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a id="Link" href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br>
+                        <br>
+                        My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br>
+                        <br>
+                        Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There are tools out there called <a href="http://www.winehq.org/">Wine</a> and <a href="http://winebottler.kronenberg.org/">WineBottler</a>, which work great for some of my Windows-only programs.<br>
+                        <br>
+                        My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">the code</a>! There's definitely nothing suspicious.<br>
+                        <br>
+                        Now go check out that Navbar thing at the top!
+                    </p>
+                    <br>
                 </div>
-                <div class="col-sm-1"></div>
             </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
 
-<!--
-            <footer>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-6">
-                            <div class="container-fluid">
-                                <div id="EndFooter" class="text-center box">
-                                    <a href="credit.html">Attributions</a><br>
-                                    Website by Austin Jackson &copy; 2014<br>
-                                    Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
-                                </div>
-                            </div>
+    <!--
+<footer>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+<div class="container-fluid">
+<div id="EndFooter" class="text-center box">
+<a href="credit.html">Attributions</a><br>
+Website by Austin Jackson &copy; 2014<br>
+Webmaster: <a href="mailto:TheMacPhage@gmail.com">TheMacPhage@gmail.com</a><br>
+</div>
+</div>
 
-                        </div>
-                        <div class="col-sm-3"></div>
-                    </div>
-                </div>
-            </footer>
+</div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+</footer>
 -->
 
-        </div>
+</div>
 
 
 
 
-        <!-- Background generation -->
-        <!-- http://qrohlf.com/trianglify/ -->
+<!-- Background generation -->
+<!-- http://qrohlf.com/trianglify/ -->
 
-        <script type="text/javascript">    
-            var t = new Trianglify(
-                {
-                    bleed: 0,
-                    noiseIntensity: 0
-                }
-            );
-            var firstWidth = document.body.clientWidth;
-            var currentWidth = document.body.clientWidth;
-            function redraw()
-            {
-                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
-                var pattern = t.generate(document.body.clientWidth, height());
-                document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
-//                document.getElementById("Background").setAttribute('style', 'background-image: '+pattern.dataUrl);
-            }
-            function height() {
-                return Math.max(
-                    document.body.scrollHeight, document.documentElement.scrollHeight,
-                    document.body.offsetHeight, document.documentElement.offsetHeight,
-                    document.body.clientHeight, document.documentElement.clientHeight
-                );
-            }
-            window.onresize = function() {
-                var newWidth = document.body.clientWidth;
-                var difference = Math.abs(newWidth - currentWidth);
-                var differenceFirst = Math.abs(newWidth - firstWidth);
+<script type="text/javascript">    
+    var t = new Trianglify(
+        {
+            bleed: 0,
+            noiseIntensity: 0
+        }
+    );
+    var firstWidth = document.body.clientWidth;
+    var currentWidth = document.body.clientWidth;
+    function redraw()
+    {
+        console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
+        var pattern = t.generate(document.body.clientWidth, height());
+        document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+        //                document.getElementById("Background").setAttribute('style', 'background-image: '+pattern.dataUrl);
+    }
+    function height() {
+        return Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+    }
+    window.onresize = function() {
+        var newWidth = document.body.clientWidth;
+        var difference = Math.abs(newWidth - currentWidth);
+        var differenceFirst = Math.abs(newWidth - firstWidth);
 
 
-                showResolution();
-                showMode();
-                cinnabar_link();
+        showResolution();
+        showMode();
+        cinnabar_link();
 
-                if(difference > 100)
-                {
-                    console.log("Enough of a window change has been made.");
-                    console.log("Difference from last change: "+difference+", original: "+differenceFirst);
-                    redraw();
-                    currentWidth = newWidth;
-//                    $('#MainContentBox').blurjs({
-//                        source: "body",
-//                        radius: 100,
-//                        overlay: "rgba(255,255,255,0.6)"
-//
-//                    });
-                }
-
-            };
-
-            function showResolution()
-            {
-                document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
-            } 
-            function showMode()
-            {
-                document.getElementById("mode").innerHTML = cinnabar_getMode();
-            }
-
+        if(difference > 100)
+        {
+            console.log("Enough of a window change has been made.");
+            console.log("Difference from last change: "+difference+", original: "+differenceFirst);
             redraw();
-            showResolution();
-            showMode();
+            currentWidth = newWidth;
+            //                    $('#MainContentBox').blurjs({
+            //                        source: "body",
+            //                        radius: 100,
+            //                        overlay: "rgba(255,255,255,0.6)"
+            //
+            //                    });
+        }
+
+    };
+
+    function showResolution()
+    {
+        document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
+    } 
+    function showMode()
+    {
+        document.getElementById("mode").innerHTML = cinnabar_getMode();
+    }
+
+    redraw();
+    showResolution();
+    showMode();
 
 
-            var scroller = new AppScroll({
-                toolbar: document.getElementById("MainNavbar"),
-                scroller: document.getElementById("MainContentContainer")
-            });
+    var scroller = new AppScroll({
+        toolbar: document.getElementById("MainNavbar"),
+        scroller: document.getElementById("MainContentContainer")
+    });
 
-//            $('#MainContentBox').blurjs({
-//                source: "#Background",
-//                radius: 50,
-//                overlay: "rgba(255,255,255,0.6)"
-//            });
+    scroller.on();
 
 
-            $(document).ready(function () {
-                $("[data-toggle=tooltip]").tooltip();
-            });
+    $(function() {
+        FastClick.attach(document.body);
+    });
 
-            document.getElementById("MainContentBox").setAttribute("style","background-position: 0px 0px!important;width: 100%;max-width: 100%;");
+    //            $('#MainContentBox').blurjs({
+    //                source: "#Background",
+    //                radius: 50,
+    //                overlay: "rgba(255,255,255,0.6)"
+    //            });
 
-        </script>
-    </body>
+
+    $(document).ready(function () {
+        $("[data-toggle=tooltip]").tooltip();
+    });
+
+    document.getElementById("MainContentBox").setAttribute("style","background-position: 0px 0px!important;width: 100%;max-width: 100%;");
+
+</script>
+</body>
 </html>
