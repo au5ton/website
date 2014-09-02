@@ -1,16 +1,38 @@
-#MainTitle {
+.MainTitle {
     font-size: 300%;
     padding-bottom: 5%;
 }
 
-#MainSubtitle {
+.MainSubtitle {
     font-size: 50%;
 }
 
-#AboutTitle {
+.AboutTitle {
     font-size: 175%;
 }
 
-#AboutBio {
+.AboutBio {
+    font-size: 125%;
+}
+
+.PortfolioContentContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.PortfolioMainTitle {
+    font-size: 250%;
+    padding-bottom: 0px;
+}
+
+.PortfolioMainSubtitle {
+    font-size: 50%;
+}
+
+.PortfolioAboutTitle {
+    font-size: 175%;
+}
+
+.PortfolioAboutBio {
     font-size: 125%;
 }
