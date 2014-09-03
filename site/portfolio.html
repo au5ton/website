@@ -7,7 +7,7 @@
         <meta name="description" content="Austin Jackson's code portfolio">
         <meta name="author" content="@MacPhage">
         <meta name="robots" content="index, follow, noimageindex, noarchive">
-        <title>austin jackson</title>
+        <title>austin jackson -- projects</title>
 
         <!-- THIRD PARTY CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans:400,300,600|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
         <!-- THIRD PARTY CSS -->
-        
+
         <!-- RP CSS -->
         <link href="../css/cinnabar.base.css" rel="stylesheet" type="text/css">
         <link href="" rel="stylesheet" type="text/css" id="cinnabar_current">
@@ -47,7 +47,7 @@
         <!-- RP ICONS -->
 
     </head>
-    <body>
+    <body onload="javascript:cinnabar_set('../css/cinnabar.xs.css','../css/cinnabar.sm.css','../css/cinnabar.md.css','../css/cinnabar.lg.css');cinnabar_link();">
 
         <div id="MainNavbar" class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -61,51 +61,115 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar-main">
                     <ul id="NavbarSections" class="nav navbar-nav">
-                        <li class="active"><a class="NavbarSection" href="home.html">Home page</a></li>
-                        <li><a class="NavbarSection" href="portfolio.html">Projects</a></li>
-
-
+                        <li><a class="NavbarSection" href="home.html">Home page</a></li>
+                        <li class="active"><a class="NavbarSection" href="portfolio.html">Projects</a></li>
+                        
+                        
                         <li><a class="NavbarSection" href="http://twitter.com/MacPhage">Twitter</a></li>
                         <li><a class="NavbarSection" href="http://github.com/MacPhage">GitHub</a></li>
                         <li><a class="NavbarSection" href="mailto:theaustinjackson@gmail.com">Email</a></li>
-
-
+                        
+                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="NavbarItem" href="javascript:toggleDebugHTML();">[Debug]</a></li>
                         <li><a class="NavbarSection" href="credit.html">Attributions</a></li>
                         <li><a class="NavbarHumans" href="../humans.txt">Humans</button></a></li>
-                </ul>
+                    </ul>
 
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
 
-<div id="MainContentContainer" class="container-fluid MainContentContainer">
+<div id="MainContentContainer" class="container-fluid PortfolioContentContainer">
     <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10">
-            <div class="MainContentBox">
+        <div class="col-sm-12">
+            <div class="PortfolioContentBox">
 
-                <h1 class="text-center MainTitle">
-                    <small class="MainSubtitle">Hello, my name is</small><br>
-                    austin jackson
-                </h1>
+                <div class="PortfolioJumbotron text-center">
+                    <div class="container-fluid">
+                        <row>
+                            <div class="col-md-6">
+                                <h1 class="JumboTitle text-right">Projects</h1>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="JumboSubtitle text-left">a portfolio of my previous work (work in progress)</p>
+                            </div>
+                        </row>
+                    </div>
+                </div>
 
-                <br><br>
+                <!-- COOL PROJECTY STUFF -->
+                <div class="ProjectGroup">
+                    <h2 class="ProjectGroupTitle">ProjectGroup</h2>
+                    
+                    <div class="container-fluid ProjectContainers text-center">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <hr>
+                
+                <div class="ProjectGroup">
 
-                <h3 class="text-center AboutTitle">about</h3>
-                <p class="text-center AboutBio">
-                    I'm Austin Jackson and I'm a programmer in high school. Here I'll have some of my projects available for public use and criticism, in fact, this <a href="https://github.com/macphage/macphage.github.io">entire website is open-source</a>.<br>
-                    <br>
-                    My current software is ideally for my own, and potentially others, educational benefits. Most of my software is open-source and found on <a href="https://github.com/">GitHub</a>. With that in mind, you probably won't find anything that incredibly fantastic, but maybe mildly useful. :) <br>
-                    <br>
-                    Being an Apple fanatic, I personally know the struggle about incompatible software. I try to make my software run on as many desktop platforms as possble. Thanks to <a href="http://www.java.com/">Java</a>, that's very possible. However, some of my software may require emulation. There are tools out there called <a href="http://www.winehq.org/">Wine</a> and <a href="http://winebottler.kronenberg.org/">WineBottler</a>, which work great for some of my Windows-only programs.<br>
-                    <br>
-                    My software is provided as-is and is not harmful to your computer, but whether you trust me or not is ultimately up to you. If you feel like it, look at <a href="https://github.com/MacPhage">the code</a>! There's definitely nothing suspicious.<br>
-                    <br>
-                    Now go check out that Navbar thing at the top!
-                </p>
+                    <h2 class="ProjectGroupTitle">ProjectGroup</h2>
+                    <div class="container-fluid ProjectContainers text-center">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_java.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+                
+                
+                
+                
+                
                 <div id="debugstuff" style="visibility: hidden; /*INITIAL*/">
                     <code>Resolution: </code>
                     <code id="resolution"></code>
@@ -113,9 +177,9 @@
                     <code>Mode: </code>
                     <code id="mode"></code>
                 </div>
+                
             </div>
         </div>
-        <div class="col-sm-1"></div>
     </div>
 </div>
 
@@ -181,7 +245,7 @@
         var initial = "visibility: hidden; /*INITIAL*/";
         var hidden = "visibility: hidden; /*DONT EDIT ME*/";
         var shown = "visibility: visible; /*DONT EDIT ME*/";
-
+        
         var de = document.getElementById("debugstuff");
         if(de.getAttribute("style") == hidden || de.getAttribute("style") == initial)
         {
@@ -212,15 +276,17 @@
 
 
     $(document).ready(function () {
+        
         cinnabar_set('../css/cinnabar.xs.css','../css/cinnabar.sm.css','../css/cinnabar.md.css','../css/cinnabar.lg.css');
         cinnabar_link();
         
         $("[data-toggle=tooltip]").tooltip();
         
         $("#MainNavbar").addClass("animated fadeInDown");
-        $(".MainTitle").addClass("animated bounceIn");
-        $(".AboutTitle").addClass("animated fadeIn");
-        $(".AboutBio").addClass("animated fadeIn");
+        $(".PortfolioJumbotron").addClass("animated fadeInDown");
+        $(".ProjectGroupTitle").addClass("animated bounceIn")
+        $(".ProjectImage").addClass("animated zoomInDown");
+        
     });
     
     $(".NavbarSection").mouseup(function(event) {
@@ -232,18 +298,6 @@
                 break;
         }
     });
-    
-    function releaseTheKraken()
-    {
-        /*For shits and giggles, this is what happens at 1:39am
-        when animations are so fun and easy.
-        
-        Serious props to:
-        https://github.com/daneden/animate.css
-        */
-        $(".MainContentBox").addClass("animated hinge");
-        $("#MainNavbar").addClass("animated lightSpeedOut");
-    }
 
 </script>
 </body>

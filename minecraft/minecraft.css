@@ -7,7 +7,7 @@
 }
 
 #MainContentBox {
-    font-family: "Helvetica Neue Light","Segoe UI Light", sans serif;
+    font-family: "Open Sans","Helvetica Neue Light","Segoe UI Light", sans serif;
 	margin-top: 10%;
 	padding: 5%;
 	display: block;
@@ -18,7 +18,7 @@
 }
 
 #Footer {
-    font-family: "Helvetica Neue","Segoe UI", sans serif;
+    font-family: "Open Sans","Helvetica Neue","Segoe UI", sans serif;
     font-weight: bold;
     font-style: condensed;
     padding: 5%;

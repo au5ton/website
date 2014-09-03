@@ -1,0 +1,241 @@
+//All site styling is done from here an auto-compiled with an Adobe Brackets extension
+
+@import "macphage.mixins.less";
+
+@link-normal: hsl(202, 59%, 48%);
+@link-hover: hsl(163, 98%, 38%);
+@link-active: hsl(347, 61%, 56%);
+
+@navbar-section: darken(@link-normal, 3%);
+@navbar-item: lighten(@link-normal, 3%);
+
+@text-normal: rgb(50,50,50);
+@text-grey: rgb(100,100,100);
+@text-white: rgb(245,245,245);
+
+@content-box-background: rgba(255,255,255,0.8);
+@portfolio-box-background: rgba(80, 80, 80, 0.8);
+
+@humans-normal: rgba(255, 166, 221, 0.25);
+@humans-hover: rgba(255, 166, 221, 0.6);
+
+@font-navbar: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
+@font-humans: "Satisfy", "Monotype Corsiva", cursive;
+@font-maintitle: "Open Sans","Helvetica Neue Thin","Segoe UI Light",Tahoma,sans serif;
+@font-mainsubtitle: "Open Sans","Helvetica Neue Light","Segoe UI Light",Tahoma,sans serif;
+@font-abouttitle: "Open Sans","Helvetica Neue","Segoe UI", Tahoma, sans serif;
+@font-aboutbio: "Source Sans Pro","Helvetica Neue","Segoe UI",Tahoma, sans serif;
+
+
+#NavbarSections {
+    color: @navbar-section;
+}
+
+
+
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150% 150%;
+    overflow-x: hidden;
+    width: 100%;
+    color: @text-normal;
+    font-weight: normal;
+
+    a:link, a:visited {
+        color: @link-normal;
+        .color-transition;
+    }
+    a:hover { 
+        color: @link-hover;
+        .color-transition;
+    }
+    a:active {
+        color: @link-active;
+        .color-transition;
+    }
+    
+    .navbar {
+        
+        .NavbarBrand {
+            font-family: @font-navbar;
+            font-weight: 700!important;
+            font-style: normal;
+            .no-select;  
+        }
+
+        .NavbarSection {
+            font-family: @font-navbar;
+            font-weight: 700!important;
+            font-style: normal;
+            font-size: 115%;
+            color: @navbar-section!important;
+            .no-select;
+        }
+
+        .NavbarItem {
+            font-family: @font-navbar;
+            font-weight: 700!important;
+            font-style: normal;
+            font-size: 115%;
+            color: @navbar-item;
+            .no-select;
+        }
+
+        .NavbarSubhead {
+            font-family: @font-navbar;
+            font-weight: 700!important;
+            font-style: normal;
+            font-size: 117.5%;
+            background: rgba(150,150,150,0.25);
+            .no-select;
+        }
+
+        .NavbarHumans {
+            font-family: @font-humans;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 175%;
+            background: @humans-normal;
+            .no-select;
+        }
+
+        .NavbarProjectIcon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            .drop-shadow-small;
+            .no-select;
+        }
+        
+    }
+
+    .MainContentContainer {
+        padding-top: 75px;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+
+        .MainContentBox {
+            display: block;
+            border-radius: 5px;
+            padding: 2%;
+            color: @text-normal;
+            background: @content-box-background;
+
+            .MainTitle {
+                font-family: @font-maintitle;
+                font-weight: 300;
+                font-style: normal;
+                word-wrap: break-word;
+
+                .MainSubtitle {
+                    font-family: @font-mainsubtitle;
+                    font-weight: 400;
+                    font-style: normal;
+                    padding-top: 0px;
+                    word-wrap: break-word;
+                }
+            }
+
+            .AboutTitle {
+                font-family: @font-abouttitle;
+                font-weight: 500;
+            }
+
+            .AboutBio {
+                font-family: @font-aboutbio;
+                font-weight: 400;
+                line-height: 1.30em;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+        }
+        
+    }
+    
+    .PortfolioContentContainer {
+        padding-top: 75px;
+        padding-bottom: 5%;
+
+        .PortfolioContentBox {
+            display: block;
+            border-radius: 5px;
+            padding: 2%;
+            color: @text-normal;
+            background: @portfolio-box-background;
+            
+            hr {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            
+            .PortfolioJumbotron {
+                display: block;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                padding-left: 5em;
+                padding-right: 5em;
+                
+                
+                border-radius: 5px;
+                background: @content-box-background;
+                
+                .JumboTitle {
+                    font-family: @font-humans;
+                    font-size: 300%;
+                }
+                .JumboSubtitle {
+                    font-family: @font-mainsubtitle;
+                    font-size: 125%;
+                    margin-top: 1.5em;
+                    margin-bottom: 0.5em;
+                }
+            }
+            
+            .ProjectGroupTitle {
+                font-family: @font-maintitle;
+                color: @text-white;
+            }
+            
+            .ProjectGroup {
+            }
+            
+            .ProjectContainers {
+            }
+            
+            .ProjectContainer {
+                width: 20em;
+                max-width: 20em;
+                height: 20em;
+                max-height: 20em;
+                
+                border-radius: 5px;
+                margin: 1em;
+                
+                .ProjectImage {
+                    width: 15em;
+                    max-width: 15em;
+                    height: 15em;
+                    max-height: 15em;
+                    
+                    margin-top: 2.5em;
+                    margin-left: 2.5em;
+                    margin-right: 2.5em;
+                    
+                    .drop-shadow-large;
+                }
+                
+                .ProjectTitle {
+                    font-family: @font-maintitle;
+                    font-style: normal;
+                    color: @text-white;
+                }
+            }
+        }
+
+    }
+
+
+}
