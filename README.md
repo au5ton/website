@@ -5,7 +5,7 @@ All the source code and resources behind the [ruthlessphysics.com](http://ruthle
 
 ##Utilizations
 
-- See the [credit page](http://macphage.github.io/site/credit.html) for a full list of the site's utilizations
+- See the [attributions page](http://macphage.github.io/site/credit.html) for a full list of the site's utilizations
 
 ##Contribution
 

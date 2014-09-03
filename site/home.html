@@ -11,6 +11,7 @@
 
         <!-- THIRD PARTY CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/animate.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans:400,300,600|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
         <!-- THIRD PARTY CSS -->
@@ -46,7 +47,7 @@
         <!-- RP ICONS -->
 
     </head>
-    <body onload="javascript:cinnabar_set('../css/cinnabar.xs.css','../css/cinnabar.sm.css','../css/cinnabar.md.css','../css/cinnabar.lg.css');cinnabar_link();">
+    <body>
 
         <div id="MainNavbar" class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -61,37 +62,30 @@
                 <div class="navbar-collapse collapse" id="navbar-main">
                     <ul id="NavbarSections" class="nav navbar-nav">
                         <li class="active"><a class="NavbarSection" href="home.html">Home page</a></li>
-                        <li><a class="NavbarSection" href="portfolio.html">Portfolio</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle NavbarSection" data-toggle="dropdown">Find Me<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a class="NavbarItem" href="http://twitter.com/MacPhage">Twitter</a></li>
-                                <li><a class="NavbarItem" href="http://github.com/MacPhage">GitHub</a></li>
-                                <li><a class="NavbarItem" href="mailto:theaustinjackson@gmail.com">Email</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="NavbarSection" href="credit.html">Attributions</a></li>
+                        <li><a class="NavbarSection" href="portfolio.html">Projects</a></li>
+
+
+                        <li><a class="NavbarSection" href="http://twitter.com/MacPhage">Twitter</a></li>
+                        <li><a class="NavbarSection" href="http://github.com/MacPhage">GitHub</a></li>
+                        <li><a class="NavbarSection" href="mailto:theaustinjackson@gmail.com">Email</a></li>
+
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="NavbarHumans" href="../humans.txt">Humans</button></a>
-                        </li>
-                    </ul>
+                        <li><a class="NavbarItem" href="javascript:toggleDebugHTML();">[Debug]</a></li>
+                        <li><a class="NavbarSection" href="credit.html">Attributions</a></li>
+                        <li><a class="NavbarHumans" href="../humans.txt">Humans</button></a></li>
+                </ul>
 
-                </div>
-            </div>
         </div>
+        </div>
+    </div>
 
 <div id="MainContentContainer" class="container-fluid MainContentContainer">
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
             <div class="MainContentBox">
-                <code>Resolution: </code>
-                <code id="resolution"></code>
-                <br>
-                <code>Mode: </code>
-                <code id="mode"></code>
 
                 <h1 class="text-center MainTitle">
                     <small class="MainSubtitle">Hello, my name is</small><br>
@@ -112,7 +106,13 @@
                     <br>
                     Now go check out that Navbar thing at the top!
                 </p>
-                <br>
+                <div id="debugstuff" style="visibility: hidden; /*INITIAL*/">
+                    <code>Resolution: </code>
+                    <code id="resolution"></code>
+                    <br>
+                    <code>Mode: </code>
+                    <code id="mode"></code>
+                </div>
             </div>
         </div>
         <div class="col-sm-1"></div>
@@ -176,6 +176,22 @@
     {
         document.getElementById("mode").innerHTML = cinnabar_getMode();
     }
+    function toggleDebugHTML()
+    {
+        var initial = "visibility: hidden; /*INITIAL*/";
+        var hidden = "visibility: hidden; /*DONT EDIT ME*/";
+        var shown = "visibility: visible; /*DONT EDIT ME*/";
+
+        var de = document.getElementById("debugstuff");
+        if(de.getAttribute("style") == hidden || de.getAttribute("style") == initial)
+        {
+            de.setAttribute("style",shown);
+        }
+        else
+        {
+            de.setAttribute("style",hidden);
+        }
+    }
 
     redraw();
     showResolution();
@@ -196,8 +212,32 @@
 
 
     $(document).ready(function () {
+        cinnabar_set('../css/cinnabar.xs.css','../css/cinnabar.sm.css','../css/cinnabar.md.css','../css/cinnabar.lg.css');
+        cinnabar_link();
+        
         $("[data-toggle=tooltip]").tooltip();
+        
+        $("#MainNavbar").addClass("animated fadeInDown");
+        $(".MainTitle").addClass("animated bounceIn");
+        $(".AboutTitle").addClass("animated fadeIn");
+        $(".AboutBio").addClass("animated fadeIn");
     });
+    
+    $(".NavbarSection").click(function() {
+        $("body").addClass("animated fadeOut")
+    });
+    
+    function releaseTheKraken()
+    {
+        /*For shits and giggles, this is what happens at 1:39am
+        when animations are so fun and easy.
+        
+        Serious props to:
+        https://github.com/daneden/animate.css
+        */
+        $(".MainContentBox").addClass("animated hinge");
+        $("#MainNavbar").addClass("animated lightSpeedOut");
+    }
 
 </script>
 </body>

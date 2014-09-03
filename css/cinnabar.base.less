@@ -1,5 +1,7 @@
 //All site styling is done from here an auto-compiled with an Adobe Brackets extension
 
+@import "macphage.mixins.less";
+
 @link-normal: hsl(202, 59%, 48%);
 @link-hover: hsl(163, 98%, 38%);
 @link-active: hsl(347, 61%, 56%);
@@ -9,6 +11,7 @@
 
 @text-normal: rgb(50,50,50);
 @text-grey: rgb(100,100,100);
+@text-white: rgb(245,245,245);
 
 @content-box-background: rgba(255,255,255,0.8);
 @portfolio-box-background: rgba(80, 80, 80, 0.8);
@@ -28,28 +31,7 @@
     color: @navbar-section;
 }
 
-.no-select {
-    -webkit-user-select: none; /* Chrome/Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
-    /* Rules below not implemented in browsers yet */
-    -o-user-select: none;
-    user-select: none;
-}
 
-.color-transition {
-    -webkit-transition: color 500ms;
-    -ms-transition: color 500ms;
-    -moz-transition: color 500ms;
-    -o-transition: color 500ms;
-    transition: color 500ms;
-}
-
-.drop-shadow-small {
-    -webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
-    -moz-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
-    -o-filter: drop-shadow(0px 0px 1px rgba(0,0,0,0.5));
-}
 
 body {
     background-repeat: no-repeat;
@@ -184,39 +166,73 @@ body {
             color: @text-normal;
             background: @portfolio-box-background;
             
+            hr {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+            
             .PortfolioJumbotron {
+                display: block;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                padding-left: 5em;
+                padding-right: 5em;
+                
+                
                 border-radius: 5px;
                 background: @content-box-background;
-            }
-
-            .PortfolioMainTitle {
-                font-family: @font-aboutbio;
-                font-weight: 300;
-                font-style: normal;
-                word-wrap: break-word;
-
-                .PortfolioMainSubtitle {
+                
+                .JumboTitle {
+                    font-family: @font-humans;
+                    font-size: 300%;
+                }
+                .JumboSubtitle {
                     font-family: @font-mainsubtitle;
-                    font-weight: 400;
-                    font-style: normal;
-                    padding-top: 0px;
-                    word-wrap: break-word;
+                    font-size: 125%;
+                    margin-top: 1.5em;
+                    margin-bottom: 0.5em;
                 }
             }
-
-            .AboutTitle {
-                font-family: @font-abouttitle;
-                font-weight: 500;
+            
+            .ProjectGroupTitle {
+                font-family: @font-maintitle;
+                color: @text-white;
             }
-
-            .AboutBio {
-                font-family: @font-aboutbio;
-                font-weight: 400;
-                line-height: 1.30em;
-                padding-left: 0px;
-                padding-right: 0px;
+            
+            .ProjectGroup {
             }
-
+            
+            .ProjectContainers {
+            }
+            
+            .ProjectContainer {
+                width: 20em;
+                max-width: 20em;
+                height: 20em;
+                max-height: 20em;
+                
+                border-radius: 5px;
+                margin: 1em;
+                
+                .ProjectImage {
+                    width: 15em;
+                    max-width: 15em;
+                    height: 15em;
+                    max-height: 15em;
+                    
+                    margin-top: 2.5em;
+                    margin-left: 2.5em;
+                    margin-right: 2.5em;
+                    
+                    .drop-shadow-large;
+                }
+                
+                .ProjectTitle {
+                    font-family: @font-maintitle;
+                    font-style: normal;
+                    color: @text-white;
+                }
+            }
         }
 
     }

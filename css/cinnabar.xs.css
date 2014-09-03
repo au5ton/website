@@ -36,3 +36,16 @@
 .PortfolioAboutBio {
     font-size: 125%;
 }
+
+.PortfolioJumbotron {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+.JumboTitle {
+    text-align: left;
+}
+.JumboSubtitle {
+    font-size: 75%
+        text-align: right;
+}

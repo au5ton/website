@@ -7,10 +7,11 @@
         <meta name="description" content="Austin Jackson's code portfolio">
         <meta name="author" content="@MacPhage">
         <meta name="robots" content="index, follow, noimageindex, noarchive">
-        <title>austin jackson</title>
+        <title>austin jackson -- projects</title>
 
         <!-- THIRD PARTY CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/animate.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans:400,300,600|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
         <!-- THIRD PARTY CSS -->
@@ -61,21 +62,19 @@
                 <div class="navbar-collapse collapse" id="navbar-main">
                     <ul id="NavbarSections" class="nav navbar-nav">
                         <li><a class="NavbarSection" href="home.html">Home page</a></li>
-                        <li class="active"><a class="NavbarSection" href="portfolio.html">Portfolio</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle NavbarSection" data-toggle="dropdown">Find Me<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a class="NavbarItem" href="http://twitter.com/MacPhage">Twitter</a></li>
-                                <li><a class="NavbarItem" href="http://github.com/MacPhage">GitHub</a></li>
-                                <li><a class="NavbarItem" href="mailto:theaustinjackson@gmail.com">Email</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="NavbarSection" href="credit.html">Attributions</a></li>
+                        <li class="active"><a class="NavbarSection" href="portfolio.html">Projects</a></li>
+                        
+                        
+                        <li><a class="NavbarSection" href="http://twitter.com/MacPhage">Twitter</a></li>
+                        <li><a class="NavbarSection" href="http://github.com/MacPhage">GitHub</a></li>
+                        <li><a class="NavbarSection" href="mailto:theaustinjackson@gmail.com">Email</a></li>
+                        
+                        
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a class="NavbarHumans" href="../humans.txt">Humans</button></a>
-                        </li>
+                        <li><a class="NavbarItem" href="javascript:toggleDebugHTML();">[Debug]</a></li>
+                        <li><a class="NavbarSection" href="credit.html">Attributions</a></li>
+                        <li><a class="NavbarHumans" href="../humans.txt">Humans</button></a></li>
                     </ul>
 
                 </div>
@@ -87,19 +86,98 @@
         <div class="col-sm-12">
             <div class="PortfolioContentBox">
 
-                <code>Resolution: </code>
-                <code id="resolution"></code>
-                <br>
-                <code>Mode: </code>
-                <code id="mode"></code>
-
-                <div class="jumbotron PortfolioJumbotron">
-                    <h1 class="PortfolioMainTitle">Portfolio</h1>
-                    <p class="PortfolioMainSubtitle">this is a sentence</p>
+                <div class="PortfolioJumbotron text-center">
+                    <div class="container-fluid">
+                        <row>
+                            <div class="col-md-6">
+                                <h1 class="JumboTitle text-right">Projects</h1>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="JumboSubtitle text-left">a portfolio of my previous work (work in progress)</p>
+                            </div>
+                        </row>
+                    </div>
                 </div>
 
                 <!-- COOL PROJECTY STUFF -->
+                <div class="ProjectGroup">
+                    <h2 class="ProjectGroupTitle">ProjectGroup</h2>
+                    
+                    <div class="container-fluid ProjectContainers text-center">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <hr>
+                
+                <div class="ProjectGroup">
 
+                    <h2 class="ProjectGroupTitle">ProjectGroup</h2>
+                    <div class="container-fluid ProjectContainers text-center">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_java.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="ProjectContainer">
+                                    <img class="ProjectImage" src="../img/icon_empty.png">
+                                    <h4 class="ProjectTitle text-center">ProjectTitle</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+                
+                
+                
+                
+                
+                <div id="debugstuff" style="visibility: hidden; /*INITIAL*/">
+                    <code>Resolution: </code>
+                    <code id="resolution"></code>
+                    <br>
+                    <code>Mode: </code>
+                    <code id="mode"></code>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -162,6 +240,22 @@
     {
         document.getElementById("mode").innerHTML = cinnabar_getMode();
     }
+    function toggleDebugHTML()
+    {
+        var initial = "visibility: hidden; /*INITIAL*/";
+        var hidden = "visibility: hidden; /*DONT EDIT ME*/";
+        var shown = "visibility: visible; /*DONT EDIT ME*/";
+        
+        var de = document.getElementById("debugstuff");
+        if(de.getAttribute("style") == hidden || de.getAttribute("style") == initial)
+        {
+            de.setAttribute("style",shown);
+        }
+        else
+        {
+            de.setAttribute("style",hidden);
+        }
+    }
 
     redraw();
     showResolution();
@@ -182,7 +276,21 @@
 
 
     $(document).ready(function () {
+        
+        cinnabar_set('../css/cinnabar.xs.css','../css/cinnabar.sm.css','../css/cinnabar.md.css','../css/cinnabar.lg.css');
+        cinnabar_link();
+        
         $("[data-toggle=tooltip]").tooltip();
+        
+        $("#MainNavbar").addClass("animated fadeInDown");
+        $(".PortfolioJumbotron").addClass("animated fadeInDown");
+        $(".ProjectGroupTitle").addClass("animated bounceIn")
+        $(".ProjectImage").addClass("animated zoomInDown");
+        
+    });
+    
+    $(".NavbarSection").click(function() {
+        $("body").addClass("animated fadeOut")
     });
 
 </script>
