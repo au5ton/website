@@ -289,8 +289,14 @@
         
     });
     
-    $(".NavbarSection").click(function() {
-        $("body").addClass("animated fadeOut")
+    $(".NavbarSection").mouseup(function(event) {
+        switch (event.which) {
+            case 1: //Left mouse button
+                $("body").addClass("animated fadeOut");
+                break;
+            default:
+                break;
+        }
     });
 
 </script>
