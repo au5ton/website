@@ -29,10 +29,15 @@
     Github: jakiestfu
     From: Los Angeles, California
 	
-	Animate.css: Daniel Eden
-	Github: daneden
-	From: San Francisco, California
+    Animate.css: Daniel Eden
+    Github: daneden
+    From: San Francisco, California
 
-    Roboto Condensed (TypeFace): Christian Robertson
-    Source Sans Pro (TypeFace): Paul D. Hunt
-    Open Sans (TypeFace): Steve Matteson
+    Roboto Condensed (TypeFace):
+    Christian Robertson
+	
+    Source Sans Pro (TypeFace):
+    Paul D. Hunt
+	
+    Open Sans (TypeFace):
+    Steve Matteson
