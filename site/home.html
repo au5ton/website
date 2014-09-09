@@ -32,6 +32,10 @@
         <script src="../js/d3.v3.min.js"></script>
         <script src="../js/AppScroll.min.js"></script>
         <script src="../js/fastclick.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
         <!-- THIRD PARTY JAVASCRIPT -->
 
         <!-- RP ICONS -->
@@ -211,11 +215,21 @@
     });
 
 
+    $("#MainNavbar").addClass("invisible");
+    $(".MainTitle").addClass("invisible");
+    $(".AboutTitle").addClass("invisible");
+    $(".AboutBio").addClass("invisible");
+    
     $(document).ready(function () {
         cinnabar_set('../css/cinnabar.xs.css','../css/cinnabar.sm.css','../css/cinnabar.md.css','../css/cinnabar.lg.css');
         cinnabar_link();
         
         $("[data-toggle=tooltip]").tooltip();
+        
+        $("#MainNavbar").removeClass("invisible");
+        $(".MainTitle").removeClass("invisible");
+        $(".AboutTitle").removeClass("invisible");
+        $(".AboutBio").removeClass("invisible");
         
         $("#MainNavbar").addClass("animated fadeInDown");
         $(".MainTitle").addClass("animated bounceIn");
