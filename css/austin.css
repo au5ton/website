@@ -43,9 +43,6 @@
 .visible {
   visibility: visible!important;
 }
-#NavbarSections {
-  color: #2f85b6;
-}
 body {
   background-repeat: no-repeat;
   background-position: center;
@@ -94,7 +91,7 @@ body .main-container .header-box {
   border-radius: 3px;
   width: 75vw;
   display: block;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.8);
 }
 body .main-container .header-box .name {
   margin-top: 0px;
@@ -103,7 +100,8 @@ body .main-container .header-box .name {
   font-weight: 300;
 }
 body .main-container .header-box .name small {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 body .main-container .section {
   margin-top: 40px;
@@ -134,10 +132,39 @@ body .main-container .section .body {
   padding-right: 10%;
   font-family: "Source Sans Pro", sans-serif;
 }
+body .main-container .footer {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  display: block;
+  border-radius: 3px;
+  background: rgba(80, 80, 80, 0.65);
+}
+body .main-container .footer a:link,
+body .main-container .footer a:visited {
+  color: #a6d0e8;
+  -webkit-transition: color 500ms;
+  -ms-transition: color 500ms;
+  -moz-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms;
+}
+body .main-container .footer a:hover,
+body .main-container .footer a:active {
+  color: #45a9e3;
+  -webkit-transition: color 500ms;
+  -ms-transition: color 500ms;
+  -moz-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms;
+}
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
   .name {
     font-size: 6em;
+  }
+  .name small {
+    font-size: 0.55em;
   }
   .head {
     font-size: 2em;
@@ -151,6 +178,9 @@ body .main-container .section .body {
   .name {
     font-size: 5em;
   }
+  .name small {
+    font-size: 0.55em;
+  }
   .head {
     font-size: 2em;
   }
@@ -162,6 +192,9 @@ body .main-container .section .body {
 @media (min-width: 768px) and (max-width: 991px) {
   .name {
     font-size: 5em;
+  }
+  .name small {
+    font-size: 0.55em;
   }
   .head {
     font-size: 2em;
@@ -175,6 +208,9 @@ body .main-container .section .body {
   .name {
     font-size: 3em;
   }
+  .name small {
+    font-size: 0.6em;
+  }
   .head {
     font-size: 2em;
   }
@@ -186,6 +222,9 @@ body .main-container .section .body {
 @media (max-width: 480px) {
   .name {
     font-size: 2.5em;
+  }
+  .name small {
+    font-size: 0.6em;
   }
   .head {
     font-size: 1.75em;

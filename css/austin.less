@@ -27,13 +27,6 @@
 @font-condensed: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
 @font-satisfy: "Satisfy", "Monotype Corsiva", cursive;
 
-
-#NavbarSections {
-    color: @navbar-section;
-}
-
-
-
 body {
     background-repeat: no-repeat;
     background-position: center;
@@ -75,7 +68,7 @@ body {
 
             width: 75vw;
             display: block;
-            background: @translucent-white;
+            background: @translucent-white2;
             .name {
                 margin-top: 0px;
                 margin-bottom: 0px;
@@ -83,7 +76,8 @@ body {
                 font-weight: 300;
 
                 small {
-                    font-family: "Roboto Condensed", sans-serif;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 500;
                 }
             }
         }
@@ -120,41 +114,58 @@ body {
             }
         }
 
+        .footer {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-size: 1.5em;
+            display: block;
+            border-radius: 3px;
+            background: @translucent-black;
+            a:link, a:visited {
+                color: lighten(@link-normal, 30%);
+                .color-transition;
+            }
+            a:hover, a:active {
+                color: saturate(lighten(@link-normal, 10%), 15%);
+                .color-transition;
+            }
+        }
+
     }
 
 }
 
 /* Large desktops and laptops */
 @media(min-width:1200px){
-    .name{font-size: 6em;}
+    .name{font-size: 6em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
     .body{font-size: 1.5em;}
 }
 
 /* Portrait tablets and medium desktops */
 @media(min-width:992px)and(max-width:1199px){
-    .name{font-size: 5em;}
+    .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
     .body{font-size: 1.5em;}
 }
 
 /* Portrait tablets and small desktops */
 @media(min-width:768px)and(max-width:991px){
-    .name{font-size: 5em;}
+    .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
     .body{font-size: 1.5em;}
 }
 
 /* Landscape phones and portrait tablets */
 @media(max-width:767px){
-    .name{font-size: 3em;}
+    .name{font-size: 3em;small{font-size: 0.6em;}}
     .head{font-size: 2em;}
     .body{font-size: 1.5em;}
 }
 
 /* Landscape phones and smaller */
 @media(max-width:480px){
-    .name{font-size: 2.5em;}
+    .name{font-size: 2.5em;small{font-size: 0.6em;}}
     .head{font-size: 1.75em;}
     .body{font-size: 1.25em;}
 }

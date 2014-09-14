@@ -54,20 +54,14 @@
     </head>
     <body>
 
-
         <div class="container-fluid main-container">
 
             <div class="header-box text-center">
                 <h1 class="name"><small>Hello, my name is<br></small>austin jackson</h1>
             </div>
-
-            <div id="debugstuff" style="display: none;">
-                    <code>Resolution: </code>
-                    <code id="resolution"></code>
-                    <br>
-                    <code>Mode: </code>
-                    <code id="mode"></code>
-                </div>
+            
+            
+            
             
             <div class="container-fluid section text-center">
                 <p class="head">About</p>
@@ -90,6 +84,15 @@
                 <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus erat lorem. Quisque pulvinar, nunc aliquam placerat semper, massa nisl vulputate dolor, et scelerisque metus ante ac urna. Pellentesque malesuada accumsan justo at facilisis. Proin mi eros, laoreet non pretium et, aliquam sed est. Fusce tortor urna, tristique quis porttitor id, eleifend ac nunc. Praesent eget nisl purus. Donec scelerisque bibendum arcu, vel consequat mauris sodales et. Morbi dolor tellus, congue et mattis et, eleifend et mi. Quisque ac sem consectetur, eleifend elit vitae, malesuada magna. Proin laoreet magna sed nulla suscipit, nec gravida ex sodales. Aliquam viverra, est in semper aliquet, sapien ex interdum mi, ut sollicitudin mauris mauris nec massa. Praesent vulputate enim justo, sed molestie lacus pulvinar eu. Integer libero sapien, ultricies sit amet ex aliquam, mattis cursus odio. Mauris in tristique sem.</p>
             </div>
 
+            <div id="debugstuff" style="display: none; /*INITIAL*/">
+                    <code>Resolution: </code>
+                    <code id="resolution"></code>
+                    <br>
+                    <code>Mode: </code>
+                    <code id="mode"></code>
+            </div>
+            <div class="class="text-center><a href="javascript:toggleDebugHTML();">[Debug]</a></div>
+            
         </div>
 
 
@@ -149,23 +152,23 @@
                 {
                     document.getElementById("mode").innerHTML = cinnabar_getMode();
                 }
-            //    function toggleDebugHTML()
-            //    {
-            //        var initial = "visibility: hidden; /*INITIAL*/";
-            //        var hidden = "visibility: hidden; /*DONT EDIT ME*/";
-            //        var shown = "visibility: visible; /*DONT EDIT ME*/";
-            //
-            //        var de = document.getElementById("debugstuff");
-            //        if(de.getAttribute("style") == hidden || de.getAttribute("style") == initial)
-            //        {
-            //            de.setAttribute("style",shown);
-            //        }
-            //        else
-            //        {
-            //            de.setAttribute("style",hidden);
-            //        }
-            //    }
-            //
+                function toggleDebugHTML()
+                {
+                    var initial = "display: none; /*INITIAL*/";
+                    var hidden = "display: none; /*DONT EDIT ME*/";
+                    var shown = "display: inline; /*DONT EDIT ME*/";
+            
+                    var de = document.getElementById("debugstuff");
+                    if(de.getAttribute("style") == hidden || de.getAttribute("style") == initial)
+                    {
+                        de.setAttribute("style",shown);
+                    }
+                    else
+                    {
+                        de.setAttribute("style",hidden);
+                    }
+                }
+            
             redraw();
             showResolution();
             showMode();

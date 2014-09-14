@@ -9,20 +9,34 @@
         <title>austin jackson -- attributions</title>
 
         <!-- THIRD PARTY CSS -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="css/bootstrap.min.css" rel="stylesheet"> 
         <!-- THIRD PARTY CSS -->
+        
+        <!-- THIRD PARTY JAVASCRIPT -->
+        <script src="js/randomColor.js"></script>
+        <!-- THIRD PARTY JAVASCRIPT -->
 
         <!-- RP ICONS -->
-        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="../apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="../apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="../apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="../apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="../apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="../apple-touch-icon-152x152.png" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
         <!-- RP ICONS -->
+        
+        <style>
+            
+            .container {
+                background: rgba(255,255,255,0.9);
+                margin-top: 15px;
+            }
+            
+        </style>
+        
     </head>
     <body>
         <div class="container">
@@ -123,10 +137,18 @@
             <footer>
                 <p class="footer">
                     <a href="javascript:history.back()">Go back?</a><br>
-                    <a href="home.html">Homepage?</a><br>
+                    <a href="index.html">Homepage?</a><br>
                     Website by Austin Jackson &copy; 2014
                 </p>
             </footer>
         </div>
+        
+        
+        <script>
+                var color = randomColor({luminosity: 'light'});
+                console.log("Assigning "+color+" as the background color.");
+                document.body.style.backgroundColor = color;
+        </script>
+        
     </body>
 </html>
