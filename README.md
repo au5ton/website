@@ -1,11 +1,11 @@
 macphage.github.io
 ===============
 
-All the source code and resources behind [my website](http://www.austinj.net/), hosted under GitHub pages.
+All the source code and resources behind my website, hosted under GitHub pages.
 
 ##Utilizations
 
-- See the [attributions page](http://www.austinj.net/attributions.html) for a full list of the site's utilizations
+- See the [attributions page](http://macphage.github.io/site/credit.html) for a full list of the site's utilizations
 
 ##Pull Requests
 

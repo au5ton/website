@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
     <meta charset="utf-8">
@@ -7,6 +7,7 @@
     <meta name="robots" content="index, follow, noimageindex, noarchive">
     <title>austin jackson -- 404 error</title>
 
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,400italic|Roboto+Condensed:700" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css">
     <script type="text/javascript" src="http://macphage.github.io/js/404.js"></script>
 
@@ -15,28 +16,24 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
     
     <style>
-        body {
-            font-family: "Helvetica Neue","Segoe UI", Tahoma, sans serif;
+        #FourOhFour {
+            font-family: "Helvetica Neue","Segoe UI","Roboto", Tahoma, sans serif;
             font-weight: bold;
             font-style: normal;
             word-wrap: break-word;
-        }
-        #FourOhFour {
+            margin-top: 5%;
+            
             display: block;
             border-radius: 0px;
             box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
             padding: 2%;
             background: rgba(255,255,255,0.8);
-            width: 40vw;
-            margin-top: 25px;
-            margin-left: auto;
-            margin-right: auto;
         }
         #MainTitle {
             font-size: 300%;
         }
         #error {
-            font-family: "Helvetica Neue","Segoe UI",Tahoma, sans serif;
+            font-family: "Helvetica Neue","Segoe UI","Roboto", Tahoma, sans serif;
             font-weight: normal;
             font-style: normal;
             font-size: 175%;
@@ -70,14 +67,23 @@
 </head>
 <body onload="applyErrorMessage();" style="background: rgb(0,153,84)">
     <div id="FourOhFour" class="container">
-        <h1 id="MainTitle">404'd</h1>
-        <hr>
-        <p class="common">Looks like you were trying to go to a page that <span style="font-style: italic;">doesn't exist</span>!<br>Silly message:</p>
-        <p id="error">
-        </p>
-        <hr>
-        <a href="javascript:history.back()">Go back?</a><br>
-        <a href="index.html">Homepage?</a><br>
+        <row>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h1 id="MainTitle">404'd</h1>
+                <hr>
+                <p class="common">Looks like you were trying to go to a page that <span style="font-style: italic;">doesn't exist</span>!</p>
+                <p id="error">
+                </p>
+                <h1><a id="link" class="common content mirror" href="http://macphage.github.io/">To the homepage!</a></h1>
+                <br>
+                Don't know what a 404 is?<br>
+                <a href="http://en.wikipedia.org/wiki/HTTP_404">Wikipedia to the rescue!</a>
+                <br><br>
+                Silly messages from <a href="http://nte-serveur.univ-lyon1.fr/nte/html1/kit-nte/Goodies/JavaScript/js_msg_rqt-funny.html">here, this really long sketchy URL that even has a .fr domain name which I'm assuming is France but it has American (I mean, typically American) humor in it which is a little bit weird this is not grammatically correct, that I found on Google</a>.
+            </div>
+            <div class="col-sm-4"></div>
+        </row>
     </div>
 </body>
 </html>

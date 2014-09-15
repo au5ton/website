@@ -41,6 +41,3 @@
 	
     Open Sans (TypeFace):
     Steve Matteson
-    
-    Oswald (TypeFace):
-    Vernon Adams
