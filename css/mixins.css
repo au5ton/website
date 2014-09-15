@@ -38,8 +38,8 @@
   -o-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
 }
 .invisible {
-  visibility: hidden!important;
+  visibility: hidden;
 }
 .visible {
-  visibility: visible!important;
+  visibility: visible;
 }
