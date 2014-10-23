@@ -44,6 +44,17 @@
         <meta property="og:url" content="http://austinj.net/"/>
         <meta property="og:site_name" content="Austin Jackson &bull; Developer"/>
         <!------ SOCIAL METADATA ------>
+        
+        <!------ GOOGLE ANALYTICS ------>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-50814720-2', 'auto');
+            ga('send', 'pageview');
+        </script>
 
         <!-- THIRD PARTY CSS -->
         <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -70,6 +81,8 @@
             new WOW().init();
         </script>
         <!-- THIRD PARTY JAVASCRIPT -->
+        
+        
 
     </head>
     <body>
@@ -99,13 +112,16 @@
                     You're welcome to follow me or message me on one of my social media outlets!<br>
                     <div class="contact-box">
                         <span class="outlet">
-                            <a href="http://twitter.com/MacPhage">Twitter</a>
+                            <a href="http://twitter.com/MacPhage" onClick="_gaq.push(['_trackEvent', 'External Link', 'TwitterProfile']);">Twitter</a>
                         </span>
                         <span class="outlet">
-                            <a href="http://github.com/MacPhage">Github</a>
+                            <a href="http://github.com/MacPhage" onClick="_gaq.push(['_trackEvent', 'External Link', 'GithubProfile']);">Github</a>
                         </span>
                         <span class="outlet">
-                            <a href="mailto:theaustinjackson@gmail.com">Email</a>
+                            <a href="http://www.linkedin.com/in/austindjackson/" onClick="_gaq.push(['_trackEvent', 'External Link', 'LinkedInProfile']);">LinkedIn</a>
+                        </span>
+                        <span class="outlet">
+                            <a href="mailto:theaustinjackson@gmail.com" onClick="_gaq.push(['_trackEvent', 'External Link', 'EmailAddress']);">Email</a>
                         </span>
                     </div>
                 </div>
@@ -113,7 +129,7 @@
 
             <div class="footer text-center">
                 <div class="content">
-                    <a class="footeritem" href="attributions.html">Attributions</a> | <span class="footeritem"><a href="humans.txt"><span class="humans">Humans</span>.txt</a></span>
+                    <a class="footeritem" href="attributions.html" onClick="_gaq.push(['_trackEvent', 'External Link', 'AttributionsPage']);">Attributions</a> | <span class="footeritem"><a href="humans.txt" onClick="_gaq.push(['_trackEvent', 'External Link', 'HumansDotTXT']);"><span class="humans">Humans</span>.txt</a></span>
                 </div>
             </div>
 
