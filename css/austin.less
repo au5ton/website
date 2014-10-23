@@ -1,4 +1,5 @@
-//All site styling is done from here an auto-compiled with an Adobe Brackets extension
+// All site styling is done from here and auto-compiled with...
+// https://github.com/jdiehl/brackets-less-autocompile
 
 @import "mixins.less";
 
@@ -15,7 +16,7 @@
 
 @translucent-white: rgba(255,255,255,0.65);
 @translucent-black: rgba(80, 80, 80, 0.65);
-@translucent-white2: rgba(255,255,255,0.8);
+@translucent-white2: rgba(255,255,255,0.85);
 @translucent-black2: rgba(80, 80, 80, 0.8);
 
 @humans-normal: rgba(255, 166, 221, 0.25);
@@ -25,7 +26,7 @@
 
 @font-opensans: "Open Sans","Helvetica Neue","Segoe UI", sans-serif;
 @font-sourcesans: "Source Sans Pro","Helvetica Neue","Segoe UI", sans-serif;
-@font-condensed: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
+@font-condensed: "AvenirNextCondensed-DemiBold","Segoe UI Semibold",sans-serif;
 @font-satisfy: "Satisfy", "Monotype Corsiva", cursive;
 
 body {
@@ -109,8 +110,7 @@ body {
                 }
             }
             .body {
-                padding-left: 10%;
-                padding-right: 10%;
+                
                 font-family: "Source Sans Pro", sans-serif;
                 .contact-box {
                     margin-top: 20px;
@@ -123,13 +123,18 @@ body {
                         padding-bottom: 3px;
                         padding-left: 3px;
                         padding-right: 3px;
-                        margin-left: 0.5em;
-                        margin-right: 0.5em;
-                        font-size: 1.35em;
+                        margin-left: 0.15em;
+                        margin-right: 0.15em;
+                        font-size: 1.1em;
+                        font-family: "AvenirNextCondensed-DemiBold", "Segoe UI Semibold", sans-serif;
                         font-weight: 700;
+                        box-shadow: 0px 2px 0px rgba(50,50,50,0.8);
                     }
                     .outlet:hover {
+                        position: relative;
+                        top: 2px;
                         background: rgba(100,100,100,0.325);
+                        box-shadow: 0px 2px 0px rgba(50,50,50,0.0);
                         .color-transition;
                     }
                 }
@@ -188,35 +193,35 @@ body {
 @media(min-width:1200px){
     .name{font-size: 6em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 10%;padding-right: 10%;}
 }
 
 /* Portrait tablets and medium desktops */
 @media(min-width:992px)and(max-width:1199px){
     .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 10%;padding-right: 10%;}
 }
 
 /* Portrait tablets and small desktops */
 @media(min-width:768px)and(max-width:991px){
     .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 7.5%;padding-right: 7.5%;}
 }
 
 /* Landscape phones and portrait tablets */
 @media(max-width:767px){
     .name{font-size: 3em;small{font-size: 0.6em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 5%;padding-right: 5%;}
 }
 
 /* Landscape phones and smaller */
 @media(max-width:480px){
     .name{font-size: 2.5em;small{font-size: 0.6em;}}
     .head{font-size: 1.75em;}
-    .body{font-size: 1.25em;}
+    .body{font-size: 1.25em;padding-left: 5%;padding-right: 5%;}
 }
 
 //Debugging purposes
