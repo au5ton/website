@@ -104,7 +104,7 @@
             </div>
             <div class="container-fluid section text-center bounceRight">
                 <div class="head"><p class="title">My Previous Work</p><hr></div>
-                <p class="body">My projects are often created out of one or more of these two things:<br> 1) Inspiration to create my own work or to recreate the work of others, <br>2) Solve my own or someone else's problems. <br>That being said, not all of my work may be useful for everyone, but useful for people who had a similar problem that I did, or that want to learn from my mistakes.<br><br>Check out my <a href="https://github.com/MacPhage">Github profile</a> to see some of my open-source projects, including this very website.</p>
+                <p class="body">My projects are often created out of one or more of these two things:<br><br> 1) Inspiration to create my own work or to recreate the work of others, <br>2) Solve my own or someone else's problems. <br><br>That being said, not all of my work may be useful for everyone, but useful for people who had a similar problem that I did, or that want to learn from my mistakes.<br><br>Check out my <a href="https://github.com/MacPhage">Github profile</a> to see some of my open-source projects, including this very website.</p>
             </div>
             <div class="container-fluid section text-center bounceLeft">
                 <div class="head"><p class="title">Contact Me</p><hr></div>
@@ -146,7 +146,10 @@
 
         <script type="text/javascript">  
 
-            var t = new Trianglify({bleed: 0,noiseIntensity: 0});
+            
+            var colors;
+            var rand;
+            var t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
             var firstWidth = document.body.clientWidth;
             var currentWidth = document.body.clientWidth;
             function redraw()
@@ -154,6 +157,45 @@
                 console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
                 var pattern = t.generate(document.body.clientWidth, height());
                 document.body.style.backgroundImage = pattern.dataUrl;
+            }
+            function completeRedraw()
+            {
+                
+                rand = randomNumberBetween(0,7);
+                if(rand == 0)
+                {
+                    colors = randomColor({count: 10,format: 'hex',hue: 'red'});
+                }
+                else if(rand == 1)
+                {
+                    colors = randomColor({count: 10,format: 'hex',hue: 'orange'});
+                }
+                else if(rand == 2)
+                {
+                    colors = randomColor({count: 10,format: 'hex',hue: 'yellow'});
+                }
+                else if(rand == 3)
+                {
+                    colors = randomColor({count: 10,format: 'hex',hue: 'green'});
+                }
+                else if(rand == 4)
+                {
+                    colors = randomColor({count: 10,format: 'hex',hue: 'blue'});
+                }
+                else if(rand == 5)
+                {
+                    colors = randomColor({count: 10,format: 'hex',hue: 'purple'});
+                }
+                else if(rand == 6)
+                {
+                    colors = randomColor({count: 10,format: 'hex',hue: 'monochrome'});
+                }
+                else
+                {
+                    colors = randomColor({count: 10,format: 'hex'});
+                }
+                t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
+                redraw();
             }
             function height() {return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,document.body.offsetHeight, document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight);}
             window.onresize = function() {
@@ -175,6 +217,11 @@
 
             };
 
+            function randomNumberBetween(from,to)
+            {
+                return Math.floor((Math.random() * to) + from);
+            }
+            
             function showResolution()
             {
                 document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
@@ -184,7 +231,7 @@
                 document.getElementById("mode").innerHTML = cinnabar_getMode();
             }
 
-            redraw();
+            completeRedraw();
             showResolution();
             showMode();
 
@@ -202,7 +249,7 @@
             });
 
 
-            $(document).ready(function () {
+            $(document).load(function () {
 
                 var bounceLeft = ".bounceLeft";
                 var bounceRight = ".bounceRight";

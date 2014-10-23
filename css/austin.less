@@ -1,6 +1,7 @@
 //All site styling is done from here an auto-compiled with an Adobe Brackets extension
 
 @import "mixins.less";
+//@import "animation.less";
 
 @link-normal: hsl(202, 59%, 48%);
 @link-hover: hsl(163, 98%, 38%);
@@ -25,7 +26,7 @@
 
 @font-opensans: "Open Sans","Helvetica Neue","Segoe UI", sans-serif;
 @font-sourcesans: "Source Sans Pro","Helvetica Neue","Segoe UI", sans-serif;
-@font-condensed: "AvenirNextCondensed-DemiBold","Roboto Condensed","Helvetica Neue","Segoe UI Semibold",Tahoma,sans serif;
+@font-condensed: "AvenirNextCondensed-DemiBold","Segoe UI Semibold",sans-serif;
 @font-satisfy: "Satisfy", "Monotype Corsiva", cursive;
 
 body {
@@ -109,8 +110,8 @@ body {
                 }
             }
             .body {
-                padding-left: 10%;
-                padding-right: 10%;
+                padding-left: 5%;
+                padding-right: 5%;
                 font-family: "Source Sans Pro", sans-serif;
                 .contact-box {
                     margin-top: 20px;
@@ -123,13 +124,18 @@ body {
                         padding-bottom: 3px;
                         padding-left: 3px;
                         padding-right: 3px;
-                        margin-left: 0.25em;
-                        margin-right: 0.25em;
-                        font-size: 1.35em;
+                        margin-left: 0.15em;
+                        margin-right: 0.15em;
+                        font-size: 1.1em;
+                        font-family: "AvenirNextCondensed-DemiBold", "Segoe UI Semibold", sans-serif;
                         font-weight: 700;
+                        box-shadow: 0px 2px 0px rgba(50,50,50,0.8);
                     }
                     .outlet:hover {
+                        position: relative;
+                        top: 2px;
                         background: rgba(100,100,100,0.325);
+                        box-shadow: 0px 2px 0px rgba(50,50,50,0.0);
                         .color-transition;
                     }
                 }
