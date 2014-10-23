@@ -154,7 +154,7 @@
             var currentWidth = document.body.clientWidth;
             function redraw()
             {
-                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height());
+                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height()+" with colorcode: "+rand+" using colors: "+colors);
                 var pattern = t.generate(document.body.clientWidth, height());
                 document.body.style.backgroundImage = pattern.dataUrl;
             }

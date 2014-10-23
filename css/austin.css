@@ -91,7 +91,7 @@ body .main-container .header-box {
   border-radius: 3px;
   width: 75vw;
   display: block;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
 }
 body .main-container .header-box .name {
   margin-top: 0px;
@@ -112,7 +112,7 @@ body .main-container .section {
   padding-bottom: 2em;
   padding-left: 0px;
   padding-right: 0px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
 }
 body .main-container .section .head {
   display: inline-block;
@@ -131,8 +131,6 @@ body .main-container .section .head hr {
   box-shadow: 0px 1px 0px #323232;
 }
 body .main-container .section .body {
-  padding-left: 5%;
-  padding-right: 5%;
   font-family: "Source Sans Pro", sans-serif;
 }
 body .main-container .section .body .contact-box {
@@ -235,6 +233,8 @@ body .main-container .footer .content .humans a:active {
   }
   .body {
     font-size: 1.5em;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 /* Portrait tablets and medium desktops */
@@ -250,6 +250,8 @@ body .main-container .footer .content .humans a:active {
   }
   .body {
     font-size: 1.5em;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 /* Portrait tablets and small desktops */
@@ -265,6 +267,8 @@ body .main-container .footer .content .humans a:active {
   }
   .body {
     font-size: 1.5em;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
   }
 }
 /* Landscape phones and portrait tablets */
@@ -280,6 +284,8 @@ body .main-container .footer .content .humans a:active {
   }
   .body {
     font-size: 1.5em;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 /* Landscape phones and smaller */
@@ -295,5 +301,7 @@ body .main-container .footer .content .humans a:active {
   }
   .body {
     font-size: 1.25em;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }

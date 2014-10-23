@@ -1,7 +1,7 @@
-//All site styling is done from here an auto-compiled with an Adobe Brackets extension
+// All site styling is done from here and auto-compiled with...
+// https://github.com/jdiehl/brackets-less-autocompile
 
 @import "mixins.less";
-//@import "animation.less";
 
 @link-normal: hsl(202, 59%, 48%);
 @link-hover: hsl(163, 98%, 38%);
@@ -16,7 +16,7 @@
 
 @translucent-white: rgba(255,255,255,0.65);
 @translucent-black: rgba(80, 80, 80, 0.65);
-@translucent-white2: rgba(255,255,255,0.8);
+@translucent-white2: rgba(255,255,255,0.85);
 @translucent-black2: rgba(80, 80, 80, 0.8);
 
 @humans-normal: rgba(255, 166, 221, 0.25);
@@ -110,8 +110,7 @@ body {
                 }
             }
             .body {
-                padding-left: 5%;
-                padding-right: 5%;
+                
                 font-family: "Source Sans Pro", sans-serif;
                 .contact-box {
                     margin-top: 20px;
@@ -194,35 +193,35 @@ body {
 @media(min-width:1200px){
     .name{font-size: 6em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 10%;padding-right: 10%;}
 }
 
 /* Portrait tablets and medium desktops */
 @media(min-width:992px)and(max-width:1199px){
     .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 10%;padding-right: 10%;}
 }
 
 /* Portrait tablets and small desktops */
 @media(min-width:768px)and(max-width:991px){
     .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 7.5%;padding-right: 7.5%;}
 }
 
 /* Landscape phones and portrait tablets */
 @media(max-width:767px){
     .name{font-size: 3em;small{font-size: 0.6em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;}
+    .body{font-size: 1.5em;padding-left: 5%;padding-right: 5%;}
 }
 
 /* Landscape phones and smaller */
 @media(max-width:480px){
     .name{font-size: 2.5em;small{font-size: 0.6em;}}
     .head{font-size: 1.75em;}
-    .body{font-size: 1.25em;}
+    .body{font-size: 1.25em;padding-left: 5%;padding-right: 5%;}
 }
 
 //Debugging purposes
