@@ -55,7 +55,6 @@ body {
 }
 body a:link,
 body a:visited {
-  color: #328ec3;
   -webkit-transition: color 500ms;
   -ms-transition: color 500ms;
   -moz-transition: color 500ms;
@@ -63,7 +62,6 @@ body a:visited {
   transition: color 500ms;
 }
 body a:hover {
-  color: #02c08a;
   -webkit-transition: color 500ms;
   -ms-transition: color 500ms;
   -moz-transition: color 500ms;
@@ -71,7 +69,6 @@ body a:hover {
   transition: color 500ms;
 }
 body a:active {
-  color: #d34a68;
   -webkit-transition: color 500ms;
   -ms-transition: color 500ms;
   -moz-transition: color 500ms;
@@ -163,6 +160,175 @@ body .main-container .section .body .contact-box .outlet:hover {
   -o-transition: color 500ms;
   transition: color 500ms;
 }
+body .main-container .section .previous-work {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+body .main-container .section .previous-work .item .description {
+  margin-left: auto;
+  margin-right: auto;
+}
+body .main-container .section .previous-work .item .go:before {
+  content: "[ ";
+}
+body .main-container .section .previous-work .item .go:after {
+  content: " ]";
+}
+body .main-container .section .previous-work #obskewer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(62, 62, 62, 0.85);
+}
+body .main-container .section .previous-work #obskewer .icon img {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  max-height: 200px;
+}
+body .main-container .section .previous-work #obskewer .project {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .main-container .section .previous-work #obskewer .description {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #obskewer .go {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #pdraw {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(147, 152, 255, 0.85);
+}
+body .main-container .section .previous-work #pdraw .icon img {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  max-height: 200px;
+}
+body .main-container .section .previous-work #pdraw .project {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .main-container .section .previous-work #pdraw .description {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #pdraw .go {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #alfeo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(255, 94, 55, 0.85);
+}
+body .main-container .section .previous-work #alfeo .icon img {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  max-height: 200px;
+}
+body .main-container .section .previous-work #alfeo .project {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .main-container .section .previous-work #alfeo .description {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #alfeo .go {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #pcalculator {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(34, 206, 127, 0.85);
+}
+body .main-container .section .previous-work #pcalculator .icon img {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  max-height: 200px;
+}
+body .main-container .section .previous-work #pcalculator .project {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .main-container .section .previous-work #pcalculator .description {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #pcalculator .go {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #austinjnet {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(240, 167, 32, 0.85);
+}
+body .main-container .section .previous-work #austinjnet .icon img {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  max-height: 200px;
+}
+body .main-container .section .previous-work #austinjnet .project {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .main-container .section .previous-work #austinjnet .description {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #f5f5f5;
+}
+body .main-container .section .previous-work #austinjnet .go {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #f5f5f5;
+}
 body .main-container .footer {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -236,6 +402,10 @@ body .main-container .footer .content .humans a:active {
     padding-left: 10%;
     padding-right: 10%;
   }
+  .description {
+    max-width: 60vw;
+    min-width: 50vw;
+  }
 }
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -252,6 +422,10 @@ body .main-container .footer .content .humans a:active {
     font-size: 1.5em;
     padding-left: 10%;
     padding-right: 10%;
+  }
+  .description {
+    max-width: 60vw;
+    min-width: 50vw;
   }
 }
 /* Portrait tablets and small desktops */
@@ -270,6 +444,10 @@ body .main-container .footer .content .humans a:active {
     padding-left: 7.5%;
     padding-right: 7.5%;
   }
+  .description {
+    max-width: 60vw;
+    min-width: 50vw;
+  }
 }
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
@@ -286,6 +464,10 @@ body .main-container .footer .content .humans a:active {
     font-size: 1.5em;
     padding-left: 5%;
     padding-right: 5%;
+  }
+  .description {
+    max-width: 90vw;
+    min-width: 50vw;
   }
 }
 /* Landscape phones and smaller */
