@@ -100,13 +100,20 @@
             <div class="container-fluid section text-center bounceLeft">
                 <div class="head"><p class="title">Who I Am &amp; What I Do</p><hr></div>
                 
-                <p class="body">My name is Austin Jackson. I am a 16 year old Java programmer and web developer from  Houston, Texas. I like Daft Punk, spending time with my girlfriend, and good Mexican food. I revere Apple and those who think like them &mdash; a passion for the user experience. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
+                <p class="body">My name is Austin Jackson. I am a 16 year old Java programmer and web developer from  Houston, Texas. I like Daft Punk, spending time with my girlfriend, and good Mexican food. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
                 </p>
             </div>
             <div class="container-fluid section text-center bounceRight">
                 <div class="head"><p class="title">My Previous Work</p><hr></div>
                 <p class="body">My projects are often created out of one or more of these two things:<br><br> 1) Inspiration to create my own work or to recreate the work of others, <br>2) Solve my own or someone else's problems. <br><br>That being said, not all of my work may be useful for everyone, but useful for people who had a similar problem that I did, or that want to learn from my mistakes.<br><br>Check out my <a href="https://github.com/MacPhage">Github profile</a> to see some of my open-source projects, including this very website.</p>
                 <div class="previous-work">
+                    
+                    <div id="ckeypad" class="item">
+                        <div class="icon"><img src="img/icon_ckeypad.png"></div><br>
+                        <div class="project">Continuity Keypad</div><br>
+                        <div class="description">Continuity Keypad is an application for OS X Yosemite, that allows you to manually enter numbers to call. I developed the website for this.</div><br>
+                        <span class="go"><a href="http://continuitykeypad.co/">Check it out</a></span>
+                    </div>
                     
                     <div id="obskewer" class="item">
                         <div class="icon"><img src="img/icon_obskewer.png"></div><br>
@@ -119,6 +126,12 @@
                         <div class="project">pDraw</div><br>
                         <div class="description">pDraw is an open-source graphics.h painting application used to paint digitally-primitive drawings using your mouse input and keyboard.</div><br>
                         <span class="go"><a href="https://github.com/MacPhage/pDraw">Check it out</a></span>
+                    </div>
+                    <div id="reaganhsgithubio" class="item">
+                        <div class="icon"><img src="img/bulldog.png"></div><br>
+                        <div class="project">ReaganHS.github.io</div><br>
+                        <div class="description">A student-run website for important bulldog announcements. Home of the <a href="http://jhreagan.org/">Reagan Bulldogs</a>.</div><br>
+                        <span class="go"><a href="http://reaganhs.github.io/">Check it out</a></span>
                     </div>
                     <div id="alfeo" class="item">
                         <div class="icon"><img src="img/icon_alfeo.png"></div><br>
@@ -196,38 +209,39 @@
             function completeRedraw()
             {
                 
-                rand = randomNumberBetween(0,7);
+                rand = randomNumberBetween(0,6);
+                var cnt = 12;
                 if(rand == 0)
                 {
-                    colors = randomColor({count: 10,format: 'hex',hue: 'red'});
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'red'});
                 }
                 else if(rand == 1)
                 {
-                    colors = randomColor({count: 10,format: 'hex',hue: 'orange'});
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'orange'});
                 }
                 else if(rand == 2)
                 {
-                    colors = randomColor({count: 10,format: 'hex',hue: 'yellow'});
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'yellow'});
                 }
                 else if(rand == 3)
                 {
-                    colors = randomColor({count: 10,format: 'hex',hue: 'green'});
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'green'});
                 }
                 else if(rand == 4)
                 {
-                    colors = randomColor({count: 10,format: 'hex',hue: 'blue'});
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'blue'});
                 }
                 else if(rand == 5)
                 {
-                    colors = randomColor({count: 10,format: 'hex',hue: 'purple'});
-                }
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'purple'});
+                }/*
                 else if(rand == 6)
                 {
-                    colors = randomColor({count: 10,format: 'hex',hue: 'monochrome'});
-                }
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'monochrome'});
+                }*/
                 else
                 {
-                    colors = randomColor({count: 10,format: 'hex'});
+                    colors = randomColor({count: cnt,format: 'hex'});
                 }
                 t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
                 redraw();
