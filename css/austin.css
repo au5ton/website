@@ -164,6 +164,19 @@ body .main-container .section .previous-work {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+body .main-container .section .previous-work .item .icon img {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  max-height: 200px;
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+  -moz-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+  -o-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+}
+body .main-container .section .previous-work .item .project {
+  margin-left: auto;
+  margin-right: auto;
+}
 body .main-container .section .previous-work .item .description {
   margin-left: auto;
   margin-right: auto;
@@ -179,19 +192,11 @@ body .main-container .section .previous-work #ckeypad {
   padding-bottom: 20px;
   background: rgba(13, 82, 32, 0.85);
 }
-body .main-container .section .previous-work #ckeypad .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  max-height: 200px;
-}
 body .main-container .section .previous-work #ckeypad .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
 }
 body .main-container .section .previous-work #ckeypad .description {
   font-family: "Source Sans Pro", sans-serif;
@@ -210,19 +215,11 @@ body .main-container .section .previous-work #obskewer {
   padding-bottom: 20px;
   background: rgba(62, 62, 62, 0.85);
 }
-body .main-container .section .previous-work #obskewer .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  max-height: 200px;
-}
 body .main-container .section .previous-work #obskewer .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
 }
 body .main-container .section .previous-work #obskewer .description {
   font-family: "Source Sans Pro", sans-serif;
@@ -241,19 +238,11 @@ body .main-container .section .previous-work #pdraw {
   padding-bottom: 20px;
   background: rgba(147, 152, 255, 0.85);
 }
-body .main-container .section .previous-work #pdraw .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  max-height: 200px;
-}
 body .main-container .section .previous-work #pdraw .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
 }
 body .main-container .section .previous-work #pdraw .description {
   font-family: "Source Sans Pro", sans-serif;
@@ -272,19 +261,11 @@ body .main-container .section .previous-work #reaganhsgithubio {
   padding-bottom: 20px;
   background: rgba(142, 0, 0, 0.85);
 }
-body .main-container .section .previous-work #reaganhsgithubio .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  max-height: 200px;
-}
 body .main-container .section .previous-work #reaganhsgithubio .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
 }
 body .main-container .section .previous-work #reaganhsgithubio .description {
   font-family: "Source Sans Pro", sans-serif;
@@ -303,19 +284,11 @@ body .main-container .section .previous-work #alfeo {
   padding-bottom: 20px;
   background: rgba(255, 94, 55, 0.85);
 }
-body .main-container .section .previous-work #alfeo .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  max-height: 200px;
-}
 body .main-container .section .previous-work #alfeo .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
 }
 body .main-container .section .previous-work #alfeo .description {
   font-family: "Source Sans Pro", sans-serif;
@@ -332,21 +305,13 @@ body .main-container .section .previous-work #alfeo .go {
 body .main-container .section .previous-work #pcalculator {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(34, 206, 127, 0.85);
-}
-body .main-container .section .previous-work #pcalculator .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  max-height: 200px;
+  background: rgba(21, 167, 99, 0.85);
 }
 body .main-container .section .previous-work #pcalculator .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
 }
 body .main-container .section .previous-work #pcalculator .description {
   font-family: "Source Sans Pro", sans-serif;
@@ -365,19 +330,11 @@ body .main-container .section .previous-work #austinjnet {
   padding-bottom: 20px;
   background: rgba(240, 167, 32, 0.85);
 }
-body .main-container .section .previous-work #austinjnet .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  max-width: 200px;
-  max-height: 200px;
-}
 body .main-container .section .previous-work #austinjnet .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
 }
 body .main-container .section .previous-work #austinjnet .description {
   font-family: "Source Sans Pro", sans-serif;
@@ -390,6 +347,11 @@ body .main-container .section .previous-work #austinjnet .go {
   font-size: 1.5em;
   font-weight: 600;
   color: #f5f5f5;
+}
+body .main-container .icon-shadow {
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+  -moz-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+  -o-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
 }
 body .main-container .footer {
   font-family: "Roboto", sans-serif;
