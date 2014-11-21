@@ -15,7 +15,7 @@
     Twitter: @mdo
     From: San Francisco, California
     
-    Bootstrap: Jacob
+    Bootstrap: Jacob Thornton
     Github: fat
     Twitter: @fat
     From: San Francisco, California
