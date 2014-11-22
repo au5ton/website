@@ -72,7 +72,6 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="js/d3.v3.min.js"></script>
-        <script src="js/AppScroll.min.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/randomColor.min.js"></script>
         <script src="js/cinnabar.switcheroo.min.js"></script>
@@ -277,45 +276,7 @@
 
             completeRedraw();
             showResolution();
-            showMode();
-            
-            var scroller = new AppScroll({
-                toolbar: document.getElementById("MainNavbar"),
-                scroller: document.getElementById("MainContentContainer")
-            });
-
-            scroller.on();
-
-
-            $(function() {
-                FastClick.attach(document.body);
-            });
-            
-            /*
-            $(".item").addClass("wow bounceIn");
-            $(".header-box").addClass("wow bounceIn");
-            $(".bounceLeft").addClass("wow bounceInLeft");
-            $(".bounceRight").addClass("wow bounceInRight");
-            $("#contactme").addClass("wow bounceIn");
-            $(".footer").addClass("wow fadeInUp");
-            */
-            $(window).load(function(){
-                $(".item").removeClass("wow bounceIn");
-                $(".header-box").removeClass("wow bounceIn");
-                $(".bounceLeft").removeClass("wow bounceInLeft");
-                $(".bounceRight").removeClass("wow bounceInRight");
-                $("#contactme").removeClass("wow bounceIn");
-                $(".footer").removeClass("wow fadeInUp");
-                
-                $(".item").addClass("animated bounceOut");
-                $(".header-box").addClass("animated bounceOut");
-                $(".bounceLeft").addClass("animated bounceOutLeft");
-                $(".bounceRight").addClass("animated bounceOutRight");
-                $("#contactme").addClass("animated bounceOut");
-                $(".footer").addClass("animated fadeOutUp");
-            });
-            
-            
+            showMode();       
 
         </script>
     </body>
