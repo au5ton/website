@@ -73,15 +73,19 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="js/d3.v3.min.js"></script>
         <script src="js/AppScroll.min.js"></script>
-        <script src="js/fastclick.min.js"></script>
         <script src="js/wow.min.js"></script>
         <script src="js/randomColor.min.js"></script>
         <script src="js/cinnabar.switcheroo.min.js"></script>
         <script src="js/austin.js"></script>
         <script src="js/flowtype.js"></script>
         <script>
-            new WOW().init();
+            var wow = new WOW({
+                animateClass: 'animated', // default
+                mobile: true
+            });
+            wow.init();
         </script>
+            
         <!-- THIRD PARTY JAVASCRIPT -->
         
         
@@ -91,40 +95,40 @@
 
         <div class="main-container">
 
-            <div class="header-box text-center">
+            <div class="header-box text-center wow bounceIn">
                 <h1 class="name"><small>Hello, my name is<br></small>Austin Jackson</h1>
             </div>
 
 
 
 
-            <div class="container-fluid section text-center bounceLeft">
+            <div class="container-fluid section text-center wow bounceInLeft">
                 <div class="head"><p class="title">Who I Am &amp; What I Do</p><hr></div>
                 
                 <p class="body">My name is Austin Jackson. I am a 16 year old Java programmer and web developer from  Houston, Texas. I like Daft Punk, spending time with my girlfriend, and good Mexican food. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
                 </p>
             </div>
-            <div class="container-fluid section text-center bounceRight">
+            <div class="container-fluid section text-center wow bounceInRight">
                 <div class="head"><p class="title">My Previous Work</p><hr></div>
                 <p class="body">My projects are often created out of one or more of these two things:<br><br> 1) Inspiration to create my own work or to recreate the work of others, <br>2) Solve my own or someone else's problems. <br><br>That being said, not all of my work may be useful for everyone, but useful for people who had a similar problem that I did, or that want to learn from my mistakes.<br><br>Check out my <a href="https://github.com/MacPhage">Github profile</a> to see some of my open-source projects, including this very website.</p>
                 </div>
-                <div class="previous-work">
+                <div id="previouswork" class="previous-work">
                     
                     <div class="container-fluid">
-                        <div id="ckeypad" class="col-lg-4 item">
+                        <div id="ckeypad" class="col-lg-4 item wow bounceIn">
                             <div class="icon"><img src="img/icon_ckeypad.png"></div><br>
                             <div class="project">Continuity Keypad</div><br>
                             <div class="description">Continuity Keypad is an application for OS X Yosemite, that allows you to manually enter numbers to call. I developed the website for this.</div><br>
                             <span class="go"><a href="http://continuitykeypad.co/">Check it out</a></span>
                         </div>
                     
-                        <div id="obskewer" class="col-lg-4 item">
+                        <div id="obskewer" class="col-lg-4 item wow bounceIn">
                             <div class="icon"><img src="img/icon_obskewer.png"></div><br>
                             <div class="project">Obskewer</div><br>
                             <div class="description">Obskewer is an open-source light-weight Java application for encoding and decoding text using common ciphers.</div><br>
                             <span class="go"><a href="https://github.com/MacPhage/Obskewer">Check it out</a></span>
                         </div>
-                        <div id="pdraw" class="col-lg-4 item">
+                        <div id="pdraw" class="col-lg-4 item wow bounceIn">
                             <div class="icon"><img src="img/pdrawlogo.png"></div><br>
                             <div class="project">pDraw</div><br>
                             <div class="description">pDraw is an open-source C++ graphics.h painting application used to paint digitally-primitive drawings using your mouse input and keyboard.</div><br>
@@ -134,25 +138,25 @@
                     
                     <div class="container-fluid">
                         
-                        <div id="reaganhsgithubio" class="col-lg-3 item">
+                        <div id="reaganhsgithubio" class="col-lg-3 item wow bounceIn">
                         <div class="icon"><img src="img/bulldog.png"></div><br>
                         <div class="project">ReaganHS.github.io</div><br>
                         <div class="description">A student-run website for important bulldog announcements. Home of the <a href="http://jhreagan.org/">Reagan Bulldogs</a>.</div><br>
                         <span class="go"><a href="http://reaganhs.github.io/">Check it out</a></span>
                         </div>
-                        <div id="alfeo" class="col-lg-3 item">
+                        <div id="alfeo" class="col-lg-3 item wow bounceIn">
                             <div class="icon"><img src="img/icon_alfeo.png"></div><br>
                             <div class="project">Alfeo</div><br>
                             <div class="description">Successor to <a href="https://github.com/MacPhage/pCalculator">pCalculator</a>, Alfeo is an open-source enhanced implementation of <a href="https://github.com/NeilFraser/JS-Interpreter">NeilFraser/JS-Interpreter</a> to specialize in quickly writing and calculating mathematical equations and formulas.</div><br>
                             <span class="go"><a href="http://austinj.net/alfeo/">Check it out</a></span>
                         </div>
-                        <div id="pcalculator" class=" col-lg-3 item">
+                        <div id="pcalculator" class=" col-lg-3 item wow bounceIn">
                             <div class="icon"><img src="img/icon_pcalculator.png"></div><br>
                             <div class="project">pCalculator</div><br>
                             <div class="description">pCalculator is a light-weight Java application for convenient calculation. It is designed to do as fully functional and do-all-the-work-for-you as possible.</div><br>
                             <span class="go"><a href="https://github.com/MacPhage/pCalculator">Check it out</a></span>
                         </div>
-                        <div id="austinjnet" class=" col-lg-3 item">
+                        <div id="austinjnet" class=" col-lg-3 item wow bounceIn">
                             <div class="icon"><img src="ico/natural.png"></div><br>
                             <div class="project">AustinJ.net</div><br>
                             <div class="description">This very website was hand-created by Austin Jackson using nothing but HTML, CSS, and JavaScript. It's open-sourced too!</div><br>
@@ -163,7 +167,7 @@
                     
                 </div>
             
-            <div class="container-fluid section text-center bounceLeft">
+            <div id="contactme" class="container-fluid section text-center wow bounceIn">
                 <div class="head"><p class="title">Contact Me</p><hr></div>
                 <div class="body">
                     You're welcome to follow me or message me on one of my social media outlets!<br>
@@ -184,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="footer text-center">
+            <div class="footer text-center wow fadeInUp">
                 <div class="content">
                     <a class="footeritem" href="attributions.html" onClick="_gaq.push(['_trackEvent', 'External Link', 'AttributionsPage']);">Attributions</a> | <span class="footeritem"><a href="humans.txt" onClick="_gaq.push(['_trackEvent', 'External Link', 'HumansDotTXT']);"><span class="humans">Humans</span>.txt</a></span>
                 </div>
@@ -209,47 +213,34 @@
             var t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
             var firstWidth = document.body.clientWidth;
             var currentWidth = document.body.clientWidth;
-            function redraw()
-            {
+            function redraw(){
                 console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height()+" with colorcode: "+rand+" using colors: "+colors);
                 var pattern = t.generate(document.body.clientWidth, height());
                 document.body.style.backgroundImage = pattern.dataUrl;
             }
-            function completeRedraw()
-            {
+            function completeRedraw(){
                 
                 rand = randomNumberBetween(0,6);
                 var cnt = 12;
-                if(rand == 0)
-                {
+                if(rand == 0){
                     colors = randomColor({count: cnt,format: 'hex',hue: 'red'});
                 }
-                else if(rand == 1)
-                {
+                else if(rand == 1){
                     colors = randomColor({count: cnt,format: 'hex',hue: 'orange'});
                 }
-                else if(rand == 2)
-                {
+                else if(rand == 2){
                     colors = randomColor({count: cnt,format: 'hex',hue: 'yellow'});
                 }
-                else if(rand == 3)
-                {
+                else if(rand == 3){
                     colors = randomColor({count: cnt,format: 'hex',hue: 'green'});
                 }
-                else if(rand == 4)
-                {
+                else if(rand == 4){
                     colors = randomColor({count: cnt,format: 'hex',hue: 'blue'});
                 }
-                else if(rand == 5)
-                {
+                else if(rand == 5){
                     colors = randomColor({count: cnt,format: 'hex',hue: 'purple'});
-                }/*
-                else if(rand == 6)
-                {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'monochrome'});
-                }*/
-                else
-                {
+                }
+                else{
                     colors = randomColor({count: cnt,format: 'hex'});
                 }
                 t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
@@ -265,8 +256,7 @@
                 showResolution();
                 showMode();
 
-                if(difference > 100)
-                {
+                if(difference > 100){
                     console.log("Enough of a window change has been made.");
                     console.log("Difference from last change: "+difference+", original: "+differenceFirst);
                     redraw();
@@ -275,17 +265,13 @@
 
             };
 
-            function randomNumberBetween(from,to)
-            {
+            function randomNumberBetween(from,to){
                 return Math.floor((Math.random() * to) + from);
             }
-            
-            function showResolution()
-            {
+            function showResolution(){
                 document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
             } 
-            function showMode()
-            {
+            function showMode(){
                 document.getElementById("mode").innerHTML = cinnabar_getMode();
             }
 
@@ -304,25 +290,32 @@
             $(function() {
                 FastClick.attach(document.body);
             });
-
-
-            $(document).load(function () {
-
-                var bounceLeft = ".bounceLeft";
-                var bounceRight = ".bounceRight";
-                var header = ".header-box";
-                var footer = ".footer";
-
-                $(bounceLeft).removeClass("invisible");
-                $(bounceRight).removeClass("invisible");
-                $(header).removeClass("invisible");
-                $(footer).removeClass("invisible");
-
-                $(bounceLeft).addClass("wow bounceInLeft");
-                $(bounceRight).addClass("wow bounceInRight");
-                $(header).addClass("wow bounceIn");
-                $(footer).addClass("wow bounceIn");
+            
+            /*
+            $(".item").addClass("wow bounceIn");
+            $(".header-box").addClass("wow bounceIn");
+            $(".bounceLeft").addClass("wow bounceInLeft");
+            $(".bounceRight").addClass("wow bounceInRight");
+            $("#contactme").addClass("wow bounceIn");
+            $(".footer").addClass("wow fadeInUp");
+            */
+            $(window).unload(function(){
+                $(".item").removeClass("wow bounceIn");
+                $(".header-box").removeClass("wow bounceIn");
+                $(".bounceLeft").removeClass("wow bounceInLeft");
+                $(".bounceRight").removeClass("wow bounceInRight");
+                $("#contactme").removeClass("wow bounceIn");
+                $(".footer").removeClass("wow fadeInUp");
+                
+                $(".item").addClass("animated bounceOut");
+                $(".header-box").addClass("animated bounceOut");
+                $(".bounceLeft").addClass("animated bounceOutLeft");
+                $(".bounceRight").addClass("animated bounceOutRight");
+                $("#contactme").addClass("animated bounceOut");
+                $(".footer").addClass("animated fadeOutUp");
             });
+            
+            
 
         </script>
     </body>

@@ -441,6 +441,18 @@ body .main-container .footer .content .humans a:active {
     display: inline-block;
     height: 500px;
   }
+  .previous-work #reaganhsgithubio {
+    height: 525px;
+  }
+  .previous-work #alfeo {
+    height: 525px;
+  }
+  .previous-work #pcalculator {
+    height: 525px;
+  }
+  .previous-work #austinjnet {
+    height: 525px;
+  }
   .item .description {
     min-width: 200px;
     max-width: 500px;
