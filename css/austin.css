@@ -43,6 +43,12 @@
 .visible {
   visibility: visible;
 }
+.hidden {
+  display: none;
+}
+.clear {
+  opacity: 0.0;
+}
 body {
   background-repeat: no-repeat;
   background-position: center;
