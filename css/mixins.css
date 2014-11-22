@@ -43,3 +43,9 @@
 .visible {
   visibility: visible;
 }
+.hidden {
+  display: none;
+}
+.clear {
+  opacity: 0.0;
+}

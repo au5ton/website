@@ -52,6 +52,8 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
 
+    .container-fluid {padding-left: 0px;padding-right: 0px;}
+    
     .main-container {
         padding-left: 0px;
         padding-right: 0px;
@@ -112,6 +114,8 @@ body {
             .body {
                 
                 font-family: "Source Sans Pro", sans-serif;
+                margin-left: auto;
+                margin-right: auto;
                 .contact-box {
                     margin-top: 20px;
                     margin-bottom: 20px;
@@ -138,17 +142,17 @@ body {
                         .color-transition;
                     }
                 }
+            }  
             }
-            
+        
             .previous-work {
                 margin-top: 40px;
                 margin-bottom: 20px;
                 
                 .item {
+                    text-align: center;
                     .icon {
                         img {
-                            margin-top: 20px;
-                            margin-bottom: 5px;
                             max-width: 200px;
                             max-height: 200px;
                             .icon-shadow;
@@ -174,7 +178,7 @@ body {
                 #ckeypad {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(13, 82, 32, 0.85);
+                    background: rgba(13, 82, 32, 0.95);
                     .icon {
                         img {
                         }
@@ -201,7 +205,7 @@ body {
                 #obskewer {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(62, 62, 62, 0.85);
+                    background: rgba(62, 62, 62, 0.95);
                     .icon {
                         img {
                         }
@@ -228,7 +232,7 @@ body {
                 #pdraw{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(147, 152, 255, 0.85);
+                    background: rgba(147, 152, 255, 0.95);
                     .icon {
                         img {
                         }
@@ -255,7 +259,7 @@ body {
                 #reaganhsgithubio {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(142, 0, 0, 0.85);
+                    background: rgba(142, 0, 0, 0.95);
                     .icon {
                         img {
                         }
@@ -282,7 +286,7 @@ body {
                 #alfeo{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(255, 94, 55, 0.85);
+                    background: rgba(255, 94, 55, 0.95);
                     .icon {
                         img {
                         }
@@ -309,7 +313,7 @@ body {
                 #pcalculator{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(21, 167, 99, 0.85);
+                    background: rgba(21, 167, 99, 0.95);
                     .icon {
                         img {
                         }
@@ -336,7 +340,7 @@ body {
                 #austinjnet{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(240, 167, 32, 0.85);
+                    background: rgba(240, 167, 32, 0.95);
                     .icon {
                         img {
                         }
@@ -360,8 +364,7 @@ body {
                         color: @text-white;
                     }
                 }
-                
-            }
+        
         }
         
         .icon-shadow {
@@ -422,39 +425,47 @@ body {
 @media(min-width:1200px){
     .name{font-size: 6em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;padding-left: 10%;padding-right: 10%;}
+    .body{font-size: 1.5em;max-width: 900px;min-width: 600px;}
     .description{max-width: 60vw;min-width: 50vw;}
+    .previous-work{
+        .item{display:inline-block;height: 500px;}
+        #reaganhsgithubio{height: 525px;}
+        #alfeo{height: 525px;}
+        #pcalculator{height: 525px;}
+        #austinjnet{height: 525px;}
+    }
+    .item{.description{min-width: 200px;max-width: 500px;}}
 }
 
 /* Portrait tablets and medium desktops */
 @media(min-width:992px)and(max-width:1199px){
     .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;padding-left: 10%;padding-right: 10%;}
-    .description{max-width: 60vw;min-width: 50vw;}
+    .body{font-size: 1.5em;max-width: 800px;min-width: 500px;}
+    .item{.description{max-width: 200px;min-width: 800px;}}
 }
 
 /* Portrait tablets and small desktops */
 @media(min-width:768px)and(max-width:991px){
     .name{font-size: 5em;small{font-size: 0.55em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;padding-left: 7.5%;padding-right: 7.5%;}
-    .description{max-width: 60vw;min-width: 50vw;}
+    .body{font-size: 1.5em;padding-left: 7.5%;padding-right: 7.5%;max-width: 800px;min-width: 400px;}
+    .item{.description{max-width: 200px;min-width: 600px;}}
 }
 
 /* Landscape phones and portrait tablets */
 @media(max-width:767px){
     .name{font-size: 3em;small{font-size: 0.6em;}}
     .head{font-size: 2em;}
-    .body{font-size: 1.5em;padding-left: 5%;padding-right: 5%;}
-    .description{max-width: 90vw;min-width: 50vw;}
+    .body{font-size: 1.5em;padding-left: 5%;padding-right: 5%;max-width: 800px;min-width: 200px;}
+    .item{.description{max-width: 200px;min-width: 300px;}}
 }
 
 /* Landscape phones and smaller */
 @media(max-width:480px){
     .name{font-size: 2.5em;small{font-size: 0.6em;}}
     .head{font-size: 1.75em;}
-    .body{font-size: 1.25em;padding-left: 5%;padding-right: 5%;}
+    .body{font-size: 1.25em;padding-left: 5%;padding-right: 5%;max-width: 800px;min-width: 200px;}
 }
 
 //Debugging purposes

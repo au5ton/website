@@ -43,6 +43,12 @@
 .visible {
   visibility: visible;
 }
+.hidden {
+  display: none;
+}
+.clear {
+  opacity: 0.0;
+}
 body {
   background-repeat: no-repeat;
   background-position: center;
@@ -74,6 +80,10 @@ body a:active {
   -moz-transition: color 500ms;
   -o-transition: color 500ms;
   transition: color 500ms;
+}
+body .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 body .main-container {
   padding-left: 0px;
@@ -129,6 +139,8 @@ body .main-container .section .head hr {
 }
 body .main-container .section .body {
   font-family: "Source Sans Pro", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 }
 body .main-container .section .body .contact-box {
   margin-top: 20px;
@@ -160,189 +172,190 @@ body .main-container .section .body .contact-box .outlet:hover {
   -o-transition: color 500ms;
   transition: color 500ms;
 }
-body .main-container .section .previous-work {
+body .main-container .previous-work {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-body .main-container .section .previous-work .item .icon img {
-  margin-top: 20px;
-  margin-bottom: 5px;
+body .main-container .previous-work .item {
+  text-align: center;
+}
+body .main-container .previous-work .item .icon img {
   max-width: 200px;
   max-height: 200px;
   -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
   -moz-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
   -o-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
 }
-body .main-container .section .previous-work .item .project {
+body .main-container .previous-work .item .project {
   margin-left: auto;
   margin-right: auto;
 }
-body .main-container .section .previous-work .item .description {
+body .main-container .previous-work .item .description {
   margin-left: auto;
   margin-right: auto;
 }
-body .main-container .section .previous-work .item .go:before {
+body .main-container .previous-work .item .go:before {
   content: "[ ";
 }
-body .main-container .section .previous-work .item .go:after {
+body .main-container .previous-work .item .go:after {
   content: " ]";
 }
-body .main-container .section .previous-work #ckeypad {
+body .main-container .previous-work #ckeypad {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(13, 82, 32, 0.85);
+  background: rgba(13, 82, 32, 0.95);
 }
-body .main-container .section .previous-work #ckeypad .project {
+body .main-container .previous-work #ckeypad .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #ckeypad .description {
+body .main-container .previous-work #ckeypad .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #ckeypad .go {
+body .main-container .previous-work #ckeypad .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #obskewer {
+body .main-container .previous-work #obskewer {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(62, 62, 62, 0.85);
+  background: rgba(62, 62, 62, 0.95);
 }
-body .main-container .section .previous-work #obskewer .project {
+body .main-container .previous-work #obskewer .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #obskewer .description {
+body .main-container .previous-work #obskewer .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #obskewer .go {
+body .main-container .previous-work #obskewer .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #pdraw {
+body .main-container .previous-work #pdraw {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(147, 152, 255, 0.85);
+  background: rgba(147, 152, 255, 0.95);
 }
-body .main-container .section .previous-work #pdraw .project {
+body .main-container .previous-work #pdraw .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #pdraw .description {
+body .main-container .previous-work #pdraw .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #pdraw .go {
+body .main-container .previous-work #pdraw .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #reaganhsgithubio {
+body .main-container .previous-work #reaganhsgithubio {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(142, 0, 0, 0.85);
+  background: rgba(142, 0, 0, 0.95);
 }
-body .main-container .section .previous-work #reaganhsgithubio .project {
+body .main-container .previous-work #reaganhsgithubio .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #reaganhsgithubio .description {
+body .main-container .previous-work #reaganhsgithubio .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #reaganhsgithubio .go {
+body .main-container .previous-work #reaganhsgithubio .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #alfeo {
+body .main-container .previous-work #alfeo {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(255, 94, 55, 0.85);
+  background: rgba(255, 94, 55, 0.95);
 }
-body .main-container .section .previous-work #alfeo .project {
+body .main-container .previous-work #alfeo .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #alfeo .description {
+body .main-container .previous-work #alfeo .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #alfeo .go {
+body .main-container .previous-work #alfeo .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #pcalculator {
+body .main-container .previous-work #pcalculator {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(21, 167, 99, 0.85);
+  background: rgba(21, 167, 99, 0.95);
 }
-body .main-container .section .previous-work #pcalculator .project {
+body .main-container .previous-work #pcalculator .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #pcalculator .description {
+body .main-container .previous-work #pcalculator .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #pcalculator .go {
+body .main-container .previous-work #pcalculator .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #austinjnet {
+body .main-container .previous-work #austinjnet {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: rgba(240, 167, 32, 0.85);
+  background: rgba(240, 167, 32, 0.95);
 }
-body .main-container .section .previous-work #austinjnet .project {
+body .main-container .previous-work #austinjnet .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #austinjnet .description {
+body .main-container .previous-work #austinjnet .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
   color: #f5f5f5;
 }
-body .main-container .section .previous-work #austinjnet .go {
+body .main-container .previous-work #austinjnet .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
@@ -423,12 +436,32 @@ body .main-container .footer .content .humans a:active {
   }
   .body {
     font-size: 1.5em;
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width: 900px;
+    min-width: 600px;
   }
   .description {
     max-width: 60vw;
     min-width: 50vw;
+  }
+  .previous-work .item {
+    display: inline-block;
+    height: 500px;
+  }
+  .previous-work #reaganhsgithubio {
+    height: 525px;
+  }
+  .previous-work #alfeo {
+    height: 525px;
+  }
+  .previous-work #pcalculator {
+    height: 525px;
+  }
+  .previous-work #austinjnet {
+    height: 525px;
+  }
+  .item .description {
+    min-width: 200px;
+    max-width: 500px;
   }
 }
 /* Portrait tablets and medium desktops */
@@ -444,12 +477,12 @@ body .main-container .footer .content .humans a:active {
   }
   .body {
     font-size: 1.5em;
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width: 800px;
+    min-width: 500px;
   }
-  .description {
-    max-width: 60vw;
-    min-width: 50vw;
+  .item .description {
+    max-width: 200px;
+    min-width: 800px;
   }
 }
 /* Portrait tablets and small desktops */
@@ -467,10 +500,12 @@ body .main-container .footer .content .humans a:active {
     font-size: 1.5em;
     padding-left: 7.5%;
     padding-right: 7.5%;
+    max-width: 800px;
+    min-width: 400px;
   }
-  .description {
-    max-width: 60vw;
-    min-width: 50vw;
+  .item .description {
+    max-width: 200px;
+    min-width: 600px;
   }
 }
 /* Landscape phones and portrait tablets */
@@ -488,10 +523,12 @@ body .main-container .footer .content .humans a:active {
     font-size: 1.5em;
     padding-left: 5%;
     padding-right: 5%;
+    max-width: 800px;
+    min-width: 200px;
   }
-  .description {
-    max-width: 90vw;
-    min-width: 50vw;
+  .item .description {
+    max-width: 200px;
+    min-width: 300px;
   }
 }
 /* Landscape phones and smaller */
@@ -509,5 +546,7 @@ body .main-container .footer .content .humans a:active {
     font-size: 1.25em;
     padding-left: 5%;
     padding-right: 5%;
+    max-width: 800px;
+    min-width: 200px;
   }
 }
