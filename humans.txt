@@ -1,7 +1,10 @@
+/* HERE LIES THE HUMANS INVOLVED IN THE END RESULT OF THIS WEBSITE */
+
+
 /* SITE DEV */
     Developer: Austin Jackson 
     Github: MacPhage
-    Twitter: @MacPhage
+    Twitter: @au5ton
     From: Houston, Texas
 
     Developer: Tarun Boddupalli
@@ -44,3 +47,5 @@
     
     Oswald (TypeFace):
     Vernon Adams
+    
+/* NOT ALL HUMANS COULD BE LISTED, UNFORTUNATELY, BECAUSE THEY WEREN'T DOCUMENTED. */
