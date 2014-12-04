@@ -182,7 +182,7 @@
                     You're welcome to follow me or message me on one of my social media outlets!<br>
                     <div class="contact-box">
                         <span class="outlet wow bounceIn invisible" data-wow-delay="1.5s">
-                            <a href="http://twitter.com/MacPhage" onClick="_gaq.push(['_trackEvent', 'External Link', 'TwitterProfile']);">Twitter</a>
+                            <a href="http://twitter.com/au5ton" onClick="_gaq.push(['_trackEvent', 'External Link', 'TwitterProfile']);">Twitter</a>
                         </span>
                         <span class="outlet wow bounceIn invisible" data-wow-delay="1.75s">
                             <a href="http://github.com/MacPhage" onClick="_gaq.push(['_trackEvent', 'External Link', 'GithubProfile']);">Github</a>
@@ -202,15 +202,6 @@
                     <a class="footeritem" href="attributions.html" onClick="_gaq.push(['_trackEvent', 'External Link', 'AttributionsPage']);">Attributions</a> | <span class="footeritem"><a href="humans.txt" onClick="_gaq.push(['_trackEvent', 'External Link', 'HumansDotTXT']);"><span class="humans">Humans</span>.txt</a></span>
                 </div>
             </div>
-
-            <div id="debugstuff" style="display: none; /*INITIAL*/">
-                <code>Resolution: </code>
-                <code id="resolution"></code>
-                <br>
-                <code>Mode: </code>
-                <code id="mode"></code>
-            </div>
-            <div class="class="text-center><a href="javascript:toggleDebugHTML();">[Debug]</a></div>
 
         </div>
 
@@ -278,10 +269,10 @@
                 return Math.floor((Math.random() * to) + from);
             }
             function showResolution(){
-                document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
+                //document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
             } 
             function showMode(){
-                document.getElementById("mode").innerHTML = cinnabar_getMode();
+                //document.getElementById("mode").innerHTML = cinnabar_getMode();
             }
 
             completeRedraw();
