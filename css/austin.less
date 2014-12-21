@@ -4,8 +4,9 @@
 @import "mixins.less";
 
 @link-normal: hsl(202, 59%, 48%);
-@link-hover: hsl(163, 98%, 38%);
-@link-active: hsl(347, 61%, 56%);
+@link-active: hsl(202, 65%, 37%);
+//@link-hover: hsl(163, 98%, 38%);
+//@link-active: hsl(347, 61%, 56%);
 
 @navbar-section: darken(@link-normal, 3%);
 @navbar-item: lighten(@link-normal, 3%);
@@ -14,7 +15,10 @@
 @text-grey: rgb(100,100,100);
 @text-white: rgb(245,245,245);
 
-@translucent-white: rgba(255,255,255,0.65);
+@healthy-white: rgb(240, 240, 240);
+@healthy-black: rgb(60, 60, 60);
+
+@translucent-white: rgba(255,255,255,0.65); //Not actually transparent, but whatever
 @translucent-black: rgba(80, 80, 80, 0.65);
 @translucent-white2: rgba(255,255,255,0.85);
 @translucent-black2: rgba(80, 80, 80, 0.8);
@@ -23,6 +27,7 @@
 @humans-hover: rgba(255, 166, 221, 0.6);
 @humans-text: rgba(255, 166, 221, 1.0);
 
+@native-font: "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
 
 @font-opensans: "Open Sans","Helvetica Neue","Segoe UI", sans-serif;
 @font-sourcesans: "Source Sans Pro","Helvetica Neue","Segoe UI", sans-serif;
@@ -58,6 +63,7 @@ body {
         padding-left: 0px;
         padding-right: 0px;
 
+        
 
         .header-box {
             margin-left: auto;
@@ -69,7 +75,9 @@ body {
 
             width: 75vw;
             display: block;
-            background: @translucent-white2;
+            background: @healthy-white;
+            .section-shadow;
+            
             .name {
                 margin-top: 0px;
                 margin-bottom: 0px;
@@ -94,7 +102,10 @@ body {
             padding-left: 0px;
             padding-right: 0px;
 
-            background: @translucent-white2;
+            background: @healthy-white;
+            
+            .section-shadow;
+            
             .head {
                 display: inline-block;
                 .title {
@@ -121,7 +132,7 @@ body {
                     margin-bottom: 20px;
                     .outlet {
                         display: inline-block;
-                        background: rgba(100,100,100,0.2);
+                        background: rgba(210,210,210,1.0);
                         border-radius: 5px;
                         padding-top: 3px;
                         padding-bottom: 3px;
@@ -132,12 +143,12 @@ body {
                         font-size: 1.1em;
                         font-family: "AvenirNextCondensed-DemiBold", "Segoe UI Semibold", sans-serif;
                         font-weight: 700;
-                        box-shadow: 0px 2px 0px rgba(50,50,50,0.8);
+                        box-shadow: 0px 2px 0px rgb(80, 80, 80);
                     }
                     .outlet:hover {
                         position: relative;
                         top: 2px;
-                        background: rgba(100,100,100,0.325);
+                        background: rgb(180,180,180);
                         box-shadow: 0px 2px 0px rgba(50,50,50,0.0);
                         .color-transition;
                     }
@@ -151,6 +162,11 @@ body {
                 
                 .item {
                     text-align: center;
+                    
+                    .section-shadow;
+                    
+                    text-shadow: 1px 1px 2px rgba(42, 42, 42, 0.65);
+                    
                     .icon {
                         img {
                             max-width: 200px;
@@ -178,7 +194,7 @@ body {
                 #ckeypad {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(13, 82, 32, 0.95);
+                    background: rgb(13, 82, 32);
                     .icon {
                         img {
                         }
@@ -200,12 +216,22 @@ body {
                         font-size: 1.5em;
                         font-weight: 600;
                         color: @text-white;
+                        
+                        a:link, a:visited {
+                            color: lighten(@link-normal,20%);
+                            .color-transition;
+                        }
+                        a:hover, a:active {
+                            color: lighten(@link-active,10%);
+                            .color-transition;
+                        }
+                        
                     }
                 }
                 #obskewer {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(62, 62, 62, 0.95);
+                    background: rgb(62, 62, 62);
                     .icon {
                         img {
                         }
@@ -228,11 +254,21 @@ body {
                         font-weight: 600;
                         color: @text-white;
                     }
+                    
+                    a:link, a:visited {
+                        color: lighten(@link-normal,20%);
+                        .color-transition;
+                    }
+                    a:hover, a:active {
+                        color: lighten(@link-active,10%);
+                        .color-transition;
+                    }
+                    
                 }
                 #pdraw{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(147, 152, 255, 0.95);
+                    background: rgb(147, 152, 255);
                     .icon {
                         img {
                         }
@@ -254,12 +290,20 @@ body {
                         font-size: 1.5em;
                         font-weight: 600;
                         color: @text-white;
+                    }
+                    a:link, a:visited {
+                        color: rgb(253, 205, 76);
+                        .color-transition;
+                    }
+                    a:hover, a:active {
+                        color: rgb(229, 184, 63);
+                        .color-transition;
                     }
                 }
                 #reaganhsgithubio {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(142, 0, 0, 0.95);
+                    background: rgb(142, 0, 0);
                     .icon {
                         img {
                         }
@@ -280,13 +324,23 @@ body {
                         font-family: "Source Sans Pro", sans-serif;
                         font-size: 1.5em;
                         font-weight: 600;
-                        color: @text-white;
+                        color: @text-white;   
                     }
+                    
+                    a:link, a:visited {
+                        color: lighten(@link-normal,20%);
+                        .color-transition;
+                    }
+                    a:hover, a:active {
+                        color: lighten(@link-active,10%);
+                        .color-transition;
+                    }
+                    
                 }
                 #alfeo{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(255, 94, 55, 0.95);
+                    background: rgb(255, 94, 55);
                     .icon {
                         img {
                         }
@@ -307,13 +361,23 @@ body {
                         font-family: "Source Sans Pro", sans-serif;
                         font-size: 1.5em;
                         font-weight: 600;
-                        color: @text-white;
+                        color: @text-white;                
                     }
+                    
+//                    a:link, a:visited {
+//                        color: lighten(@link-normal,20%);
+//                        .color-transition;
+//                    }
+//                    a:hover, a:active {
+//                        color: lighten(@link-active,10%);
+//                        .color-transition;
+//                    }
+                    
                 }
                 #pcalculator{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(21, 167, 99, 0.95);
+                    background: rgb(21, 167, 99);
                     .icon {
                         img {
                         }
@@ -336,11 +400,21 @@ body {
                         font-weight: 600;
                         color: @text-white;
                     }
+                    
+//                    a:link, a:visited {
+//                        color: lighten(@link-normal,20%);
+//                        .color-transition;
+//                    }
+//                    a:hover, a:active {
+//                        color: lighten(@link-active,10%);
+//                        .color-transition;
+//                    }
+                    
                 }
                 #austinjnet{
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    background: rgba(240, 167, 32, 0.95);
+                    background: rgb(240, 167, 32);
                     .icon {
                         img {
                         }
@@ -363,6 +437,16 @@ body {
                         font-weight: 600;
                         color: @text-white;
                     }
+                    
+//                    a:link, a:visited {
+//                        color: lighten(@link-normal,20%);
+//                        .color-transition;
+//                    }
+//                    a:hover, a:active {
+//                        color: lighten(@link-active,10%);
+//                        .color-transition;
+//                    }
+                    
                 }
         
         }
@@ -374,17 +458,17 @@ body {
         }
 
         .footer {
-            font-family: "Roboto", sans-serif;
-            font-weight: 700;
+            font-family: "Avenir Next Condensed", @native-font;
+            font-weight: 400;
             font-size: 1.5em;
             display: block;
-            background: @translucent-black;
+            background: rgba(60,60,60,0.8);
             a:link, a:visited {
                 color: saturate(lighten(@link-normal, 25%), 15%);
                 .color-transition;
             }
             a:hover, a:active {
-                color: saturate(lighten(@link-active, 25%), 15%);
+                color: darken(saturate(lighten(@link-normal, 25%), 0%), 20%);
                 .color-transition;
             }
             
@@ -402,14 +486,14 @@ body {
                     font-family: "Satisfy", cursive;
                     font-weight: 400;
                     font-size: 1.25em;
-                    a:link, a:visited {
-                        color: @humans-text;
-                        .color-transition;
-                    }
-                    a:hover, a:active {
-                        color: @text-white;
-                        .color-transition;
-                    }
+//                    a:link, a:visited {
+//                        color: @humans-text;
+//                        .color-transition;
+//                    }
+//                    a:hover, a:active {
+//                        color: @text-white;
+//                        .color-transition;
+//                    }
                 }
                 
             }
