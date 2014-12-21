@@ -192,7 +192,7 @@ body .main-container .previous-work .item {
   -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
   -moz-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
   -o-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
-  text-shadow: 0px 0px 2px rgba(40, 40, 40, 0.4);
+  text-shadow: 1px 1px 2px rgba(40, 40, 40, 0.4);
 }
 body .main-container .previous-work .item .icon img {
   max-width: 200px;
