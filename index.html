@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="viewport" content="width=device-width">
         <title>Austin Jackson &bull; Developer</title>
-		
+
 		<!--[if IE]>
 		<script>
 			alert("You are viewing this website with Internet Explorer.\nPlease be advised that this website does NOT support Internet Explorer.\nSome features may not work correctly, or at all.\nPlease use something else like Google Chrome or Firefox, they're better."
 		</script>
 		<![endif]-->
 		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
-		
+
         <!------ FAVEICON DATA ------>
         <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114x114.png">
@@ -53,7 +53,7 @@
         <meta property="og:url" content="http://austinj.net/"/>
         <meta property="og:site_name" content="Austin Jackson &bull; Developer"/>
         <!------ SOCIAL METADATA ------>
-        
+
         <!------ GOOGLE ANALYTICS ------>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -64,8 +64,8 @@
             ga('create', 'UA-50814720-2', 'auto');
             ga('send', 'pageview');
         </script>
-		
-		
+
+
 
         <!-- THIRD PARTY CSS -->
         <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -94,10 +94,10 @@
             });
             wow.init();
         </script>
-            
+
         <!-- THIRD PARTY JAVASCRIPT -->
-        
-        
+
+
 
     </head>
     <body>
@@ -113,7 +113,7 @@
 
             <div class="container-fluid section text-center wow bounceInLeft invisible">
                 <div class="head"><p class="title">Who I Am &amp; What I Do</p><hr></div>
-                
+
                 <p class="body">My name is Austin Jackson. I am a 16 year old Java programmer and web developer from  Houston, Texas. I like Daft Punk, spending time with my girlfriend, and good Mexican food. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
                 </p>
             </div>
@@ -122,7 +122,7 @@
                 <p class="body">My projects are often created out of one or more of these two things:<br><br> 1) Inspiration to create my own work or to recreate the work of others, <br>2) Solve my own or someone else's problems. <br><br>That being said, not all of my work may be useful for everyone, but useful for people who had a similar problem that I did, or that want to learn from my mistakes.<br><br>Check out my <a href="https://github.com/MacPhage">Github profile</a> to see some of my open-source projects, including this very website.</p>
                 </div>
                 <div id="previouswork" class="previous-work">
-                    
+
                     <div class="container-fluid">
                         <div id="ckeypad" class="col-lg-4 item wow bounceIn invisible">
                             <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/icon_ckeypad.png"></div><br>
@@ -130,7 +130,7 @@
                             <div class="description wow bounceIn invisible" data-wow-delay="1.25s">Continuity Keypad is an application for OS X Yosemite, that allows you to manually enter numbers to call. I developed the website for this.</div><br>
                             <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="http://continuitykeypad.co/">Check it out</a></span>
                         </div>
-                    
+
                         <div id="obskewer" class="col-lg-4 item wow bounceIn invisible">
                             <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/icon_obskewer.png"></div><br>
                             <div class="project wow bounceIn invisible" data-wow-delay="1.25s">Obskewer</div><br>
@@ -144,9 +144,9 @@
                             <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="https://github.com/MacPhage/pDraw">Check it out</a></span>
                         </div>
                     </div>
-                    
+
                     <div class="container-fluid">
-                        
+
                         <div id="reaganhsgithubio" class="col-lg-3 item wow bounceIn invisible">
                         <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/bulldog.png"></div><br>
                         <div class="project wow bounceIn invisible" data-wow-delay="1.25s">ReaganHS.github.io</div><br>
@@ -171,11 +171,11 @@
                             <div class="description wow bounceIn invisible" data-wow-delay="1.25s">This very website was hand-created by Austin Jackson using nothing but HTML, CSS, and JavaScript. It's open-sourced too!</div><br>
                             <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="https://github.com/MacPhage/macphage.github.io">Check it out</a></span>
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-            
+
             <div id="contactme" class="container-fluid section text-center wow bounceIn invisible">
                 <div class="head wow bounceIn invisible" data-wow-delay="0.5s"><p class="title">Contact Me</p><hr></div>
                 <div class="body wow bounceIn invisible" data-wow-delay="0.5s">
@@ -214,9 +214,9 @@
 
         </div>
 
-        <script type="text/javascript">  
+        <script type="text/javascript">
 
-            
+
             var colors;
             var rand;
             var t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
@@ -228,7 +228,7 @@
                 document.body.style.backgroundImage = pattern.dataUrl;
             }
             function completeRedraw(){
-                
+
                 rand = randomNumberBetween(0,6);
                 var cnt = 12;
                 if(rand == 0){
@@ -279,14 +279,14 @@
             }
             function showResolution(){
                 //document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
-            } 
+            }
             function showMode(){
                 //document.getElementById("mode").innerHTML = cinnabar_getMode();
             }
 
             completeRedraw();
             showResolution();
-            showMode();       
+            showMode();
 
         </script>
     </body>
