@@ -15,6 +15,9 @@
   -o-user-select: none;
   user-select: none;
 }
+.no-text-shadow {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
 .color-transition {
   -webkit-transition: color 500ms;
   -ms-transition: color 500ms;
@@ -226,7 +229,8 @@ body .main-container .previous-work .item a:active {
 body .main-container .previous-work #ckeypad {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: #0d5220;
+  background: url("../img/yosemiteisawesome_small.png");
+  background-position: center;
 }
 body .main-container .previous-work #ckeypad .project {
   font-family: "Source Sans Pro", sans-serif;
@@ -349,84 +353,73 @@ body .main-container .previous-work #pdraw a:active {
 body .main-container .previous-work #chisel {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: #8e0000;
+  background: #dae6f2;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  /*a:link, a:visited {
+                    color: lighten(@link-normal,20%);
+                    .color-transition;
+                }
+                a:hover, a:active {
+                    color: lighten(@link-active,10%);
+                    .color-transition;
+                }*/
 }
 body .main-container .previous-work #chisel .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
-  color: #f5f5f5;
+  color: #323232;
 }
 body .main-container .previous-work #chisel .description {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
-  color: #f5f5f5;
+  color: #323232;
 }
 body .main-container .previous-work #chisel .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
-  color: #f5f5f5;
-}
-body .main-container .previous-work #chisel a:link,
-body .main-container .previous-work #chisel a:visited {
-  color: #7dbade;
-  -webkit-transition: color 500ms;
-  -ms-transition: color 500ms;
-  -moz-transition: color 500ms;
-  -o-transition: color 500ms;
-  transition: color 500ms;
-}
-body .main-container .previous-work #chisel a:hover,
-body .main-container .previous-work #chisel a:active {
-  color: #2a8dc6;
-  -webkit-transition: color 500ms;
-  -ms-transition: color 500ms;
-  -moz-transition: color 500ms;
-  -o-transition: color 500ms;
-  transition: color 500ms;
+  color: #323232;
 }
 body .main-container .previous-work #alfeo {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: #ff5e37;
+  background: #b6ffa8;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  /*a:link, a:visited {
+                    color: lighten(@link-normal,20%);
+                    .color-transition;
+                }
+                a:hover, a:active {
+                    color: lighten(@link-active,10%);
+                    .color-transition;
+                }*/
+}
+body .main-container .previous-work #alfeo .mixin {
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 5px;
 }
 body .main-container .previous-work #alfeo .project {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2em;
   font-weight: 600;
-  color: #f5f5f5;
+  color: #323232;
 }
 body .main-container .previous-work #alfeo .description {
+  display: block;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
-  color: #f5f5f5;
+  color: #323232;
 }
 body .main-container .previous-work #alfeo .go {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
-  color: #f5f5f5;
-}
-body .main-container .previous-work #alfeo a:link,
-body .main-container .previous-work #alfeo a:visited {
-  color: #7dbade;
-  -webkit-transition: color 500ms;
-  -ms-transition: color 500ms;
-  -moz-transition: color 500ms;
-  -o-transition: color 500ms;
-  transition: color 500ms;
-}
-body .main-container .previous-work #alfeo a:hover,
-body .main-container .previous-work #alfeo a:active {
-  color: #2a8dc6;
-  -webkit-transition: color 500ms;
-  -ms-transition: color 500ms;
-  -moz-transition: color 500ms;
-  -o-transition: color 500ms;
-  transition: color 500ms;
+  color: #323232;
 }
 body .main-container .previous-work #pcalculator {
   padding-top: 20px;
