@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Oops, 404.</title>
+        <title>404 page</title>
+
+        
         <!------ FAVEICON DATA ------>
         <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114x114.png">
@@ -21,99 +23,95 @@
         <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32">
         <meta name="msapplication-TileColor" content="#c33333">
         <meta name="msapplication-TileImage" content="ico/mstile-144x144.png">
-        <!------ SOCIAL METADATA ------>
-        <!------ GOOGLE+ METADATA ------>
-        <meta itemprop="name" content="Austin Jackson &bull; Developer"/>
-        <meta itemprop="description" content="Austin Jackson is a 16 year old desktop and web developer from Houston, Texas."/>
-        <meta itemprop="image" content="http://austinj.net/ico/favicon-196x196.png"/>
-        <!------ TWITTER METADATA ------>
-        <meta name="twitter:card" content="summary"/>  <!-- Card type -->
-        <meta name="twitter:site" content="austinj"/>
-        <meta name="twitter:title" content="Austin Jackson &bull; Developer">
-        <meta name="twitter:description" content="Austin Jackson is a 16 year old desktop and web developer from Houston, Texas."/>
-        <meta name="twitter:creator" content="MacPhage"/>
-        <meta name="twitter:image:src" content="http://austinj.net/ico/favicon-196x196.png"/>
-        <meta name="twitter:domain" content="http://austinj.net"/>
-        <!------ FACEBOOK METADATA ------>
-        <meta property="og:type" content="profile"/>
-        <meta property="profile:first_name" content="Austin"/>
-        <meta property="profile:last_name" content="Jackson"/>
-        <meta property="profile:username" content=""/>
-        <meta property="og:title" content="Austin Jackson &bull; Developer"/>
-        <meta property="og:description" content="Austin Jackson is a 16 year old desktop and web developer from Houston, Texas."/>
-        <meta property="og:image" content="http://austinj.net/ico/favicon-196x196.png"/>
-        <meta property="og:url" content="http://austinj.net/"/>
-        <meta property="og:site_name" content="Austin Jackson &bull; Developer"/>
-        <!------ SOCIAL METADATA ------>
+        
+        
+        <style>
 
-    <link href="css/bootstrap.min.css">
-    <script type="text/javascript" src="http://macphage.github.io/js/404.js"></script>
-    
-    <style>
-        body {
-            font-family: "Helvetica Neue","Segoe UI", Tahoma, sans serif;
-            font-weight: bold;
-            font-style: normal;
-            word-wrap: break-word;
-            padding-left: 0px;
-            padding-right: 0px;
-            margin-left: 0px;
-            margin-right: 0px;
-        }
-        #FourOhFour {
-            display: block;
-            border-radius: 0px;
-            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-            padding: 2%;
-            background: rgba(255,255,255,0.8);
-            width: 300px;
-            margin-top: 25px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #MainTitle {
-            font-size: 300%;
-        }
-        #error {
-            font-family: "Helvetica Neue","Segoe UI",Tahoma, sans serif;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 175%;
-            text-align: center;
-        }
-        a:link, a:visited {
-            color: rgb(50, 141, 194)!important;
-            -webkit-transition: color 500ms;
-            -ms-transition: color 500ms;
-            -moz-transition: color 500ms;
-            -o-transition: color 500ms;
-            transition: color 500ms;
-        }
-        a:hover {
-            color: rgb(0, 231, 169)!important;
-            -webkit-transition: color 500ms;
-            -ms-transition: color 500ms;
-            -moz-transition: color 500ms;
-            -o-transition: color 500ms;
-            transition: color 500ms;
-        }
-        a:active {
-            color: rgb(224, 74, 109)!important;
-            -webkit-transition: color 500ms;
-            -ms-transition: color 500ms;
-            -moz-transition: color 500ms;
-            -o-transition: color 500ms;
-            transition: color 500ms;
-        }
-    </style>
-</head>
-<body onload="applyErrorMessage();" style="background: rgb(0,153,84)">
-    <div id="FourOhFour" class="container">
-        <h1 id="MainTitle">404'd</h1>
-        <hr>
-        <p class="common">Looks like you were trying to go to a page that <span style="font-style: italic;">doesn't exist</span>!<br><br>
-        <a href="javascript:history.back()">Go back?</a><br>
-        <a href="http://www.austinj.net/index.html">Homepage?</a><br>
-    </div>
-</body>
+            body {
+                width: 100vw;
+                height: 100vh;
+                background: rgb(44, 44, 44);
+                margin: 0;
+                font-size: 16pt;
+            }
+
+            .table {
+                width: 100vw;
+                display: table;
+            }
+
+            #dinkelberg {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 85vw;
+            }
+            
+            #dinkelbergwrap {
+                display: inline-block;
+            }
+            
+            .centerme {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }            
+
+            #fourohfour {
+                z-index: 10;
+                text-align: center;
+                color: rgb(240,240,240);
+                padding: 10px;
+            }
+
+            .title {
+                font-family: "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+            .subtitle {
+                font-family: "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+                font-weight: normal;
+            }
+
+            p {
+                margin-top: 0;
+            }
+
+            @media only screen 
+                and (min-device-width : 320px) 
+                and (max-device-width : 480px)
+                and (orientation : portrait) { 
+                    #dinkelberg {max-width: 67.5vw;}
+                }
+
+            @media only screen 
+                and (min-device-width : 320px) 
+                and (max-device-width : 480px)
+                and (orientation : landscape) { 
+                    #dinkelberg {max-width: 25vw;}
+                }
+
+            @media only screen 
+                and (min-device-width : 540px) 
+                and (max-device-width : 960px) {
+                    #dinkelberg {max-width: 25vw;}
+                }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="table">
+
+            <div class="centerme">
+                <div id="fourohfour">
+                    <span class="title">404</span>
+                    <p class="subtitle">The page you requested probably doesn't exist.</p>
+                </div>
+                <a id="dinkelbergwrap" href="http://en.wikipedia.org/wiki/HTTP_404"><img id="dinkelberg" src="img/404.png"></a>
+            </div>
+
+        </div>
+    </body>
 </html>
