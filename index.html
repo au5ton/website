@@ -69,7 +69,7 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
 
         <!-- THIRD PARTY CSS -->
         <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/animate.min.css" rel="stylesheet">
+<!--        <link href="css/animate.min.css" rel="stylesheet">-->
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700|Open+Sans:300|Oswald|Satisfy|Roboto:500,700' rel='stylesheet' type='text/css'>
         <!-- THIRD PARTY CSS -->
 
@@ -78,22 +78,7 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
         <!-- CUSTOM CSS -->
 
         <!-- THIRD PARTY JAVASCRIPT -->
-        <script src="js/trianglify.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" ></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script src="js/d3.v3.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/randomColor.min.js"></script>
-        <script src="js/cinnabar.switcheroo.min.js"></script>
-        <script src="js/austin.js"></script>
-        <script>
-            var wow = new WOW({
-                animateClass: 'animated', // default
-                mobile: false
-            });
-            wow.init();
-        </script>
-
+        <script src="js/concatenated.js"></script>
         <!-- THIRD PARTY JAVASCRIPT -->
 
 
@@ -103,43 +88,43 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
 
         <div class="main-container">
 
-            <div class="header-box text-center wow bounceIn invisible">
+            <div class="header-box text-center">
                 <h1 class="name"><small>Hello, my name is<br></small>Austin Jackson</h1>
             </div>
 
 
 
 
-            <div class="container-fluid section text-center wow bounceInLeft invisible">
+            <div class="container-fluid section text-center">
                 <div class="head"><p class="title">Who I Am &amp; What I Do</p><hr></div>
 
                 <p class="body">My name is Austin Jackson. I am a 16 year old Java/Arduino/NodeJS/C++ programmer and web developer from Houston, Texas. I like Daft Punk, spending time with my girlfriend, and good Mexican food. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
                 </p>
             </div>
-            <div class="container-fluid section text-center wow bounceInRight invisible">
+            <div class="container-fluid section text-center">
                 <div class="head"><p class="title">My Previous Work</p><hr></div>
                 <p class="body">My projects are often created out of one or more of these two things:<br><br> 1) Inspiration to create my own work or to recreate the work of others, <br>2) Solve my own or someone else's problems. <br><br>That being said, not all of my work may be useful for everyone, but useful for people who had a similar problem that I did, or that want to learn from my mistakes.<br><br>Check out my <a href="https://github.com/MacPhage">Github profile</a> to see some of my open-source projects, including this very website.</p>
             </div>
             <div id="previouswork" class="previous-work">
 
                 <div class="container-fluid">
-                    <div id="ckeypad" class="col-lg-4 item wow bounceIn invisible">
-                        <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/icon_ckeypad.png"></div><br>
-                        <div class="project wow bounceIn invisible" data-wow-delay="1.25s">Continuity Keypad</div><br>
-                        <div class="description wow bounceIn invisible" data-wow-delay="1.25s">Continuity Keypad is an application for OS X Yosemite, that allows you to manually enter numbers to call. I developed the website for this.</div><br>
-                        <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="http://continuitykeypad.co/">Check it out</a></span>
+                    <div id="ckeypad" class="col-lg-4 item">
+                        <div class="icon"><img src="img/icon_ckeypad.png"></div><br>
+                        <div class="project">Continuity Keypad</div><br>
+                        <div class="description">Continuity Keypad is an application for OS X Yosemite, that allows you to manually enter numbers to call. I developed the website for this.</div><br>
+                        <span class="go"><a href="http://continuitykeypad.co/">Check it out</a></span>
                     </div>
 
-                    <div id="obskewer" class="col-lg-4 item wow bounceIn invisible">
-                        <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/icon_obskewer.png"></div><br>
-                        <div class="project wow bounceIn invisible" data-wow-delay="1.25s">Obskewer</div><br>
-                        <div class="description wow bounceIn invisible" data-wow-delay="1.25s">Obskewer is an open-source light-weight Java application for encoding and decoding text using common ciphers.</div><br>
-                        <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="http://www.austinj.net/Obskewer/">Check it out</a></span>
+                    <div id="obskewer" class="col-lg-4 item">
+                        <div class="icon"><img src="img/icon_obskewer.png"></div><br>
+                        <div class="project">Obskewer</div><br>
+                        <div class="description">Obskewer is an open-source light-weight Java application for encoding and decoding text using common ciphers.</div><br>
+                        <span class="go"><a href="http://www.austinj.net/Obskewer/">Check it out</a></span>
                     </div>
-                    <div id="pdraw" class="col-lg-4 item wow bounceIn invisible">
-                        <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/pdrawlogo.png"></div><br>
-                        <div class="project wow bounceIn invisible" data-wow-delay="1.25s">pDraw</div><br>
-                        <div class="description wow bounceIn invisible" data-wow-delay="1.25s">pDraw is an open-source C++ graphics.h painting application used to paint digitally-primitive drawings using your mouse input and keyboard.</div><br>
+                    <div id="pdraw" class="col-lg-4">
+                        <div class="icon"><img src="img/pdrawlogo.png"></div><br>
+                        <div class="project" data-wow-delay="1.25s">pDraw</div><br>
+                        <div class="description" data-wow-delay="1.25s">pDraw is an open-source C++ graphics.h painting application used to paint digitally-primitive drawings using your mouse input and keyboard.</div><br>
                         <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="https://github.com/MacPhage/pDraw">Check it out</a></span>
                     </div>
                 </div>
@@ -154,22 +139,14 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
                         </div><br>
                         <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="http://austinj.net/chisel">Check it out</a></span>
                     </div>
+                    
                     <div id="alfeo" class="col-lg-4 item wow bounceIn invisible">
                         <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/icon_alfeo.png"></div><br>
                         <div class="project wow bounceIn invisible" data-wow-delay="1.25s">Alfeo</div><br>
                         <div class="description wow bounceIn invisible" data-wow-delay="1.25s">Successor to <a href="https://github.com/MacPhage/pCalculator">pCalculator</a>, Alfeo is an open-source enhanced implementation of <a href="https://github.com/NeilFraser/JS-Interpreter">NeilFraser/JS-Interpreter</a> to specialize in quickly writing and calculating mathematical equations and formulas.</div><br>
                         <span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="http://austinj.net/alfeo/">Check it out</a></span>
                     </div>
-
-                    <!--
-<div id="pcalculator" class=" col-lg-3 item wow bounceIn invisible">
-<div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="img/icon_pcalculator.png"></div><br>
-<div class="project wow bounceIn invisible" data-wow-delay="1.25s">pCalculator</div><br>
-<div class="description wow bounceIn invisible" data-wow-delay="1.25s">pCalculator is a light-weight Java application for convenient calculation. It is designed to do as fully functional and do-all-the-work-for-you as possible.</div><br>
-<span class="go wow bounceIn invisible" data-wow-delay="1.25s"><a href="https://github.com/MacPhage/pCalculator">Check it out</a></span>
-</div>
--->
-
+                    
                     <div id="austinjnet" class="col-lg-4 item wow bounceIn invisible">
                         <div class="icon wow bounceIn invisible" data-wow-delay="1s"><img src="ico/natural.png"></div><br>
                         <div class="project wow bounceIn invisible" data-wow-delay="1.25s">AustinJ.net</div><br>
@@ -207,15 +184,6 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
                     <a class="footeritem" href="attributions.html" onClick="_gaq.push(['_trackEvent', 'External Link', 'AttributionsPage']);">Attributions</a> | <span class="footeritem"><a href="humans.txt" onClick="_gaq.push(['_trackEvent', 'External Link', 'HumansDotTXT']);"><span class="humans">Humans</span>.txt</a></span>
                 </div>
             </div>
-
-            <div id="debugstuff" style="display: none; /*INITIAL*/">
-                <code>Resolution: </code>
-                <code id="resolution"></code>
-                <br>
-                <code>Mode: </code>
-                <code id="mode"></code>
-            </div>
-            <div style="display: none;" class="class="text-center><a href="javascript:toggleDebugHTML();">[Debug]</a></div>
 
         </div>
 
@@ -265,10 +233,6 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
                 var difference = Math.abs(newWidth - currentWidth);
                 var differenceFirst = Math.abs(newWidth - firstWidth);
 
-
-                showResolution();
-                showMode();
-
                 if(difference > 100){
                     console.log("Enough of a window change has been made.");
                     console.log("Difference from last change: "+difference+", original: "+differenceFirst);
@@ -281,16 +245,8 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
             function randomNumberBetween(from,to){
                 return Math.floor((Math.random() * to) + from);
             }
-            function showResolution(){
-                //document.getElementById("resolution").innerHTML = (document.body.clientWidth+"x"+ height());
-            }
-            function showMode(){
-                //document.getElementById("mode").innerHTML = cinnabar_getMode();
-            }
 
             completeRedraw();
-            showResolution();
-            showMode();
 
         </script>
     </body>
