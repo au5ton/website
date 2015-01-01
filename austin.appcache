@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 2015-1-1 v1.0.0
+js/libraries.js
+css/bootstrap.min.css
+img/icon_alfeo.png
+img/icon_ckeypad.png
+img/icon_obskewer_reduced.png
+ico/natural.png
+img/pdrawlogo_reduced.png
+img/yosemiteisawesome_small.png
+http://www.austinj.net/chisel/res/img/Icon200_KEEPME.png
+
+NETWORK:
+#index.html
+
+FALLBACK:
+#normal.html offline.html
