@@ -231,6 +231,7 @@ body .main-container .previous-work #ckeypad {
   padding-bottom: 20px;
   background: url("../img/yosemiteisawesome_small.png");
   background-position: center;
+  background-size: cover;
 }
 body .main-container .previous-work #ckeypad .project {
   font-family: "Source Sans Pro", sans-serif;
@@ -515,7 +516,7 @@ body .main-container .footer {
   font-weight: 400;
   font-size: 1.5em;
   display: block;
-  background: rgba(60, 60, 60, 0.8);
+  background: #3c3c3c;
 }
 body .main-container .footer a:link,
 body .main-container .footer a:visited {
@@ -539,6 +540,7 @@ body .main-container .footer .content {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
+  color: #87c8ed;
 }
 body .main-container .footer .content .footeritem {
   margin-left: 10px;
