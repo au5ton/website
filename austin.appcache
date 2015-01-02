@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2015-1-1 v1.0.0
+# 2015-1-1 v1.1.0
 js/libraries.js
 css/bootstrap.min.css
 img/icon_alfeo.png
@@ -9,9 +9,11 @@ ico/natural.png
 img/pdrawlogo_reduced.png
 img/yosemiteisawesome_small.png
 http://www.austinj.net/chisel/res/img/Icon200_KEEPME.png
+404.html
 
 NETWORK:
-*.html
+#index.html
+#attributions.html
 
 FALLBACK:
 #normal.html offline.html
