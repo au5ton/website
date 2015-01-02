@@ -11,7 +11,7 @@ img/yosemiteisawesome_small.png
 http://www.austinj.net/chisel/res/img/Icon200_KEEPME.png
 
 NETWORK:
-#index.html
+*.html
 
 FALLBACK:
 #normal.html offline.html
