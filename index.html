@@ -218,10 +218,10 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
                     </div>
                 </div>
             </div>
-
+            
             <div class="footer text-center">
                 <div class="content">
-                    <a class="footeritem" href="attributions.html" onClick="_gaq.push(['_trackEvent', 'External Link', 'AttributionsPage']);">Attributions</a> | <span class="footeritem"><a href="humans.txt" onClick="_gaq.push(['_trackEvent', 'External Link', 'HumansDotTXT']);"><span class="humans">Humans</span>.txt</a></span>
+                    Website by Austin Jackson &copy; 2014-<span id="copyright">2015</span>
                 </div>
             </div>
 
@@ -287,7 +287,7 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
                 return Math.floor((Math.random() * to) + from);
             }
             
-            
+            document.getElementById("copyright").innerHTML = new Date().getFullYear();
 
         </script>
     </body>

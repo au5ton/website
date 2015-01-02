@@ -28,14 +28,6 @@
     Twitter: @qrohlf
     From: Portland, Oregon
 
-    AppScroll.js: Jacob Kelley
-    Github: jakiestfu
-    From: Los Angeles, California
-	
-    Animate.css: Daniel Eden
-    Github: daneden
-    From: San Francisco, California
-
     Roboto Condensed (TypeFace):
     Christian Robertson
 	
@@ -48,4 +40,4 @@
     Oswald (TypeFace):
     Vernon Adams
     
-/* NOT ALL HUMANS COULD BE LISTED, UNFORTUNATELY, BECAUSE THEY WEREN'T DOCUMENTED. */
+/* NOT ALL HUMANS COULD BE LISTED, UNFORTUNATELY, BECAUSE THEY WEREN'T DOCUMENTED, AT LEAST PUBLICLY. */

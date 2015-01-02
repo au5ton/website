@@ -5,8 +5,6 @@
 
 @link-normal: hsl(202, 59%, 48%);
 @link-active: hsl(202, 65%, 37%);
-//@link-hover: hsl(163, 98%, 38%);
-//@link-active: hsl(347, 61%, 56%);
 
 @navbar-section: darken(@link-normal, 3%);
 @navbar-item: lighten(@link-normal, 3%);
@@ -23,9 +21,7 @@
 @translucent-white2: rgba(255,255,255,0.85);
 @translucent-black2: rgba(80, 80, 80, 0.8);
 
-@humans-normal: rgba(255, 166, 221, 0.25);
-@humans-hover: rgba(255, 166, 221, 0.6);
-@humans-text: rgba(255, 166, 221, 1.0);
+@love: rgb(255, 176, 225);
 
 @native-font: "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
 
@@ -62,478 +58,447 @@ body {
     .main-container {
         padding-left: 0px;
         padding-right: 0px;
+    }
+}
 
 
+.header-box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 2em;
+    border-radius: 3px;
 
-        .header-box {
+    width: 75vw;
+    display: block;
+    background: @healthy-white;
+    .section-shadow;
+
+    .name {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+
+        small {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+        }
+    }
+}
+
+
+.section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    background: @healthy-white;
+
+    .section-shadow;
+
+    .head {
+        display: inline-block;
+        .title {
+            font-family: "Oswald", sans-serif;
+        }
+        hr {
+            margin-top: 0px;
+            margin-bottom: 10px;
+            border: none;
+            height: 2px;
+            width: auto;
+            color: @translucent-black;
+            background-color: @translucent-black;
+            box-shadow: 0px 1px 0px @text-normal;
+        }
+    }
+    .body {
+
+        font-family: "Source Sans Pro", sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        .contact-box {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .outlet {
+            display: inline-block;
+            background: rgba(210,210,210,1.0);
+            border-radius: 5px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+            padding-right: 3px;
+            margin-left: 0.15em;
+            margin-right: 0.15em;
+            font-size: 1.0em;
+            font-family: "Avenir Next Condensed DemiBold", "Roboto", "Segoe UI Semibold", sans-serif;
+            font-weight: 700;
+            box-shadow: 0px 2px 0px rgb(80, 80, 80);
+        }
+        .outlet:hover {
+            position: relative;
+            top: 2px;
+            background: rgb(180,180,180);
+            box-shadow: 0px 2px 0px rgba(50,50,50,0.0);
+            .color-transition;
+        }
+    }
+}
+
+
+.previous-work {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    .item {
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(42, 42, 42, 0.65);
+        .section-shadow;
+
+        .icon {
+            img {
+                max-width: 200px;
+                max-height: 200px;
+                .icon-shadow;
+            }
+        }
+        .project {
             margin-left: auto;
             margin-right: auto;
-            margin-top: 5vh;
-            margin-bottom: 5vh;
-            padding: 2em;
-            border-radius: 3px;
+        }
+        .description {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .go {
 
-            width: 75vw;
-            display: block;
-            background: @healthy-white;
-            .section-shadow;
-
-            .name {
-                margin-top: 0px;
-                margin-bottom: 0px;
-                font-family: "Open Sans", sans-serif;
-                font-weight: 300;
-
-                small {
-                    font-family: "Roboto", sans-serif;
-                    font-weight: 500;
-                }
+            &:before {
+                content: "[ ";
+            }
+            &:after {
+                content: " ]";
             }
         }
 
-        .section {
-            margin-top: 40px;
-            margin-bottom: 40px;
-            margin-left: 0px;
-            margin-right: 0px;
-
-            padding-top: 2em;
-            padding-bottom: 2em;
-            padding-left: 0px;
-            padding-right: 0px;
-
-            background: @healthy-white;
-
-            .section-shadow;
-
-            .head {
-                display: inline-block;
-                .title {
-                    font-family: "Oswald", sans-serif;
-                }
-                hr {
-                    margin-top: 0px;
-                    margin-bottom: 10px;
-                    border: none;
-                    height: 2px;
-                    width: auto;
-                    color: @translucent-black;
-                    background-color: @translucent-black;
-                    box-shadow: 0px 1px 0px @text-normal;
-                }
-            }
-            .body {
-
-                font-family: "Source Sans Pro", sans-serif;
-                margin-left: auto;
-                margin-right: auto;
-                .contact-box {
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                    .outlet {
-                        display: inline-block;
-                        background: rgba(210,210,210,1.0);
-                        border-radius: 5px;
-                        padding-top: 3px;
-                        padding-bottom: 3px;
-                        padding-left: 3px;
-                        padding-right: 3px;
-                        margin-left: 0.15em;
-                        margin-right: 0.15em;
-                        font-size: 1.1em;
-                        font-family: "AvenirNextCondensed-DemiBold", "Segoe UI Semibold", sans-serif;
-                        font-weight: 700;
-                        box-shadow: 0px 2px 0px rgb(80, 80, 80);
-                    }
-                    .outlet:hover {
-                        position: relative;
-                        top: 2px;
-                        background: rgb(180,180,180);
-                        box-shadow: 0px 2px 0px rgba(50,50,50,0.0);
-                        .color-transition;
-                    }
-                }
-            }
+        a:link, a:visited {
+            //color: lighten(@link-normal,20%);
+            //.color-transition;
+            font-weight: 700;
         }
-
-        .previous-work {
-            margin-top: 40px;
-            margin-bottom: 20px;
-
-            .item {
-                text-align: center;
-
-                .section-shadow;
-
-                text-shadow: 1px 1px 2px rgba(42, 42, 42, 0.65);
-
-                .icon {
-                    img {
-                        max-width: 200px;
-                        max-height: 200px;
-                        .icon-shadow;
-                    }
-                }
-                .project {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                .description {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                .go {
-                    
-                    &:before {
-                        content: "[ ";
-                    }
-                    &:after {
-                        content: " ]";
-                    }
-                }
-
-                a:link, a:visited {
-                    //color: lighten(@link-normal,20%);
-                    //.color-transition;
-                    font-weight: 700;
-                }
-                a:hover, a:active {
-                    //color: lighten(@link-active,10%);
-                    //.color-transition;
-                    font-weight: 700;
-                }
-
-            }
-            #ckeypad {
-                padding-top: 20px;
-                padding-bottom: 20px;
-                //background: rgb(13, 82, 32);
-                background: url("../img/yosemiteisawesome_small.png");
-                background-position: center;
-                background-size: cover;
-                .icon {
-                    img {
-                    }
-                }
-                .project {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 2em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-                .description {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    color: @text-white;
-                }
-                .go {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.5em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-
-                a:link, a:visited {
-                    color: lighten(@link-normal,20%);
-                    .color-transition;
-                }
-                a:hover, a:active {
-                    color: lighten(@link-active,10%);
-                    .color-transition;
-                }
-            }
-            #obskewer {
-                padding-top: 20px;
-                padding-bottom: 20px;
-                background: rgb(62, 62, 62);
-                .icon {
-                    img {
-                    }
-                }
-                .project {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 2em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-                .description {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    color: @text-white;
-                }
-                .go {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.5em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-
-                a:link, a:visited {
-                    color: lighten(@link-normal,20%);
-                    .color-transition;
-                }
-                a:hover, a:active {
-                    color: lighten(@link-active,10%);
-                    .color-transition;
-                }
-
-            }
-            #pdraw{
-                padding-top: 20px;
-                padding-bottom: 20px;
-                background: rgb(147, 152, 255);
-                .icon {
-                    img {
-                    }
-                }
-                .project {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 2em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-                .description {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    color: @text-white;
-                }
-                .go {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.5em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-                a:link, a:visited {
-                    color: rgb(253, 205, 76);
-                    .color-transition;
-                }
-                a:hover, a:active {
-                    color: rgb(229, 184, 63);
-                    .color-transition;
-                }
-            }
-            #chisel {
-                padding-top: 20px;
-                padding-bottom: 20px;
-                background: #dae6f2;
-                .no-text-shadow;
-                .icon {
-                    img {
-                    }
-                }
-                .project {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 2em;
-                    font-weight: 600;
-                    color: @text-normal;
-                }
-                .description {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    color: @text-normal;
-                }
-                .go {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.5em;
-                    font-weight: 600;
-                    color: @text-normal;
-                }
-
-                /*a:link, a:visited {
-                    color: lighten(@link-normal,20%);
-                    .color-transition;
-                }
-                a:hover, a:active {
-                    color: lighten(@link-active,10%);
-                    .color-transition;
-                }*/
-
-            }
-            #alfeo{
-                padding-top: 20px;
-                padding-bottom: 20px;
-                background: rgb(182, 255, 168);
-                .no-text-shadow;
-                .icon {
-                    img {
-                    }
-                }
-                .mixin {
-                    background: rgba(255,255,255,0.85);
-                    -webkit-border-radius: 10px;
-                    -moz-border-radius: 10px;
-                    -o-border-radius: 10px;
-                    border-radius: 10px;
-                    padding: 5px;
-                }
-                .project {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 2em;
-                    font-weight: 600;
-                    color: @text-normal;
-                    //text-shadow: 0px 1px 3px @text-normal;
-                }
-                .description {
-                    display: block;
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    color: @text-normal;
-                    //text-shadow: 0px 1px 3px @text-normal;
-                }
-                .go {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.5em;
-                    font-weight: 600;
-                    color: @text-normal
-                    //text-shadow: 0px 1px 3px @text-normal;
-                }
-
-                /*a:link, a:visited {
-                    color: lighten(@link-normal,20%);
-                    .color-transition;
-                }
-                a:hover, a:active {
-                    color: lighten(@link-active,10%);
-                    .color-transition;
-                }*/
-
-            }
-            #pcalculator{
-                padding-top: 20px;
-                padding-bottom: 20px;
-                background: rgb(21, 167, 99);
-                .icon {
-                    img {
-                    }
-                }
-                .project {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 2em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-                .description {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    color: @text-white;
-                }
-                .go {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.5em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-
-                a:link, a:visited {
-                    color: lighten(@link-normal,20%);
-                    .color-transition;
-                }
-                a:hover, a:active {
-                    color: lighten(@link-active,10%);
-                    .color-transition;
-                }
-
-            }
-            #austinjnet{
-                padding-top: 20px;
-                padding-bottom: 20px;
-                background: rgb(240, 167, 32);
-                .icon {
-                    img {
-                    }
-                }
-                .project {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 2em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-                .description {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.25em;
-                    font-weight: 400;
-                    color: @text-white;
-                }
-                .go {
-                    font-family: "Source Sans Pro", sans-serif;
-                    font-size: 1.5em;
-                    font-weight: 600;
-                    color: @text-white;
-                }
-
-                a:link, a:visited {
-                    color: lighten(@link-normal,20%);
-                    .color-transition;
-                }
-                a:hover, a:active {
-                    color: lighten(@link-active,10%);
-                    .color-transition;
-                }
-
-            }
-
-        }
-
-        .icon-shadow {
-            -webkit-filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.6));
-            -moz-filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.6));
-            -o-filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.6));
-        }
-
-        .footer {
-            font-family: "Avenir Next Condensed", @native-font;
-            font-weight: 400;
-            font-size: 1.5em;
-            display: block;
-            background: rgba(60,60,60,1.0);
-            a:link, a:visited {
-                color: saturate(lighten(@link-normal, 25%), 15%);
-                .color-transition;
-            }
-            a:hover, a:active {
-                color: darken(saturate(lighten(@link-normal, 25%), 0%), 20%);
-                .color-transition;
-            }
-
-            .content {
-                margin-left: auto;
-                margin-right: auto;
-                width: 300px;
-                color: #87c8ed;
-
-                .footeritem {
-                    margin-left: 10px;
-                    margin-right: 10px;
-                }
-
-                .humans {
-                    font-family: "Satisfy", cursive;
-                    font-weight: 400;
-                    font-size: 1.25em;
-                    //                    a:link, a:visited {
-                    //                        color: @humans-text;
-                    //                        .color-transition;
-                    //                    }
-                    //                    a:hover, a:active {
-                    //                        color: @text-white;
-                    //                        .color-transition;
-                    //                    }
-                }
-
-            }
-
-
+        a:hover, a:active {
+            //color: lighten(@link-active,10%);
+            //.color-transition;
+            font-weight: 700;
         }
 
     }
+}
+
+
+#ckeypad {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //background: rgb(13, 82, 32);
+    background: url("../img/yosemiteisawesome_small.png");
+    background-position: center;
+    background-size: cover;
+    .icon {
+        img {
+        }
+    }
+    .project {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        color: @text-white;
+    }
+    .description {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        color: @text-white;
+    }
+    .go {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: @text-white;
+    }
+
+    a:link, a:visited {
+        color: lighten(@link-normal,20%);
+        .color-transition;
+    }
+    a:hover, a:active {
+        color: lighten(@link-active,10%);
+        .color-transition;
+    }
+}
+
+
+#obskewer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(62, 62, 62);
+    .icon {
+        img {
+        }
+    }
+    .project {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        color: @text-white;
+    }
+    .description {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        color: @text-white;
+    }
+    .go {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: @text-white;
+    }
+
+    a:link, a:visited {
+        color: lighten(@link-normal,20%);
+        .color-transition;
+    }
+    a:hover, a:active {
+        color: lighten(@link-active,10%);
+        .color-transition;
+    }
 
 }
+
+
+#pdraw {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(147, 152, 255);
+    .icon {
+        img {
+        }
+    }
+    .project {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        color: @text-white;
+    }
+    .description {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        color: @text-white;
+    }
+    .go {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: @text-white;
+    }
+    a:link, a:visited {
+        color: rgb(253, 205, 76);
+        .color-transition;
+    }
+    a:hover, a:active {
+        color: rgb(229, 184, 63);
+        .color-transition;
+    }
+}
+
+
+#chisel {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #dae6f2;
+    .no-text-shadow;
+    .icon {
+        img {
+        }
+    }
+    .project {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        color: @text-normal;
+    }
+    .description {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        color: @text-normal;
+    }
+    .go {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: @text-normal;
+    }
+}
+
+
+#alfeo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(182, 255, 168);
+    .no-text-shadow;
+    .icon {
+        img {
+        }
+    }
+    .project {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        color: @text-normal;
+    }
+    .description {
+        display: block;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        color: @text-normal;
+    }
+    .go {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: @text-normal;
+    }
+}
+
+
+#pcalculator {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(21, 167, 99);
+    .icon {
+        img {
+        }
+    }
+    .project {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        color: @text-white;
+    }
+    .description {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        color: @text-white;
+    }
+    .go {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: @text-white;
+    }
+
+    a:link, a:visited {
+        color: lighten(@link-normal,20%);
+        .color-transition;
+    }
+    a:hover, a:active {
+        color: lighten(@link-active,10%);
+        .color-transition;
+    }
+}
+
+
+#austinjnet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgb(240, 167, 32);
+    .icon {
+        img {
+        }
+    }
+    .project {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 2em;
+        font-weight: 600;
+        color: @text-white;
+    }
+    .description {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.25em;
+        font-weight: 400;
+        color: @text-white;
+    }
+    .go {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: @text-white;
+    }
+
+    a:link, a:visited {
+        color: lighten(@link-normal,20%);
+        .color-transition;
+    }
+    a:hover, a:active {
+        color: lighten(@link-active,10%);
+        .color-transition;
+    }
+
+}
+
+
+.footer {
+    font-family: "Roboto", @native-font;
+    font-weight: 700;
+    font-size: 1.0em;
+    display: block;
+    background: rgba(60,60,60,1.0);
+    a:link, a:visited {
+        color: saturate(lighten(@link-normal, 25%), 15%);
+        .color-transition;
+    }
+    a:hover, a:active {
+        color: darken(saturate(lighten(@link-normal, 25%), 0%), 20%);
+        .color-transition;
+    }
+
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        color: #87c8ed;
+    }
+}
+
+
+/*----------------------------------------------------------------------
+
+  _____  ______  _____ _____   ____  _   _  _____ _______      ________ 
+ |  __ \|  ____|/ ____|  __ \ / __ \| \ | |/ ____|_   _\ \    / /  ____|
+ | |__) | |__  | (___ | |__) | |  | |  \| | (___   | |  \ \  / /| |__   
+ |  _  /|  __|  \___ \|  ___/| |  | | . ` |\___ \  | |   \ \/ / |  __|  
+ | | \ \| |____ ____) | |    | |__| | |\  |____) |_| |_   \  /  | |____ 
+ |_|__\_\______|_____/|_|____ \____/|_|_\_|_____/|_____|   \/   |______|
+ |__   __\ \        / /  ____|   /\   | |/ // ____|                     
+    | |   \ \  /\  / /| |__     /  \  | ' /| (___                       
+    | |    \ \/  \/ / |  __|   / /\ \ |  <  \___ \                      
+    | |     \  /\  /  | |____ / ____ \| . \ ____) |                     
+    |_|      \/  \/   |______/_/    \_\_|\_\_____/                      
+                                                                        
+----------------------------------------------------------------------*/
+
 
 /* Large desktops and laptops */
 @media(min-width:1200px){
