@@ -3263,6 +3263,7 @@ body .container-fluid {
 body .main-container {
   padding-left: 0px;
   padding-right: 0px;
+  text-align: center;
 }
 .header-box {
   margin-left: auto;
@@ -3271,8 +3272,7 @@ body .main-container {
   margin-bottom: 5vh;
   padding: 2em;
   border-radius: 3px;
-  width: 75vw;
-  display: block;
+  display: inline-block;
   background: #f0f0f0;
   -webkit-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
   -moz-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
@@ -3735,6 +3735,12 @@ body .main-container {
     min-width: 200px;
     max-width: 500px;
   }
+  .header-box {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
 }
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -3755,6 +3761,12 @@ body .main-container {
   .item .description {
     max-width: 200px;
     min-width: 800px;
+  }
+  .header-box {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
   }
 }
 /* Portrait tablets and small desktops */

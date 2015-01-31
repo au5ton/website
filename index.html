@@ -105,7 +105,7 @@ console.log(source+": "+test()+", expected: "+expectedValue+", "+count+" loops."
             
             loadCSS("css/concatenated.css",b4,undefined,function(){
                 cssLoaded = true;
-                console.log("Custom CSS and libraries (bundled as one).");
+                console.log("Custom CSS and libraries (bundled as one) loaded.");
             });
             
             waitfor(function(){return (fontsLoaded && cssLoaded && jsLoaded);},true,0,count,undefined,function(){
