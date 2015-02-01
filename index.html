@@ -186,11 +186,7 @@
             </style>
 
             <script>
-
-                $(".main-container").removeClass("invisible");
-                $(".main-container").addClass("animated");
-                $(".main-container").addClass("fadeIn");
-
+                document.getElementById("main-container").setAttribute("class","main-container");
             </script>
 
             <div class="ie-warning">
@@ -202,7 +198,7 @@
     </head>
     <body style="background: rgb(87,87,87);">
 
-        <div class="main-container invisible">
+        <div id="main-container" class="main-container invisible">
 
             <div class="header-box text-center">
                 <h1 class="name"><small>Hello, my name is<br></small>Austin Jackson</h1>
