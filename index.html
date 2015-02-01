@@ -7,10 +7,33 @@
 
 
         <!--[if IE]>
-<script>
-alert("You are viewing this website with Internet Explorer.\nPlease be advised that this website does NOT support Internet Explorer.\nSome features may not work correctly, or at all.\nPlease use something else like Google Chrome or Firefox, they're better."
-</script>
-<![endif]-->
+            <style>
+                body {
+                    text-align: center;
+                }
+
+                .ie-warning {
+                    margin-top: 10px;
+                    width: 50%;
+                    text-align: center;
+                    border-radius: 3px;
+                    display: inline-block;
+                    color: #fff;
+                    background: rgb(216, 72, 72);
+                    padding-top: 2.5%;
+                    -webkit-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+                    padding-bottom: 2.5%;
+                    font-size: 1.0em;
+                    z-index: 50;
+                    padding: 10px;
+                    font-family: sans-serif;
+                }
+            </style>
+
+            <div class="ie-warning">
+                You are viewing this website with Internet Explorer.<br>Please be advised that this website does NOT support Internet Explorer.<br>Some features may not work correctly, or at all.<br>Please use something else like Google Chrome or Firefox, they're better.
+            </div>
+        <![endif]-->
         <noscript><link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700|Open+Sans:300|Oswald|Satisfy|Roboto:500,700' rel='stylesheet' type='text/css'> <link href="css/austin.css" rel="stylesheet" type="text/css"></noscript>
 
 
@@ -30,29 +53,6 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
         <link rel="icon" type="image/png" href="ico/favicon-16x16.png" sizes="16x16">
         <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32">
         <meta name="msapplication-TileColor" content="#c33333">
-        <meta name="msapplication-TileImage" content="ico/mstile-144x144.png">
-        <!-- GOOGLE+ METADATA -->
-        <meta itemprop="name" content="Austin Jackson &bull; Developer"/>
-        <meta itemprop="description" content="Austin Jackson is a 16 year old desktop and web developer from Houston, Texas."/>
-        <meta itemprop="image" content="http://austinj.net/ico/favicon-196x196.png"/>
-        <!-- TWITTER METADATA -->
-        <meta name="twitter:card" content="summary"/>  <!-- Card type -->
-        <meta name="twitter:site" content="austinj"/>
-        <meta name="twitter:title" content="Austin Jackson &bull; Developer">
-        <meta name="twitter:description" content="Austin Jackson is a 16 year old desktop and web developer from Houston, Texas."/>
-        <meta name="twitter:creator" content="MacPhage"/>
-        <meta name="twitter:image:src" content="http://austinj.net/ico/favicon-196x196.png"/>
-        <meta name="twitter:domain" content="http://austinj.net"/>
-        <!-- FACEBOOK METADATA -->
-        <meta property="og:type" content="profile"/>
-        <meta property="profile:first_name" content="Austin"/>
-        <meta property="profile:last_name" content="Jackson"/>
-        <meta property="profile:username" content=""/>
-        <meta property="og:title" content="Austin Jackson &bull; Developer"/>
-        <meta property="og:description" content="Austin Jackson is a 16 year old desktop and web developer from Houston, Texas."/>
-        <meta property="og:image" content="http://austinj.net/ico/favicon-196x196.png"/>
-        <meta property="og:url" content="http://austinj.net/"/>
-        <meta property="og:site_name" content="Austin Jackson &bull; Developer"/>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -65,10 +65,12 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
 
         <!-- END OF OBLIGATORY TAGS -->
 
+        
+        
 
         <style>
+            /*These tags will be overwritten once the CSS is asynchronously loaded with JavaScript*/
             .invisible {visibility:hidden;}
-
             body {
                 background-repeat: no-repeat;
                 background-position: 0% 0%;
@@ -76,53 +78,118 @@ alert("You are viewing this website with Internet Explorer.\nPlease be advised t
                 overflow-x: hidden;
                 margin: 0px;
             }
-
         </style>
-
         <meta id="loadCSS" />
-        <script async src="js/libraries.js" onload="javascript:librariesDoneLoading();"></script>
-        <script>
+        <script type="text/javascript">
+            /*
+             *   JAVASCRIPT DECLARATIONS
+             */
             var fontsLoaded = false;
             var cssLoaded = false;
             var jsLoaded = false;
-
-            function loadCSS(href,before,media,callback){"use strict"
-function toggleMedia(){for(var defined,i=0;i<sheets.length;i++)sheets[i].href&&sheets[i].href.indexOf(href)>-1&&(defined=!0)
-defined?ss.media=media||"all":setTimeout(toggleMedia)}var ss=window.document.createElement("link"),ref=before||window.document.getElementsByTagName("script")[0],sheets=window.document.styleSheets
-return ss.rel="stylesheet",ss.href=href,ss.media="only x",ss.onload=callback||function(){},ref.parentNode.insertBefore(ss,ref),toggleMedia(),ss}
-            
-            function waitfor(test,expectedValue,msec,count,source,callback){for(;test()!==expectedValue;)return count++,void setTimeout(function(){waitfor(test,expectedValue,msec,count,source,callback)},msec)
-console.log(source+": "+test()+", expected: "+expectedValue+", "+count+" loops."),callback()}
-
-
-
             var b4 = document.getElementById("loadCSS");
             var count = 0;
+
+            function loadCSS(href,before,media,callback){"use strict"
+            function toggleMedia(){for(var defined,i=0;i<sheets.length;i++)sheets[i].href&&sheets[i].href.indexOf(href)>-1&&(defined=!0)
+            defined?ss.media=media||"all":setTimeout(toggleMedia)}var ss=window.document.createElement("link"),ref=before||window.document.getElementsByTagName("script")[0],sheets=window.document.styleSheets
+            return ss.rel="stylesheet",ss.href=href,ss.media="only x",ss.onload=callback||function(){},ref.parentNode.insertBefore(ss,ref),toggleMedia(),ss}
+
+            function waitfor(test,expectedValue,msec,count,source,callback){for(;test()!==expectedValue;)return count++,void setTimeout(function(){waitfor(test,expectedValue,msec,count,source,callback)},msec)
+            console.log(source+": "+test()+", expected: "+expectedValue+", "+count+" loops."),callback()}
+
+            var colors;
+            var rand;
+            var t;
+            var firstWidth;
+            var currentWidth;
+            function redraw(){
+                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height()+" with colorcode: "+rand+" using colors: "+colors);
+                var pattern = t.generate(document.body.clientWidth, height());
+                document.body.style.background = pattern.dataUrl;
+            }
+            function completeRedraw(){
+
+                rand = randomNumberBetween(0,6);
+                var cnt = 12;
+                if(rand == 0) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'red'});
+                }
+                else if(rand == 1) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'orange'});
+                }
+                else if(rand == 2) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'yellow'});
+                }
+                else if(rand == 3) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'green'});
+                }
+                else if(rand == 4) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'blue'});
+                }
+                else if(rand == 5) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'purple'});
+                }
+                else {
+                    colors = randomColor({count: cnt,format: 'hex'});
+                }
+                t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
+                redraw();
+            }
+            function height() {return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,document.body.offsetHeight, document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight);
+                              }
+            window.onresize = function() {
+                var newWidth = document.body.clientWidth;
+                var difference = Math.abs(newWidth - currentWidth);
+                var differenceFirst = Math.abs(newWidth - firstWidth);
+
+                if(difference > 100){
+                    console.log("Enough of a window change has been made.");
+                    console.log("Difference from last change: "+difference+", original: "+differenceFirst);
+                    redraw();
+                    currentWidth = newWidth;
+                }
+
+            };
+
+            function randomNumberBetween(from,to){
+                return Math.floor((Math.random() * to) + from);
+            }
+            function librariesDoneLoading(){
+                firstWidth = document.body.clientWidth;
+                currentWidth = document.body.clientWidth;
+                completeRedraw();
+                jsLoaded = true;
+            }
+
+        </script>
+        <!-- JAVASCRIPT IMPORTING -->
+        <script async src="js/libraries.js" onload="javascript:librariesDoneLoading();"></script>
+        <script type="text/javascript">
+            /*
+             *   JAVASCRIPT ACTIONS
+             */
             loadCSS("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700|Open+Sans:300|Oswald|Satisfy|Roboto:500,700",b4,undefined,function(){
                 fontsLoaded = true;
                 console.log("Google Fonts loaded.");
             });
-            
+
             loadCSS("css/concatenated.css",b4,undefined,function(){
                 cssLoaded = true;
                 console.log("Custom CSS and libraries (bundled as one) loaded.");
             });
-            
+
             waitfor(function(){return (fontsLoaded && cssLoaded && jsLoaded);},true,0,count,undefined,function(){
-                $("body").removeClass("invisible");
-                $("body").addClass("animated");
-                $("body").addClass("fadeIn");
+                $(".main-container").removeClass("invisible");
+                $(".main-container").addClass("animated");
+                $(".main-container").addClass("fadeIn");
             });
-            
         </script>
-        
-
-
 
     </head>
-    <body class="invisible" style="background: rgb(87,87,87);">
+    <body style="background: rgb(87,87,87);">
 
-        <div class="main-container">
+        <div class="main-container invisible">
 
             <div class="header-box text-center">
                 <h1 class="name"><small>Hello, my name is<br></small>Austin Jackson</h1>
@@ -131,7 +198,7 @@ console.log(source+": "+test()+", expected: "+expectedValue+", "+count+" loops."
             <div class="container-fluid section text-center">
                 <div class="head"><p class="title">Who I Am &amp; What I Do</p><hr></div>
 
-                <p class="body">My name is Austin Jackson. I am a 16 year old Java/Arduino/NodeJS programmer and web developer from Houston, Texas. I like Daft Punk, spending time with my girlfriend, and good Mexican food. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
+                <p class="body">My name is Austin Jackson. I am a 16 year old Java/Arduino/NodeJS programmer and web developer from Houston, Texas. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
                 </p>
             </div>
             <div class="container-fluid section text-center">
@@ -221,73 +288,7 @@ console.log(source+": "+test()+", expected: "+expectedValue+", "+count+" loops."
         </div>
 
         <script type="text/javascript">
-
-            var colors;
-            var rand;
-            var t;
-            var firstWidth;
-            var currentWidth;
-            function redraw(){
-                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height()+" with colorcode: "+rand+" using colors: "+colors);
-                var pattern = t.generate(document.body.clientWidth, height());
-                document.body.style.background = pattern.dataUrl;
-            }
-            function completeRedraw(){
-
-                rand = randomNumberBetween(0,6);
-                var cnt = 12;
-                if(rand == 0) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'red'});
-                }
-                else if(rand == 1) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'orange'});
-                }
-                else if(rand == 2) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'yellow'});
-                }
-                else if(rand == 3) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'green'});
-                }
-                else if(rand == 4) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'blue'});
-                }
-                else if(rand == 5) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'purple'});
-                }
-                else {
-                    colors = randomColor({count: cnt,format: 'hex'});
-                }
-                t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
-                redraw();
-            }
-            function height() {return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,document.body.offsetHeight, document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight);
-                              }
-            window.onresize = function() {
-                var newWidth = document.body.clientWidth;
-                var difference = Math.abs(newWidth - currentWidth);
-                var differenceFirst = Math.abs(newWidth - firstWidth);
-
-                if(difference > 100){
-                    console.log("Enough of a window change has been made.");
-                    console.log("Difference from last change: "+difference+", original: "+differenceFirst);
-                    redraw();
-                    currentWidth = newWidth;
-                }
-
-            };
-
-            function randomNumberBetween(from,to){
-                return Math.floor((Math.random() * to) + from);
-            }
-            function librariesDoneLoading(){
-                firstWidth = document.body.clientWidth;
-                currentWidth = document.body.clientWidth;
-                completeRedraw();
-                jsLoaded = true;
-            }
-
             document.getElementById("copyright").innerHTML = new Date().getFullYear();
-
         </script>
     </body>
 </html>
