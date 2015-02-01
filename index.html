@@ -297,6 +297,11 @@
         </div>
 
         <script type="text/javascript">
+            
+            if(navigator.userAgent.contains("MSIE")){
+                document.getElementById("main-container").setAttribute("class","main-container");
+            }
+            
             document.getElementById("copyright").innerHTML = new Date().getFullYear();
         </script>
     </body>
