@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/austinj
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://austinj.net
+  * I am austinj (https://keybase.io/austinj) on keybase.
+  * I have a public key with fingerprint 1123 DE1E B58A 6CC4 63DE  2704 2F90 C333 5264 46AC
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "1123de1eb58a6cc463de27042f90c333526446ac",
+            "host": "keybase.io",
+            "key_id": "2f90c333526446ac",
+            "kid": "0101ee4fa6fafd0459d34dfd44944ef35d57ad9045e1cabb22387228347b677ad58f0a",
+            "uid": "e7dc6bb8279cdf6d3a59ae0002eae719",
+            "username": "austinj"
+        },
+        "revoke": {
+            "sig_ids": [
+                "df45c4058d273b2f2eb9906ca344a08ec8736e22f28332a13affadfc83778fb60f"
+            ]
+        },
+        "service": {
+            "hostname": "austinj.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1429048213,
+    "expire_in": 157680000,
+    "prev": "c49a55c4885daed9ecd784a4e0b58088e39e8f5638f00ae0be192c808a7a30b8",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMJcAnicbZJdaBVHGIZPtFY9ahS0iCDYTEEoJHF2ZnZn9hiUtoZiqxemCMVoDrMz
+38RNdPe4u+fYECK2lJY2LaFUc2HR9qIUW4JU9KJVsfUvmFpqwfiDoqZoqTetovHn
+Sp0N9qLQq2Hmfef5vu+dOTlrcqFYd3z+UPHhW1/11p05tqtaWNvUv7MXBbHuQaVe
+1A0TiwmjTkgqSRhlqIQch1ANDgSukJ5SzLM7wjEjxseKUuoSjzFPKtSINsZpfsNi
+AplCcxjbM7sph9qe/o+/e0LADnYAmJGekUZj5vqaMm00Yz5jYKirXS61bwVwlAwC
+QqjghAjKeOBxK7nCYGlx1QkccK28IBCE+0obT1Pp+hIwxgQkcMfPjSkkkdwM1i2r
+aRZGXaivESVQi7shDyANO23PKSq1I22Yqxh2hSacBsQQCHwfe0pSxiQWoASnHhAr
+CEqJdKg0RmqjBOVcmMDDBm2wbFuwFqoJeB7Sf4s3R5DZripJnMUq3mSFjVlWKeU9
+ZT2V3LgVgvIzRDkII20fyF6oQZKGcYRKjnWqLMyZDiM2KUEc2ojgnUqYQDnMHS73
+hM0A52WgZpGK+dK1ownhagnaB6W5YJIBtg+NhQDqgzCuR2242OYXgOMTZRXJJcWB
+QPlQW6IYlZhtU3ZapI0tklk1AdR3/Of1zxXqioXnp0zKv1ihOH3Ovx+v/Gha4VTD
+oalNHaMPV2/eM7Z34dAL4c1lXaUpM8i+TW3nLj3+rvX1kcjNXl6JX/x7ZG719MEH
+w4Mr+9sOHuUvXWtqW3i4f817M2fvfH9Fdajwyd7krBw9Mjpw5xvct6a5ZXX6e8ep
+63da9nsXcfFxypta2ltvPDm6avbwogJZVO/1HBj685WkTRw50bnu4o51bx84sf5J
+ZXv9jt/oX7vuqz3jLWeK394aRPqfJcOLf9w29sf4D6Oth87fn1xXv2rGrYrnDn4a
+vzvpdnvD/jeX3/5F11b8tGTe3OCqs/bV3d+/sf0D8dFI0nD563v37n7x6wV597WB
+L89e65q59MaV8Y7PB7btXuBC5eMPP7t5euwpBkBEQw==
+=7e+e
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/austinj
+
+==================================================================
