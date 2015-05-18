@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Austin Jackson &bull; Developer</title>
 
-        <noscript><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Roboto:400,300"><link rel="stylesheet" href="css/materialize.min.css"><link rel="stylesheet" href="css/austin.css"></noscript>
+        <noscript><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700|Open+Sans:300|Oswald|Satisfy|Roboto:500,700' rel='stylesheet' type='text/css'> <link href="css/concatenated.css" rel="stylesheet" type="text/css"></noscript>
+
 
         <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
         <!-- FAVEICON DATA -->
@@ -34,64 +35,277 @@
         </script>
 
         <!-- END OF OBLIGATORY TAGS -->
+
         
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Roboto:400,300">
-        <link rel="stylesheet" href="css/materialize.min.css">
-        <link rel="stylesheet" href="css/austin.css">
-        <script type="text/javascript">
-            function librariesDoneLoading(){
-                var pattern = GeoPattern.generate(new Date());
-                document.getElementById("canvas").style.background = pattern.toDataUrl();
+        
+
+        <style>
+            /*These tags will be overwritten once the CSS is asynchronously loaded with JavaScript*/
+            .invisible {visibility:hidden;}
+            body {
+                background-repeat: no-repeat;
+                background-position: 0% 0%;
+                background-size: auto;
+                overflow-x: hidden;
+                margin: 0px;
             }
+        </style>
+        <meta id="loadCSS" />
+        <script type="text/javascript">
+            /*
+             *   JAVASCRIPT DECLARATIONS
+             */
+            var fontsLoaded = false;
+            var cssLoaded = false;
+            var jsLoaded = false;
+            var b4 = document.getElementById("loadCSS");
+            var count = 0;
+
+            function loadCSS(href,before,media,callback){"use strict"
+            function toggleMedia(){for(var defined,i=0;i<sheets.length;i++)sheets[i].href&&sheets[i].href.indexOf(href)>-1&&(defined=!0)
+            defined?ss.media=media||"all":setTimeout(toggleMedia)}var ss=window.document.createElement("link"),ref=before||window.document.getElementsByTagName("script")[0],sheets=window.document.styleSheets
+            return ss.rel="stylesheet",ss.href=href,ss.media="only x",ss.onload=callback||function(){},ref.parentNode.insertBefore(ss,ref),toggleMedia(),ss}
+
+            function waitfor(test,expectedValue,msec,count,source,callback){for(;test()!==expectedValue;)return count++,void setTimeout(function(){waitfor(test,expectedValue,msec,count,source,callback)},msec)
+            console.log(source+": "+test()+", expected: "+expectedValue+", "+count+" loops."),callback()}
+
+            var colors;
+            var rand;
+            var t;
+            var firstWidth;
+            var currentWidth;
+            function redraw(){
+                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+height()+" with colorcode: "+rand+" using colors: "+colors);
+                var pattern = t.generate(document.body.clientWidth, height());
+                document.body.style.background = pattern.dataUrl;
+            }
+            function completeRedraw(){
+
+                rand = randomNumberBetween(0,6);
+                var cnt = 12;
+                if(rand == 0) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'red'});
+                }
+                else if(rand == 1) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'orange'});
+                }
+                else if(rand == 2) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'yellow'});
+                }
+                else if(rand == 3) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'green'});
+                }
+                else if(rand == 4) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'blue'});
+                }
+                else if(rand == 5) {
+                    colors = randomColor({count: cnt,format: 'hex',hue: 'purple'});
+                }
+                else {
+                    colors = randomColor({count: cnt,format: 'hex'});
+                }
+                t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
+                redraw();
+            }
+            function height() {return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight,document.body.offsetHeight, document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight);
+                              }
+            window.onresize = function() {
+                var newWidth = document.body.clientWidth;
+                var difference = Math.abs(newWidth - currentWidth);
+                var differenceFirst = Math.abs(newWidth - firstWidth);
+
+                if(difference > 100){
+                    console.log("Enough of a window change has been made.");
+                    console.log("Difference from last change: "+difference+", original: "+differenceFirst);
+                    redraw();
+                    currentWidth = newWidth;
+                }
+
+            };
+
+            function randomNumberBetween(from,to){
+                return Math.floor((Math.random() * to) + from);
+            }
+            function librariesDoneLoading(){
+                firstWidth = document.body.clientWidth;
+                currentWidth = document.body.clientWidth;
+                completeRedraw();
+                jsLoaded = true;
+            }
+
         </script>
-        
         <!-- JAVASCRIPT IMPORTING -->
         <script async src="js/libraries.js" onload="javascript:librariesDoneLoading();"></script>
+        <script type="text/javascript">
+            /*
+             *   JAVASCRIPT ACTIONS
+             */
+            loadCSS("http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700|Open+Sans:300|Oswald|Satisfy|Roboto:500,700",b4,undefined,function(){
+                fontsLoaded = true;
+                console.log("Google Fonts loaded.");
+            });
+
+            loadCSS("css/concatenated.css",b4,undefined,function(){
+                cssLoaded = true;
+                console.log("Custom CSS and libraries (bundled as one) loaded.");
+            });
+
+            waitfor(function(){return (fontsLoaded && cssLoaded && jsLoaded);},true,0,count,undefined,function(){
+                $(".main-container").removeClass("invisible");
+                $(".main-container").addClass("animated");
+                $(".main-container").addClass("fadeIn");
+            });
+        </script>
+        
+        
+        <!--[if IE]>
+            <style>
+                body {
+                    text-align: center;
+                }
+
+                .ie-warning {
+                    margin-top: 10px;
+                    width: 50%;
+                    text-align: center;
+                    border-radius: 3px;
+                    display: inline-block;
+                    color: #fff;
+                    background: rgb(216, 72, 72);
+                    padding-top: 2.5%;
+                    -webkit-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+                    -moz-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+                    -o-filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+                    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+                    padding-bottom: 2.5%;
+                    font-size: 1.0em;
+                    z-index: 50;
+                    padding: 10px;
+                    font-family: sans-serif;
+                }
+            </style>
+
+            <script>
+                document.getElementById("main-container").setAttribute("class","main-container");
+            </script>
+
+            <div class="ie-warning">
+                You are viewing this website with Internet Explorer.<br>Please be advised that this website does NOT support Internet Explorer.<br>Some features may not work correctly, or at all.<br>Please use something else like Google Chrome or Firefox, they're better.
+            </div>
+        <![endif]-->
+        
 
     </head>
-    <body>
+    <body style="background: rgb(87,87,87);">
 
-        <div id="canvas" class="canvas">
-            <div class="container">
-                <div class="hero box">
-                    <h1>Austin Jackson</h1>
-                    <h5>Passionate student developer</h5>
+        <div id="main-container" class="main-container invisible">
+
+            <div class="header-box text-center">
+                <h1 class="name"><small>Hello, my name is<br></small>Austin Jackson</h1>
+            </div>
+
+            <div class="container-fluid section text-center">
+                <div class="head"><p class="title">Who I Am &amp; What I Do</p><hr></div>
+
+                <p class="body">My name is Austin Jackson. I am a 16 year old Java/Arduino/NodeJS programmer and web developer from Houston, Texas. I like my work to be well-designed, and to look and feel exquisite. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.
+                </p>
+            </div>
+            <div class="container-fluid section text-center">
+                <div class="head"><p class="title">My Previous Work</p><hr></div>
+                <p class="body">My projects are often created out of one or more of these two things:<br><br> 1) Inspiration to create my own work or to recreate the work of others, <br>2) Solve my own or someone else's problems. <br><br>That being said, not all of my work may be useful for everyone, but useful for people who had a similar problem that I did, or that want to learn from my mistakes.<br><br>Check out my <a href="https://github.com/MacPhage">Github profile</a> to see some of my open-source projects, including this very website.</p>
+            </div>
+            <div id="previouswork" class="previous-work">
+
+                <div class="container-fluid">
+                    <div id="ckeypad" class="col-lg-4 item">
+                        <div class="icon"><img src="img/icon_ckeypad.png"></div><br>
+                        <div class="project">Continuity Keypad</div><br>
+                        <div class="description">Continuity Keypad is an application for OS X Yosemite, that allows you to manually enter numbers to call. I developed the website for this.</div><br>
+                        <span class="go"><a href="http://continuitykeypad.co/">Check it out</a></span>
+                    </div>
+
+                    <div id="obskewer" class="col-lg-4 item">
+                        <div class="icon"><img src="img/icon_obskewer_reduced.png"></div><br>
+                        <div class="project">Obskewer</div><br>
+                        <div class="description">Obskewer is an open-source light-weight Java application for encoding and decoding text using common ciphers.</div><br>
+                        <span class="go"><a href="http://www.austinj.net/Obskewer/">Check it out</a></span>
+                    </div>
+                    <div id="pdraw" class="col-lg-4 item">
+                        <div class="icon"><img src="img/pdrawlogo_reduced.png"></div><br>
+                        <div class="project">pDraw</div><br>
+                        <div class="description">pDraw is an open-source C++ graphics.h painting application used to paint digitally-primitive drawings using your mouse input and keyboard.</div><br>
+                        <span class="go"><a href="http://www.austinj.net/pDraw/">Check it out</a></span>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+
+                    <div id="chisel" class="col-lg-4 item">
+                        <div class="icon"><img src="img/chisel.png"></div><br>
+                        <div class="project">Chisel</div><br>
+                        <div class="description">
+                            A sleek desktop app for web development automation. Created in collaboration with <a href="http://javaftw.github.io/">Tarun Boddupalli</a>.
+                        </div><br>
+                        <span class="go"><a href="http://austinj.net/chisel">Check it out</a></span>
+                    </div>
+
+                    <div id="alfeo" class="col-lg-4 item">
+                        <div class="icon"><img src="img/icon_alfeo.png"></div><br>
+                        <div class="project">Alfeo</div><br>
+                        <div class="description">Successor to <a href="https://github.com/MacPhage/pCalculator">pCalculator</a>, Alfeo is an open-source enhanced implementation of <a href="https://github.com/NeilFraser/JS-Interpreter">NeilFraser/JS-Interpreter</a> to specialize in quickly writing and calculating mathematical equations and formulas.</div><br>
+                        <span class="go"><a href="http://austinj.net/alfeo/">Check it out</a></span>
+                    </div>
+
+                    <div id="austinjnet" class="col-lg-4 item">
+                        <div class="icon"><img src="ico/natural.png"></div><br>
+                        <div class="project">AustinJ.net</div><br>
+                        <div class="description">This very website was hand-created by Austin Jackson using nothing but HTML, CSS, and JavaScript. It's open-sourced too!</div><br>
+                        <span class="go"><a href="https://github.com/au5ton/au5ton.github.io">Check it out</a></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="contactme" class="container-fluid section text-center">
+                <div class="head"><p class="title">Contact Me</p><hr></div>
+                <div class="body">
+                    You're welcome to follow me or message me on one of my social media outlets!<br>
+                    <div class="contact-box">
+                        <span class="outlet">
+                            <a href="http://twitter.com/au5ton" onClick="_gaq.push(['_trackEvent', 'External Link', 'TwitterProfile']);">Twitter</a>
+                        </span>
+                        <span class="outlet">
+                            <a href="http://github.com/au5ton" onClick="_gaq.push(['_trackEvent', 'External Link', 'GithubProfile']);">Github</a>
+                        </span>
+                        <span class="outlet">
+                            <a href="https://www.youtube.com/channel/UC-nKVn_FYFTY10N1jH03u4w" onClick="_gaq.push(['_trackEvent', 'External Link', 'YoutubeProfile']);">YouTube</a>
+                        </span>
+                        <span class="outlet">
+                            <a href="http://www.linkedin.com/in/austindjackson/" onClick="_gaq.push(['_trackEvent', 'External Link', 'LinkedInProfile']);">LinkedIn</a>
+                        </span>
+                        <span class="outlet">
+                            <a href="mailto:theaustinjackson@gmail.com" onClick="_gaq.push(['_trackEvent', 'External Link', 'EmailAddress']);">Email</a>
+                        </span>
+                    </div>
                 </div>
             </div>
+
+            <div class="footer text-center">
+                <div class="content">
+                    Website by Austin Jackson &copy; 2014-<span id="copyright">2015</span>
+                </div>
+            </div>
+
         </div>
 
-        <div class="content">
-            <div class="container">
-                <div class="section">
-                    <h5>Synopsis</h5>
-                    <p>My name is Austin Jackson. I am a <span id="age">16</span> year old developer from Houston, Texas. I'm a perfectionist and problem solver fueled by rigid inspiration, and a big supporter of open-source software.</p>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Résumé</h5>
-                    <p>I frequently code on Github and work on projects for my employers. See my <a href="javascript:alert('Sorry, that\'s not available yet.')">résumé</a> for more details.</p>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Contact Me</h5>
-                    <p>If you'd like to say hi, I'm on <a class="" href="http://twitter.com/au5ton">Twitter</a>. I'm there most often. If you'd like to see more of my software, as mentioned above, I'm on <a href="http://github.com/au5ton">Github</a>. If you'd like to contact me privately, I'm always open for <a href="mailto:theaustinjackson@gmail.com">emails</a>. If you're a LinkedIn kind of person, <a href="http://www.linkedin.com/in/austindjackson/">here's where</a> you'll find me. I also occasionally upload a video or to to <a href="https://www.youtube.com/channel/UC-nKVn_FYFTY10N1jH03u4w">YouTube</a>.</p>
-                    <div class="divider"></div>
-                    <div class="section">
-                        <h5>This Website</h5>
-                        <p>This website has had an interesting history throughout my years of web development. It was my first major website since when I first started coding. Thankfully, through the power of Github, you can look at all its nitty gritty details, including its changes over time and its source code.</p>
-                        <p><a href="https://github.com/au5ton/au5ton.github.io">Check it out!</a></p>
-                    </div>
-                    <div class="footer">
-                        <div class="divider"></div>
-                        <p>Website by Austin Jackson © 2014-<span id="copyright">2015</span></p>
-                    </div>
-                </div>
-                <script>
-                    document.getElementById("copyright").innerHTML = new Date().getFullYear();
-                    var birthday = new Date(1998,10,22);
-                    var age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
-                    var precision = 1000; //However many zeros is how many places
-                    document.getElementById("age").innerHTML = Math.floor(age*precision)/precision;
-                </script>
-                </body>
-            </html>
+        <script type="text/javascript">
+            
+            if(navigator.userAgent.contains("MSIE")){
+                document.getElementById("main-container").setAttribute("class","main-container");
+            }
+            
+            document.getElementById("copyright").innerHTML = new Date().getFullYear();
+        </script>
+    </body>
+</html>

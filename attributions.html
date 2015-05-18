@@ -13,6 +13,10 @@
         <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> 
         <!-- THIRD PARTY CSS -->
 
+        <!-- THIRD PARTY JAVASCRIPT -->
+        <script src="js/randomColor.min.js"></script>
+        <!-- THIRD PARTY JAVASCRIPT -->
+
         <!-- RP ICONS -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -26,10 +30,6 @@
         <!-- RP ICONS -->
 
         <style>
-            body {
-                background: #2f2f2f;
-            }
-            
             .container {
                 background: rgba(245,245,245,1.0);
                 max-width: 414px;
@@ -56,10 +56,10 @@
                     General Development
                     <ul>
                         <li>
-                            <a href="http://github.com/au5ton">Austin Jackson</a>
+                            <a href="http://github.com/MacPhage">Austin Jackson</a>
                         </li>
                         <li>
-                            <a href="https://github.com/au5ton/au5ton.github.io/graphs/contributors">GitHub contributors</a>
+                            <a href="https://github.com/MacPhage/macphage.github.io/graphs/contributors">GitHub contributors</a>
                         </li>
                     </ul>
                 </li>
@@ -67,7 +67,7 @@
                     CSS
                     <ul>
                         <li>
-                            <a href="http://materializecss.com/">Materialize, CSS framework</a>
+                            <a href="http://getbootstrap.com/">Bootstrap CSS/JavaScript framework</a>
                         </li>
                     </ul>
                 </li>
@@ -76,10 +76,19 @@
                     JavaScript
                     <ul>
                         <li>
-                            <a href="http://jquery.com">jQuery</a>
+                            <a href="http://qrohlf.com/trianglify/">Trianglify.js by Quinn Rohlf</a>
                         </li>
                         <li>
-                            <a href="https://github.com/btmills/geopattern">GeoPattern (JS port)</a>
+                            <a href="http://d3js.org">d3.v3.js (Trianglify.js dependecy)</a>
+                        </li>
+                        <li>
+                            <a href="http://jquery.com">jQuery framework</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/davidmerfield/randomColor">randomColor.js</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/filamentgroup/loadCSS">loadCSS</a>
                         </li>
                         <li>
                             <a href="http://imulus.github.io/retinajs/">retina.js</a>
@@ -110,14 +119,17 @@
                 <p class="footer">
                     <a href="javascript:history.back()">Go back?</a><br>
                     <a href="index.html">Homepage?</a><br>
-                    Website by Austin Jackson &copy; 2014-<span id="copyright">2015</span>
+                    Website by Austin Jackson &copy; 2014
                 </p>
             </footer>
         </div>
 
 
         <script>
-            document.getElementById("copyright").innerHTML = new Date().getFullYear();
+            var color = randomColor({luminosity: 'light'});
+            console.log("Assigning "+color+" as the background color.");
+            //document.getElementById("background-image").style.backgroundColor = color;
+            document.body.style.backgroundColor = color;
         </script>
 
     </body>

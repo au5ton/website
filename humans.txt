@@ -3,21 +3,41 @@
 
 /* SITE DEV */
     Developer: Austin Jackson 
-    Github: au5ton
+    Github: MacPhage
     Twitter: @au5ton
     From: Houston, Texas
 
     Developer: Tarun Boddupalli
-    Github: tarunbod
-    Twitter: @tarunbod
+    Github: FirstWorldAnarchy
+    Twitter: @JavaFTW
 
 /* THANKS */
 
-    Materialize.css Contributors
-    Website: http://materializecss.com/
+    Bootstrap: Mark Otto
+    Github: mdo
+    Twitter: @mdo
+    From: San Francisco, California
     
+    Bootstrap: Jacob Thornton
+    Github: fat
+    Twitter: @fat
+    From: San Francisco, California
 
     Trianglify.js: Quinn Rohlf
     Github: qrohlf
     Twitter: @qrohlf
     From: Portland, Oregon
+
+    Roboto Condensed (TypeFace):
+    Christian Robertson
+	
+    Source Sans Pro (TypeFace):
+    Paul D. Hunt
+	
+    Open Sans (TypeFace):
+    Steve Matteson
+    
+    Oswald (TypeFace):
+    Vernon Adams
+    
+/* NOT ALL HUMANS COULD BE LISTED, UNFORTUNATELY, BECAUSE THEY WEREN'T DOCUMENTED, AT LEAST PUBLICLY. */

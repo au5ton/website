@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn to code at ruthlessphysics.com</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<meta name="description" content="Coding lessons and activities">
+	<meta name="author" content="@MacPhage">
+	<meta name="robots" content="index, follow, noimageindex, noarchive">
+
+	<!-- RP CSS -->
+	<link href="../../css/main.min.css" rel="stylesheet">
+	<link href="css/coding.min.css" rel="stylesheet">
+	<!-- RP CSS -->
+
+	<!-- THIRD PARTY CSS -->
+	<link href="css/geopattern.css" rel="stylesheet">
+	<link href="css/prism.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,500,400italic|Roboto+Condensed:700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
+	<!-- THIRD PARTY CSS -->
+
+	<!-- RP JAVASCRIPT -->
+	<script src="js/main.min.js"></script>
+	<!-- RP JAVASCRIPT -->
+
+	<!-- THIRD PARTY JAVASCRIPT -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/d3.v3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/geopattern.min.js"></script>
+	<script src="js/prism.js"></script>
+	<script src="js/main.min.js"></script>
+	<!-- THIRD PARTY JAVASCRIPT -->
+
+	<!-- RP ICONS -->
+	<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../apple-touch-icon-152x152-precomposed.png">
+	<!-- RP ICONS -->
+
+</head>
+<body id="body" style="background-image: url()">
+<script>
+var pattern = GeoPattern.generate(navigator.userAgent);
+document.getElementById("body").setAttribute("style","background-image:"+pattern.toDataUrl()+";");
+
+//
+</script>
+
+<div class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a id="NavbarBrand" class="navbar-brand">ruthlessphysics.com</a>
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-main">
+			<ul class="nav navbar-nav">
+				<li class="active"><a id="NavbarItem" href="../home.html">Home</a></li>
+				<li class="dropdown">
+					<a id="NavbarItem" class="dropdown-toggle" data-toggle="dropdown" href="">Projects<span class="caret"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="themes">
+						<li><a id="NavbarItem" href="http://github.com/MacPhage/Obskewer">Obskewer</a></li>
+						<li><a id="NavbarItem" href="http://github.com/MacPhage/pCalculator">pCalculator</a></li>
+						<li><a id="NavbarItem" href="http://github.com/MacPhage/pTicTacToe">pTicTacToe</a></li>
+						<li><a id="NavbarItem" href="http://github.com/MacPhage/txt-concat">txt-concat</a></li>
+						<li class="divider"></li>
+						<li><a id="NavbarItem" href="http://github.com/MacPhage/pDraw">pDraw</a></li>
+						<li><a id="NavbarItem" href="http://github.com/MacPhage/supercircle">SuperCircle: legacy</a></li>
+						<li class="divider"></li>
+						<li><a id="NavbarItem" href="http://github.com/MacPhage/macphage.github.io">macphage.github.io</a></li>
+					</ul>
+					<li><a id="NavbarItem" href="javascript:alert('Want to learn how to code?\nComing soon!')">Coding</a></li>
+					<li class="dropdown">
+						<a id="NavbarItem" href="#" class="dropdown-toggle" data-toggle="dropdown">Follow me <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a id="NavbarItem" href="http://twitter.com/MacPhage">Twitter</a></li>
+							<li><a id="NavbarItem" href="http://github.com/MacPhage">GitHub</a></li>
+						</ul>
+					</li>
+					<li><a id="NavbarItem" href="../credit.html">Credit</a></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="MainContentContainer" class="container-fluid">
+
+		<code>Resolution: </code>
+		<code id="resolution"></code>
+		<br>
+		<small><code id="useragent"></code></small>
+
+		<div class="row">
+			<div id="MainCol" class="col-xs-10">
+				<div id="PrimaryContentBox">
+					<h1>Learning to Code</h1>
+					<br><br>
+					<h3>The fundamentals</h3>
+					<p>
+						I don't feel like writing this whole shpeel yet, so I'm just going to keep coding.
+					</p>
+				</div>
+			</div>
+			<div id="Sidebar" class="col-xs-2">
+				<div id="SecondaryContentBox">
+					<h3>Sidebar</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	var isHidden;
+	function height() {
+		return Math.max(
+			document.body.scrollHeight, document.documentElement.scrollHeight,
+			document.body.offsetHeight, document.documentElement.offsetHeight,
+			document.body.clientHeight, document.documentElement.clientHeight
+		);
+	}
+	function width() {
+		return document.body.clientWidth;
+	}
+	function check()
+	{
+		if(width() < 768)
+			{
+				isHidden = true;
+				hideStuff();
+				console.log("hiding stuff");
+			}
+			else
+				{
+					isHidden = false;
+					revealStuff();
+					console.log("revealing stuff");
+				}
+			}
+			window.onresize = function() {
+				showResolution();
+				showUserAgent();
+				check();
+			};
+			function showResolution()
+			{
+				document.getElementById("resolution").innerHTML = (width()+"x"+ height());
+			}
+			function showUserAgent()
+			{
+				document.getElementById("useragent").innerHTML = navigator.userAgent;
+			}
+
+			function hideStuff()
+			{
+				document.getElementById("MainCol").setAttribute("class","col-xs-12");
+				document.getElementById("Sidebar").setAttribute("class","hidden");
+			}
+
+			function revealStuff()
+			{
+				document.getElementById("MainCol").setAttribute("class","col-xs-10");
+				document.getElementById("Sidebar").setAttribute("class","col-xs-2");
+			}
+
+			showResolution();
+			showUserAgent();
+			check();
+			</script>
+
+		</body>
+		</html>
