@@ -66,6 +66,30 @@
 .clear {
   opacity: 0.0;
 }
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/lora/Lora-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/lora/Lora-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../font/lora/Lora-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../font/lora/Lora-BoldItalic.ttf') format('truetype');
+}
 a {
   color: #3798eb;
   text-decoration: none;
