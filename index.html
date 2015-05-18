@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Austin Jackson &bull; Developer</title>
 
-        <!--        <noscript><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700|Open+Sans:300|Oswald|Satisfy|Roboto:500,700' rel='stylesheet' type='text/css'> <link href="css/concatenated.css" rel="stylesheet" type="text/css"></noscript>-->
-
+        <noscript><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Roboto:400,300"><link rel="stylesheet" href="css/materialize.min.css"><link rel="stylesheet" href="css/austin.css"></noscript>
 
         <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
         <!-- FAVEICON DATA -->
@@ -35,40 +34,15 @@
         </script>
 
         <!-- END OF OBLIGATORY TAGS -->
-
-
-
-
-        <style>
-            /*These tags will be overwritten once the CSS is asynchronously loaded with JavaScript*/
-            .invisible {visibility:hidden;}
-            body {
-                background-repeat: no-repeat;
-                background-position: 0% 0%;
-                background-size: auto;
-                overflow-x: hidden;
-                margin: 0px;
-            }
-        </style>
-        <meta id="loadCSS" />
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Roboto:400,300">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="css/austin.css">
         <script type="text/javascript">
             /*
-*   JAVASCRIPT DECLARATIONS
-*/
-            var fontsLoaded = false;
-            var cssLoaded = false;
-            var jsLoaded = false;
-            var b4 = document.getElementById("loadCSS");
+             *   JAVASCRIPT DECLARATIONS
+             */
             var count = 0;
-
-            function loadCSS(href,before,media,callback){"use strict"
-            function toggleMedia(){for(var defined,i=0;i<sheets.length;i++)sheets[i].href&&sheets[i].href.indexOf(href)>-1&&(defined=!0)
-            defined?ss.media=media||"all":setTimeout(toggleMedia)}var ss=window.document.createElement("link"),ref=before||window.document.getElementsByTagName("script")[0],sheets=window.document.styleSheets
-            return ss.rel="stylesheet",ss.href=href,ss.media="only x",ss.onload=callback||function(){},ref.parentNode.insertBefore(ss,ref),toggleMedia(),ss}
-
-            function waitfor(test,expectedValue,msec,count,source,callback){for(;test()!==expectedValue;)return count++,void setTimeout(function(){waitfor(test,expectedValue,msec,count,source,callback)},msec)
-            console.log(source+": "+test()+", expected: "+expectedValue+", "+count+" loops."),callback()}
-
             var colors;
             var rand;
             var t;
@@ -128,37 +102,12 @@
                 firstWidth = document.body.clientWidth;
                 currentWidth = document.body.clientWidth;
                 completeRedraw();
-                jsLoaded = true;
             }
 
         </script>
+        
         <!-- JAVASCRIPT IMPORTING -->
-        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Roboto:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/materialize.min.css">
-        <link rel="stylesheet" href="css/austin.css">
         <script async src="js/libraries.js" onload="javascript:librariesDoneLoading();"></script>
-        <!--
-<script type="text/javascript">
-/*
-*   JAVASCRIPT ACTIONS
-*/
-loadCSS("http://fonts.googleapis.com/css?family=Roboto:400,300",b4,undefined,function(){
-fontsLoaded = true;
-console.log("Google Fonts loaded.");
-});
-
-loadCSS("css/austin.css",b4,undefined,function(){
-cssLoaded = true;
-console.log("Custom CSS and libraries (bundled as one) loaded.");
-});
-
-waitfor(function(){return (fontsLoaded && cssLoaded && jsLoaded);},true,0,count,undefined,function(){
-$(".main-container").removeClass("invisible");
-$(".main-container").addClass("animated");
-$(".main-container").addClass("fadeIn");
-});
-</script>
--->
 
     </head>
     <body>
@@ -186,7 +135,7 @@ $(".main-container").addClass("fadeIn");
                 <div class="divider"></div>
                 <div class="section">
                     <h5>Contact Me</h5>
-                    <p>If you'd like to say hi, I'm on <a class="" href="http://twitter.com/au5ton">Twitter</a>. I'm there most often. If you'd like to see more of my software, I'm on <a href="http://github.com/au5ton">Github</a>. If you'd like to contact me privately, I'm always open for <a href="mailto:theaustinjackson@gmail.com">emails</a>. If you're a LinkedIn kind of person, <a href="http://www.linkedin.com/in/austindjackson/">here's where</a> you'll find me. I also occasionally upload a video or to to <a href="https://www.youtube.com/channel/UC-nKVn_FYFTY10N1jH03u4w">YouTube</a>.</p>
+                    <p>If you'd like to say hi, I'm on <a class="" href="http://twitter.com/au5ton">Twitter</a>. I'm there most often. If you'd like to see more of my software, as mentioned above, I'm on <a href="http://github.com/au5ton">Github</a>. If you'd like to contact me privately, I'm always open for <a href="mailto:theaustinjackson@gmail.com">emails</a>. If you're a LinkedIn kind of person, <a href="http://www.linkedin.com/in/austindjackson/">here's where</a> you'll find me. I also occasionally upload a video or to to <a href="https://www.youtube.com/channel/UC-nKVn_FYFTY10N1jH03u4w">YouTube</a>.</p>
                     <div class="divider"></div>
                     <div class="section">
                         <h5>This Website</h5>
@@ -204,14 +153,14 @@ $(".main-container").addClass("fadeIn");
 
 
                 <script>
-                    
+
                     document.getElementById("copyright").innerHTML = new Date().getFullYear();
                     var birthday = new Date(1998,10,22);
                     var age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
                     var precision = 1000; //However many zeros is how many places
                     document.getElementById("age").innerHTML = Math.floor(age*precision)/precision;
-                
+
                 </script>
-                
+
                 </body>
             </html>
