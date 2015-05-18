@@ -39,73 +39,10 @@
         <link rel="stylesheet" href="css/materialize.min.css">
         <link rel="stylesheet" href="css/austin.css">
         <script type="text/javascript">
-            /*
-             *   JAVASCRIPT DECLARATIONS
-             */
-            var count = 0;
-            var colors;
-            var rand;
-            var t;
-            var firstWidth;
-            var currentWidth;
-            function redraw(){
-                console.log("Drawing Trianglify background: "+document.body.clientWidth+"x"+$(".canvas").height()+" with colorcode: "+rand+" using colors: "+colors);
-                var pattern = t.generate(document.body.clientWidth, $(".canvas").height());
-                document.getElementById("canvas").style.background = pattern.dataUrl;
-            }
-            function completeRedraw(){
-
-                rand = randomNumberBetween(0,6);
-                var cnt = 12;
-                if(rand == 0) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'red'});
-                }
-                else if(rand == 1) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'orange'});
-                }
-                else if(rand == 2) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'yellow'});
-                }
-                else if(rand == 3) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'green'});
-                }
-                else if(rand == 4) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'blue'});
-                }
-                else if(rand == 5) {
-                    colors = randomColor({count: cnt,format: 'hex',hue: 'purple'});
-                }
-                else {
-                    colors = randomColor({count: cnt,format: 'hex'});
-                }
-                t = new Trianglify({bleed: 0,noiseIntensity: 0,x_gradient: colors});
-                redraw();
-            }
-            window.onresize = function() {
-                var newWidth = document.body.clientWidth;
-                var difference = Math.abs(newWidth - currentWidth);
-                var differenceFirst = Math.abs(newWidth - firstWidth);
-
-                if(difference > 100){
-                    console.log("Enough of a window change has been made.");
-                    console.log("Difference from last change: "+difference+", original: "+differenceFirst);
-                    redraw();
-                    currentWidth = newWidth;
-                }
-
-            };
-
-            function randomNumberBetween(from,to){
-                return Math.floor((Math.random() * to) + from);
-            }
             function librariesDoneLoading(){
-                firstWidth = document.body.clientWidth;
-                currentWidth = document.body.clientWidth;
-                completeRedraw();
                 var pattern = GeoPattern.generate(new Date());
-        document.getElementById("canvas").style.background = pattern.toDataUrl();
+                document.getElementById("canvas").style.background = pattern.toDataUrl();
             }
-
         </script>
         
         <!-- JAVASCRIPT IMPORTING -->
@@ -148,21 +85,13 @@
                         <div class="divider"></div>
                         <p>Website by Austin Jackson © 2014-<span id="copyright">2015</span></p>
                     </div>
-
                 </div>
-
-
-
-
                 <script>
-
                     document.getElementById("copyright").innerHTML = new Date().getFullYear();
                     var birthday = new Date(1998,10,22);
                     var age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
                     var precision = 1000; //However many zeros is how many places
                     document.getElementById("age").innerHTML = Math.floor(age*precision)/precision;
-
                 </script>
-
                 </body>
             </html>
