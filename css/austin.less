@@ -7,9 +7,8 @@
 @text-grey: rgb(100,100,100);
 @text-white: rgb(245,245,245);
 
-//Bootstrap link colors, because they're nice
 a {
-    color:#337ab7;
+    color:#3798eb;
     text-decoration:none
 }
 a:focus, a:hover {
@@ -32,7 +31,6 @@ a:focus {
     text-overflow: ellipsis;
 }
 
-
 body {
     overflow-x: hidden;
     color: @text-normal;
@@ -42,6 +40,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;    
+    background: #fff;
 }
 
 .canvas {
@@ -49,7 +48,7 @@ body {
     background-position: center;
     background-size: 150% 150%!important;
     width: 100%;
-    background: red;
+    background: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -58,9 +57,13 @@ body {
     font-family: "Roboto", sans-serif;
     
     h1 {
+        margin-top: 20px;
+        margin-bottom: 0;
     }
     
     h5 {
+        margin-top: 0!important;
+        margin-bottom: 20px;
         font-weight: 300;
     }
     
@@ -72,6 +75,21 @@ body {
     padding: 0;
     background: #fff;
     font-family: "Lora", sans-serif;
+    
+    .container {
+        padding-top: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    h5 {
+        font-size: 1.64rem;
+        font-weight: 700;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
 }
 
 .footer {
