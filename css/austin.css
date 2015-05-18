@@ -103,7 +103,6 @@ body {
 .canvas {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 150% 150%!important;
   width: 100%;
   background: #fff;
   padding-top: 40px;

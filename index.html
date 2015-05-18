@@ -102,6 +102,8 @@
                 firstWidth = document.body.clientWidth;
                 currentWidth = document.body.clientWidth;
                 completeRedraw();
+                var pattern = GeoPattern.generate(new Date());
+        document.getElementById("canvas").style.background = pattern.toDataUrl();
             }
 
         </script>
