@@ -16,8 +16,3 @@
     Materialize.css Contributors
     Website: http://materializecss.com/
     
-
-    Trianglify.js: Quinn Rohlf
-    Github: qrohlf
-    Twitter: @qrohlf
-    From: Portland, Oregon
