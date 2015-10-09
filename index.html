@@ -7,6 +7,7 @@
 
     <noscript>
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Roboto:400,300">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/materialize.min.css">
         <link rel="stylesheet" href="css/austin.css">
     </noscript>
@@ -39,6 +40,9 @@
     </script>
 
     <!-- END OF OBLIGATORY TAGS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link rel="stylesheet" href="css/github-activity-0.1.2.min.css">
 
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/austin.css">
@@ -78,6 +82,8 @@
 
     <!-- JAVASCRIPT IMPORTING -->
     <script async src="js/libraries.js" onload="javascript:librariesDoneLoading();"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="js/github-activity-0.1.2.min.js"></script>
 
 </head>
 <body>
@@ -106,19 +112,69 @@
             <div class="section">
                 <h5>Contact Me</h5>
                 <p>If you'd like to say hi, I'm on <a class="" href="http://twitter.com/au5ton">Twitter</a>. I'm there most often. If you'd like to see more of my software, as mentioned above, I'm on <a href="http://github.com/au5ton">Github</a>. If you'd like to contact me privately, I'm always open for <a href="mailto:austinjckson@gmail.com">emails</a>. If you're a <a href="http://www.linkedin.com/in/austindjackson/">LinkedIn</a> kind of person, click that link you just read over. I also occasionally upload a video or two to <a href="https://www.youtube.com/channel/UC-nKVn_FYFTY10N1jH03u4w">YouTube</a>, and someday I'll write something on <a href="https://medium.com/@au5ton">Medium</a>. If you're feeling generous and want to buy me a coffee, I'm on <a href="https://cash.me/$austinj">Square Cash</a>.</p>
-                <div class="footer">
-                    <div class="divider"></div>
-                    <p>Website by Austin Jackson © 2014-<span id="copyright">2015</span></p>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Recent Activity</h5>
+                <p>Here's some of my recent commits and things.</p>
+                <div id="feed"></div>
+            </div>
+            <!-- <div class="divider"></div> -->
+            <div class="section">
+                <h5>Popular repositories</h5>
+                <p>Here's some of my recent activity on <a href="http://github.com/au5ton">Github</a>.</p>
+                <div class="row github">
+                    <div class="col s12 m6">
+                        <div class="card ">
+                            <div class="card-content">
+                                <span class="card-title">Card Title</span>
+                                <p>
+                                    I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content">
+                                <span class="card-title">Card Title</span>
+                                <p>
+                                    I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">This is a link</a>
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <script>
-            document.getElementById("copyright").innerHTML = new Date().getFullYear();
-            var birthday = new Date(1998,10,22);
-            var age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
-            var precision = 1000; //However many zeros is how many places
-            document.getElementById("age").innerHTML = Math.floor(age*precision)/precision;
-            </script>
         </div>
+        <div class="footer">
+            <div class="divider"></div>
+            <p>Website by Austin Jackson © 2014-<span id="copyright">2015</span></p>
+        </div>
+        <script>
+        GitHubActivity.feed({
+            username: 'au5ton',
+            selector: '#feed',
+            limit: 6 // optional
+        });
+
+        document.getElementById("copyright").innerHTML = new Date().getFullYear();
+        var birthday = new Date(1998,10,22);
+        var age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
+        var precision = 1000; //However many zeros is how many places
+        document.getElementById("age").innerHTML = Math.floor(age*precision)/precision;
+        </script>
     </div>
+</div>
 </body>
 </html>
