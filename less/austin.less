@@ -135,13 +135,18 @@ body {
     }
 }
 
+@media(min-width: 415px) {
+    #feed {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 #feed {
 
     //CSS fixes for https://github.com/caseyscarborough/github-activity/ to look less buggy
 
     max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
 
     .gha-header {
         width: ~"calc(100% - 2px)";
@@ -203,4 +208,12 @@ body {
     .card-title {
         color: #323232;
     }
+}
+
+.thechart {
+    text-align: center;
+}
+.myChart {
+    //width: 100%;
+    //height: 100%;
 }
