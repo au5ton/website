@@ -46,49 +46,12 @@
 
     <link rel='stylesheet' href='css/materialize.min.css'>
     <link rel='stylesheet' href='css/austin.css'>
-    <script type='text/javascript'>
-    function librariesDoneLoading(){
-        try {
-            var pattern = GeoPattern.generate(new Date());
-            document.getElementById('canvas').style.background = pattern.toDataUrl();
-        }
-        catch(err){
-            //If GeoPattern is unsupported... (Which it is in IE 11, thanks Microsoft)
-            //Generate a new color
-            var color = randomColor({
-                luminosity: 'light'
-            });
-            //Convert to a tinycolor
-            color = tinycolor(color);
-            //If the color is too light
-            if(color.toHsl().l >= 0.7) {
-                color = color.toHsl();
-                //Bring it down to 0.7
-                color.l = 0.7;
-            }
-            //Convert back into a tinycolor
-            color = tinycolor(color);
-            //If the color is too saturated
-            if(color.toHsl().s >= 0.6) {
-                color = color.toHsl();
-                //Bring it down to 0.6
-                color.s = 0.6;
-            }
-            //Apply the color
-            $('#canvas')[0].style.background = tinycolor(color).toHexString();
-        }
-    }
-    </script>
 
     <!-- JAVASCRIPT IMPORTING -->
-    <script async src='js/libraries.js' onload='javascript:librariesDoneLoading();'></script>
-    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js'></script>
-    <script type='text/javascript' src='js/github-activity-0.1.2.min.js'></script>
-    <script src='js/Chart.min.js'></script>
+    <script async src='js/libraries.js'></script>
 
 </head>
 <body>
-
     <div id='canvas' class='canvas'>
         <div class='container'>
             <div class='hero box'>
@@ -97,9 +60,8 @@
             </div>
         </div>
     </div>
-
-    <div class='content'>
-        <div class='container'>
+    <div class='container'>
+        <div class='content'>
             <div class='section'>
                 <h5>Synopsis</h5>
                 <p>My name is Austin Jackson. As of this very moment, I am a <span id='age'>16</span> year old developer from Houston, Texas. I'm a perfectionist, problem solver, and a big supporter of open-source software.</p>
@@ -120,68 +82,20 @@
                 <p>Here's some of my recent commits and things.</p>
                 <div id='feed'>
                 </div>
-                <div class='showmorestats-container'>
-                    <a id='showmorestats' class='waves-effect waves-light btn github light-blue'>Show more stats</a>
-                </div>
             </div>
-            <div class='section stats-section'>
+            <div class='section'>
                 <h5>Most-used languages</h5>
                 <p>These are languages I use most in my repositories.</p>
-                <canvas id='myChart' width='150' height='150'></canvas>
-            </div>
-        </div>
-
-        <div id='repo-card-template'>
-            <div class='card-parent'>
-                <div class='card'>
-                    <div class='card-content'>
-                        <span class='card-title'>{{REPO_FULL_NAME}}</span>
-                        <span class='card-stargazers'><span id='stargazers-count'>{{REPO_STARGAZERS_COUNT}}</span><i class='material-icons'>grade</i></span>
-                        <p>
-                            {{REPO_DESCRIPTION}}
-                        </p>
-                    </div>
-                    <div class='card-action'>
-                        <a href='{{REPO_HTML_URL}}'>Open</a>
-                    </div>
+                <div class='chart-container'>
+                    <canvas id='myChart' width='250' height='250'></canvas>
                 </div>
             </div>
-        </div>
 
-        <div class='container stats-section'>
-            <div class='section'>
-                <h5>Popular repositories</h5>
-                <p>Here's some of my most popular repositories.</p>
-            </div>
-            <div class='repo-container collection github'>
-
-                <a href='' class='collection-item'>
-                    <h5 class='title'>Title</h5>
-                    <p>description description description description description description description description description description</p>
-                </a>
-                <a href='' class='collection-item'>
-                    <h5 class='title'>Title</h5>
-                    <p>description description description description description description description description description description</p>
-                </a>
-                <a href='' class='collection-item'>
-                    <h5 class='title'>Title</h5>
-                    <p>description description description description description description description description description description</p>
-                </a>
-                <a href='' class='collection-item'>
-                    <h5 class='title'>Title</h5>
-                    <p>description description description description description description description description description description</p>
-                </a>
-
-            </div>
-        </div>
-        <div class='container'>
             <div class='footer'>
                 <div class='divider'></div>
                 <p>Website by Austin Jackson © 2014-<span id='copyright'>2015</span></p>
             </div>
         </div>
     </div>
-</div>
-<script src='js/main.js'></script>
 </body>
 </html>
