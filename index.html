@@ -75,7 +75,7 @@
                 color.s = 0.6;
             }
             //Apply the color
-            document.getElementById('canvas').style.background = tinycolor(color).toHexString();
+            $('#canvas')[0].style.background = tinycolor(color).toHexString();
         }
     }
     </script>
@@ -118,127 +118,70 @@
             <div class='section'>
                 <h5>Recent Activity</h5>
                 <p>Here's some of my recent commits and things.</p>
-                <div id='feed'></div>
+                <div id='feed'>
+                </div>
+                <div class='showmorestats-container'>
+                    <a id='showmorestats' class='waves-effect waves-light btn github light-blue'>Show more stats</a>
+                </div>
             </div>
-            <!-- <div class='divider'></div> -->
+            <div class='section stats-section'>
+                <h5>Most-used languages</h5>
+                <p>These are languages I use most in my repositories.</p>
+                <canvas id='myChart' width='150' height='150'></canvas>
+            </div>
+        </div>
+
+        <div id='repo-card-template'>
+            <div class='card-parent'>
+                <div class='card'>
+                    <div class='card-content'>
+                        <span class='card-title'>{{REPO_FULL_NAME}}</span>
+                        <span class='card-stargazers'><span id='stargazers-count'>{{REPO_STARGAZERS_COUNT}}</span><i class='material-icons'>grade</i></span>
+                        <p>
+                            {{REPO_DESCRIPTION}}
+                        </p>
+                    </div>
+                    <div class='card-action'>
+                        <a href='{{REPO_HTML_URL}}'>Open</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container stats-section'>
             <div class='section'>
                 <h5>Popular repositories</h5>
                 <p>Here's some of my most popular repositories.</p>
-                <div class='row github'>
-                    <div class='col s12 m6'>
-                        <div class='card '>
-                            <div class='card-content'>
-                                <span class='card-title'>Repository name</span>
-                                <p>
-                                    I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class='card-action'>
-                                <a href='#'>This is a link</a>
-                                <a href='#'>This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col s12 m6'>
-                        <div class='card'>
-                            <div class='card-content'>
-                                <span class='card-title'>Repository name</span>
-                                <p>
-                                    I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class='card-action'>
-                                <a href='#'>This is a link</a>
-                                <a href='#'>This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col s12 m6'>
-                        <div class='card'>
-                            <div class='card-content'>
-                                <span class='card-title'>Repository name</span>
-                                <p>
-                                    I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class='card-action'>
-                                <a href='#'>This is a link</a>
-                                <a href='#'>This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col s12 m6'>
-                        <div class='card'>
-                            <div class='card-content'>
-                                <span class='card-title'>Repository name</span>
-                                <p>
-                                    I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class='card-action'>
-                                <a href='#'>This is a link</a>
-                                <a href='#'>This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class='section'>
-                <h5>Most-used languages</h5>
-                <p>These are languages I use most in my repositories.</p>
-                <div class='thechart'>
-                    <canvas id='myChart' width='150' height='150'></canvas>
-                </div>
+            <div class='repo-container collection github'>
+
+                <a href='' class='collection-item'>
+                    <h5 class='title'>Title</h5>
+                    <p>description description description description description description description description description description</p>
+                </a>
+                <a href='' class='collection-item'>
+                    <h5 class='title'>Title</h5>
+                    <p>description description description description description description description description description description</p>
+                </a>
+                <a href='' class='collection-item'>
+                    <h5 class='title'>Title</h5>
+                    <p>description description description description description description description description description description</p>
+                </a>
+                <a href='' class='collection-item'>
+                    <h5 class='title'>Title</h5>
+                    <p>description description description description description description description description description description</p>
+                </a>
+
             </div>
+        </div>
+        <div class='container'>
             <div class='footer'>
                 <div class='divider'></div>
                 <p>Website by Austin Jackson © 2014-<span id='copyright'>2015</span></p>
             </div>
         </div>
-        <script>
-        GitHubActivity.feed({
-            username: 'au5ton',
-            selector: '#feed',
-            limit: 6 // optional
-        });
-
-        var data = [
-            {
-                value: 300,
-                color:"#F7464A",
-                highlight: "#FF5A5E",
-                label: "Red"
-            },
-            {
-                value: 50,
-                color: "#46BFBD",
-                highlight: "#5AD3D1",
-                label: "Green"
-            },
-            {
-                value: 100,
-                color: "#FDB45C",
-                highlight: "#FFC870",
-                label: "Yellow"
-            }
-        ]
-
-        // Get the context of the canvas element we want to select
-        var ctx = document.getElementById('myChart').getContext('2d');
-        // And for a doughnut chart
-        var myDoughnutChart = new Chart(ctx).Doughnut(data);
-
-        document.getElementById('copyright').innerHTML = new Date().getFullYear();
-        var birthday = new Date(1998,10,22);
-        var age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
-        var precision = 1000; //However many zeros is how many places
-        document.getElementById('age').innerHTML = Math.floor(age*precision)/precision;
-        </script>
     </div>
 </div>
+<script src='js/main.js'></script>
 </body>
 </html>

@@ -35,20 +35,6 @@
     src:url('../font/lora/Lora-BoldItalic.ttf') format('truetype');
 }
 
-a {
-    color:#3798eb;
-    text-decoration: none;
-    &:hover, &:focus {
-        color:#005098;
-        text-decoration: underline;
-    }
-}
-a:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset:-2px
-}
-
 .box {
     background: #fff;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
@@ -116,7 +102,22 @@ body {
 
     p {
         font-size: 1.2rem;
+        a {
+            color:#3798eb;
+            text-decoration: none;
+            &:hover, &:focus {
+                color:#005098;
+                text-decoration: underline;
+            }
+        }
+        a:focus {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset:-2px
+        }
     }
+
+
 }
 
 .footer {
@@ -178,14 +179,38 @@ body {
         }
     }
 
-    .gha-push-small, .gha-footer {
+    .gha-push-small {
         display: none;
+    }
+
+    .gha-footer {
+        display: none;
+        /*position: static;
+        text-align: center;
+        border-top: none;
+        border-bottom: 1px solid #ddd;
+        height: auto;
+        width: auto;
+
+        a {
+        float: none;
+        padding: 0;
+        }*/
+
     }
 
     .gha-feed {
         border-bottom-style: none;
     }
 
+}
+
+.showmorestats-container {
+    text-align: center;
+}
+#showmorestats {
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 .github {
@@ -201,19 +226,115 @@ body {
 
 }
 
+#repo-card-template {
+    display: none;
+}
+
+.repo-container {
+    max-width: 400px;
+    margin: 0 auto;
+
+    a {
+        text-decoration: none!important;
+    }
+}
+
+.card-parent {
+    max-width: 330px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+@media (min-width: 415px) {
+    .card-parent {
+        max-width: 250px;
+        display: inline-block;
+    }
+}
+
 .card {
+
+    -webkit-animation-name: dropDown;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    animation-name: dropDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    opacity: 1!important;
+
     a:hover {
         text-decoration: none;
     }
     .card-title {
         color: #323232;
     }
+    .card-stargazers {
+        float: right;
+
+        #stargazers-count {
+            position: relative;
+            bottom: 7px;
+        }
+        .material-icons {
+            color: #ffce20;
+        }
+    }
+    .card-action a {
+        margin-right: 0;
+    }
 }
 
-.thechart {
-    text-align: center;
+#myChart {
+    //float: right;
 }
-.myChart {
-    //width: 100%;
-    //height: 100%;
+
+
+
+
+
+
+
+@-webkit-keyframes dropDown{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+}
+
+@-moz-keyframes dropDown{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+}
+
+@keyframes dropDown{
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+        box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+}
+
+.inline-block {
+    display: inline-block;
 }
