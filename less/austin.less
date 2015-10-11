@@ -1,0 +1,267 @@
+// out: ../css/austin.css, sourcemap: true, compress: true
+
+// All site styling is done from here and auto-compiled with...
+//https://github.com/lohek/less-autocompile
+
+@import "mixins.less";
+
+@text-normal: rgb(50,50,50);
+@text-grey: rgb(100,100,100);
+@text-white: rgb(245,245,245);
+
+
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/lora/Lora-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/lora/Lora-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lora';
+    font-style: italic;
+    font-weight: 400;
+    src:url('../font/lora/Lora-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Lora';
+    font-style: italic;
+    font-weight: 700;
+    src:url('../font/lora/Lora-BoldItalic.ttf') format('truetype');
+}
+
+.box {
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    padding: 10px;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+body {
+    overflow-x: hidden;
+    color: @text-normal;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+}
+
+.canvas {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hero {
+    font-family: 'Roboto', sans-serif;
+
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    h5 {
+        margin-top: 0!important;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+
+}
+
+
+.content {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: 'Lora', sans-serif;
+
+    .container {
+        padding-top: 0.75rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.64rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.2rem;
+        a {
+            color:#3798eb;
+            text-decoration: none;
+            &:hover, &:focus {
+                color:#005098;
+                text-decoration: underline;
+            }
+        }
+        a:focus {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset:-2px
+        }
+    }
+
+
+}
+
+.footer {
+    width: 70%;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    p {
+        display: inline-block;
+    }
+
+    .divider {
+        width: 100%;
+    }
+}
+
+@media(min-width: 415px) {
+    #feed {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#feed {
+
+    //CSS fixes for https://github.com/caseyscarborough/github-activity/ to look less buggy
+
+    max-width: 400px;
+
+    .gha-header {
+        width: ~"calc(100% - 2px)";
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .gha-gravatar {
+        display: none;
+    }
+
+    .gha-github-icon {
+        padding-top: 6px;
+    }
+
+    .gha-push {
+        height: 67px;
+    }
+
+    .gha-activity.gha-small .gha-message {
+        max-width: 50%;
+    }
+
+    @media(max-width: 415px) {
+        .gha-activity.gha-small .gha-time {
+            margin-left: 50px;
+        }
+    }
+
+    .gha-push-small {
+        display: none;
+    }
+
+    .gha-footer {
+        display: none;
+        /*position: static;
+        text-align: center;
+        border-top: none;
+        border-bottom: 1px solid #ddd;
+        height: auto;
+        width: auto;
+
+        a {
+        float: none;
+        padding: 0;
+        }*/
+
+    }
+
+    .gha-feed {
+        border-bottom-style: none;
+    }
+
+}
+
+.sans {
+    font-family: 'Roboto', sans-serif;
+}
+
+.chart-container {
+    text-align: center;
+}
+
+#myChart {
+    //float: right;
+}
+
+
+
+
+
+
+
+@-webkit-keyframes dropDown{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+}
+
+@-moz-keyframes dropDown{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px);
+        box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+}
+
+@keyframes dropDown{
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+        box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+}
+
+.inline-block {
+    display: inline-block;
+}
