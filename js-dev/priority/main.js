@@ -10,6 +10,8 @@ This is so we can use the async HTML attribute to make JavaScript loading non-bl
 */
 
 
+document.addEventListener("touchstart", function(){}, true);
+
 //Geopattern pattern
 try {
     var pattern = GeoPattern.generate(new Date());
