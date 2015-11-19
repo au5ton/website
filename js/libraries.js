@@ -49,10 +49,21 @@ This is so we can use the async HTML attribute to make JavaScript loading non-bl
 
 document.addEventListener("touchstart", function(){}, true);
 
+console.log(document.body.clientWidth);
+
+//We're making this Apple Watch compatible for shits and giggles
+
 //Geopattern pattern
 try {
+
+    if(document.body.clientWidth <= 104) {
+        console.log('hello');
+        throw {};
+    }
+
     var pattern = GeoPattern.generate(new Date());
     document.getElementById('canvas').style.background = pattern.toDataUrl();
+
 }
 catch(err){
     //If GeoPattern is unsupported... (Which it isn't in IE sometimes, thanks Microsoft)
@@ -80,40 +91,46 @@ catch(err){
     $('#canvas')[0].style.background = tinycolor(color).toHexString();
 }
 
-//Activity feed
-GitHubActivity.feed({
-    username: 'au5ton',
-    selector: '#feed',
-    limit: 6 // optional
-});
+if(document.body.clientWidth > 104) {
+
+    //Activity feed
+    GitHubActivity.feed({
+        username: 'au5ton',
+        selector: '#feed',
+        limit: 6 // optional
+    });
 
 
-//Most used languages
-var keys = []; //keys to the Dictionary (object)
-var graph_data = [];
-var ctx;
-var myDoughnutChart;
-jQuery.get('https://austinjnet-stats.herokuapp.com/api/mostusedlanguages?include_colors=true',function(data){
-    /*
-    Gets the names of the keys and saves them in `keys` so that we can access
-    `data` with bracket notation (like Swift dictionaries)
-    */
-    for(prop in data) {
-        keys.push(prop);
-    }
+    //Most used languages
+    var keys = []; //keys to the Dictionary (object)
+    var graph_data = [];
+    var ctx;
+    var myDoughnutChart;
+    jQuery.get('https://austinjnet-stats.herokuapp.com/api/mostusedlanguages?include_colors=true',function(data){
+        /*
+        Gets the names of the keys and saves them in `keys` so that we can access
+        `data` with bracket notation (like Swift dictionaries)
+        */
+        for(prop in data) {
+            keys.push(prop);
+        }
 
-    for(var i = 0; i < keys.length; i++) {
-        graph_data.push({
-            value: data[keys[i]]['count'],
-            color: data[keys[i]]['color'],
-            label: keys[i]
-        });
-    }
-    // Get the context of the canvas element we want to select
-    ctx = document.getElementById('myChart').getContext('2d')
-    // And for a doughnut chart
-    myDoughnutChart = new Chart(ctx).Pie(graph_data)
-});
+        for(var i = 0; i < keys.length; i++) {
+            graph_data.push({
+                value: data[keys[i]]['count'],
+                color: data[keys[i]]['color'],
+                label: keys[i]
+            });
+        }
+        // Get the context of the canvas element we want to select
+        ctx = document.getElementById('myChart').getContext('2d')
+        // And for a doughnut chart
+        myDoughnutChart = new Chart(ctx).Pie(graph_data)
+    });
+
+}
+
+
 
 
 //Auto Copyright
