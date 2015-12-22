@@ -103,7 +103,7 @@ function createSongElement(t) {
     return elem;
 }
 
-jQuery.get('https://austinjnet-stats.herokuapp.com/api/soundcloud/likes', function(likes){
+jQuery.get('https://austinjnet-stats.herokuapp.com/api/soundcloud/likes?count=10', function(likes){
     for(var i = 0; i < likes.length; i++) {
         var elem = createSongElement(likes[i]);
         $('.song-grid').append(elem);
