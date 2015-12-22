@@ -93,6 +93,23 @@ if(document.body.clientWidth > 104) {
 
 }
 
+function createSongElement(t) {
+    var elem = document.createElement('div');
+    elem.setAttribute('class', 'song');
+    elem.innerHTML = document.getElementById('song-template').innerHTML;
+    elem.innerHTML = String(elem.innerHTML).replace('{{PERMALINK}}',t['permalink']);
+    elem.innerHTML = String(elem.innerHTML).replace('{{SONG_TITLE}}',t['song_title']);
+    elem.innerHTML = String(elem.innerHTML).replace('{{COVER_ART}}',t['cover_art']);
+    return elem;
+}
+
+jQuery.get('https://austinjnet-stats.herokuapp.com/api/soundcloud/likes', function(likes){
+    for(var i = 0; i < likes.length; i++) {
+        var elem = createSongElement(likes[i]);
+        $('.song-grid').append(elem);
+    }
+    $('.tooltipped').tooltip({delay: 0});
+});
 
 
 

@@ -90,12 +90,28 @@
                     <canvas id='myChart' width='250' height='250'></canvas>
                 </div>
             </div>
+            <div class="section">
+                <h5>SoundCloud likes</h5>
+                <p>Using a <a href='https://austinjnet-stats.herokuapp.com/api/soundcloud/likes'>custom Heroku app</a> again, these are the last 8 songs I liked on SoundCloud. <span style='font-style:italic'>If the cards don't show below, it's probably because my Heroku app is <a href='https://blog.heroku.com/archives/2013/6/20/app_sleeping_on_heroku'>sleeping</a>. Give it time, it'll show.</span></p>
+                <div class="music-container sans">
+                    <div class="song-grid">
+                        <!-- INSTANCES ARE CREATED FROM THE TEMPLATE AND PLACED HERE -->
+                    </div>
+                    <a href="https://soundcloud.com/austinj/likes" class="waves-effect waves-light btn orange darken-2">View more likes</a>
+                </div>
+                <div style="display: none;">
+                    <!-- SONG ELEMENT TEMPLATE -->
+                    <div id="song-template" class="song">
+                        <a href="{{PERMALINK}}"><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="{{SONG_TITLE}}" src="{{COVER_ART}}"></a>
+                    </div>
+                </div>
 
-            <div class='footer'>
-                <div class='divider'></div>
-                <p>Website by Austin Jackson © 2014-<span id='copyright'>2015</span></p>
+
+                <div class='footer'>
+                    <div class='divider'></div>
+                    <p>Website by Austin Jackson © 2014-<span id='copyright'>2015</span></p>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
