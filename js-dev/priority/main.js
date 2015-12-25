@@ -9,6 +9,22 @@ This is so we can use the async HTML attribute to make JavaScript loading non-bl
 
 */
 
+var v = new Viento();
+
+var entityMap = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': '&quot;',
+    "'": '&#39;',
+    "/": '&#x2F;'
+};
+
+function escapeHtml(string) {
+    return String(string).replace(/[&<>"'\/]/g, function (s) {
+        return entityMap[s];
+    });
+}
 
 document.addEventListener("touchstart", function(){}, true);
 
@@ -98,17 +114,31 @@ function createSongElement(t) {
     elem.setAttribute('class', 'song');
     elem.innerHTML = document.getElementById('song-template').innerHTML;
     elem.innerHTML = String(elem.innerHTML).replace('{{PERMALINK}}',t['permalink']);
-    elem.innerHTML = String(elem.innerHTML).replace('{{SONG_TITLE}}',t['song_title']);
+    elem.innerHTML = String(elem.innerHTML).replace('{{SONG_TITLE}}',escapeHtml(t['song_title']));
     elem.innerHTML = String(elem.innerHTML).replace('{{COVER_ART}}',t['cover_art']);
     return elem;
 }
 
 jQuery.get('https://austinjnet-stats.herokuapp.com/api/soundcloud/likes?count=10', function(likes){
+    $('.song-grid').empty();
+    $('.song-grid').removeClass('hidden');
     for(var i = 0; i < likes.length; i++) {
         var elem = createSongElement(likes[i]);
+        $(elem).addClass('hidden');
         $('.song-grid').append(elem);
     }
     $('.tooltipped').tooltip({delay: 0});
+
+    v.burst({
+        elements: $('.song-grid .song'),
+        mode: 'oneAtATime',
+        sortingMethod: "topToBottom",
+        animation: {
+            name: 'zoomIn',
+            duration: '0.25s',
+            type: 'entrance'
+        }
+    });
 });
 
 

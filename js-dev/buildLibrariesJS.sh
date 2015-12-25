@@ -5,3 +5,5 @@ cd normal
 cat * >> ../../js/libraries.js
 cd ..
 cat priority/main.js >> ../js/libraries.js
+
+#uglifyjs ../js/libraries.js --compress --mangle -o ../js/libraries.min.js
