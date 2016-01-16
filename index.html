@@ -80,13 +80,21 @@
             <div class="section">
                 <h5>Recent Activity</h5>
                 <p>Here are some of the things I'm currently working on.</p>
+                <div id="loader-container1">
+                    <h5>Loading</h5>
+                    <div class="loader"></div>
+                </div>
                 <div id="feed">
                 </div>
             </div>
             <div class="section">
                 <h5>Most-used languages</h5>
                 <p>Using a <a href="https://austinjnet-stats.herokuapp.com/api/mostusedlanguages?include_colors=true">custom Heroku app</a> and a couple neat libraries, these are languages I use most in my public repositories. The colors are the same as those of the <a href="https://github.com/github/linguist">Github linguist</a>. The numbers are the number of repositories where that language is considered the primary language, but not necessarily the only language. Tap/hover over the pie slices too! <span style="font-style:italic">If the chart doesn't show below, it's probably because my Heroku app is <a href="https://blog.heroku.com/archives/2013/6/20/app_sleeping_on_heroku">sleeping</a>. Give it time, it'll show.</span></p>
-                <div class="chart-container">
+                <div class="chart-container sans">
+                    <div id="loader-container2">
+                        <h5>Loading</h5>
+                        <div class="loader"></div>
+                    </div>
                     <canvas id="myChart" width="250" height="250"></canvas>
                 </div>
             </div>
@@ -94,37 +102,11 @@
                 <h5>SoundCloud likes</h5>
                 <p>Using a <a href="https://austinjnet-stats.herokuapp.com/api/soundcloud/likes">custom Heroku app</a> again, these are the last 8 songs I liked on SoundCloud. <span style="font-style:italic">If the cards don't show below, it's probably because my Heroku app is <a href="https://blog.heroku.com/archives/2013/6/20/app_sleeping_on_heroku">sleeping</a>. Give it time, it'll show.</span></p>
                 <div class="music-container sans">
-                    <div class="song-grid hidden">
+                    <div class="song-grid">
                         <!-- INSTANCES ARE CREATED FROM THE TEMPLATE AND PLACED HERE -->
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
-                        </div>
-                        <div class="song">
-                            <a href=""><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="Placeholder" src="https://placehold.it/300x300"></a>
+                        <div class="loader-container">
+                            <h5>Loading</h5>
+                            <div class="loader"></div>
                         </div>
                     </div>
                     <a href="https://soundcloud.com/austinj/likes" class="waves-effect waves-light btn orange darken-2">View more likes</a>

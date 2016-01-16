@@ -427,6 +427,7 @@ catch(err){
 if(document.body.clientWidth > 104) {
 
     //Activity feed
+    $('#loader-container1').remove();
     GitHubActivity.feed({
         username: 'au5ton',
         selector: '#feed',
@@ -439,26 +440,67 @@ if(document.body.clientWidth > 104) {
     var graph_data = [];
     var ctx;
     var myDoughnutChart;
-    jQuery.get('https://austinjnet-stats.herokuapp.com/api/mostusedlanguages?include_colors=true',function(data){
-        /*
-        Gets the names of the keys and saves them in `keys` so that we can access
-        `data` with bracket notation (like Swift dictionaries)
-        */
-        for(prop in data) {
-            keys.push(prop);
-        }
 
-        for(var i = 0; i < keys.length; i++) {
-            graph_data.push({
-                value: data[keys[i]]['count'],
-                color: data[keys[i]]['color'],
-                label: keys[i]
+    $.ajax({
+        url: 'https://austinjnet-stats.herokuapp.com/api/mostusedlanguages?include_colors=true',
+        type: 'get',
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+            $('.chart-container').empty();
+            $('.chart-container').html('<h5>Failed to load (HTTP '+XMLHttpRequest.status+')</h5><img style=\'width:60px;height:60px;\' src=\'img/red_x.png\'>');
+        },
+        success: function(data){
+            $('#loader-container2').remove();
+            /*
+            Gets the names of the keys and saves them in `keys` so that we can access
+            `data` with bracket notation (like Swift dictionaries)
+
+            This is becuase the response object `data` isn't an array, it's an object with properties.
+            */
+            for(prop in data) {
+                keys.push(prop);
+            }
+
+            for(var i = 0; i < keys.length; i++) {
+                graph_data.push({
+                    value: data[keys[i]]['count'],
+                    color: data[keys[i]]['color'],
+                    label: keys[i]
+                });
+            }
+            // Get the context of the canvas element we want to select
+            ctx = document.getElementById('myChart').getContext('2d')
+            // And for a doughnut chart
+            myDoughnutChart = new Chart(ctx).Pie(graph_data)
+        }
+    });
+
+    $.ajax({
+        url: 'https://austinjnet-stats.herokuapp.com/api/soundcloud/likes?count=10',
+        type: 'get',
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+            $('.song-grid').empty();
+            $('.song-grid').html('<h5>Failed to load (HTTP '+XMLHttpRequest.status+')</h5><img style=\'width:60px;height:60px;\' src=\'img/red_x.png\'>');
+        },
+        success: function(likes){
+            $('.song-grid').empty();
+            for(var i = 0; i < likes.length; i++) {
+                var elem = createSongElement(likes[i]);
+                $(elem).addClass('hidden');
+                $('.song-grid').append(elem);
+            }
+            $('.tooltipped').tooltip({delay: 0});
+
+            v.burst({
+                elements: $('.song-grid .song'),
+                mode: 'oneAtATime',
+                sortingMethod: "topToBottom",
+                animation: {
+                    name: 'zoomIn',
+                    duration: '0.25s',
+                    type: 'entrance'
+                }
             });
         }
-        // Get the context of the canvas element we want to select
-        ctx = document.getElementById('myChart').getContext('2d')
-        // And for a doughnut chart
-        myDoughnutChart = new Chart(ctx).Pie(graph_data)
     });
 
 }
@@ -472,30 +514,6 @@ function createSongElement(t) {
     elem.innerHTML = String(elem.innerHTML).replace('{{COVER_ART}}',t['cover_art']);
     return elem;
 }
-
-jQuery.get('https://austinjnet-stats.herokuapp.com/api/soundcloud/likes?count=10', function(likes){
-    $('.song-grid').empty();
-    $('.song-grid').removeClass('hidden');
-    for(var i = 0; i < likes.length; i++) {
-        var elem = createSongElement(likes[i]);
-        $(elem).addClass('hidden');
-        $('.song-grid').append(elem);
-    }
-    $('.tooltipped').tooltip({delay: 0});
-
-    v.burst({
-        elements: $('.song-grid .song'),
-        mode: 'oneAtATime',
-        sortingMethod: "topToBottom",
-        animation: {
-            name: 'zoomIn',
-            duration: '0.25s',
-            type: 'entrance'
-        }
-    });
-});
-
-
 
 //Auto Copyright
 document.getElementById('copyright').innerHTML = new Date().getFullYear();
