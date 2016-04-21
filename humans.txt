@@ -2,9 +2,9 @@
 
 
 /* SITE DEV */
-    Developer: Austin Jackson 
+    Developer: Austin Jackson
     Github: au5ton
-    Twitter: @au5ton
+    Twitter: @austinjckson
     From: Houston, Texas
 
     Developer: Tarun Boddupalli
@@ -15,4 +15,3 @@
 
     Materialize.css Contributors
     Website: http://materializecss.com/
-    

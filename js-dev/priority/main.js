@@ -163,7 +163,3 @@ function createSongElement(t) {
 
 //Auto Copyright
 document.getElementById('copyright').innerHTML = new Date().getFullYear();
-/*var birthday = new Date(1998,10,22);
-var age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365);
-var precision = 1000; //However many zeros is how many places
-document.getElementById('age').innerHTML = Math.floor(age*precision)/precision;*/
