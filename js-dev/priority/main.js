@@ -9,8 +9,6 @@ This is so we can use the async HTML attribute to make JavaScript loading non-bl
 
 */
 
-var v = new Viento();
-
 var entityMap = {
     "&": "&amp;",
     "<": "&lt;",
@@ -135,7 +133,7 @@ if(document.body.clientWidth > 104) {
             }
             $('.tooltipped').tooltip({delay: 0});
 
-            v.burst({
+            Viento.burst({
                 elements: $('.song-grid .song'),
                 mode: 'oneAtATime',
                 sortingMethod: "topToBottom",
