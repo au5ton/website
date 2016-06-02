@@ -11,5 +11,8 @@ cd ..
 printf "Adding main.js..."
 cat priority/main.js >> ../js/libraries.js
 printf "done\n"
+printf "Adding gallery.js..."
+cat priority/gallery.js >> ../js/libraries.js
+printf "done\n"
 
-uglifyjs ../js/libraries.js --compress -o ../js/libraries.min.js
+#uglifyjs ../js/libraries.js --compress -o ../js/libraries.min.js

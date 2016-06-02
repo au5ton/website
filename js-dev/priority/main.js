@@ -80,7 +80,6 @@ if(document.body.clientWidth > 104) {
         limit: 6 // optional
     });
 
-
     //Most used languages
     var keys = []; //keys to the Dictionary (object)
     var graph_data = [];
