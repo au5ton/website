@@ -15,25 +15,25 @@
     font-family: 'Lora';
     font-style: normal;
     font-weight: 400;
-    src: url('../font/lora/Lora-Regular.ttf') format('truetype');
+    src: url('../fonts/lora/Lora-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Lora';
     font-style: normal;
     font-weight: 700;
-    src: url('../font/lora/Lora-Bold.ttf') format('truetype');
+    src: url('../fonts/lora/Lora-Bold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Lora';
     font-style: italic;
     font-weight: 400;
-    src:url('../font/lora/Lora-Italic.ttf') format('truetype');
+    src:url('../fonts/lora/Lora-Italic.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Lora';
     font-style: italic;
     font-weight: 700;
-    src:url('../font/lora/Lora-BoldItalic.ttf') format('truetype');
+    src:url('../fonts/lora/Lora-BoldItalic.ttf') format('truetype');
 }
 
 .box {
@@ -177,11 +177,11 @@ body {
         max-width: 50%;
     }
 
-    @media(max-width: 415px) {
-        .gha-activity.gha-small .gha-time {
-            margin-left: 50px;
-        }
-    }
+    // @media(max-width: 415px) {
+    //     .gha-activity.gha-small .gha-time {
+    //         margin-left: 50px;
+    //     }
+    // }
 
     .gha-push-small {
         display: none;
@@ -333,4 +333,5 @@ body {
     visibility: hidden;
 }
 
+@import "gallery.less";
 @import "wearable.less";

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 printf "Adding priority JS..."
-cat priority/jquery-2.1.4.min.js priority/materialize.min.js priority/d3.v3.min.js > ../js/libraries.js
+cat priority/jquery-2.2.4.min.js priority/materialize.min.js priority/d3.v3.min.js > ../js/libraries.js
 printf "done\n"
 cd normal
 printf "Adding the other libraries..."
@@ -11,5 +11,8 @@ cd ..
 printf "Adding main.js..."
 cat priority/main.js >> ../js/libraries.js
 printf "done\n"
+printf "Adding gallery.js..."
+cat priority/gallery.js >> ../js/libraries.js
+printf "done\n"
 
-#uglifyjs ../js/libraries.js --compress --mangle -o ../js/libraries.min.js
+#uglifyjs ../js/libraries.js --compress -o ../js/libraries.min.js

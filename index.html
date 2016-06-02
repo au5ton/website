@@ -8,11 +8,12 @@
     <meta name="robots" content="nosnippet,noimageindex">
     <title>Austin Jackson &bull; Developer</title>
 
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
     <noscript>
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic|Roboto:400,300">
-        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-        <link rel="stylesheet" href="css/materialize.min.css">
-        <link rel="stylesheet" href="css/austin.css">
+        <link rel="stylesheet" href="css/noscript.css">
     </noscript>
 
     <!-- FAVEICON DATA -->
@@ -31,7 +32,7 @@
     <link rel="icon" type="image/png" href="/ico/favicon-16x16.png?v=4" sizes="16x16">
     <link rel="manifest" href="/ico/manifest.json?v=4">
     <link rel="shortcut icon" href="/ico/favicon.ico?v=4">
-    <meta name="msapplication-TileColor" content="#4a9aea">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ico/mstile-144x144.png?v=4">
     <meta name="msapplication-config" content="/ico/browserconfig.xml?v=4">
     <script>
@@ -47,7 +48,9 @@
     <!-- END OF OBLIGATORY TAGS -->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
-    <link rel="stylesheet" href="css/github-activity-0.1.2.min.css">
+    <link rel="stylesheet" href="css/github-activity-0.1.4.min.css">
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="css/default-skin/default-skin.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/austin.css">
@@ -89,9 +92,119 @@
                     <h5>Loading</h5>
                     <div class="loader"></div>
                 </div>
-                <div id="feed">
-                </div>
+                <div id="feed"></div>
             </div>
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Design &amp; Photography</h5>
+                <p>
+                    As a web designer, creative expression and clean interfaces go hand in hand. Photography has been a hobby of mine since 4th grade and is an fun way to express creativity.
+                </p>
+
+                <div class="my-gallery center-align" itemscope itemtype="http://schema.org/ImageGallery">
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/img/showcase/getkeypadco.jpg" itemprop="contentUrl" data-size="1600x2016">
+                            <img src="/img/showcase/getkeypadco_small.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Web design for popular OS X app: <a href="http://getkeypad.co/">Keypad</a></figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/img/showcase/ReaganFilter_model1.jpg" itemprop="contentUrl" data-size="1080x1920">
+                            <img src="/img/showcase/ReaganFilter_model1_small.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Active Snapchat Geofilter for Heights High School (previously Reagan HS)</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/img/showcase/ReaganFilter_model2.jpg" itemprop="contentUrl" data-size="1080x1920">
+                            <img src="/img/showcase/ReaganFilter_model2_small.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Active Snapchat Geofilter for Heights High School (previously Reagan HS)</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="/img/showcase/ReaganFilter_model3.jpg" itemprop="contentUrl" data-size="1080x1920">
+                            <img src="/img/showcase/ReaganFilter_model3_small.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Active Snapchat Geofilter for Heights High School (previously Reagan HS)</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm6.staticflickr.com/5627/23021198513_5a1cd91943_k_d.jpg" itemprop="contentUrl" data-size="2048x1150">
+                            <img src="https://farm6.staticflickr.com/5627/23021198513_a485a97c22_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Golden Gate, from Battery Spencer</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm1.staticflickr.com/636/23351941540_7632846fd9_k_d.jpg" itemprop="contentUrl" data-size="2048x1536">
+                            <img src="https://farm1.staticflickr.com/636/23351941540_de77364c0e_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Point Bonita Lighthouse</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm1.staticflickr.com/665/23020211463_b3fb378211_k_d.jpg" itemprop="contentUrl" data-size="2048x1536">
+                            <img src="https://farm1.staticflickr.com/665/23020211463_98c25be954_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Stanford University</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm1.staticflickr.com/693/23279268359_0a59d199d8_k_d.jpg" itemprop="contentUrl" data-size="2048x1536">
+                            <img src="https://farm1.staticflickr.com/693/23279268359_34a1f77903_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Googleplex</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm2.staticflickr.com/1685/25882559111_0459b96286_k_d.jpg" itemprop="contentUrl" data-size="2048x1536">
+                            <img src="https://farm2.staticflickr.com/1685/25882559111_4594deac81_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">UPenn, from PennApps XIII</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm1.staticflickr.com/337/20018696249_dfb2248947_k_d.jpg" itemprop="contentUrl" data-size="2048x1536">
+                            <img src="https://farm1.staticflickr.com/337/20018696249_9903ca09b0_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">View of the Potomac river tidal basin by the Jefferson Memorial, view of the Washington Monument in the background</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm8.staticflickr.com/7310/16238117967_3169133aa9_k_d.jpg" itemprop="contentUrl" data-size="2048x1365">
+                            <img src="https://farm8.staticflickr.com/7310/16238117967_0cdabd38b6_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Manhattan Island from the Hudson River</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm4.staticflickr.com/3941/15682206076_bf7438f674_k_d.jpg" itemprop="contentUrl" data-size="2048x1536">
+                            <img src="https://farm4.staticflickr.com/3941/15682206076_5d77f2f391_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Arc de Triomphe, Paris</figcaption>
+                    </figure>
+
+                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                        <a href="https://farm4.staticflickr.com/3946/15086100734_8abda98423_k_d.jpg" itemprop="contentUrl" data-size="1536x2048">
+                            <img src="https://farm4.staticflickr.com/3946/15086100734_782eb4ed6a_m_d.jpg" itemprop="thumbnail" />
+                        </a>
+                        <figcaption itemprop="caption description">Eiffel Tower</figcaption>
+                    </figure>
+
+                </div>
+                <div class="gallery-buttons center-align sans">
+                    <a href="https://www.flickr.com/photos/macphage/" class="waves-effect waves-light btn blue accent-3">View more on Flickr</a>
+                </div>
+
+                <!-- <img src="/img/showcase/getkeypadco.jpg"></a>
+                <img src="/img/showcase/ReaganFilter_model1.jpg"></a>
+                <img src="/img/showcase/ReaganFilter_model2.jpg"></a>
+                <img src="/img/showcase/ReaganFilter_model3.jpg"></a> -->
+            </div>
+            <div class="divider"></div>
             <div class="section">
                 <h5>Generated statistics</h5>
                 <p>Using a custom Heroku app, I can generate some real-time statistics about my presence online. There's currently only two services, but there's more to come. <span style="font-style:italic">If loading times are long, it's probably because my Heroku app is <a href="https://blog.heroku.com/archives/2013/6/20/app_sleeping_on_heroku">sleeping</a>. Give it time, it'll show.</span></p>
@@ -131,6 +244,72 @@
                     <p>Website by Austin Jackson © 2014-<span id="copyright">2015</span></p>
                 </div>
             </div>
+        </div>
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <!-- Background of PhotoSwipe.
+            It's a separate element as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+
+                <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+
+                    <div class="pswp__top-bar">
+
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+
+                        <div class="pswp__counter"></div>
+
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                        <!-- <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> -->
+
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </body>
     </html>
