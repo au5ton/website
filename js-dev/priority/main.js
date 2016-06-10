@@ -85,7 +85,7 @@ if(document.body.clientWidth > 104) {
     var myDoughnutChart;
 
     $.ajax({
-        url: 'https://austinjnet-stats.herokuapp.com/api/mostusedlanguages?include_colors=true',
+        url: 'https://austinjnet-stats.herokuapp.com/api/github/languages?include_colors=true',
         type: 'get',
         error: function(XMLHttpRequest, textStatus, errorThrown){
             $('.chart-container').empty();
