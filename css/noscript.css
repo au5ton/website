@@ -8,3 +8,7 @@
 .hidden {
     visibility: visible!important;
 }
+
+.canvas {
+    background: #2196F3;
+}
