@@ -24,9 +24,7 @@ try {
     document.getElementById('canvas').style.background = pattern.toDataUrl();
 }
 catch(err){
-    //If GeoPattern is unsupported... do nothing, fall back on CSS
-
-    document.getElementById('canvas').style.background = '#2196F3'; //GeoPattern fallback
+    //If GeoPattern is unsupported... do nothing, fall back on CSS, just as if they had a JavaScript blocker
 }
 
 if(document.body.clientWidth > 104) {
