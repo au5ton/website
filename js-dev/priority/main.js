@@ -17,18 +17,8 @@ function css_time_to_milliseconds(time_string){var milliseconds,num=parseFloat(t
 document.addEventListener("touchstart", function(){}, true);
 console.log(document.body.clientWidth);
 
-//Geopattern pattern
-try {
-    //throw 'lol hi';
-    var pattern = GeoPattern.generate(new Date());
-    document.getElementById('canvas').style.background = pattern.toDataUrl();
-}
-catch(err){
-    //If GeoPattern is unsupported... do nothing, fall back on CSS, just as if they had a JavaScript blocker
-}
-
 if(document.body.clientWidth > 104) {
-
+    
     //Activity feed
     $('#loader-container1').remove();
     GitHubActivity.feed({
