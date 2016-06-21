@@ -4,3 +4,7 @@
 
     Screw them.
 */
+
+.hidden {
+    visibility: visible!important;
+}

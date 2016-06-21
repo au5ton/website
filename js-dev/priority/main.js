@@ -9,26 +9,13 @@ This is so we can use the async HTML attribute to make JavaScript loading non-bl
 
 */
 
-var entityMap = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': '&quot;',
-    "'": '&#39;',
-    "/": '&#x2F;'
-};
+function escapeHtml(string){return String(string).replace(/[&<>"'\/]/g,function(s){return entityMap[s]})}var entityMap={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","/":"&#x2F;"};
 
-function escapeHtml(string) {
-    return String(string).replace(/[&<>"'\/]/g, function (s) {
-        return entityMap[s];
-    });
-}
+//Thanks: https://gist.github.com/jakebellacera/9261266
+function css_time_to_milliseconds(time_string){var milliseconds,num=parseFloat(time_string,10),unit=time_string.match(/m?s/);switch(unit&&(unit=unit[0]),unit){case"s":milliseconds=1e3*num;break;case"ms":milliseconds=num;break;default:milliseconds=0}return milliseconds}
 
 document.addEventListener("touchstart", function(){}, true);
-
 console.log(document.body.clientWidth);
-
-//We're making this Apple Watch compatible for shits and giggles
 
 //Geopattern pattern
 try {
