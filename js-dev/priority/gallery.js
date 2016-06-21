@@ -19,7 +19,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             figureEl = thumbElements[i]; // <figure> element
 
             // include only element nodes
-            if(figureEl.nodeType !== 1) {
+            if(figureEl.nodeType !== 1 || figureEl.tagName !== 'FIGURE') {
                 continue;
             }
 
@@ -83,7 +83,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             index;
 
         for (var i = 0; i < numChildNodes; i++) {
-            if(childNodes[i].nodeType !== 1) {
+            if(childNodes[i].nodeType !== 1 || childNodes[i].tagName !== 'FIGURE') {
                 continue;
             }
 

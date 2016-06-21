@@ -19,40 +19,12 @@ console.log(document.body.clientWidth);
 
 //Geopattern pattern
 try {
-
-    if(document.body.clientWidth <= 104) {
-        console.log('hello');
-        throw {};
-    }
-
+    //throw 'lol hi';
     var pattern = GeoPattern.generate(new Date());
     document.getElementById('canvas').style.background = pattern.toDataUrl();
-
 }
 catch(err){
-    //If GeoPattern is unsupported... (Which it isn't in IE sometimes, thanks Microsoft)
-    //Generate a new color
-    var color = randomColor({
-        luminosity: 'light'
-    });
-    //Convert to a tinycolor
-    color = tinycolor(color);
-    //If the color is too light
-    if(color.toHsl().l >= 0.7) {
-        color = color.toHsl();
-        //Bring it down to 0.7
-        color.l = 0.7;
-    }
-    //Convert back into a tinycolor
-    color = tinycolor(color);
-    //If the color is too saturated
-    if(color.toHsl().s >= 0.6) {
-        color = color.toHsl();
-        //Bring it down to 0.6
-        color.s = 0.6;
-    }
-    //Apply the color
-    $('#canvas')[0].style.background = tinycolor(color).toHexString();
+    //If GeoPattern is unsupported... do nothing, fall back on CSS, just as if they had a JavaScript blocker
 }
 
 if(document.body.clientWidth > 104) {
@@ -123,7 +95,7 @@ if(document.body.clientWidth > 104) {
             Viento.burst({
                 elements: $('.song-grid .song'),
                 mode: 'oneAtATime',
-                sortingMethod: "topToBottom",
+                sortingMethod: 'topToBottom',
                 animation: {
                     name: 'zoomIn',
                     duration: '0.25s',

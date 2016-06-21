@@ -1,4 +1,4 @@
-// out: ../css/austin.css, sourcemap: false, compress: true
+// out: ../css/austin.css, sourcemap: true, compress: true
 
 // All site styling is done from here and auto-compiled with...
 //https://github.com/lohek/less-autocompile
@@ -6,91 +6,38 @@
 @import "external.less";
 @import "mixins.less";
 
+@austin-color: #2196F3;
 @text-normal: rgb(50,50,50);
 @text-grey: rgb(100,100,100);
 @text-white: rgb(245,245,245);
 
-
-@font-face {
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/lora/Lora-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/lora/Lora-Bold.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 400;
-    src:url('../fonts/lora/Lora-Italic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 700;
-    src:url('../fonts/lora/Lora-BoldItalic.ttf') format('truetype');
-}
+@primary-font: 'Space Mono', 'Menlo', 'Lucida Console', monospace;
+@secondary-font: 'Roboto', sans-serif;
 
 body {
     overflow-x: hidden;
     color: @text-normal;
     font-weight: normal;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: #fff;
 }
 
 .canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
-    background: #fff;
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    // Full page look?
-    //height: 100vh;
-    //max-height: 100vh;
-    transition: all 1s; //Use max-height as a little hack ()
-
-}
-
-.hero-parent {
-    text-align: center;
-    //display: inline-block;
-    .hero {
-        font-family: 'Roboto', sans-serif;
-        text-align: left;
-        display: inline-block;
-        width: auto;
-        h1 {
-            margin-top: 20px;
-            margin-bottom: 0;
-        }
-
-        h5 {
-            margin-top: 0!important;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-    }
+    background: #eee;
 }
 
 
 .content {
     margin: 0;
     padding: 0;
-    background: #fff;
-    font-family: 'Lora', sans-serif;
+    font-family: @primary-font;
 
     .container {
         padding-top: 0.75rem;
@@ -107,6 +54,7 @@ body {
     }
 
     p {
+        font-family: @secondary-font;
         font-size: 1.2rem;
         a {
             color:#3798eb;
@@ -123,7 +71,47 @@ body {
         }
     }
 
+    .hero {
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            font-style: italic;
+        }
+        h5 {
+            margin-top: 0!important;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+    }
 
+}
+
+@media(min-width: 601px) {
+    .content {
+        padding-top: 10px!important;
+    }
+}
+
+//Overwrite the Materialize divider
+.divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.divider.gallerymargin {
+    margin: 20px auto;
+}
+
+.section, .divider {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section.full-size, .divider.full-size {
+    width: 100%;
 }
 
 .footer {
@@ -132,8 +120,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
     p {
+        font-family: @primary-font;
         display: inline-block;
     }
 
@@ -142,58 +130,14 @@ body {
     }
 }
 
-@media(min-width: 415px) {
-    #feed {
-        margin-left: auto;
-        margin-right: auto;
+@media(max-width: 600px) {
+    .section, .divider, .footer {
+        width: 85%;
     }
-}
-
-#feed {
-    //CSS fixes for https://github.com/caseyscarborough/github-activity/ to look less buggy
-
-    max-width: 400px;
-
-    .gha-header {
-        width: ~"calc(100% - 2px)";
-        padding-top: 5px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-    }
-
-    .gha-gravatar {
-        display: none;
-    }
-
-    .gha-github-icon {
-        padding-top: 6px;
-    }
-
-    .gha-push {
-        height: 67px;
-    }
-
-    .gha-activity.gha-small .gha-message {
-        max-width: 50%;
-    }
-
-    .gha-push-small {
-        display: none;
-    }
-
-    .gha-footer {
-        display: none;
-    }
-
-    .gha-feed {
-        border-bottom-style: none;
-    }
-
 }
 
 .sans {
-    font-family: 'Roboto', sans-serif;
+    font-family: @secondary-font;
 }
 
 .chart-container {
@@ -202,6 +146,14 @@ body {
 
 #myChart {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+//Fix for lop-sided-ness on iPhone 5
+@media(max-width: 385px) {
+    #myChart {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .music-container {
@@ -224,6 +176,7 @@ body {
         img {
             width: inherit;
             height: inherit;
+            border-radius: 2px;
         }
 
         &:hover {
