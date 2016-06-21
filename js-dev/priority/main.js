@@ -53,7 +53,7 @@ if(document.body.clientWidth > 104) {
             $('.chart-container').html('<h5>Failed to load (HTTP '+XMLHttpRequest.status+')</h5><img style=\'width:60px;height:60px;\' src=\'img/red_x.png\'>');
         },
         success: function(data){
-            //$('#loader-container2').remove();
+            $('#loader-container2').remove();
             /*
             Gets the names of the keys and saves them in `keys` so that we can access
             `data` with bracket notation (like Swift dictionaries)

@@ -1,4 +1,4 @@
-// out: ../css/austin.css, sourcemap: false, compress: true
+// out: ../css/austin.css, sourcemap: true, compress: true
 
 // All site styling is done from here and auto-compiled with...
 //https://github.com/lohek/less-autocompile
@@ -10,6 +10,9 @@
 @text-normal: rgb(50,50,50);
 @text-grey: rgb(100,100,100);
 @text-white: rgb(245,245,245);
+
+@primary-font: 'Space Mono', sans-serif;
+@secondary-font: 'Roboto', sans-serif;
 
 
 @font-face {
@@ -61,7 +64,7 @@ body {
     margin: 0;
     padding: 0;
     //background: #fff;
-    font-family: 'Space Mono', sans-serif;
+    font-family: @primary-font;
 
     .container {
         padding-top: 0.75rem;
@@ -78,6 +81,7 @@ body {
     }
 
     p {
+        font-family: @secondary-font;
         font-size: 1.2rem;
         a {
             color:#3798eb;
@@ -110,6 +114,7 @@ body {
 
 }
 
+//Overwrite the Materialize divider
 .divider {
     height: 1px;
     overflow: hidden;
@@ -136,8 +141,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
     p {
+        font-family: @primary-font;
         display: inline-block;
     }
 
@@ -146,58 +151,14 @@ body {
     }
 }
 
-@media(min-width: 415px) {
-    #feed {
-        margin-left: auto;
-        margin-right: auto;
+@media(max-width: 600px) {
+    .section, .divider, .footer {
+        width: 85%;
     }
-}
-
-#feed {
-    //CSS fixes for https://github.com/caseyscarborough/github-activity/ to look less buggy
-
-    max-width: 400px;
-
-    .gha-header {
-        width: ~"calc(100% - 2px)";
-        padding-top: 5px;
-        padding-right: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-    }
-
-    .gha-gravatar {
-        display: none;
-    }
-
-    .gha-github-icon {
-        padding-top: 6px;
-    }
-
-    .gha-push {
-        height: 67px;
-    }
-
-    .gha-activity.gha-small .gha-message {
-        max-width: 50%;
-    }
-
-    .gha-push-small {
-        display: none;
-    }
-
-    .gha-footer {
-        display: none;
-    }
-
-    .gha-feed {
-        border-bottom-style: none;
-    }
-
 }
 
 .sans {
-    font-family: 'Roboto', sans-serif;
+    font-family: @secondary-font;
 }
 
 .chart-container {
@@ -228,6 +189,7 @@ body {
         img {
             width: inherit;
             height: inherit;
+            border-radius: 2px;
         }
 
         &:hover {

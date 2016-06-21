@@ -29,3 +29,44 @@
     95% {left: 120%;}
     to {left: 100%;}
 }
+
+
+@media(min-width: 415px) {
+    #feed {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#feed {
+    //CSS fixes for https://github.com/caseyscarborough/github-activity/ to look less buggy, and to customize a little
+    max-width: 400px;
+    .gha-header {
+        width: ~"calc(100% - 2px)";
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    .gha-gravatar {
+        display: none;
+    }
+    .gha-github-icon {
+        padding-top: 6px;
+    }
+    .gha-push {
+        height: 67px;
+    }
+    .gha-activity.gha-small .gha-message {
+        max-width: 50%;
+    }
+    .gha-push-small {
+        display: none;
+    }
+    .gha-footer {
+        display: none;
+    }
+    .gha-feed {
+        border-bottom-style: none;
+    }
+}

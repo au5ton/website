@@ -19,7 +19,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             figureEl = thumbElements[i]; // <figure> element
 
             // include only element nodes
-            if(figureEl.nodeType !== 1) {
+            if(figureEl.nodeType !== 1 || figureEl.tagName !== 'FIGURE') {
                 continue;
             }
 
