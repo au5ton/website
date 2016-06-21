@@ -74,6 +74,8 @@ if(document.body.clientWidth > 104) {
             $('#canvas')[0].style.height = canvasStartHeight+'px';
             setTimeout(function(){
                 $('#canvas')[0].style.height = 'auto';
+                //We can't do this because Safari (and potentially others)
+                //glitch out when attemtping to transition from canvasStartHeight to 'auto' 😤
             },css_time_to_milliseconds(window.getComputedStyle($('#canvas')[0]).getPropertyValue('transition-duration')));
         }
     });
