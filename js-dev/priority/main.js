@@ -15,12 +15,7 @@ function escapeHtml(string){return String(string).replace(/[&<>"'\/]/g,function(
 function css_time_to_milliseconds(time_string){var milliseconds,num=parseFloat(time_string,10),unit=time_string.match(/m?s/);switch(unit&&(unit=unit[0]),unit){case"s":milliseconds=1e3*num;break;case"ms":milliseconds=num;break;default:milliseconds=0}return milliseconds}
 
 document.addEventListener("touchstart", function(){}, true);
-
 console.log(document.body.clientWidth);
-
-//For animating the main card later
-var canvasStartHeight = $('#canvas')[0].clientHeight;
-$('#canvas')[0].style.height = '100vh';
 
 //Geopattern pattern
 try {
@@ -61,25 +56,6 @@ catch(err){
 }
 
 if(document.body.clientWidth > 104) {
-
-    //Cool entrance with my name
-    Viento.fire({
-        element: $('.hero')[0],
-        animation: {
-            name: 'fadeInDown',
-            duration: '1s',
-            type: 'entrance'
-        },
-        callback: function(){
-            $('#canvas')[0].style.height = canvasStartHeight+'px';
-            setTimeout(function(){
-                $('#canvas')[0].style.height = 'auto';
-                //We can't do this because Safari (and potentially others)
-                //glitch out when attemtping to transition from canvasStartHeight to 'auto' 😤
-            },css_time_to_milliseconds(window.getComputedStyle($('#canvas')[0]).getPropertyValue('transition-duration')));
-        }
-    });
-
 
     //Activity feed
     $('#loader-container1').remove();
