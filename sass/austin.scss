@@ -103,7 +103,7 @@ body {
 .card-panel {
     @include z-depth-1();
     @include animation-name(floatUp);
-    @include animation-duration(1.5s);
+    @include animation-duration(1s);
     @include animation-iteration-count(1);
 }
 

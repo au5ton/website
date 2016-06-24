@@ -15,7 +15,7 @@
 }
 
 @include keyframes(floatUp) {
-    0%, 25% {
+    0% {
         @include z-depth-0-alt();
         opacity: 0;
         @include transform(translateY(10px));
