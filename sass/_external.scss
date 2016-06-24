@@ -1,4 +1,4 @@
-// main: austin.less
+@import 'bourbon/bourbon';
 
 //Loading bar
 //From: http://blog.pexels.com/css-only-loaders/
@@ -18,10 +18,10 @@
     width: 200px;
     height: 4px;
     background-color: #2980b9;
-    animation: loading 2s linear infinite;
+    @include animation(loading 2s linear infinite);
 }
 
-@keyframes loading {
+@include keyframes(loading) {
     from {left: -200px; width: 30%;}
     50% {width: 30%;}
     70% {width: 70%;}
@@ -29,7 +29,6 @@
     95% {left: 120%;}
     to {left: 100%;}
 }
-
 
 @media(min-width: 415px) {
     #feed {
@@ -42,7 +41,7 @@
     //CSS fixes for https://github.com/caseyscarborough/github-activity/ to look less buggy, and to customize a little
     max-width: 400px;
     .gha-header {
-        width: ~"calc(100% - 2px)";
+        width: calc(100% - 2px);
         padding-top: 5px;
         padding-right: 10px;
         padding-bottom: 10px;
