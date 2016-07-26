@@ -55,9 +55,6 @@
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/austin.css">
 
-    <!-- JAVASCRIPT IMPORTING -->
-    <script async src="js/libraries.min.js"></script>
-
 </head>
 <body>
     <div class="row">
@@ -80,7 +77,7 @@
             </div>
             <div class="section card-panel">
                 <h5>Contact Me</h5>
-                <p>The <span style="font-style:italic;">fastest</span> way to contact me is with <a href="http://telegram.me/austinj">Telegram</a>. If you'd like to contact me privately, I'm always open for <a href="mailto:austinjckson@gmail.com">emails</a>. If you'd like to see more of my software, as mentioned above, I'm on <a href="http://github.com/au5ton">Github</a>. Sometimes I'm on <a class="" href="http://twitter.com/au5ton">Twitter</a>. If you're a <a href="http://www.linkedin.com/in/austindjackson/">LinkedIn</a> kind of person, click that link you just read over. I also occasionally upload a video or two to <a href="https://youtube.com/c/austinjckson">YouTube</a>.</p>
+                <p>The <span style="font-style:italic;">fastest</span> way to contact me is with <a href="http://telegram.me/austinj">Telegram</a>. If you'd like to contact me privately, I'm always open for <a href="mailto:austinjckson@gmail.com">emails</a>. If you'd like to see more of my software, as mentioned above, I'm on <a href="http://github.com/au5ton">Github</a>. Sometimes I'm on <a class="" href="http://twitter.com/au5ton">Twitter</a>. If you're a <a href="http://www.linkedin.com/in/austindjackson/">LinkedIn</a> kind of person, click that link you just read over. I also occasionally upload a video or two to <a href="https://youtube.com/c/austinjckson">YouTube</a>. I love sharing music: here's my <a href="https://soundcloud.com/austinj/likes">SoundCloud likes</a> and <a href="http://www.last.fm/user/au5ton">Last.fm scrobblings</a>.</p>
             </div>
             <div class="section card-panel">
                 <h5>Blog</h5>
@@ -217,26 +214,6 @@
                     <canvas id="myChart" width="250" height="250"></canvas>
                 </div>
             </div>
-            <div class="section card-panel">
-                <h5 class="small">SoundCloud likes</h5>
-                <p>These are the last couple songs I liked on SoundCloud.</span></p>
-                <div class="center-align"><a href="https://soundcloud.com/austinj/likes" class="waves-effect waves-light btn orange darken-2 sans">View more on SoundCloud</a></div>
-            </div>
-            <div class="music-container sans">
-                <div class="song-grid">
-                    <!-- INSTANCES ARE CREATED FROM THE TEMPLATE AND PLACED HERE -->
-                    <div class="loader-container card-panel">
-                        <h5>Loading</h5>
-                        <div class="loader"></div>
-                    </div>
-                </div>
-            </div>
-            <div style="display:none;">
-                <!-- SONG ELEMENT TEMPLATE -->
-                <div id="song-template" class="song animated">
-                    <a href="{{PERMALINK}}"><img class="tooltipped" data-position="top" data-delay="0" data-tooltip="{{SONG_TITLE}}" src="{{COVER_ART}}"></a>
-                </div>
-            </div>
             <div class="footer card-panel">
                 <p>Website by Austin Jackson. <br />Copyright 2014-<span id="copyright">2015</span></p>
             </div>
@@ -308,6 +285,8 @@
             </div>
 
         </div>
+        <!-- JAVASCRIPT IMPORTING -->
+        <script async src="js/libraries.min.js"></script>
         <script>
         document.getElementById('jswarning').remove();
         </script>

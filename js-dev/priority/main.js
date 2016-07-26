@@ -18,7 +18,7 @@ document.addEventListener("touchstart", function(){}, true);
 console.log(document.body.clientWidth);
 
 if(document.body.clientWidth > 104) {
-    
+
     //Activity feed
     $('#loader-container1').remove();
     GitHubActivity.feed({
@@ -63,35 +63,6 @@ if(document.body.clientWidth > 104) {
             ctx = document.getElementById('myChart').getContext('2d')
             // And for a doughnut chart
             myDoughnutChart = new Chart(ctx).Pie(graph_data)
-        }
-    });
-
-    $.ajax({
-        url: 'https://austinjnet-stats.herokuapp.com/api/soundcloud/likes?count=10',
-        type: 'get',
-        error: function(XMLHttpRequest, textStatus, errorThrown){
-            $('.song-grid').empty();
-            $('.song-grid').html('<h5>Failed to load (HTTP '+XMLHttpRequest.status+')</h5><img style=\'width:60px;height:60px;\' src=\'img/red_x.png\'>');
-        },
-        success: function(likes){
-            $('.song-grid').empty();
-            for(var i = 0; i < likes.length; i++) {
-                var elem = createSongElement(likes[i]);
-                $(elem).addClass('hidden');
-                $('.song-grid').append(elem);
-            }
-            $('.tooltipped').tooltip({delay: 0});
-
-            Viento.burst({
-                elements: $('.song-grid .song'),
-                mode: 'oneAtATime',
-                sortingMethod: 'topToBottom',
-                animation: {
-                    name: 'zoomIn',
-                    duration: '0.25s',
-                    type: 'entrance'
-                }
-            });
         }
     });
 
