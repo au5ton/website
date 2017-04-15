@@ -5,7 +5,6 @@
 
 @import 'bourbon/bourbon';
 @import 'external';
-@import 'animation';
 @import 'shadow';
 
 //Thanks Google: https://material.google.com/style/color.html#color-color-palette
@@ -15,6 +14,8 @@ $text-normal: rgb(50,50,50);
 $text-grey: rgb(100,100,100);
 $text-white: rgb(245,245,245);
 
+//Fonts stolen from Github CSS because they're adaptive and clever
+$github-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Roboto', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $primary-font: 'Space Mono', 'Menlo', 'Lucida Console', monospace;
 $secondary-font: 'Roboto', sans-serif;
 
@@ -28,7 +29,7 @@ body {
 .content {
     margin: 0;
     padding: 0;
-    font-family: $primary-font;
+    font-family: $secondary-font;
 
     .container {
         padding-top: 0.75rem;
@@ -63,13 +64,13 @@ body {
     }
 
     .hero {
-        h2 {
+        .title {
             margin-top: 20px;
             margin-bottom: 0;
-            font-weight: normal;
+            font-weight: 900;
             font-style: italic;
         }
-        h5 {
+        .subtitle {
             margin-top: 0!important;
             margin-bottom: 20px;
             font-weight: normal;
@@ -110,7 +111,7 @@ body {
 }
 
 @media(max-width: 600px) {
-    .section, .divider, .footer {
+    .section, .divider {
         width: 85%;
     }
 }
@@ -119,28 +120,30 @@ body {
     font-family: $secondary-font;
 }
 
-.chart-container {
-    text-align: center;
-}
-
-#myChart {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    display: inline-block!important;
-    max-height: 350px;
-    max-width: 350px;
-}
-
-//Fix for lop-sided-ness on iPhone 5
-@media(max-width: 385px) {
-    #myChart {
-        width: 200px;
-        height: 200px;
-    }
-}
-
 .inline-block {
     display: inline-block;
 }
 .hidden {
     visibility: hidden;
+}
+
+.extra-margin {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.resume-box {
+  text-align: center;
+  h5, p {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.footer {
+  font-style: italic;
+  font-weight: 400;
+  color: $text-grey;
+  font-size: 1rem!important;
 }
