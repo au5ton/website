@@ -147,3 +147,18 @@ body {
   color: $text-grey;
   font-size: 1rem!important;
 }
+
+.almamater {
+    //padding-left: 25px!important;
+    li {
+        display: block;
+        //list-style-type: disc!important;
+        font-weight: 400;
+        font-size: 1.2rem;
+        span {
+            font-weight: 400;
+            font-style: italic;
+            color: lighten($text-grey, 20%);
+        }
+    }
+}
