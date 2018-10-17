@@ -2,16 +2,16 @@
 
 
 /* SITE DEV */
-    Developer: Austin Jackson
-    Github: au5ton
-    Twitter: @austinjckson
-    From: Houston, Texas
+	Developer: Austin Jackson
+	Github: au5ton
+	Twitter: @austinjckson
+	From: Houston, Texas
 
-    Developer: Tarun Boddupalli
-    Github: tarunbod
-    Twitter: @tarunbod
+	Developer: Tarun Boddupalli
+	Github: tarunbod
+	Twitter: @tarunbod
 
 /* THANKS */
 
-    Materialize.css Contributors
-    Website: http://materializecss.com/
+	Materialize.css Contributors
+	Website: http://materializecss.com/

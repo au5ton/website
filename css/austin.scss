@@ -20,124 +20,124 @@ $primary-font: 'Space Mono', 'Menlo', 'Lucida Console', monospace;
 $secondary-font: 'Roboto', sans-serif;
 
 body {
-    overflow-x: hidden;
-    color: $text-normal;
-    font-weight: normal;
-    background: $background-color;
+	overflow-x: hidden;
+	color: $text-normal;
+	font-weight: normal;
+	background: $background-color;
 }
 
 .content {
-    margin: 0;
-    padding: 0;
-    font-family: $secondary-font;
+	margin: 0;
+	padding: 0;
+	font-family: $secondary-font;
 
-    .container {
-        padding-top: 0.75rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+	.container {
+		padding-top: 0.75rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
 
-    h5 {
-        font-size: 1.64rem;
-        font-weight: 700;
-        &.small {
-            font-size: 1.28rem;
-        }
-    }
+	h5 {
+		font-size: 1.64rem;
+		font-weight: 700;
+		&.small {
+			font-size: 1.28rem;
+		}
+	}
 
-    p {
-        font-family: $secondary-font;
-        font-size: 1.2rem;
-        a {
-            color:#3798eb;
-            text-decoration: none;
-            &:hover, &:focus {
-                color:#005098;
-                text-decoration: underline;
-            }
-        }
-        a:focus {
-            outline: thin dotted;
-            outline: 5px auto -webkit-focus-ring-color;
-            outline-offset:-2px
-        }
-    }
+	p {
+		font-family: $secondary-font;
+		font-size: 1.2rem;
+		a {
+			color:#3798eb;
+			text-decoration: none;
+			&:hover, &:focus {
+				color:#005098;
+				text-decoration: underline;
+			}
+		}
+		a:focus {
+			outline: thin dotted;
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset:-2px
+		}
+	}
 
-    .hero {
-        .title {
-            margin-top: 20px;
-            margin-bottom: 0;
-            font-weight: 900;
-            font-style: italic;
-        }
-        .subtitle {
-            margin-top: 0!important;
-            margin-bottom: 20px;
-            font-weight: normal;
-        }
-    }
+	.hero {
+		.title {
+			margin-top: 20px;
+			margin-bottom: 0;
+			font-weight: 900;
+			font-style: italic;
+		}
+		.subtitle {
+			margin-top: 0!important;
+			margin-bottom: 20px;
+			font-weight: normal;
+		}
+	}
 
 }
 
 @media(min-width: 601px) {
-    .content {
-        padding-top: 10px!important;
-    }
+	.content {
+		padding-top: 10px!important;
+	}
 }
 
 //Overwrite the Materialize divider
 .divider {
-    height: 1px;
-    overflow: hidden;
-    background-color: rgba(0,0,0,0.35);
+	height: 1px;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.35);
 }
 
 .divider.gallerymargin {
-    margin: 20px auto;
+	margin: 20px auto;
 }
 
 .section, .divider {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .section.full-size, .divider.full-size {
-    width: 100%;
+	width: 100%;
 }
 
 .card-panel {
-    @include z-depth-1();
+	@include z-depth-1();
 }
 
 @media(max-width: 600px) {
-    .section, .divider {
-        width: 85%;
-    }
+	.section, .divider {
+		width: 85%;
+	}
 }
 
 .sans {
-    font-family: $secondary-font;
+	font-family: $secondary-font;
 }
 
 .inline-block {
-    display: inline-block;
+	display: inline-block;
 }
 .hidden {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .extra-margin {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .resume-box {
   text-align: center;
   h5, p {
-    display: inline-block;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+	display: inline-block;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
   }
 }
 
@@ -149,16 +149,16 @@ body {
 }
 
 .almamater {
-    //padding-left: 25px!important;
-    li {
-        display: block;
-        //list-style-type: disc!important;
-        font-weight: 400;
-        font-size: 1.2rem;
-        span {
-            font-weight: 400;
-            font-style: italic;
-            color: lighten($text-grey, 20%);
-        }
-    }
+	//padding-left: 25px!important;
+	li {
+		display: block;
+		//list-style-type: disc!important;
+		font-weight: 400;
+		font-size: 1.2rem;
+		span {
+			font-weight: 400;
+			font-style: italic;
+			color: lighten($text-grey, 20%);
+		}
+	}
 }
