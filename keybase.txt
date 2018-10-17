@@ -4,47 +4,78 @@ https://keybase.io/austinj
 
 I hereby claim:
 
-  * I am an admin of http://austinj.net
+  * I am an admin of https://austinj.net
   * I am austinj (https://keybase.io/austinj) on keybase.
-  * I have a public key ASCNU5kpoAXfi0B2cB-gwWNs7PY6zRtH6SmbcWgpiuS0igo
+  * I have a public key with fingerprint 17BA 7F6C 7281 5A63 E16D  A07C D15C FEA0 EF51 E1F5
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "010187ce109f8c3fb191f681b0fafa80a864a1132e39fc0af1152d7e23a7cf74b22d0a",
-            "host": "keybase.io",
-            "kid": "01208d539929a005df8b4076701fa0c1636cecf63acd1b47e9299b7168298ae4b48a0a",
-            "uid": "e7dc6bb8279cdf6d3a59ae0002eae719",
-            "username": "austinj"
-        },
-        "service": {
-            "hostname": "austinj.net",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "010187ce109f8c3fb191f681b0fafa80a864a1132e39fc0af1152d7e23a7cf74b22d0a",
+      "fingerprint": "17ba7f6c72815a63e16da07cd15cfea0ef51e1f5",
+      "host": "keybase.io",
+      "key_id": "d15cfea0ef51e1f5",
+      "kid": "010187ce109f8c3fb191f681b0fafa80a864a1132e39fc0af1152d7e23a7cf74b22d0a",
+      "uid": "e7dc6bb8279cdf6d3a59ae0002eae719",
+      "username": "austinj"
     },
-    "client": {
-        "name": "keybase.io go client",
-        "version": "1.0.16"
-    },
-    "ctime": 1472010074,
-    "expire_in": 504576000,
     "merkle_root": {
-        "ctime": 1472010002,
-        "hash": "3072f8dbea2ade0543868694d90ba7b4eb79107afec1ed75894b517681d70683f4dea400b114e8832cdb1efe6244af2dc062c6008a8461f6639cb4b5e6500774",
-        "seqno": 598060
+      "ctime": 1539797712,
+      "hash_meta": "6276113f93400bd935908914a6c49651be097b6193224f6b272aee337a6bea17",
+      "seqno": 3810221
     },
-    "prev": "497e5310f719429933d36f55f6ba9ff19e4621b32c9b675b0906037b3141ac5f",
-    "seqno": 44,
-    "tag": "signature"
+    "revoke": {
+      "sig_ids": [
+        "3d2434f1bf00865bafc9868f0e46b24ccf950ea75dfed90148d6d086b441317b0f"
+      ]
+    },
+    "service": {
+      "hostname": "austinj.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1539797726,
+  "expire_in": 157680000,
+  "prev": "6ff8cc44b2a03cb596a15262a3bf6946129c45cde2ca5a93eaa3169169aa0147",
+  "seqno": 86,
+  "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgjVOZKaAF34tAdnAfoMFjbOz2Os0bR+kpm3FoKYrktIoKp3BheWxvYWTFAvJ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxODdjZTEwOWY4YzNmYjE5MWY2ODFiMGZhZmE4MGE4NjRhMTEzMmUzOWZjMGFmMTE1MmQ3ZTIzYTdjZjc0YjIyZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOGQ1Mzk5MjlhMDA1ZGY4YjQwNzY3MDFmYTBjMTYzNmNlY2Y2M2FjZDFiNDdlOTI5OWI3MTY4Mjk4YWU0YjQ4YTBhIiwidWlkIjoiZTdkYzZiYjgyNzljZGY2ZDNhNTlhZTAwMDJlYWU3MTkiLCJ1c2VybmFtZSI6ImF1c3RpbmoifSwic2VydmljZSI6eyJob3N0bmFtZSI6ImF1c3RpbmoubmV0IiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNiJ9LCJjdGltZSI6MTQ3MjAxMDA3NCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDcyMDEwMDAyLCJoYXNoIjoiMzA3MmY4ZGJlYTJhZGUwNTQzODY4Njk0ZDkwYmE3YjRlYjc5MTA3YWZlYzFlZDc1ODk0YjUxNzY4MWQ3MDY4M2Y0ZGVhNDAwYjExNGU4ODMyY2RiMWVmZTYyNDRhZjJkYzA2MmM2MDA4YTg0NjFmNjYzOWNiNGI1ZTY1MDA3NzQiLCJzZXFubyI6NTk4MDYwfSwicHJldiI6IjQ5N2U1MzEwZjcxOTQyOTkzM2QzNmY1NWY2YmE5ZmYxOWU0NjIxYjMyYzliNjc1YjA5MDYwMzdiMzE0MWFjNWYiLCJzZXFubyI6NDQsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAIg045bwNZiyBWN//huY7Z0zQ6d+wuE7DtIRR233Kd+5AoUwySCI4XBDcWWq7tBhi1vSDl6pAu0z/3DmLvHu1AqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIH0JgIE5StjuiPFv5ETHo04B+W4uTRga0I+BPyNbErH4o3RhZ80CAqd2ZXJzaW9uAQ==
+-----BEGIN PGP MESSAGE-----
+
+owGtU3tsFEUcvl6Rl0WOVyE8LCwNJMpjZh+zu4dAonBADIQWhcYWjtndmXZpe3vs
+7V0pTUsVCiKhBaUgFGIsWq0UHykWShpSQSEVLUQpiBgBWx5FSAsikRbR2UYSNf5p
+MslkZr7f9/vm+2a2DIj39I0bePxqc8Ge9dPiTrZrnvQTdnsBp1lGPucv4LJJz0Ry
+DBJxgtmmwfk5AAFUZJ1AoFJFF6gGVUiRAjVAMcUKwAoSMYQCTwSV6gBTCCXekAkv
+YFmnsqjxvAEwN4mjZiiT2GHbDDmMFsoalinSZV6BEkYCgcjAQNYNKOmUYECoBAmk
+EivMsiJuBROn4QiZYlpsjy2CPfL+A/8/64720BHZ0JGmKbys6gZFhoAlFRMAAE8w
+kaHqAiPEDuFcwtA4GnHM0AqucBKXS+zsHBK0LctxvdUd00VASVBlVZYhz+6HI1nB
+XOJgVoh4GTFRVBVEADRDFSQVKCoUMdJFFUlQI0CVNQRVgedFijRe5jEhgiBjpBEM
+ZSYjQlaGLM4vKBDwPGQKbBKzsonbPGJmMtcinD+dEwxeFBqjIoUaBUBBkoapripI
+oYCIjFfUdapKgGBZMigxVABFxUAGQ2qiCAUWH6Dc0kK3nR0z9R56N6h/GjAlRBwm
+KWxbjqVbOewgy3HCEb9rjJMfdpF5RAv+xRHUzJDBXgmriBE7YlohZhRD/sszHk3i
+yKqwaZOg6SIkGSksCOD2ITHXRMoS10UWIQaCrkkqwixbxGNBo0gVEeRVXZR0g/A6
+lrAqEIwFiFQ2MGb3/JuJCmvl4EzGyawLYSdqE66w/0av0MsT19czJnFcr87evm3v
+dLfaVee3W49+1mNe91t5+vfzPdp58IvP89rsDO/mlwevuJNCR+WDL6dVtxyK9T3W
+vfpIXXLVhx9tHjoZVjwxPO7ShBH+k1/dbZmgv59Zesx+2P5BQmLew7Vr9q9a3oe7
+PjhjYsrPi/Z/17ltaUdsw5rY2WP9aobWLry8N60+rbL+LX9gfWjXTP6oeZObUzzv
+QXJJc0PH9cLyhroXB91Ob0wt2lYwY1zZZw/aosmLa1oaU0fu3fTUvOat3ZVX5hWl
+0TN7stqPfO71rQ2saznsOdAwLHvVokHjV258/PSdtppzHt+y9bcSRjaNEctiTw+4
+Ldm1DU11FSXr7hlx3bO7osMe7tj9Male3qt1zzcH30ibM/XdWNL0TaOLy8uHJHbl
+3w8kx7363syLtVcrfrzbuOX2t6eSAucrM5q+7hf1zp+VM2hJoEo9mtxyxduRX/R8
++alAU5lTXzaq1Cg9WJQdLiweveSFeycqMnaevvDsgn2X0q9VTz5l1sza/kPxlqRz
+y8YeOF7aPDZ1/jN5c6znRk3v3XarZO3hwu27fsqc0rn4hq/02tyOpvgZC14587qA
+tl6ccL/45tY2ePOkItNAfNdLN/Dw1vGzar+YW/lJYmvt4d8TUqrPi0/2blYPiQXm
+pzuiY1dXNQjxuxdeuVxSt2F6btgK/NHVMKKeX1PRvji4vGvMxM48b406pNyXC5IT
+36YJO20hKTp/w4V2dPTNqb/2OXBWSF/w/b6B3t8s/k8=
+=CxeW
+-----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
@@ -52,3 +83,4 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/austinj
 
 ==================================================================
+
