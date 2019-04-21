@@ -68,12 +68,12 @@ body {
                 font-weight: 900;
                 font-style: italic;
                 //font-size: 3.8rem;
-                text-shadow: 0px 0px 10px $text-normal;
+                text-shadow: 0px 0px 20px $text-normal;
             }
             .subtitle {
                 margin-top: 0;
                 font-size: 1.6em;
-                text-shadow: 0px 0px 6px $text-normal;
+                text-shadow: 0px 0px 20px $text-normal;
             }
             @media (min-width: 600px) {
                 .title {
