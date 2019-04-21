@@ -1,164 +1,150 @@
 ---
-# this ensures Jekyll reads the file to be transformed into CSS later
-# only Main files contain this front matter, not partials.
 ---
 
-//@import 'bourbon/bourbon';
-//@import 'external';
-//@import 'shadow';
-
 //Thanks Google: https://material.google.com/style/color.html#color-color-palette
-$background-color: #e4e4e4;
+$google: #e4e4e4;
 
-$text-normal: rgb(50,50,50);
-$text-grey: rgb(100,100,100);
-$text-white: rgb(245,245,245);
+$text-normal: #323232;
+$text-grey: #646464;
+$text-white: #f5f5f5;
 
-//Fonts stolen from Github CSS because they're adaptive and clever
-$github-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Roboto', Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$primary-font: 'Space Mono', 'Menlo', 'Lucida Console', monospace;
-$secondary-font: 'Roboto', sans-serif;
+$monospace: 'Space Mono', 'Menlo', 'Lucida Console', monospace;
+$font: 'Roboto', sans-serif;
 
+html,
 body {
-	overflow-x: hidden;
-	color: $text-normal;
-	font-weight: normal;
-	background: $background-color;
+    width: 100%;
+}
+body {
+    background: $google;
+    height: 100%;
+    width: 100%;
+    font-family: $font;
+}
+.hero {
+    color: $text-white;
+    width: 100%;
+    background-image: url('/img/magi.jpg');
+    //background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 2px rgba(0,0,0,.14);
+    @media (min-width: 600px) {
+        text-align: center;
+    }
+    @media (min-width: 1200px) {
+        //%// .body max-height is 1280px
+        //%// .col.m10 width is 83.3333333333
+        //%// .body.section width is 70%
+        max-width: calc(1200px * 0.666666666667 * 0.7 - 0.75rem);
+        border-radius: 2px;
+        margin-top: 30px;
+    }
+
+    .name {
+        margin-bottom: 0px;
+        height: 420px;
+        padding: 0 .75rem;
+
+        .table {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+        .wrap {
+            display: table-cell;
+            vertical-align: bottom;
+            height: 100%;
+            width: 100%;
+            padding: 5px;
+            @media (min-width: 600px) {
+                vertical-align: middle;
+            }
+        }
+        .content {
+            .title {
+                margin-bottom: 0px;
+                font-weight: 900;
+                font-style: italic;
+                //font-size: 3.8rem;
+                text-shadow: 0px 0px 20px $text-normal;
+            }
+            .subtitle {
+                margin-top: 0;
+                font-size: 1.6em;
+                text-shadow: 0px 0px 20px $text-normal;
+            }
+            @media (min-width: 600px) {
+                .title {
+                    font-size: 3.5rem;
+                }
+                .subtitle {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+.body {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .section {
+        width: 70%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        @media (max-width: 600px) {
+            width: 85%;
+        }
+
+        h5 {
+            font-size: 1.64rem;
+            font-weight: 700;
+            &.small {
+                font-size: 1.28rem;
+            }
+        }
+    
+        p {
+            font-family: $font;
+            font-size: 1.2rem;
+            a {
+                color:#3798eb;
+                text-decoration: none;
+                &:hover, &:focus {
+                    color:#005098;
+                    text-decoration: underline;
+                }
+            }
+            a:focus {
+                outline: thin dotted;
+                outline: 5px auto -webkit-focus-ring-color;
+                outline-offset:-2px
+            }
+        }
+        .almamater {
+            //padding-left: 25px!important;
+            li {
+                display: block;
+                //list-style-type: disc!important;
+                font-weight: 400;
+                font-size: 1.2rem;
+                span {
+                    font-weight: 400;
+                    font-style: italic;
+                    color: lighten($text-grey, 20%);
+                }
+            }
+        }
+    }
+    .footer {
+        font-style: italic;
+        font-weight: 400;
+        color: $text-grey;
+        font-size: 1rem!important;
+    }
 }
 
-.content {
-	margin: 0;
-	padding: 0;
-	font-family: $secondary-font;
-
-	.container {
-		padding-top: 0.75rem;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-	}
-
-	h5 {
-		font-size: 1.64rem;
-		font-weight: 700;
-		&.small {
-			font-size: 1.28rem;
-		}
-	}
-
-	p {
-		font-family: $secondary-font;
-		font-size: 1.2rem;
-		a {
-			color:#3798eb;
-			text-decoration: none;
-			&:hover, &:focus {
-				color:#005098;
-				text-decoration: underline;
-			}
-		}
-		a:focus {
-			outline: thin dotted;
-			outline: 5px auto -webkit-focus-ring-color;
-			outline-offset:-2px
-		}
-	}
-
-	.hero {
-		.title {
-			margin-top: 20px;
-			margin-bottom: 0;
-			font-weight: 900;
-			font-style: italic;
-		}
-		.subtitle {
-			margin-top: 0!important;
-			margin-bottom: 20px;
-			font-weight: normal;
-		}
-	}
-
-}
-
-@media(min-width: 601px) {
-	.content {
-		padding-top: 10px!important;
-	}
-}
-
-//Overwrite the Materialize divider
-.divider {
-	height: 1px;
-	overflow: hidden;
-	background-color: rgba(0,0,0,0.35);
-}
-
-.divider.gallerymargin {
-	margin: 20px auto;
-}
-
-.section, .divider {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.section.full-size, .divider.full-size {
-	width: 100%;
-}
-
-.card-panel {
-	//@include z-depth-1();
-}
-
-@media(max-width: 600px) {
-	.section, .divider {
-		width: 85%;
-	}
-}
-
-.sans {
-	font-family: $secondary-font;
-}
-
-.inline-block {
-	display: inline-block;
-}
-.hidden {
-	visibility: hidden;
-}
-
-.extra-margin {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-}
-
-.resume-box {
-  text-align: center;
-  h5, p {
-	display: inline-block;
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
-  }
-}
-
-.footer {
-  font-style: italic;
-  font-weight: 400;
-  color: $text-grey;
-  font-size: 1rem!important;
-}
-
-.almamater {
-	//padding-left: 25px!important;
-	li {
-		display: block;
-		//list-style-type: disc!important;
-		font-weight: 400;
-		font-size: 1.2rem;
-		span {
-			font-weight: 400;
-			font-style: italic;
-			color: lighten($text-grey, 20%);
-		}
-	}
-}
