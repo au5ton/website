@@ -3,9 +3,9 @@
 # only Main files contain this front matter, not partials.
 ---
 
-@import 'bourbon/bourbon';
-@import 'external';
-@import 'shadow';
+//@import 'bourbon/bourbon';
+//@import 'external';
+//@import 'shadow';
 
 //Thanks Google: https://material.google.com/style/color.html#color-color-palette
 $background-color: #e4e4e4;
@@ -107,7 +107,7 @@ body {
 }
 
 .card-panel {
-	@include z-depth-1();
+	//@include z-depth-1();
 }
 
 @media(max-width: 600px) {
