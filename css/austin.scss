@@ -50,7 +50,6 @@ body {
     display: inline-block;
 }
 
-
 img.hero, picture > source.hero {
     object-fit: cover;
     height: 420px;
@@ -66,11 +65,8 @@ div.hero {
 
 .hero {
     color: $text-white;
-    //width: 100%;
     width: 100vw;
     text-align: left;
-    //background-image: url('/img/magi.jpg');
-    //background-position: center;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
@@ -112,7 +108,6 @@ div.hero {
                 margin-bottom: 0px;
                 font-weight: 900;
                 font-style: italic;
-                //font-size: 3.8rem;
                 text-shadow: 0px 0px 20px $text-normal;
             }
             .subtitle {
@@ -172,10 +167,8 @@ div.hero {
             }
         }
         .almamater {
-            //padding-left: 25px!important;
             li {
                 display: block;
-                //list-style-type: disc!important;
                 font-weight: 400;
                 font-size: 1.2rem;
                 span {
@@ -191,6 +184,10 @@ div.hero {
         font-weight: 400;
         color: $text-grey;
         font-size: 1rem!important;
+    }
+
+    #noscript {
+        color: #603838;
     }
 }
 

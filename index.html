@@ -100,6 +100,7 @@
 				<div class="section center-align">
 					<p class="footer">
 					Made from Houston, Texas<br>
+					<span id="noscript">Some images weren't loaded because JavaScript is disabled.</span>
 					<span id="cover_copyright" style="display: none;">Cover image: Copyright &copy; <span id="cover_copyright_corp">Lorem Ipsum</span></span>
 					</p>
 				</div>
@@ -118,6 +119,7 @@
 		};
 		copycorp.textContent = corp[set[i].slice(0,-2)];
 		copy.style.display = "";
+		document.getElementById('noscript').textContent = "";
 	</script>
 </body>
 
