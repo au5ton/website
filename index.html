@@ -13,27 +13,37 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link rel="stylesheet" href="css/austin.css">
-	<style>
-		/* Don't wait for austin.css to completely load before downloading */
-		.hero {
-			/* background-image: url('/img/magi.jpg'); */
-		}
-	</style>
 </head>
 
 <body>
 	<div class="hero-wrap">
+		<!-- Use <picture> to use optimized webp files when compatible, left with placeholder transparent grey pixels -->
 		<picture id="cover">
-			<source srcset="data:image/webp;base64,UklGRkAAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAM1ZQOCAYAAAAMAEAnQEqAQABAAAAACWkAANwAP7yoQAA" type="image/webp" class="hero">
-			<source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOsMAYAASkAraGKXsYAAAAASUVORK5CYII=" type="image/jpeg" class="hero">
-			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOsMAYAASkAraGKXsYAAAAASUVORK5CYII=" class="hero">
+			<source type="image/webp" class="hero" srcset="data:image/webp;base64,UklGRkIAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAM1ZQOCAaAAAAMAEAnQEqAQABAAAAACWkAANwAP7/vt3gAAA=" >
+			<source type="image/jpeg" class="hero" srcset="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACv/aAAgBAQAAAAAx/wD/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oACAEBAAE/AH//2Q==" >
+			<img class="hero" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACv/aAAgBAQAAAAAx/wD/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oACAEBAAE/AH//2Q==" >
 		</picture>
 		<script>
-			let set = ['lain01','magi01']
-			let i = Math.floor(Math.random()*set.length)
-			console.log(set[i])
+			// Possible images to choose from
+			var set = []
+			try {
+				// generate list of possible images (doesn't work in IE)
+				let range = (a,b) => a <= b ? [a, ...range(a+1,b)] : []; // range(3,7) => [3,4,5,6,7]
+				// spicy one-liner
+				// ref: https://stackoverflow.com/a/8513046/4852536
+				set = ['magi01', ...(range(1,7).map(x => `lain${('0' + x).slice(-2)}`)), ...(range(1,3).map(x => `bebop${('0' + x).slice(-2)}`))]
+			}
+			catch(err) {
+				// statically set
+				set = ['magi01']
+			}
+			// Random index
+			let i = Math.floor(Math.random()*set.length);
+			// Image elements
 			let pict = document.querySelectorAll('#cover source');
-			let img = document.querySelectorAll('#cover img')
+			let img = document.querySelectorAll('#cover img');
+			
+			// Presenting an image
 			pict[0].srcset = '/img/'+set[i]+'.webp';
 			pict[1].srcset = '/img/'+set[i]+'.jpg';
 			img[0].src = '/img/'+set[i]+'.jpg';
@@ -89,60 +99,26 @@
 				</div>
 				<div class="section center-align">
 					<p class="footer">
-					Made from Houston, Texas
+					Made from Houston, Texas<br>
+					<span id="cover_copyright" style="display: none;">Cover image: Copyright &copy; <span id="cover_copyright_corp">Lorem Ipsum</span></span>
 					</p>
 				</div>
 			</div>
 			<div class="col m1 l2">&nbsp;</div>
 		</div>
 	</div>
-
-
-	<!-- <div class="row">
-	<div class="col m1 l2">&nbsp;</div>
-	<div class="content col s12 m10 l8">
-		<div class="hero section card-panel">
-		<h1 class="title">Austin Jackson</h1>
-		<h5 class="subtitle">Software Developer</h5>
-		</div>
-		<div class="section card-panel">
-		<h5>Education</h5>
-		<p>
-			<ul class="almamater">
-			<li>
-				Heights High School (HISD) <span>(2013-2017)</span>
-			</li>
-			<li>
-				Texas A&amp;M University <span>(2017-2021) (projected)</span>
-			</li>
-			</ul>
-		</p>
-		</div>
-		<div class="section card-panel">
-		<h5>Contact Me</h5>
-		<p>
-			Telegram: <a href="https://t.me/austinj">@austinj</a>
-			<br>
-			Email: <a href="mailto:austinjckson@gmail.com">austinjckson@gmail.com</a>
-			<br>
-			Github: <a href="https://github.com/au5ton">au5ton</a>
-			<br>
-			Twitter: <a href="https://twitter.com/austinjckson">@austinjckson</a>
-			<br>
-			Music: <a href="http://austinj.net/music">austinj.net/music</a>
-			<br>
-			PGP key: <a href="https://keybase.io/austinj">0xD15CFEA0EF51E1F5</a>
-			<br>
-			Texas A&amp;M Webpage: <a href="http://people.tamu.edu/~austinjckson/">people.tamu.edu</a>
-		</p>
-		</div>
-		<div class="section center-align">
-		  <p class="footer">
-		Made from Houston, Texas
-		  </p>
-		</div>
-	</div>
-	<div class="col m1 l2">&nbsp;</div> -->
+	<script>
+		// Copyright message
+		let copy = document.getElementById('cover_copyright');
+		let copycorp = document.getElementById('cover_copyright_corp');
+		corp = {
+			'magi': 'GAINAX Co., Ltd.',
+			'lain': 'Triangle Staff Co., Ltd.',
+			'bebop': 'Sunrise Inc.'
+		};
+		copycorp.textContent = corp[set[i].slice(0,-2)];
+		copy.style.display = "";
+	</script>
 </body>
 
 </html>
