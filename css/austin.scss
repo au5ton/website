@@ -20,11 +20,58 @@ body {
     height: 100%;
     width: 100%;
     font-family: $font;
+    text-align: center;
 }
+
+/*
+
+.box{
+        position: relative;
+        display: inline-block; // Make the width of box same as image 
+    }
+    .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;        
+        text-align: center;
+        top: 40%; // Adjust this value to move the positioned div up and down 
+        background: rgba(0, 0, 0, 0.8);
+        font-family: Arial,sans-serif;
+        color: #fff;
+        width: 60%; // Set the width of the positioned div 
+    }
+
+*/
+
+.hero-wrap {
+    position: relative;
+    display: inline-block;
+
+    //margin-top: 30px;
+}
+
+
+img.hero {
+    object-fit: cover;
+    height: 420px;
+}
+
+div.hero {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
 .hero {
     color: $text-white;
-    width: 100%;
-    background-image: url('/img/magi.jpg');
+    //width: 100%;
+    width: 100vw;
+    text-align: left;
+    //background-image: url('/img/magi.jpg');
     //background-position: center;
     background-size: cover;
     margin-left: auto;
@@ -90,6 +137,7 @@ body {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
 
     .section {
         width: 70%;
