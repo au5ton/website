@@ -20,12 +20,31 @@ body {
     height: 100%;
     width: 100%;
     font-family: $font;
+    text-align: center;
+} 
+
+.hero-wrap {
+    position: relative;
+    display: inline-block;
 }
+
+img.hero, picture > source.hero {
+    object-fit: cover;
+    height: 420px;
+}
+
+div.hero {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
 .hero {
     color: $text-white;
-    width: 100%;
-    background-image: url('/img/magi.jpg');
-    //background-position: center;
+    width: 100vw;
+    text-align: left;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +86,6 @@ body {
                 margin-bottom: 0px;
                 font-weight: 900;
                 font-style: italic;
-                //font-size: 3.8rem;
                 text-shadow: 0px 0px 20px $text-normal;
             }
             .subtitle {
@@ -90,6 +108,7 @@ body {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
 
     .section {
         width: 70%;
@@ -126,10 +145,8 @@ body {
             }
         }
         .almamater {
-            //padding-left: 25px!important;
             li {
                 display: block;
-                //list-style-type: disc!important;
                 font-weight: 400;
                 font-size: 1.2rem;
                 span {
@@ -145,6 +162,10 @@ body {
         font-weight: 400;
         color: $text-grey;
         font-size: 1rem!important;
+    }
+
+    #noscript {
+        color: #603838;
     }
 }
 
