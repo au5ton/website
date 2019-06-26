@@ -48,12 +48,10 @@ body {
 .hero-wrap {
     position: relative;
     display: inline-block;
-
-    //margin-top: 30px;
 }
 
 
-img.hero {
+img.hero, picture > source.hero {
     object-fit: cover;
     height: 420px;
 }

@@ -23,7 +23,21 @@
 
 <body>
 	<div class="hero-wrap">
-		<img src="/img/magi.jpg" class="hero">
+		<picture id="cover">
+			<source srcset="data:image/webp;base64,UklGRkAAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAM1ZQOCAYAAAAMAEAnQEqAQABAAAAACWkAANwAP7yoQAA" type="image/webp" class="hero">
+			<source srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOsMAYAASkAraGKXsYAAAAASUVORK5CYII=" type="image/jpeg" class="hero">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOsMAYAASkAraGKXsYAAAAASUVORK5CYII=" class="hero">
+		</picture>
+		<script>
+			let set = ['lain01','magi01']
+			let i = Math.floor(Math.random()*set.length)
+			console.log(set[i])
+			let pict = document.querySelectorAll('#cover source');
+			let img = document.querySelectorAll('#cover img')
+			pict[0].srcset = '/img/'+set[i]+'.webp';
+			pict[1].srcset = '/img/'+set[i]+'.jpg';
+			img[0].src = '/img/'+set[i]+'.jpg';
+		</script>
 		<div class="hero">
 			<div class="name">
 				<div class="table">
