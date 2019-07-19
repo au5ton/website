@@ -147,12 +147,19 @@ div.hero {
         .almamater {
             li {
                 display: block;
+                color: lighten($text-normal, 10%);
                 font-weight: 400;
-                font-size: 1.2rem;
+                font-size: 1.05rem;
                 span {
                     font-weight: 400;
                     font-style: italic;
                     color: lighten($text-grey, 20%);
+                }
+
+                &.current {
+                    color: $text-normal;
+                    font-size: 1.15rem;
+                    font-weight: 700;
                 }
             }
         }
