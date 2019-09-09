@@ -137,6 +137,9 @@ div.hero {
                     color:#005098;
                     text-decoration: underline;
                 }
+                &.btn-flat, &.btn {
+                    text-decoration: none;
+                }
             }
             a:focus {
                 outline: thin dotted;
