@@ -38,7 +38,11 @@
 				let range = (a,b) => a <= b ? [a, ...range(a+1,b)] : []; // range(3,7) => [3,4,5,6,7]
 				// spicy one-liner
 				// ref: https://stackoverflow.com/a/8513046/4852536
-				set = ['magi01', ...(range(1,7).map(x => `lain${('0' + x).slice(-2)}`)), ...(range(1,3).map(x => `bebop${('0' + x).slice(-2)}`))]
+				set = ['magi01',
+					'psycho01',
+					...(range(1,7).map(x => `lain${('0' + x).slice(-2)}`)), 
+					...(range(1,3).map(x => `bebop${('0' + x).slice(-2)}`))
+				]
 			}
 			catch(err) {
 				// statically set
@@ -127,7 +131,8 @@
 		corp = {
 			'magi': 'GAINAX Co., Ltd.',
 			'lain': 'Triangle Staff Co., Ltd.',
-			'bebop': 'Sunrise Inc.'
+			'bebop': 'Sunrise Inc.',
+			'psycho': 'Production I.G, Inc.'
 		};
 		copycorp.textContent = corp[set[i].slice(0,-2)];
 		copy.style.display = "";
