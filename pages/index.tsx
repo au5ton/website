@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { getPlaiceholder } from 'plaiceholder'
 
 import styles from '../styles/Home.module.scss'
 
-import placeholder from '../public/cover/1x1.png'
+import placeholder from '../public/1x1.png'
 import bebop01 from '../public/cover/bebop01.jpg'
 import bebop02 from '../public/cover/bebop02.jpg'
 import bebop03 from '../public/cover/bebop03.jpg'
@@ -17,28 +19,27 @@ import lain06 from '../public/cover/lain06.jpg'
 import lain07 from '../public/cover/lain07.jpg'
 import magi01 from '../public/cover/magi01.jpg'
 import psycho01 from '../public/cover/psycho01.jpg'
+import { getAllCoverImagePaths } from '../lib/covers'
 
-const covers = [
-  bebop01,
-  bebop02,
-  bebop03,
-  lain01,
-  lain02,
-  lain03,
-  lain04,
-  lain05,
-  lain06,
-  lain07,
-  magi01,
-  psycho01,
-]
+interface ImageProps {
+  blurDataURL: string;
+  src: string;
+  height: number;
+  width: number;
+  type?: string | undefined;
+}
 
-export default function Home() {
-  const [cover, setCover] = useState(placeholder);
+interface HomeProps {
+  blurredCovers: ImageProps[];
+}
+
+export default function Home({ blurredCovers }: HomeProps) {
+  console.log(blurredCovers)
+  const [cover, setCover] = useState<ImageProps>();
   const [copyright, setCopyright] = useState('');
   useEffect(() => {
     // set random cover
-    const item = covers[Math.floor(Math.random()*covers.length)];
+    const item = blurredCovers[Math.floor(Math.random()*blurredCovers.length)];
     const fileName = item.src.split('/').reverse()[0];
     setCover(item);
     const corp: { [Key: string]: string } = {
@@ -83,14 +84,25 @@ export default function Home() {
         <div className="container-xl gx-0 gy-0">
           <div className="d-flex align-items-center justify-content-center">
             <div className={styles.bgWrap}>
+              { cover === undefined ? 
               <Image
                 alt={`Image Copyright © ${copyright}`}
-                src={cover}
+                src={placeholder}
                 layout="fill"
                 objectFit="cover"
                 placeholder="blur"
                 priority
               />
+              :
+              <Image
+                {...cover}
+                alt={`Image Copyright © ${copyright}`}
+                layout="fill"
+                objectFit="cover"
+                placeholder="blur"
+                priority
+              />
+              }
             </div>
             <div className={styles.bgText}>
               <div className="d-flex h-100 flex-column align-items-sm-center align-items-start justify-content-sm-center justify-content-end">
@@ -157,4 +169,43 @@ export default function Home() {
       </footer>
     </>
   )
+}
+
+// From: https://github.com/joe-bell/plaiceholder/blob/67ed723f8ea0b8ad43d627477040b1db135d54cb/examples/next/src/pages/base64/multiple.tsx#L10-L33
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const covers = [
+    bebop01,
+    bebop02,
+    bebop03,
+    lain01,
+    lain02,
+    lain03,
+    lain04,
+    lain05,
+    lain06,
+    lain07,
+    magi01,
+    psycho01,
+  ]
+
+  //const imagePaths = covers.map(e => e.src);
+  const imagePaths = getAllCoverImagePaths();
+  console.log(imagePaths)
+
+  const images = await Promise.all(
+    imagePaths.map(async (src) => {
+      const { base64, img } = await getPlaiceholder(src);
+
+      return {
+        ...img,
+        blurDataURL: base64,
+      };
+    })
+  ).then((values) => values);
+
+  return {
+    props: {
+      blurredCovers: images,
+    }
+  }
 }
