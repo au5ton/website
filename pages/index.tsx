@@ -2,25 +2,11 @@ import { useEffect, useState } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import fs from 'fs'
 import { getPlaiceholder } from 'plaiceholder'
+import { getAllCoverImagePaths } from '../lib/covers'
+import placeholder from '../public/1x1.png'
 
 import styles from '../styles/Home.module.scss'
-
-import placeholder from '../public/1x1.png'
-import bebop01 from '../public/cover/bebop01.jpg'
-import bebop02 from '../public/cover/bebop02.jpg'
-import bebop03 from '../public/cover/bebop03.jpg'
-import lain01 from '../public/cover/lain01.jpg'
-import lain02 from '../public/cover/lain02.jpg'
-import lain03 from '../public/cover/lain03.jpg'
-import lain04 from '../public/cover/lain04.jpg'
-import lain05 from '../public/cover/lain05.jpg'
-import lain06 from '../public/cover/lain06.jpg'
-import lain07 from '../public/cover/lain07.jpg'
-import magi01 from '../public/cover/magi01.jpg'
-import psycho01 from '../public/cover/psycho01.jpg'
-import { getAllCoverImagePaths } from '../lib/covers'
 
 interface ImageProps {
   blurDataURL: string;
@@ -55,22 +41,6 @@ export default function Home({ blurredCovers }: HomeProps) {
     }
   },[]);
   console.log(cover?.blurDataURL);
-
-  // const cover = covers[Math.floor(Math.random()*covers.length)];
-  // let copyright = '';
-  // const fileName = cover.src.split('/').reverse()[0];
-  // const corp: { [Key: string]: string } = {
-  //   'magi': 'GAINAX Co., Ltd.',
-  //   'lain': 'Triangle Staff Co., Ltd.',
-  //   'bebop': 'Sunrise Inc.',
-  //   'psycho': 'Production I.G, Inc.'
-  // };
-  // for(let key of Object.keys(corp)) {
-  //   if(fileName.startsWith(key)) {
-  //     copyright = corp[key];
-  //   }
-  // }
-
 
   return (
     <>
@@ -174,51 +144,19 @@ export default function Home({ blurredCovers }: HomeProps) {
 
 // From: https://github.com/joe-bell/plaiceholder/blob/67ed723f8ea0b8ad43d627477040b1db135d54cb/examples/next/src/pages/base64/multiple.tsx#L10-L33
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const covers = [
-    bebop01,
-    bebop02,
-    bebop03,
-    lain01,
-    lain02,
-    lain03,
-    lain04,
-    lain05,
-    lain06,
-    lain07,
-    magi01,
-    psycho01,
-  ]
-
-  //const imagePaths = covers.map(e => e.src);
   const imagePaths = getAllCoverImagePaths();
-  //console.log(imagePaths)
 
-  let images = [];
-  for(let src of imagePaths) {
-    //const [localPath, browserPath] = src;
-    
-    const { base64, img } = await getPlaiceholder(src);
-    //console.log('exists? ', src, fs.existsSync(src), img.width, 'x', img.height)
-    const result = {
-      ...img,
-      blurDataURL: base64,
-    };
-    //result.src = src;
-    images.push(result);
-  }  
-
-  // const images = await Promise.all(
-  //   imagePaths.map(async (src) => {
-  //     const { base64, img } = await getPlaiceholder(src);
-
-  //     return {
-  //       ...img,
-  //       blurDataURL: base64,
-  //     };
-  //   })
-  // );
-
-  //console.log(images)
+  console.time('generating plaiceholders');
+  const images = await Promise.all(
+    imagePaths.map(async (src) => {
+      const { base64, img } = await getPlaiceholder(src, { size: 16 });
+      return {
+        ...img,
+        blurDataURL: base64,
+      };
+    })
+  );
+  console.timeEnd('generating plaiceholders');
 
   return {
     props: {
