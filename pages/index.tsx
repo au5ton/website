@@ -119,9 +119,6 @@ export default function Home({ blurredCovers }: HomeProps) {
             PGP key: <a href="https://keybase.io/austinj">0xD15CFEA0EF51E1F5</a>
             </li>
             <li>
-            Texas A&amp;M Webpage: <a href="http://people.tamu.edu/~austinjckson/">people.tamu.edu</a>
-            </li>
-            <li>
             Resume: <a href="https://au5ton.github.io/resume/austin_jackson_resume.pdf">PDF</a>
             </li>
           </ul>
