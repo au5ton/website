@@ -1,0 +1,134 @@
+
+// .cover {
+//   height: 420px;
+//   max-width: 100%;
+
+//   @media (min-width: 1200px) {
+//     max-width: 550px;
+//   }
+//   position: fixed;
+//   overflow: hidden;
+//   z-index: -1;
+// }
+
+@mixin sizing {
+  height: 420px;
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0,0,0,.14);
+  
+  @media (min-width: 1200px) {
+    max-width: 550px;
+    border-radius: 2px;
+    margin-top: 30px;
+  }
+}
+
+.bgWrap {
+  position: absolute;
+  @include sizing;
+
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bgText {
+  @include sizing;
+
+  margin: 0;
+  color: #fff;
+}
+
+.title {
+  color: inherit;
+  padding: 0 15px;
+  margin-bottom: 0px;
+  line-height: 110%;
+  font-size: 3.6rem;
+  font-style: italic;
+  text-shadow: 0px 0px 20px #323232;
+
+  @media (min-width: 576px) {
+    font-size: 3.1rem;
+  }
+}
+.subtitle {
+  color: inherit;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  line-height: 110%;
+  font-size: 1.4em;
+  font-weight: 400;
+  text-shadow: 0px 0px 20px #323232;
+
+  @media (min-width: 576px) {
+    font-size: 1.5rem;
+  }
+}
+
+
+.cardPanel {
+  width: 62%;
+  max-width: 550px;
+  box-sizing: border-box;
+  @media (max-width: 575px) {
+    width: 85%;
+  }
+  @media (min-width: 1200px) {
+    width: 100%;
+  }
+
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 24px;
+  border-radius: 2px;
+  background-color: #fff;
+  @media (prefers-color-scheme: dark) {
+    background-color: #252525;
+  }
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.cardTitle {
+  border: 0;
+  line-height: 110%;;
+}
+
+.almamater {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 15px 0;
+  li {
+    display: block;
+    font-weight: 400;
+    font-size: 1.05rem;
+    margin-top: 0;
+    span {
+      font-weight: 400;
+      font-style: italic;
+      color: #979797;
+    }
+
+    &.current {
+      //color: $text-normal;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.footer {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 1rem 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  color: #646464;
+  @media (prefers-color-scheme: dark) {
+    color: #979797;
+  }
+  font-size: 1rem;
+}
