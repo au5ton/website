@@ -1,11 +1,76 @@
-import type { NextPage } from 'next'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import lain from '../public/cover/lain05.jpg'
 import styles from '../styles/Home.module.scss'
 
+import placeholder from '../public/cover/1x1.png'
+import bebop01 from '../public/cover/bebop01.jpg'
+import bebop02 from '../public/cover/bebop02.jpg'
+import bebop03 from '../public/cover/bebop03.jpg'
+import lain01 from '../public/cover/lain01.jpg'
+import lain02 from '../public/cover/lain02.jpg'
+import lain03 from '../public/cover/lain03.jpg'
+import lain04 from '../public/cover/lain04.jpg'
+import lain05 from '../public/cover/lain05.jpg'
+import lain06 from '../public/cover/lain06.jpg'
+import lain07 from '../public/cover/lain07.jpg'
+import magi01 from '../public/cover/magi01.jpg'
+import psycho01 from '../public/cover/psycho01.jpg'
+
+const covers = [
+  bebop01,
+  bebop02,
+  bebop03,
+  lain01,
+  lain02,
+  lain03,
+  lain04,
+  lain05,
+  lain06,
+  lain07,
+  magi01,
+  psycho01,
+]
+
 export default function Home() {
+  //lain01.src.split('/').reverse()[0]
+  // const [cover, setCover] = useState(placeholder);
+  // const [copyright, setCopyright] = useState('');
+  // useEffect(() => {
+  //   // set random cover
+  //   const item = covers[Math.floor(Math.random()*covers.length)];
+  //   const fileName = item.src.split('/').reverse()[0];
+  //   setCover(item);
+  //   const corp: { [Key: string]: string } = {
+  //     'magi': 'GAINAX Co., Ltd.',
+  //     'lain': 'Triangle Staff Co., Ltd.',
+  //     'bebop': 'Sunrise Inc.',
+  //     'psycho': 'Production I.G, Inc.'
+  //   };
+  //   for(let key of Object.keys(corp)) {
+  //     if(fileName.startsWith(key)) {
+  //       setCopyright(corp[key]);
+  //     }
+  //   }
+  // },[]);
+
+  const cover = covers[Math.floor(Math.random()*covers.length)];
+  let copyright = '';
+  const fileName = cover.src.split('/').reverse()[0];
+  const corp: { [Key: string]: string } = {
+    'magi': 'GAINAX Co., Ltd.',
+    'lain': 'Triangle Staff Co., Ltd.',
+    'bebop': 'Sunrise Inc.',
+    'psycho': 'Production I.G, Inc.'
+  };
+  for(let key of Object.keys(corp)) {
+    if(fileName.startsWith(key)) {
+      copyright = corp[key];
+    }
+  }
+
+
   return (
     <>
       <Head>
@@ -18,20 +83,10 @@ export default function Home() {
       <header>
         <div className="container-xl gx-0 gy-0">
           <div className="d-flex align-items-center justify-content-center">
-            {/* <div className={styles.cover}>
-              <Image
-                alt="cover picture"
-                src={lain}
-                layout="fill"
-                objectFit="cover"
-                placeholder="blur"
-                priority
-              />
-            </div> */}
             <div className={styles.bgWrap}>
               <Image
-                alt="cover picture"
-                src={lain}
+                alt={`Image Copyright © ${copyright}`}
+                src={cover}
                 layout="fill"
                 objectFit="cover"
                 placeholder="blur"
@@ -96,7 +151,7 @@ export default function Home() {
           <div className={styles.footer}>
             <p>
               Made from Houston, Texas <br />
-              Cover image: Copyright &copy; {'Lorem Ipsum'}
+              Cover image: Copyright &copy; {copyright}
             </p>
           </div>
         </div>
