@@ -110,7 +110,7 @@ export default function Home({ blurredCovers }: HomeProps) {
             Email: <a href="mailto:austinjckson@gmail.com">austinjckson@gmail.com</a>
             </li>
             <li>
-            Github: <a href="https://github.com/au5ton">au5ton</a>
+            GitHub: <a href="https://github.com/au5ton">au5ton</a>
             </li>
             <li>
             Twitter: <a href="https://twitter.com/austinjckson">@austinjckson</a>
