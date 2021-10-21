@@ -1,8 +1,0 @@
-*.jar
-.sass-cache/
-Gemfile.lock
-_site/
-.jekyll-metadata
-
-# OS X
-.DS_Store
