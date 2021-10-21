@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import fs from 'fs'
 import { getPlaiceholder } from 'plaiceholder'
 
 import styles from '../styles/Home.module.scss'
@@ -34,7 +35,6 @@ interface HomeProps {
 }
 
 export default function Home({ blurredCovers }: HomeProps) {
-  console.log(blurredCovers)
   const [cover, setCover] = useState<ImageProps>();
   const [copyright, setCopyright] = useState('');
   useEffect(() => {
@@ -54,6 +54,7 @@ export default function Home({ blurredCovers }: HomeProps) {
       }
     }
   },[]);
+  console.log(cover?.blurDataURL);
 
   // const cover = covers[Math.floor(Math.random()*covers.length)];
   // let copyright = '';
@@ -90,16 +91,16 @@ export default function Home({ blurredCovers }: HomeProps) {
                 src={placeholder}
                 layout="fill"
                 objectFit="cover"
-                placeholder="blur"
                 priority
               />
               :
               <Image
-                {...cover}
                 alt={`Image Copyright © ${copyright}`}
+                src={cover.src}
                 layout="fill"
                 objectFit="cover"
                 placeholder="blur"
+                blurDataURL={cover.blurDataURL}
                 priority
               />
               }
@@ -190,18 +191,34 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
   //const imagePaths = covers.map(e => e.src);
   const imagePaths = getAllCoverImagePaths();
-  console.log(imagePaths)
+  //console.log(imagePaths)
 
-  const images = await Promise.all(
-    imagePaths.map(async (src) => {
-      const { base64, img } = await getPlaiceholder(src);
+  let images = [];
+  for(let src of imagePaths) {
+    //const [localPath, browserPath] = src;
+    
+    const { base64, img } = await getPlaiceholder(src);
+    //console.log('exists? ', src, fs.existsSync(src), img.width, 'x', img.height)
+    const result = {
+      ...img,
+      blurDataURL: base64,
+    };
+    //result.src = src;
+    images.push(result);
+  }  
 
-      return {
-        ...img,
-        blurDataURL: base64,
-      };
-    })
-  ).then((values) => values);
+  // const images = await Promise.all(
+  //   imagePaths.map(async (src) => {
+  //     const { base64, img } = await getPlaiceholder(src);
+
+  //     return {
+  //       ...img,
+  //       blurDataURL: base64,
+  //     };
+  //   })
+  // );
+
+  //console.log(images)
 
   return {
     props: {
