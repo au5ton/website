@@ -34,41 +34,40 @@ const covers = [
 ]
 
 export default function Home() {
-  //lain01.src.split('/').reverse()[0]
-  // const [cover, setCover] = useState(placeholder);
-  // const [copyright, setCopyright] = useState('');
-  // useEffect(() => {
-  //   // set random cover
-  //   const item = covers[Math.floor(Math.random()*covers.length)];
-  //   const fileName = item.src.split('/').reverse()[0];
-  //   setCover(item);
-  //   const corp: { [Key: string]: string } = {
-  //     'magi': 'GAINAX Co., Ltd.',
-  //     'lain': 'Triangle Staff Co., Ltd.',
-  //     'bebop': 'Sunrise Inc.',
-  //     'psycho': 'Production I.G, Inc.'
-  //   };
-  //   for(let key of Object.keys(corp)) {
-  //     if(fileName.startsWith(key)) {
-  //       setCopyright(corp[key]);
-  //     }
-  //   }
-  // },[]);
-
-  const cover = covers[Math.floor(Math.random()*covers.length)];
-  let copyright = '';
-  const fileName = cover.src.split('/').reverse()[0];
-  const corp: { [Key: string]: string } = {
-    'magi': 'GAINAX Co., Ltd.',
-    'lain': 'Triangle Staff Co., Ltd.',
-    'bebop': 'Sunrise Inc.',
-    'psycho': 'Production I.G, Inc.'
-  };
-  for(let key of Object.keys(corp)) {
-    if(fileName.startsWith(key)) {
-      copyright = corp[key];
+  const [cover, setCover] = useState(placeholder);
+  const [copyright, setCopyright] = useState('');
+  useEffect(() => {
+    // set random cover
+    const item = covers[Math.floor(Math.random()*covers.length)];
+    const fileName = item.src.split('/').reverse()[0];
+    setCover(item);
+    const corp: { [Key: string]: string } = {
+      'magi': 'GAINAX Co., Ltd.',
+      'lain': 'Triangle Staff Co., Ltd.',
+      'bebop': 'Sunrise Inc.',
+      'psycho': 'Production I.G, Inc.'
+    };
+    for(let key of Object.keys(corp)) {
+      if(fileName.startsWith(key)) {
+        setCopyright(corp[key]);
+      }
     }
-  }
+  },[]);
+
+  // const cover = covers[Math.floor(Math.random()*covers.length)];
+  // let copyright = '';
+  // const fileName = cover.src.split('/').reverse()[0];
+  // const corp: { [Key: string]: string } = {
+  //   'magi': 'GAINAX Co., Ltd.',
+  //   'lain': 'Triangle Staff Co., Ltd.',
+  //   'bebop': 'Sunrise Inc.',
+  //   'psycho': 'Production I.G, Inc.'
+  // };
+  // for(let key of Object.keys(corp)) {
+  //   if(fileName.startsWith(key)) {
+  //     copyright = corp[key];
+  //   }
+  // }
 
 
   return (
