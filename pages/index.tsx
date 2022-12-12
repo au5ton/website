@@ -104,9 +104,6 @@ export default function Home({ blurredCovers }: HomeProps) {
           <h3 className={styles.cardTitle}>Contact Me</h3>
           <ul className={styles.almamater}>
             <li>
-            Telegram: <a href="https://t.me/austinj">@austinj</a>
-            </li>
-            <li>
             Email: <a href="mailto:austinjckson@gmail.com">austinjckson@gmail.com</a>
             </li>
             <li>
