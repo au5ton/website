@@ -113,6 +113,9 @@ export default function Home({ blurredCovers }: HomeProps) {
             Twitter: <a href="https://twitter.com/austinjckson">@austinjckson</a>
             </li>
             <li>
+            Mastodon: <a rel="me" href="https://mastodon.online/@austinj">@austinj@mastodon.online</a>
+            </li>
+            <li>
             PGP key: <a href="https://keybase.io/austinj">0xD15CFEA0EF51E1F5</a>
             </li>
             <li>
